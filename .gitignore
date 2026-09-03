@@ -1,8 +1,39 @@
+# ======================================================================
+# REGLAS ORIGINALES DE LA CÁTEDRA
+# ======================================================================
+
 # Compile outputs
 **/build
+
 # Peripheral view
 .espidf.peripherals.state.json
-# Settings per project
-**/.vscode/settings.json
+
+# original que apunta a "settings.json" (ahora comentado solo para señalar lo original) 
+# **/.vscode/settings.json
 
 
+# ======================================================================
+# MODIFICACIÓN DE COMPATIBILIDAD ENTRE PC Y NOTEBOOK
+# ======================================================================
+
+# Bloquea la CARPETA COMPLETA .vscode (y no solo settings.json).
+# Esto frena c_cpp_properties.json, rutas de compiladores locales,
+# nombres de usuario en disco C: y configuraciones particulares de cada PC.
+**/.vscode/
+**/mi_prueba_*/
+
+# ======================================================================
+# NUEVOS AGREGADOS DE PROTECCIÓN LOCAL (OCULTA INFO DE PC Y NOTEBOOK)
+# ======================================================================
+
+# Bloquea archivos de respaldo de configuración de la ESP32
+# Evita conflictos de periféricos al cambiar de computadora
+**/sdkconfig.old
+
+# Bloquea configuraciones internas de la extensión ESP-IDF
+**/.esp_idf/
+
+# Blindaje extra para subcarpetas temporales de CMake
+# (Guardan rutas del disco C en archivos de texto internos de compilación)
+**/CMakeCache.txt
+**/CMakeFiles/

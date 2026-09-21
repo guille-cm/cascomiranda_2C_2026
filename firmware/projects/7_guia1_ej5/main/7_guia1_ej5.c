@@ -1,72 +1,90 @@
-/*! @mainpage Template
- *
+/**
+ * @mainpage Guía de Trabajos Prácticos 1 - Ejercicio 5
+ * 
+ * 
  * @section genDesc General Description
- *
- * This section describes how the program works.
- *
- * <a href="https://drive.google.com/...">Operation Example</a>
- *
- * @section hardConn Hardware Connection
- *
- * |    Peripheral  |   ESP32   	|
- * |:--------------:|:--------------|
- * | 	PIN_X	 	| 	GPIO_X		|
- *
- *
+ * Aplicación principal para la ESP32,
+ * que prueba el mapeo de BCD a GPIO.
+ * 
+ * 
+ * @file 7_guia1_ej5.c
+ * @brief Aplicación principal del Ejercicio 5 de la Guía de Trabajos Prácticos 1.
+ * @details 
+ * Aplicación principal para la ESP32. @n
+ * 
+ * Inicializa un bus de GPIOs, y prueba el mapeo de BCD a GPIO. 
+ * Id est, los estados de esos 4 dígitos BCD de un número, 
+ * ponen en alto o bajo, cada 4 segundos, 
+ * los estados de 4 pines GPIO de salida, específicos, de la ESP32.
+ * 
+ * 
  * @section changelog Changelog
- *
- * |   Date	    | Description                                    |
- * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
- *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
- *
+ * | Date | Description |
+ * | :--- | :--- |
+ * | 2026-09-20 | Document creation |
+ * 
+ * @version 1.0
+ * @author Guillermo Casco Miranda
+ * @copyright FIUNER - UNER
  */
 
 /*==================[inclusions]=============================================*/
-#include "gpio_mcu.h"  /*!< Incluye la cabecera correspondiente */
+#include <stdio.h>
 #include <stdint.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "gpio_mcu.h"
+#include "bcd_LCD.h"
+
 /*==================[macros and definitions]=================================*/
+#define DELAY_MS 4000     // valor solo con fines de probar la función de este main
 
 /*==================[internal data definition]===============================*/
-typedef struct
-{
-    gpio_t pin;  /*!< Número de pin GPIO */
-    io_t dir;    /*!< Dirección del GPIO ('0' IN, '1' OUT) */
-} gpioConf_t;
 
 /*==================[internal functions declaration]=========================*/
-uint8_t ManejoGPIO(uint8_t bcd, gpioConf_t *config) {
-    for (int i = 0; i < 4; i++) {
-        GPIOInit(config[i].pin, config[i].dir);  /*!< Inicializa el GPIO con la configuración adecuada */
-        
-        if (bcd & (1 << i)) {  /*!< Si el bit 'i' del BCD está en 1, enciende el GPIO correspondiente */
-            GPIOOn(config[i].pin);
-        } else {               /*!< Si el bit 'i' del BCD está en 0, apaga el GPIO correspondiente */
-            GPIOOff(config[i].pin);
-        }
-    }
-    return 0;  /*!< Retorna 0 indicando que no hubo errores */
-}
+
 /*==================[external functions definition]==========================*/
-void app_main(void){
-
-
-	/* Definición del vector de configuración, mapeando los bits del BCD a los GPIO correspondientes */
-    gpioConf_t conf[4] = {
-        {GPIO_20, GPIO_OUTPUT},  /*!< b0 -> GPIO_20 */
-        {GPIO_21, GPIO_OUTPUT},  /*!< b1 -> GPIO_21 */
-        {GPIO_22, GPIO_OUTPUT},  /*!< b2 -> GPIO_22 */
-        {GPIO_23, GPIO_OUTPUT}   /*!< b3 -> GPIO_23 */
+void app_main(void) {
+    /* 
+     * Se define el vector que mapea los bits según la consigna.
+     */
+    gpioConf_t gpio_bcd_bus[4] = {
+        {GPIO_20, GPIO_OUTPUT}, // asociado a b0 LSB
+        {GPIO_21, GPIO_OUTPUT}, // asociado a b1
+        {GPIO_22, GPIO_OUTPUT}, // asociado a b2
+        {GPIO_23, GPIO_OUTPUT}  // asociado a b3 MSB
     };
+    
+    // Inicialización del hardware GPIO previo a su uso
+    for (uint8_t i = 0; i < 4; i++) {
+        GPIOInit(gpio_bcd_bus[i].pin, gpio_bcd_bus[i].dir);
+    }
 
-    /* Manejo de diferentes valores de BCD para establecer el estado de los GPIO */
-    ManejoGPIO(4, conf);  /*!< Establece el estado del BCD 4 */
-    ManejoGPIO(6, conf);  /*!< Establece el estado del BCD 6 */
-    ManejoGPIO(9, conf);  /*!< Establece el estado del BCD 9 */
+    uint8_t digito_prueba = 0;
 
     while (1) {
-        /* Bucle infinito */
+        printf("Escribiendo el dígito BCD %d en los pines GPIO...\n", digito_prueba);
+        
+        // Llamada a la capa de dispositivo
+        bcdToGpio(digito_prueba, gpio_bcd_bus);
+        
+        // Verificación por software (impresión teórica de los bits)
+        for (uint8_t i = 0; i < 4; i++){
+            // Usamos un desplazamiento de bits para imprimir cómo debería estar cada bit
+            uint8_t estado_bit = (digito_prueba & (1 << i)) ? 1 : 0;
+            printf("Bus b%d (Pin %d): %d\n", i, gpio_bcd_bus[i].pin, estado_bit);
+        }
+        printf("\n");
+
+        // Incrementamos el dígito y reseteamos al llegar a 10 (solo dígitos válidos BCD)
+        digito_prueba++;
+        if (digito_prueba > 9) {
+            digito_prueba = 0;
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(DELAY_MS));
     }
 }
+
+
 /*==================[end of file]============================================*/

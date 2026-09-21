@@ -1,7 +1,12 @@
 /**
  * @file bcd_LCD.c
- * @brief Implementación de las funciones de conversión BCD y manejo de display.[cite: 3]
- * @details Contiene el desarrollo de las funciones lógicas para descomponer enteros y multiplexar displays mediante decodificadores.
+ * @brief Implementación de la función bcdToGpio
+ * 
+ * 
+ * @details Contiene el desarrollo de la función bcdToGpio, 
+ * que mapea los valores de los 4 dígitos BCD de un número cualquiera, 
+ * a 4 pines GPIO de salida, específicos, de la ESP32.
+ * 
  * @version 1.0
  * 
  * 
@@ -31,3 +36,13 @@ int8_t convertToBcdArray(uint32_t data, uint8_t digits, uint8_t *bcd_number) {
     return 0;
 }
 
+
+void bcdToGpio(uint8_t bcd, gpioConf_t *gpio_conf) {
+    for (uint8_t i = 0; i < 4; i++) {
+        if (bcd & (1 << i)) {            /*!< Si el bit 'i' del BCD está en 1, enciende el GPIO correspondiente */
+            GPIOOn(gpio_conf[i].pin);
+        } else {                        /*!< Sino, si el bit 'i' del BCD está en 0, apaga el GPIO correspondiente */
+            GPIOOff(gpio_conf[i].pin);
+        }
+    }
+}

@@ -1,11 +1,15 @@
 /**
  * @file bcd_LCD.c
- * @brief Implementación de la función bcdToGpio
+ * @brief Implementación para conversión de enteros a BCD, BCD a GPIO, y control de display LCD multiplexado.
  * 
  * 
- * @details Contiene el desarrollo de la función bcdToGpio, 
- * que mapea los valores de los 4 dígitos BCD de un número cualquiera, 
- * a 4 pines GPIO de salida, específicos, de la ESP32.
+ * @details Agrega el desarrollo de la función lcdDisplay, 
+ * que permite mostrar números en un display. @n
+ * 
+ * Contiene e integra el desarrollo de las funciones lógicas para descomponer enteros 
+ * y multiplexar displays mediante un decodificador/latch BCD a 7 segmentos, como el CD4543B. @n
+ * 
+ * Para más información sobre el conexionado, refiérase a bcd_LCD.h
  * 
  * @version 1.0
  * 
@@ -17,9 +21,20 @@
  * 
  * @author Guillermo Casco Miranda
  */
-
+/*==================[inclusions]=============================================*/
 #include "bcd_LCD.h"
 #include <stddef.h>
+/*==================[macros and definitions]=================================*/
+
+/*==================[internal data declaration]==============================*/
+
+/*==================[internal functions declaration]=========================*/
+
+/*==================[internal data definition]===============================*/
+
+/*==================[external data definition]===============================*/
+
+/*==================[internal functions definition]==========================*/
 
 /*==================[external functions definition]==========================*/
 
@@ -46,3 +61,25 @@ void bcdToGpio(uint8_t bcd, gpioConf_t *gpio_conf) {
         }
     }
 }
+
+
+void lcdDisplay(uint32_t data, uint8_t digits, gpioConf_t *gpio_bcd, gpioConf_t *gpio_sel) {
+    uint8_t bcd_array[digits];
+    
+    // 1. Ejercicio 4: Convertir el entero en arreglo BCD
+    if (convertToBcdArray(data, digits, bcd_array) == 0) {
+        
+        // 2. Recorrer cada dígito para actualizar los CD4543BE
+        for (uint8_t i = 0; i < digits; i++) {
+            
+            // Ejercicio 5: Setear el bus de datos BCD (b0-b3)
+            bcdToGpio(bcd_array[digits-1-i], gpio_bcd);
+            
+            // Ejercicio 6: Pulso en el pin de Latch Disable para fijar el número en el integrado
+            GPIOOn(gpio_sel[i].pin);
+            GPIOOff(gpio_sel[i].pin);
+        }
+    }
+}
+
+/*==================[end of file]============================================*/

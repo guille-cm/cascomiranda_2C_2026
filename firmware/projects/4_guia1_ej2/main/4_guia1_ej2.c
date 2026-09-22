@@ -45,8 +45,8 @@ void app_main(void){
 	SwitchesInit();
     while(1)    {
     	teclas  = SwitchesRead();
-    		switch(teclas){
-						case SWITCH_1 | SWITCH_2:
+    	switch(teclas){
+			case SWITCH_1 | SWITCH_2:
     			LedToggle(LED_3);
 				printf("LED 3 --> Toggle\n");
     		break;

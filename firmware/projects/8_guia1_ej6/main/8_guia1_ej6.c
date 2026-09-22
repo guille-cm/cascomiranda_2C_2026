@@ -1,99 +1,140 @@
-/*! @mainpage Template
- *
+/**
+ * @mainpage Guía de Trabajos Prácticos 1 - Ejercicio 6
+ * 
+ * 
  * @section genDesc General Description
- *
- * This section describes how the program works.
- *
- * <a href="https://drive.google.com/...">Operation Example</a>
- *
+ * Aplicación principal para la ESP32. @n
+ * Muestra un valor entero incremental en un display de 3 dígitos multiplexado, @n
+ * utilizando un decodificador BCD controlado por pines GPIO.
+ * 
+ * 
+ * @file 8_guia1_ej6.c
+ * @brief Aplicación principal del Ejercicio 6 de la Guía de Trabajos Prácticos 1.
+ * @details 
+ * Aplicación principal para la ESP32. @n
+ * Muestra un valor entero incremental en un display de 3 dígitos multiplexado, @n
+ * utilizando un decodificador BCD controlado por pines GPIO.
+ * 
+ * Para más información sobre el manejo y conexionado
+ * entre los decoders (como el 74HC4543 y el CD4543BE)
+ * y los displays (tanto el LCD como el LED de 7 segmentos de 3 dígitos),
+ * refiérase a los PDFs e imágenes agregados en la carpeta que contiene este proyecto.
+ * 
+ * 
+ * ### Videos de referencia subidos a YouTube:
+ * 
+ * Prueba manual de conteo de 0 a 9 del dígito menos significativo. @n
+ * [Display LED 1 - manual 1 dígito](https://youtu.be/6-N6dmuXu8M)
+ * 
+ * Prueba manual de conteo de 0 a 10, para hacer uso del latch. @n
+ * [Display LED 2 - manual 3 dígitos con latch](https://youtu.be/mcUrqBuPrnc)
+ * 
+ * Prueba de consumo de del bloque entero (display + decoders). @n
+ * Consumo: no supera los 18 mA, a 3.3 V. @n
+ * Condiciones medición: mostrando "888", 
+ * con brillo aceptablemente legible para interiores iluminados. @n
+ * [Display LED 3 - prueba consumo corriente](https://youtube.com/shorts/JrYvggtQ8cA)
+ * 
+ * Ejecución de 8_guia1_ej6.c @n 
+ * Muestra por display y por consola, los numeros de 000 a 999, 
+ * en bucle, con frecuencia de 1 Hz. @n
+ * [Display LED 4 - guia 1, ej 6 - contador de 0 a 999](https://youtube.com/shorts/k55fkw2KJYM)
+ *                     
+ * 
  * @section hardConn Hardware Connection
- *
- * |    Peripheral  |   ESP32   	|
- * |:--------------:|:--------------|
- * | 	PIN_X	 	| 	GPIO_X		|
- *
- *
+ * | Periférico / Señal | Pin ESP32 | Descripción |
+ * | :--- | :--- | :--- |
+ * | Bus BCD b0 | GPIO_20 | Bit menos significativo del bus BCD|
+ * | Bus BCD b1 | GPIO_21 | Bit 1 del bus BCD |
+ * | Bus BCD b2 | GPIO_22 | Bit 2 del bus BCD |
+ * | Bus BCD b3 | GPIO_23 | Bit más significativo del bus BCD |
+ * | Latch Dígito 1 | GPIO_19 | Línea de habilitación (Latch) para el dígito 1 (MSB)|
+ * | Latch Dígito 2 | GPIO_18 | Línea de habilitación (Latch) para el dígito 2 |
+ * | Latch Dígito 3 | GPIO_9 | Línea de habilitación (Latch) para el dígito 3 (LSB)|
+ * 
+ * 
+ * @section docu Documentación y Adjuntos
+ * @see [Pinout CI 4543](../pinout_4543.jpg)
+ * @see [Datasheet HEF4543B](../datasheet_HEF4543B.pdf)
+ * @see [Resumen de LCD](../resumen_LCD.png)
+ * @see [Señal AC para LCD](../senial_AC_para_LCD.png)
+ * @see [Compilación, Flasheo y consola con LCD - 2026-09-03 a las 13:09:41](../Revision_2026-09-03_a_las_13h09m41s.jpeg)
+ * @see [Compilación mismo código, pero con display LED](../01_compiled_8_guia1_ej6.png)
+ * @see [Flasheo con mismo código, pero con display LED](../02_flashed_8_guia1_ej6.png)
+ * @see [Consola con mismo código, pero con display LED](../03_tested_8_guia1_ej6.png)
+ * 
  * @section changelog Changelog
- *
- * |   Date	    | Description                                    |
- * |:----------:|:-----------------------------------------------|
- * | 12/09/2023 | Document creation		                         |
- *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
- *
+ * | Date | Description |
+ * | :--- | :--- |
+ * | 2026-09-20 | Document creation |
+ * 
+ * @version 1.0
+ * @author Guillermo Casco Miranda
  */
 
 /*==================[inclusions]=============================================*/
-#include "bcd_LCD.h"       /* <= own header */
+#include <stdio.h>
 #include <stdint.h>
-#include <gpio_mcu.h>      /* <= Archivo de cabecera que gestiona los GPIO */
 #include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "gpio_mcu.h"
+#include "bcd_LCD.h"
 
 /*==================[macros and definitions]=================================*/
-// typedef struct
-// {
-// 	gpio_t pin; /* Número del pin */
-// 	io_t dir;  /* Dirección 0=in 1=out */
-// } gpioConf_t;
+/**
+ * @def DIGITS_COUNT
+ * @brief Cantidad de dígitos del display multiplexado.
+ */
+#define DIGITS_COUNT 3
 
-/*==================[internal data definition]===============================*/
+/*==================[main application]=======================================*/
+/**
+ * @fn void app_main(void)
+ * @brief Función principal de la aplicación FreeRTOS.
+ * @details Configura los pines GPIO para el bus BCD y la selección de dígitos, e inicia un bucle infinito que incrementa y muestra un contador numérico en el display.
+ */
+void app_main(void) {
+    // Configuración del vector del bus BCD (Ejercicio 5)
+    gpioConf_t gpio_bcd_bus[4] = {
+        {GPIO_20, GPIO_OUTPUT}, // b0 LSB
+        {GPIO_21, GPIO_OUTPUT}, // b1
+        {GPIO_22, GPIO_OUTPUT}, // b2
+        {GPIO_23, GPIO_OUTPUT}  // b3 MSB
+    };
+    
+    // Configuración del vector de selección de dígitos/Latch (Ejercicio 6)
+    gpioConf_t gpio_digit_select[3] = {
+        {GPIO_19, GPIO_OUTPUT}, // Latch Dígito 1 LSD
+        {GPIO_18, GPIO_OUTPUT}, // Latch Dígito 2
+        {GPIO_9,  GPIO_OUTPUT}  // Latch Dígito 3 MSD
+    };
+    
+    // Inicialización del hardware GPIO de datos BCD
+    for (uint8_t i = 0; i < 4; i++) {
+        GPIOInit(gpio_bcd_bus[i].pin, gpio_bcd_bus[i].dir);
+    }
+    
+    // Inicialización del hardware GPIO de selección de dígitos
+    for (uint8_t i = 0; i < DIGITS_COUNT; i++) {
+        GPIOInit(gpio_digit_select[i].pin, gpio_digit_select[i].dir);
+    }
+    
+    // Valor de prueba a mostrar en el display
+    uint32_t my_number = 000;
 
-/*==================[internal functions declaration]=========================*/
-uint8_t ManejoGPIO(uint8_t bcd, gpioConf_t *config){
-	for(int i = 0; i < 4; i++){
-		GPIOInit(config[i].pin, config[i].dir);   // Inicializa el pin
-		if(bcd & (1 << i))                        // Si el bit correspondiente en BCD está en 1
-			GPIOOn(config[i].pin);                // Activa el pin
-		else
-			GPIOOff(config[i].pin);               // Desactiva el pin
-	}
-	return 0;
+    while (1) {
+        // Muestra el valor reutilizando la lógica modular
+        lcdDisplay(my_number, DIGITS_COUNT, gpio_bcd_bus, gpio_digit_select);
+		printf("my_number: %lu\n", my_number);
+
+		if (my_number < 999){
+			my_number++;
+		}
+		else{
+			my_number = 0;
+		}
+        
+        // Retardo preventivo de la tarea FreeRTOS
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }
-
-int8_t BinaryToBcd (uint32_t data, uint8_t digits, uint8_t *bcd_number){
-	for(int i = digits; i > 0; i--){
-		bcd_number[i - 1] = data % 10;
-		data = data / 10;
-	}
-	return 0;
-}
-
-void ManejoLCD(uint32_t numero, uint8_t digitos, gpioConf_t* config, gpioConf_t* seleccion){
-	uint8_t bcd[digitos];
-	BinaryToBcd(numero, digitos, bcd);  // Convierte el número a BCD
-
-	for(int i = 0; i < 3; i++){
-		GPIOInit(seleccion[i].pin, seleccion[i].dir);  // Inicializa el pin de selección
-		GPIOOn(seleccion[i].pin);                      // Activa el pin de selección
-		ManejoGPIO(bcd[i], config);                    // Muestra el dígito correspondiente
-		// Espera un tiempo mínimo de 50ns para latchear los datos
-		for (volatile int j = 0; j < 1000; j++) {};    // Espera pequeña
-		GPIOOff(seleccion[i].pin);                     // Desactiva el pin de selección
-	}
-}
-
-/*==================[external functions definition]==========================*/
-void app_main(void){
-	/* Inicializaciones */
-	gpioConf_t conf[4] = {
-		{GPIO_20, GPIO_OUTPUT},   // D1 -> LCD1
-		{GPIO_21, GPIO_OUTPUT},   // D2 -> LCD2
-		{GPIO_22, GPIO_OUTPUT},   // D3 -> LCD3
-		{GPIO_23, GPIO_OUTPUT}    // D4 -> LCD4
-	};
-
-	gpioConf_t seleccion[3] = {
-		{GPIO_19, GPIO_OUTPUT},   // SEL_1 -> Dígito 1
-		{GPIO_18, GPIO_OUTPUT},   // SEL_2 -> Dígito 2
-		{GPIO_9, GPIO_OUTPUT}     // SEL_3 -> Dígito 3
-	};
-
-	/* Muestra el número 736 en el display LCD */
-	ManejoLCD(739, 3, conf, seleccion);
-
-    while(1){
-		/* Bucle principal - Aquí el programa seguiría mostrando el número o podría incluir otras lógicas */
-	}
-
-}
-/*==================[end of file]============================================*/

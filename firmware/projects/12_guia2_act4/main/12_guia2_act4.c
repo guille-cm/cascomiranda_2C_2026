@@ -17,13 +17,14 @@
  * Ejecución gradual de 12_guia2_act4.c @n 
  * [Guia 2, act 4 - 00 Prueba salida GPIO_0](https://youtube.com/shorts/sI_Fc5lGRFs)
  * [Guia 2, act 4 - 01 Puente entre GPIO_0 y GPIO_1](https://youtu.be/fAqSIl8k_Ok)
- * [Guia 2, act 4 - 02 ECG entre GPIO_0 y GPIO_1](https://youtu.be/gupTlS4Yn8)
+ * [Guia 2, act 4 - 02 ECG entre GPIO_0 y GPIO_1](https://youtu.be/91VUybTmg7U)
  * 
  * @section docu Documentación y Adjuntos
  * @see [Compilado](../01_compilado.png)
  * @see [Flasheado](../02_flasheado.png)
  * @see [Diagrama de Flujo](../diagrama_de_flujo_guia2_act4.png)
  * @see [Teleplot](../03_Teleplot_GPIO_0_a_GPIO_1.png)
+ * @see [Mi DAC](../04_mi_DAC.png)
  *
  *
  * @section changelog Changelog
@@ -45,8 +46,8 @@
 #include "analog_io_mcu.h"
 
 /*==================[macros and definitions]=================================*/
-/** @brief Período del temporizador para muestreo a 500Hz (2000 microsegundos) */
-#define CONFIG_BLINK_PERIOD_500HZ 2000
+/** @brief Período del temporizador para lograr 60 BPM con 231 muestras (1.000.000 us / 231) */
+#define CONFIG_BLINK_PERIOD_60BPM 4329
 
 /* Datos provistos en 02_ECG.txt */
 #define BUFFER_SIZE 231
@@ -140,7 +141,7 @@ void app_main(void) {
     /* Configuración de Timer A para disparar a 500 Hz (2 ms) */
     timer_config_t timer_muestreo = {
         .timer = TIMER_A,
-        .period = CONFIG_BLINK_PERIOD_500HZ,
+        .period = CONFIG_BLINK_PERIOD_60BPM,
         .func_p = FuncTimerMuestreo,
         .param_p = NULL
     };

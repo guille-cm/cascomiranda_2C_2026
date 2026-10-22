@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['a_5f1_0',['A_1',['../l293_8c.html#a3846181cf670f578e43772faa4bd3f75',1,'l293.c']]],
-  ['a_5f2_1',['A_2',['../l293_8c.html#a01e92799f99fb681f6db217e5fcce84d',1,'l293.c']]],
-  ['a_5f3_2',['A_3',['../l293_8c.html#a304db09cca37e303ccb2af2b5e669b84',1,'l293.c']]],
-  ['a_5f4_3',['A_4',['../l293_8c.html#a45c10761257fe9b986909363bec442a7',1,'l293.c']]],
-  ['adc_5fattenuation_4',['ADC_ATTENUATION',['../analog__io__mcu_8c.html#a011dd77da2406fbe9beab9a63e042af9',1,'analog_io_mcu.c']]],
-  ['adc_5fbitwidth_5',['ADC_BITWIDTH',['../analog__io__mcu_8c.html#a133ef7b7b4ad7fa713384c3ede19e5f4',1,'analog_io_mcu.c']]],
-  ['adv_5fconfig_5fflag_6',['ADV_CONFIG_FLAG',['../ble__mcu_8c.html#a5d2f5677517e7c8fd4ee8e2287ebec3b',1,'ble_mcu.c']]],
-  ['ang_5frange_7',['ANG_RANGE',['../servo__sg90_8c.html#a99ea7d692f294ea773d8dd1becfa5281',1,'servo_sg90.c']]],
-  ['architecture_5fid_8',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['att_5fsvc_5fhid_9',['ATT_SVC_HID',['../ble__hid__mcu_8c.html#a120ccad3a7e1b92bda154619fbb25ea8',1,'ble_hid_mcu.c']]]
+  ['battray_5fapp_5fid_0',['BATTRAY_APP_ID',['../ble__hid__mcu_8c.html#abc3e6e8d2476850b1308f64d6afeacaa',1,'ble_hid_mcu.c']]],
+  ['bit_5f0_1',['BIT_0',['../ws2812b_8c.html#add6d2693f5d356b091088437148f939b',1,'ws2812b.c']]],
+  ['bit_5f7_2',['BIT_7',['../ws2812b_8c.html#a4ad58adf84157aebea2a98cc9402212a',1,'ws2812b.c']]],
+  ['blank_5fporch_5fctrl_3',['BLANK_PORCH_CTRL',['../ili9341_8c.html#a3864c48a21a720ca2c2e3ea4cd904569',1,'ili9341.c']]],
+  ['blue_5fmsk_4',['BLUE_MSK',['../neopixel__stripe_8c.html#ab821869451c5b9d4dcaec88d8cb00b41',1,'neopixel_stripe.c']]],
+  ['blue_5foffset_5',['BLUE_OFFSET',['../neopixel__stripe_8c.html#a62e3dbb5365407c155ed8c6ec346e8e1',1,'neopixel_stripe.c']]],
+  ['bright_5foffset_6',['BRIGHT_OFFSET',['../neopixel__stripe_8c.html#a6c94edbcea161634d33b78aa6138f18a',1,'neopixel_stripe.c']]],
+  ['buffer_5fsize_7',['BUFFER_SIZE',['../12__guia2__act4_8c.html#a6b20d41d6252e9871430c242cb1a56e7',1,'12_guia2_act4.c']]]
 ];

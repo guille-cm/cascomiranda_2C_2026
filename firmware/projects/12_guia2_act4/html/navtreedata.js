@@ -52,13 +52,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "12__guia2__act4_8c.html",
-"globals.html",
-"group___b_l_e.html#ggaed078c594a86d36a49f51710e35c405bae4266b9ae5cd6533d9d65394466b0b2d",
-"group___i_c_o_n_s.html#gga945c9cb2ded81b38da222e91d09df40ba3d11911bdb45ee599c400c0156a9fc76",
-"group___m_p_u6050.html#ga348db70e788c76a40539599570fe6023",
-"group___m_p_u6050.html#gaa24a8f0d1285c74a94c7407a94d4be9b",
-"group___s_p_i.html#ga401e936d7c4a7ec7866bd93d6e3e3a8d",
-"spi__mcu_8c.html#a350c5eeed9a7697071fd6fcf68de2a39"
+"globals_eval_p.html",
+"group___b_u_z_z_e_r.html#ga441475178599565b3dd4572cebbdf28c",
+"group___i_c_o_n_s.html#gga945c9cb2ded81b38da222e91d09df40bad4e719719be4bb96d93b144c6ebf989f",
+"group___m_p_u6050.html#ga484dc2c64005652ff208840ddc8c1cff",
+"group___m_p_u6050.html#gab64e78a35138012905b39bce57bc11ad",
+"group___u_a_r_t.html#ga440f6a03dfd8b310f5fdf42c3bf20c42",
+"structdigital__io__t.html#a23aeec8098631547d58a797b2ad857c1"
 ];
 
 var SYNCONMSG = 'pulsar para deshabilitar sincronización';

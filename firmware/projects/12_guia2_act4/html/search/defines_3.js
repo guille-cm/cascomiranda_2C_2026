@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['c_5fversion_0',['C_VERSION',['../_c_make_c_compiler_id_8c.html#adaee3ee7c5a7a22451ea25e762e1d7d5',1,'CMakeCCompilerId.c']]],
-  ['char_5fdeclaration_5fsize_1',['CHAR_DECLARATION_SIZE',['../ble__hid__mcu_8c.html#a36dab879c60ad380569b702ffb0caabf',1,'ble_hid_mcu.c']]],
-  ['column_5faddr_5fset_2',['COLUMN_ADDR_SET',['../ili9341_8c.html#ac1ec6d9537a288a39f354c7133fb11c5',1,'ili9341.c']]],
-  ['compiler_5fid_3',['COMPILER_ID',['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['config_5fblink_5fperiod_5f500hz_4',['CONFIG_BLINK_PERIOD_500HZ',['../12__guia2__act4_8c.html#a82fe0ccb3a8476eec52aca4736e6f93b',1,'12_guia2_act4.c']]],
-  ['cxx_5fstd_5',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
+  ['dc_5f100_0',['DC_100',['../pwm__mcu_8c.html#a684bac99a5de1348b0cf76f80c31ae3d',1,'pwm_mcu.c']]],
+  ['dc_5fmax_1',['DC_MAX',['../pwm__mcu_8c.html#a701d2222601b84faafa94cb1909df104',1,'pwm_mcu.c']]],
+  ['disp_5ffun_5fctrl_2',['DISP_FUN_CTRL',['../ili9341_8c.html#ab17423783bb85a590da679a849ea5c57',1,'ili9341.c']]],
+  ['display_5finv_5foff_3',['DISPLAY_INV_OFF',['../ili9341_8c.html#a61f0dfed825350751d2c07c7c50a35ff',1,'ili9341.c']]],
+  ['display_5finv_5fon_4',['DISPLAY_INV_ON',['../ili9341_8c.html#aa9833fa99863f5c2648202085044620a',1,'ili9341.c']]],
+  ['display_5foff_5',['DISPLAY_OFF',['../ili9341_8c.html#ad2ec9831813c5e7069917aa4455af682',1,'ili9341.c']]],
+  ['display_5fon_6',['DISPLAY_ON',['../ili9341_8c.html#a5ae6b05b3e1559c97f0d1b2daaaa0ee4',1,'ili9341.c']]],
+  ['down_7',['DOWN',['../ili9341_8c.html#a4193cd1c8c2e6ebd0e056fa2364a663f',1,'ili9341.c']]],
+  ['driv_5ftim_5fctrl_5fa_8',['DRIV_TIM_CTRL_A',['../ili9341_8c.html#a12dc1e23eaceb49cbc5643e44ebcddac',1,'ili9341.c']]],
+  ['driv_5ftim_5fctrl_5fb_9',['DRIV_TIM_CTRL_B',['../ili9341_8c.html#a5d38d9987627bf2e19312456b3ca399b',1,'ili9341.c']]]
 ];

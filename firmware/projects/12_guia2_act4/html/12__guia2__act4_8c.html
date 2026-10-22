@@ -128,9 +128,9 @@ $(function(){initNavTree('12__guia2__act4_8c.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 defines</h2></td></tr>
-<tr class="memitem:a82fe0ccb3a8476eec52aca4736e6f93b" id="r_a82fe0ccb3a8476eec52aca4736e6f93b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82fe0ccb3a8476eec52aca4736e6f93b">CONFIG_BLINK_PERIOD_500HZ</a>&#160;&#160;&#160;2000</td></tr>
-<tr class="memdesc:a82fe0ccb3a8476eec52aca4736e6f93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período del temporizador para muestreo a 500Hz (2000 microsegundos)  <br /></td></tr>
-<tr class="separator:a82fe0ccb3a8476eec52aca4736e6f93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216f31e25a705d49710d8d0c8006b104" id="r_a216f31e25a705d49710d8d0c8006b104"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a216f31e25a705d49710d8d0c8006b104">CONFIG_BLINK_PERIOD_60BPM</a>&#160;&#160;&#160;4329</td></tr>
+<tr class="memdesc:a216f31e25a705d49710d8d0c8006b104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período del temporizador para lograr 60 BPM con 231 muestras (1.000.000 us / 231)  <br /></td></tr>
+<tr class="separator:a216f31e25a705d49710d8d0c8006b104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7" id="r_a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;231</td></tr>
 <tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -156,7 +156,7 @@ Variables</h2></td></tr>
 <h3><a class="anchor" id="autotoc_md0"></a>
 Videos de referencia subidos a YouTube:</h3>
 <p>Ejecución gradual de <a class="el" href="12__guia2__act4_8c.html" title="Osciloscopio digital por puerto serie utilizando ADC, DAC y UART.">12_guia2_act4.c</a> <br  />
- <a href="https://youtube.com/shorts/sI_Fc5lGRFs">Guia 2, act 4 - 00 Prueba salida GPIO_0</a> <a href="https://youtu.be/fAqSIl8k_Ok">Guia 2, act 4 - 01 Puente entre GPIO_0 y GPIO_1</a> <a href="https://youtu.be/gupTlS4Yn8">Guia 2, act 4 - 02 ECG entre GPIO_0 y GPIO_1</a></p>
+ <a href="https://youtube.com/shorts/sI_Fc5lGRFs">Guia 2, act 4 - 00 Prueba salida GPIO_0</a> <a href="https://youtu.be/fAqSIl8k_Ok">Guia 2, act 4 - 01 Puente entre GPIO_0 y GPIO_1</a> <a href="https://youtu.be/91VUybTmg7U">Guia 2, act 4 - 02 ECG entre GPIO_0 y GPIO_1</a></p>
 <h1><a class="anchor" id="docu"></a>
 Documentación y Adjuntos</h1>
 <dl class="section see"><dt>Ver también</dt><dd><a href="../01_compilado.png">Compilado</a> </dd>
@@ -165,7 +165,9 @@ Documentación y Adjuntos</h1>
 <dd>
 <a href="../diagrama_de_flujo_guia2_act4.png">Diagrama de Flujo</a> </dd>
 <dd>
-<a href="../03_Teleplot_GPIO_0_a_GPIO_1.png">Teleplot</a></dd></dl>
+<a href="../03_Teleplot_GPIO_0_a_GPIO_1.png">Teleplot</a> </dd>
+<dd>
+<a href="../04_mi_DAC.png">Mi DAC</a></dd></dl>
 <h1><a class="anchor" id="changelog"></a>
 Changelog</h1>
 <table class="markdownTable">
@@ -191,27 +193,27 @@ Changelog</h1>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00052">52</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00053">53</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
 </div>
 </div>
-<a id="a82fe0ccb3a8476eec52aca4736e6f93b" name="a82fe0ccb3a8476eec52aca4736e6f93b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82fe0ccb3a8476eec52aca4736e6f93b">&#9670;&#160;</a></span>CONFIG_BLINK_PERIOD_500HZ</h2>
+<a id="a216f31e25a705d49710d8d0c8006b104" name="a216f31e25a705d49710d8d0c8006b104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216f31e25a705d49710d8d0c8006b104">&#9670;&#160;</a></span>CONFIG_BLINK_PERIOD_60BPM</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CONFIG_BLINK_PERIOD_500HZ&#160;&#160;&#160;2000</td>
+          <td class="memname">#define CONFIG_BLINK_PERIOD_60BPM&#160;&#160;&#160;4329</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Período del temporizador para muestreo a 500Hz (2000 microsegundos) </p>
+<p>Período del temporizador para lograr 60 BPM con 231 muestras (1.000.000 us / 231) </p>
 
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00049">49</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00050">50</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00120">app_main()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00121">app_main()</a>.</p>
 
 </div>
 </div>
@@ -231,9 +233,9 @@ Changelog</h1>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00120">120</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00121">121</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
-<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00120">AnalogOutputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00049">CONFIG_BLINK_PERIOD_500HZ</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00089">FuncTimerMuestreo()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00055">main_task_handle</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00116">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00120">AnalogOutputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00050">CONFIG_BLINK_PERIOD_60BPM</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00090">FuncTimerMuestreo()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="12__guia2__act4_8c_source.html#l00056">main_task_handle</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00116">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
 
 </div>
 </div>
@@ -254,11 +256,11 @@ Changelog</h1>
 
 <p>ISR invocada por el Timer A a 500 Hz. Notifica a la tarea principal. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00089">89</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00090">90</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
-<p class="reference">Hace referencia a <a class="el" href="12__guia2__act4_8c_source.html#l00055">main_task_handle</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="12__guia2__act4_8c_source.html#l00056">main_task_handle</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00120">app_main()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00121">app_main()</a>.</p>
 
 </div>
 </div>
@@ -294,7 +296,7 @@ Changelog</h1>
 <div class="line">    74, 67, 71, 78, 72, 67, 73, 81, 77, 71, 75, 84, 79, 77, 77, 76, 76,</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00057">57</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00058">58</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
 </div>
 </div>
@@ -310,9 +312,9 @@ Changelog</h1>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00055">55</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="12__guia2__act4_8c_source.html#l00056">56</a> del archivo <a class="el" href="12__guia2__act4_8c_source.html">12_guia2_act4.c</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00120">app_main()</a> y <a class="el" href="12__guia2__act4_8c_source.html#l00089">FuncTimerMuestreo()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="12__guia2__act4_8c_source.html#l00121">app_main()</a> y <a class="el" href="12__guia2__act4_8c_source.html#l00090">FuncTimerMuestreo()</a>.</p>
 
 </div>
 </div>

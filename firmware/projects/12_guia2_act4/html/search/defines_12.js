@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vcom_5fctrl1_0',['VCOM_CTRL1',['../ili9341_8c.html#a6aaf215e34abc207bc8e2f607ec7c7b3',1,'ili9341.c']]],
-  ['vcom_5fctrl2_1',['VCOM_CTRL2',['../ili9341_8c.html#a64425812670d1aa05fd620e20bfc3df7',1,'ili9341.c']]]
+  ['wait_5fmax_0',['WAIT_MAX',['../hc__sr04_8c.html#a514caef8617b9e64da34797c47f20421',1,'hc_sr04.c']]],
+  ['write_5fctrl_5fdisp_1',['WRITE_CTRL_DISP',['../ili9341_8c.html#a47a04474c8c4fa05bd3ca427346a7cc1',1,'ili9341.c']]],
+  ['write_5fdisp_5fbright_2',['WRITE_DISP_BRIGHT',['../ili9341_8c.html#a65c7150109661fbdca94d5cf724c307b',1,'ili9341.c']]]
 ];

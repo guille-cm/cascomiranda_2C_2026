@@ -1,12 +1,12 @@
 var ble__hid__mcu_8c =
 [
     [ "esp_hidd_cb_param_t", "unionesp__hidd__cb__param__t.html", "unionesp__hidd__cb__param__t" ],
-    [ "hidd_init_finish_evt_param", "structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param" ],
-    [ "hidd_deinit_finish_evt_param", "structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param" ],
-    [ "hidd_connect_evt_param", "structesp__hidd__cb__param__t_1_1hidd__connect__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__connect__evt__param" ],
-    [ "hidd_disconnect_evt_param", "structesp__hidd__cb__param__t_1_1hidd__disconnect__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__disconnect__evt__param" ],
-    [ "hidd_vendor_write_evt_param", "structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param" ],
-    [ "hidd_led_write_evt_param", "structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_init_finish_evt_param", "structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__init__finish__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_deinit_finish_evt_param", "structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__deinit__finish__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_connect_evt_param", "structesp__hidd__cb__param__t_1_1hidd__connect__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__connect__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_disconnect_evt_param", "structesp__hidd__cb__param__t_1_1hidd__disconnect__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__disconnect__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_vendor_write_evt_param", "structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param" ],
+    [ "esp_hidd_cb_param_t::hidd_led_write_evt_param", "structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param.html", "structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param" ],
     [ "hid_report_map_t", "structhid__report__map__t.html", "structhid__report__map__t" ],
     [ "hid_dev_cfg_t", "structhid__dev__cfg__t.html", "structhid__dev__cfg__t" ],
     [ "hidd_feature_t", "structhidd__feature__t.html", "structhidd__feature__t" ],

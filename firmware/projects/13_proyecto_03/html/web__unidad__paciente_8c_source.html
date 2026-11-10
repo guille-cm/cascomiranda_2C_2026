@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/web_unidad_paciente.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('web__unidad__paciente_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">web_unidad_paciente.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="web__unidad__paciente_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="web__unidad__paciente_8h.html">web_unidad_paciente.h</a>&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="microsd__datalogger_8h.html">microsd_datalogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;esp_wifi.h&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;esp_event.h&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;esp_netif.h&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;esp_http_server.h&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;nvs_flash.h&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/*==================[internal data declaration]==============================*/</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">static</span> <a class="code hl_struct" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> s_datos_actuales = {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    .<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">fc_bpm</a> = 60,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    .fr_rpm = 15,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    .alerta_fc = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    .alerta_fr = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    .modo_sim_local = 0,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    .temp_decimas_c = 220,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    .hum_decimas_pct = 500,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    .mq3_precalentado = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    .mq3_alcohol_detectado = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    .mq3_segundos_bajo = 0,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    .pir_movimiento = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    .pir_contador_eventos = 0,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    .alertas_fifo_cant = 0,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    .alerta_fifo_actual = <span class="stringliteral">&quot;SIN ALERTAS&quot;</span>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    .sd_montada = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    .sd_registros_totales = 0,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    .fecha_actual = <span class="stringliteral">&quot;2026-01-01&quot;</span>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    .hora_actual = <span class="stringliteral">&quot;00:00:00&quot;</span>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    .paciente_requiere_atencion = <span class="keyword">false</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_ip_asignada[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a> + 1] = <span class="stringliteral">&quot;Conectando WiFi&quot;</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_nombre_paciente[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a> + 1] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_mensaje_activo[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a> + 1] = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_conectado_wifi = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_req_clear_alert = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_req_warn_3s = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_req_play_voice = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">static</span> portMUX_TYPE s_web_spinlock = portMUX_INITIALIZER_UNLOCKED;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_json_status_buf[640];</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_json_history_buf[3072];</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> INDEX_HTML[] =</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="stringliteral">&quot;&lt;!DOCTYPE html&gt;&lt;html lang=&#39;es&#39;&gt;&lt;head&gt;&lt;meta charset=&#39;UTF-8&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="stringliteral">&quot;&lt;meta name=&#39;viewport&#39; content=&#39;width=device-width,initial-scale=1.0&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="stringliteral">&quot;&lt;title&gt;Monitor Unidad de Paciente - Unidad 1&lt;/title&gt;&quot;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="stringliteral">&quot;&lt;style&gt;&quot;</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="stringliteral">&quot;body{font-family:Arial,sans-serif;background:#0f172a;color:#f8fafc;margin:0;padding:16px;}&quot;</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="stringliteral">&quot;.container{max-width:880px;margin:auto;}&quot;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="stringliteral">&quot;.header{background:#1e293b;padding:16px 20px;border-radius:10px;border-left:5px solid #38bdf8;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}&quot;</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="stringliteral">&quot;h1{margin:0;font-size:1.35rem;color:#38bdf8;}&quot;</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="stringliteral">&quot;.badge{padding:6px 12px;border-radius:6px;font-weight:bold;font-size:0.85rem;display:inline-flex;align-items:center;gap:6px;}&quot;</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="stringliteral">&quot;.ok{background:#065f46;color:#6ee7b7;}&quot;</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="stringliteral">&quot;.alerta{background:#991b1b;color:#fca5a5;animation:bl 1s infinite;}&quot;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="stringliteral">&quot;@keyframes bl{50%{opacity:0.4;}}&quot;</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="stringliteral">&quot;@keyframes beat{0%{transform:scale(1);}15%{transform:scale(1.35);}30%{transform:scale(1);}45%{transform:scale(1.2);}60%{transform:scale(1);}}&quot;</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="stringliteral">&quot;@keyframes breathe{0%{transform:scale(1);opacity:0.65;}50%{transform:scale(1.28);opacity:1;}100%{transform:scale(1);opacity:0.65;}}&quot;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="stringliteral">&quot;.ico-beat{display:inline-block;transform-origin:center;}&quot;</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="stringliteral">&quot;.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:16px;}&quot;</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="stringliteral">&quot;.card{background:#1e293b;padding:16px;border-radius:10px;border:1px solid #334155;margin-bottom:14px;}&quot;</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="stringliteral">&quot;.card h3{margin:0 0 10px 0;font-size:0.92rem;color:#94a3b8;letter-spacing:0.5px;}&quot;</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="stringliteral">&quot;.val-row{display:flex;justify-content:space-between;align-items:center;margin:4px 0;}&quot;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="stringliteral">&quot;.val{font-size:2.0rem;font-weight:bold;line-height:1;}&quot;</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="stringliteral">&quot;.sub{font-size:0.8rem;color:#64748b;}&quot;</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="stringliteral">&quot;.tag-amb{display:inline-block;padding:3px 9px;border-radius:5px;font-weight:bold;font-size:0.9rem;transition:all 0.3s;}&quot;</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="stringliteral">&quot;.fifo-alert-box{text-align:center;margin:12px 0;}&quot;</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="stringliteral">&quot;.patient-sub-block{border-top:1px solid #334155;padding-top:10px;margin-top:10px;}&quot;</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="stringliteral">&quot;input,select,button{padding:9px 12px;border-radius:6px;border:1px solid #475669;background:#0f172a;color:#fff;font-size:0.9rem;margin-top:6px;}&quot;</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="stringliteral">&quot;button{background:#0284c7;border:none;cursor:pointer;font-weight:bold;margin-right:6px;}&quot;</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="stringliteral">&quot;button:hover{background:#0369a1;}&quot;</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="stringliteral">&quot;.btn-warn{background:#d97706;}.btn-warn:hover{background:#b45309;}&quot;</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="stringliteral">&quot;.btn-danger{background:#dc2626;}.btn-danger:hover{background:#b91c1c;}&quot;</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="stringliteral">&quot;.btn-voice{background:#7c3aed;}.btn-voice:hover{background:#6d28d9;}&quot;</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="stringliteral">&quot;.btn-sd{background:#059669;}.btn-sd:hover{background:#047857;}&quot;</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="stringliteral">&quot;.row-ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px;}&quot;</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="stringliteral">&quot;.chart-box{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px;margin-top:10px;}&quot;</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="stringliteral">&quot;.chart-title{font-size:0.85rem;font-weight:bold;color:#cbd5e1;margin-bottom:4px;display:flex;justify-content:space-between;}&quot;</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="stringliteral">&quot;canvas{width:100%;height:150px;display:block;}&quot;</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="stringliteral">&quot;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&#39;container&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="stringliteral">&quot;&lt;div class=&#39;header&#39;&gt;&lt;div&gt;&lt;h1&gt;Monitor Unidad de Paciente&lt;/h1&gt;&quot;</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="stringliteral">&quot;&lt;div class=&#39;sub&#39; id=&#39;sim_txt&#39;&gt;Conectando con ESP32-C6 de Guille CM...&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="stringliteral">&quot;&lt;div id=&#39;global_badge&#39; class=&#39;badge ok&#39;&gt;SISTEMA NORMAL&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="stringliteral">&quot;&lt;div class=&#39;grid&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">/* --- RECUADRO UNIFICADO: FC + FR + ESTADO DEL PACIENTE --- */</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="stringliteral">&quot;&lt;div class=&#39;card&#39; style=&#39;margin-bottom:0&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="stringliteral">&quot;&lt;div&gt;&lt;h3&gt;FRECUENCIA CARDÍACA&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="stringliteral">&quot;&lt;div class=&#39;val-row&#39;&gt;&lt;div class=&#39;val&#39; id=&#39;fc_val&#39;&gt;-- bpm&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="stringliteral">&quot;&lt;div id=&#39;fc_st&#39; class=&#39;badge ok&#39;&gt;&lt;span id=&#39;ico_heart&#39; class=&#39;ico-beat&#39;&gt;&amp;#10084;&lt;/span&gt;&lt;span id=&#39;fc_txt&#39;&gt;NORMAL&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="stringliteral">&quot;&lt;div class=&#39;sub&#39;&gt;Rango normal: 50 - 130 bpm&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="stringliteral">&quot;&lt;div class=&#39;patient-sub-block&#39;&gt;&lt;h3&gt;FRECUENCIA RESPIRATORIA&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="stringliteral">&quot;&lt;div class=&#39;val-row&#39;&gt;&lt;div class=&#39;val&#39; id=&#39;fr_val&#39;&gt;-- rpm&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="stringliteral">&quot;&lt;div id=&#39;fr_st&#39; class=&#39;badge ok&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="stringliteral">&quot;&lt;svg id=&#39;ico_lung&#39; class=&#39;ico-beat&#39; viewBox=&#39;0 0 24 24&#39; width=&#39;16&#39; height=&#39;16&#39; fill=&#39;none&#39; stroke=&#39;currentColor&#39; stroke-width=&#39;2.2&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="stringliteral">&quot;&lt;path d=&#39;M12 3v8&#39;/&gt;&lt;path d=&#39;M8 6c-2.4 0-4.2 1.8-4.2 4.5 0 3.2 1.8 6.5 4.2 7.5 1 0 1.8-1 1.8-2V8&#39;/&gt;&lt;path d=&#39;M16 6c2.4 0 4.2 1.8 4.2 4.5 0 3.2-1.8 6.5-4.2 7.5-1 0-1.8-1-1.8-2V8&#39;/&gt;&quot;</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="stringliteral">&quot;&lt;/svg&gt;&lt;span id=&#39;fr_txt&#39;&gt;NORMAL&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="stringliteral">&quot;&lt;div class=&#39;sub&#39;&gt;Rango normal: 12 - 20 rpm&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="stringliteral">&quot;&lt;div class=&#39;patient-sub-block&#39;&gt;&lt;h3&gt;ESTADO DEL PACIENTE&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="stringliteral">&quot;&lt;div class=&#39;val-row&#39;&gt;&lt;div style=&#39;font-size:1.15rem;font-weight:bold;&#39; id=&#39;pat_st_title&#39;&gt;Condición General&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="stringliteral">&quot;&lt;div id=&#39;pat_st_badge&#39; class=&#39;badge ok&#39;&gt;&lt;span id=&#39;pat_emoji&#39; class=&#39;ico-beat&#39; style=&#39;font-size:1.1rem;&#39;&gt;&amp;#128522;&lt;/span&gt;&lt;span id=&#39;pat_st_txt&#39;&gt;NORMAL&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="stringliteral">&quot;&lt;div class=&#39;sub&#39; id=&#39;pat_sub_txt&#39;&gt;Paciente estable en reposo&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="stringliteral">&quot;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">/* --- TARJETA AMBIENTE APILADA --- */</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="stringliteral">&quot;&lt;div class=&#39;card&#39; style=&#39;margin-bottom:0&#39;&gt;&lt;h3&gt;AMBIENTE&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="stringliteral">&quot;&lt;div style=&#39;margin:7px 0&#39;&gt;Temperatura: &lt;span id=&#39;tag_t&#39; class=&#39;tag-amb ok&#39;&gt;&lt;b id=&#39;t_val&#39;&gt;--&lt;/b&gt; °C&lt;/span&gt; &lt;span class=&#39;sub&#39;&gt;(15-40°C)&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="stringliteral">&quot;&lt;div style=&#39;margin:7px 0&#39;&gt;Humedad: &lt;span id=&#39;tag_h&#39; class=&#39;tag-amb ok&#39;&gt;&lt;b id=&#39;h_val&#39;&gt;--&lt;/b&gt; %&lt;/span&gt; &lt;span class=&#39;sub&#39;&gt;(30-80%)&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="stringliteral">&quot;&lt;div style=&#39;margin:7px 0&#39;&gt;Gases inflamables: &lt;span id=&#39;tag_g&#39; class=&#39;tag-amb ok&#39;&gt;&lt;b id=&#39;g_val&#39;&gt;--&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="stringliteral">&quot;&lt;div style=&#39;margin:7px 0&#39;&gt;Movimiento personas:&lt;br&gt;&lt;span id=&#39;tag_p&#39; class=&#39;tag-amb ok&#39; style=&#39;margin-top:4px&#39;&gt;&lt;b id=&#39;p_val&#39;&gt;SIN MOV.&lt;/b&gt; (Eventos: &lt;b id=&#39;p_cnt&#39;&gt;0&lt;/b&gt;)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="stringliteral">&quot;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">/* --- IDENTIFICACIÓN PACIENTE Y MENSAJES LCD --- */</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="stringliteral">&quot;&lt;div class=&#39;card&#39;&gt;&lt;h3&gt;IDENTIFICACIÓN DE PACIENTE Y MENSAJES A DISPLAY LCD 16x2&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="stringliteral">&quot;&lt;div class=&#39;sub&#39;&gt;Texto base Fila 0: &lt;b id=&#39;lcd_f0&#39; style=&#39;color:#38bdf8&#39;&gt;BIENVENIDO!&lt;/b&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="stringliteral">&quot;&lt;div class=&#39;row-ctrl&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="stringliteral">&quot;&lt;input type=&#39;text&#39; id=&#39;pat_in&#39; maxlength=&#39;16&#39; placeholder=&#39;Nombre Paciente (vacío = IP)&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="stringliteral">&quot;&lt;button onclick=&#39;sendText(\&quot;/api/patient\&quot;,\&quot;pat_in\&quot;)&#39;&gt;Guardar Paciente&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="stringliteral">&quot;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="stringliteral">&quot;&lt;div class=&#39;row-ctrl&#39; style=&#39;margin-top:10px&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="stringliteral">&quot;&lt;select id=&#39;msg_sel&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="stringliteral">&quot;&lt;option value=&#39;&#39;&gt;-- Mostrar Paciente / IP --&lt;/option&gt;&quot;</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="stringliteral">&quot;&lt;option value=&#39;AYUDA EN CAMINO&#39;&gt;AYUDA EN CAMINO (y Voz LPCM)&lt;/option&gt;&quot;</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="stringliteral">&quot;&lt;option value=&#39;CONTROL MEDICO&#39;&gt;CONTROL MEDICO&lt;/option&gt;&quot;</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="stringliteral">&quot;&lt;option value=&#39;SUMINISTRAR MED&#39;&gt;SUMINISTRAR MED&lt;/option&gt;&quot;</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="stringliteral">&quot;&lt;option value=&#39;SILENCIO SALA&#39;&gt;SILENCIO SALA&lt;/option&gt;&quot;</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="stringliteral">&quot;&lt;/select&gt;&quot;</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="stringliteral">&quot;&lt;button onclick=&#39;sendText(\&quot;/api/msg\&quot;,\&quot;msg_sel\&quot;)&#39;&gt;Enviar a Fila 0 LCD&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="stringliteral">&quot;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="comment">/* --- COLA FIFO CON ALERTA CENTRADA --- */</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="stringliteral">&quot;&lt;div class=&#39;card&#39;&gt;&lt;h3&gt;COLA FIFO DE ALARMAS Y AVISO SONORO&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="stringliteral">&quot;&lt;div style=&#39;margin-bottom:4px&#39;&gt;Alertas en Cola FIFO: &lt;b id=&#39;fifo_cnt&#39;&gt;0&lt;/b&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="stringliteral">&quot;&lt;div style=&#39;margin-bottom:4px&#39;&gt;Primera alerta a atender:&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="stringliteral">&quot;&lt;div class=&#39;fifo-alert-box&#39;&gt;&lt;b id=&#39;fifo_top&#39; style=&#39;color:#00e676;font-size:1.25rem;letter-spacing:1px;&#39;&gt;SIN ALERTAS&lt;/b&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="stringliteral">&quot;&lt;div class=&#39;row-ctrl&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="stringliteral">&quot;&lt;button class=&#39;btn-danger&#39; onclick=&#39;postAct(\&quot;/api/clear_alert\&quot;)&#39;&gt;Desactivar Alerta más Antigua (FIFO)&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="stringliteral">&quot;&lt;button class=&#39;btn-warn&#39; onclick=&#39;postAct(\&quot;/api/sound_warn\&quot;)&#39;&gt;Tono Advertencia (3s)&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="stringliteral">&quot;&lt;button class=&#39;btn-voice&#39; onclick=&#39;postAct(\&quot;/api/play_voice\&quot;)&#39;&gt;Reproducir Voz LPCM (&#39;Ayuda en camino&#39;)&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="stringliteral">&quot;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment">/* --- REGISTRO EN MICROSD Y GRÁFICAS --- */</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="stringliteral">&quot;&lt;div class=&#39;card&#39;&gt;&lt;h3&gt;REGISTRO EN MICROSD Y GRÁFICAS HISTÓRICAS&lt;/h3&gt;&quot;</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="stringliteral">&quot;&lt;div style=&#39;margin-bottom:6px&#39;&gt;Estado MicroSD: &lt;span id=&#39;sd_st&#39; class=&#39;tag-amb ok&#39;&gt;--&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="stringliteral">&quot;&lt;div style=&#39;margin-bottom:6px&#39;&gt;Registros grabados: &lt;b id=&#39;sd_cnt&#39;&gt;0&lt;/b&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="stringliteral">&quot;&lt;div style=&#39;margin-bottom:10px&#39;&gt;Reloj ESP32: &lt;b id=&#39;rtc_txt&#39; style=&#39;color:#38bdf8&#39;&gt;--&lt;/b&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="stringliteral">&quot;&lt;div class=&#39;row-ctrl&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="stringliteral">&quot;&lt;input type=&#39;datetime-local&#39; id=&#39;dt_in&#39; step=&#39;1&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="stringliteral">&quot;&lt;button onclick=&#39;syncTimeManual()&#39;&gt;Sincronizar Fecha y Hora&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="stringliteral">&quot;&lt;button class=&#39;btn-sd&#39; onclick=&#39;loadCharts()&#39;&gt;Consultar / Actualizar Gráficas desde MicroSD&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="stringliteral">&quot;&lt;button onclick=&#39;window.location.href=\&quot;/api/sd_csv\&quot;&#39;&gt;Descargar DATALOG.CSV&lt;/button&gt;&quot;</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="stringliteral">&quot;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="stringliteral">&quot;&lt;div id=&#39;charts_wrap&#39; style=&#39;display:none;margin-top:12px&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="stringliteral">&quot;&lt;div class=&#39;chart-box&#39;&gt;&lt;div class=&#39;chart-title&#39;&gt;&lt;span&gt;Frecuencia Cardíaca (bpm) - (50-130)&lt;/span&gt;&lt;/div&gt;&lt;canvas id=&#39;cv_fc&#39; width=&#39;800&#39; height=&#39;150&#39;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="stringliteral">&quot;&lt;div class=&#39;chart-box&#39;&gt;&lt;div class=&#39;chart-title&#39;&gt;&lt;span&gt;Frecuencia Respiratoria (rpm) - (12-20)&lt;/span&gt;&lt;/div&gt;&lt;canvas id=&#39;cv_fr&#39; width=&#39;800&#39; height=&#39;150&#39;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="stringliteral">&quot;&lt;div class=&#39;chart-box&#39;&gt;&lt;div class=&#39;chart-title&#39;&gt;&lt;span&gt;Temperatura Ambiente (°C) - (15-40)&lt;/span&gt;&lt;/div&gt;&lt;canvas id=&#39;cv_t&#39; width=&#39;800&#39; height=&#39;150&#39;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="stringliteral">&quot;&lt;div class=&#39;chart-box&#39;&gt;&lt;div class=&#39;chart-title&#39;&gt;&lt;span&gt;Humedad Relativa (%) - (30-80)&lt;/span&gt;&lt;/div&gt;&lt;canvas id=&#39;cv_h&#39; width=&#39;800&#39; height=&#39;150&#39;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="stringliteral">&quot;&lt;div class=&#39;chart-box&#39;&gt;&lt;div class=&#39;chart-title&#39;&gt;&quot;</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="stringliteral">&quot;&lt;div style=&#39;display:flex; justify-content:space-between; margin-bottom:4px;&#39;&gt;&lt;span&gt;Gases Inflamables &lt;span style=&#39;color:#bfbfbf&#39;&gt;(Gris)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="stringliteral">&quot;&lt;div style=&#39;display:flex; justify-content:space-between;&#39;&gt;&lt;span&gt;Movimiento &lt;span style=&#39;color:#ff0000&#39;&gt;(Rojo)&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="stringliteral">&quot;&lt;/div&gt;&lt;canvas id=&#39;cv_ev&#39; width=&#39;800&#39; height=&#39;140&#39;&gt;&lt;/canvas&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="stringliteral">&quot;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&quot;</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="stringliteral">&quot;&lt;script&gt;&quot;</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="stringliteral">&quot;let autoSynced=false;&quot;</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="stringliteral">&quot;async function syncEpoch(sec){await fetch(&#39;/api/time&#39;,{method:&#39;POST&#39;,headers:{&#39;Content-Type&#39;:&#39;text/plain&#39;},body:String(sec)});}&quot;</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="stringliteral">&quot;function syncTimeManual(){const v=document.getElementById(&#39;dt_in&#39;).value;if(!v)return;&quot;</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="stringliteral">&quot;const d=new Date(v);const localSec=Math.floor((d.getTime()-d.getTimezoneOffset()*60000)/1000);syncEpoch(localSec);upd();}&quot;</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="stringliteral">&quot;async function upd(){&quot;</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="stringliteral">&quot;try{const r=await fetch(&#39;/api/status&#39;);const d=await r.json();&quot;</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="stringliteral">&quot;if(!autoSynced&amp;&amp;!d.rtc_ok){autoSynced=true;const now=new Date();&quot;</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="stringliteral">&quot;const localSec=Math.floor((now.getTime()-now.getTimezoneOffset()*60000)/1000);syncEpoch(localSec);}&quot;</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="stringliteral">&quot;document.getElementById(&#39;fc_val&#39;).innerText=d.fc+&#39; bpm&#39;;&quot;</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="stringliteral">&quot;document.getElementById(&#39;fr_val&#39;).innerText=d.fr+&#39; rpm&#39;;&quot;</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="stringliteral">&quot;document.getElementById(&#39;t_val&#39;).innerText=d.temp;&quot;</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="stringliteral">&quot;document.getElementById(&#39;h_val&#39;).innerText=d.hum;&quot;</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="stringliteral">&quot;document.getElementById(&#39;p_cnt&#39;).innerText=d.pir_n;&quot;</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="stringliteral">&quot;document.getElementById(&#39;lcd_f0&#39;).innerText=d.fila0;&quot;</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="stringliteral">&quot;document.getElementById(&#39;fifo_cnt&#39;).innerText=d.fifo_n;&quot;</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="stringliteral">&quot;document.getElementById(&#39;sd_cnt&#39;).innerText=d.sd_n;&quot;</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="stringliteral">&quot;document.getElementById(&#39;rtc_txt&#39;).innerText=d.fecha+&#39; &#39;+d.hora;&quot;</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="stringliteral">&quot;const sdB=document.getElementById(&#39;sd_st&#39;);&quot;</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="stringliteral">&quot;sdB.className=d.sd_ok?&#39;tag-amb ok&#39;:&#39;tag-amb alerta&#39;;&quot;</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="stringliteral">&quot;sdB.innerText=d.sd_ok?&#39;MONTADA (FAT16)&#39;:&#39;NO DETECTADA&#39;;&quot;</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="stringliteral">&quot;const iH=document.getElementById(&#39;ico_heart&#39;);&quot;</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="stringliteral">&quot;if(d.fc&gt;0){const s=(60/d.fc).toFixed(2);iH.style.animation=&#39;beat &#39;+s+&#39;s infinite ease-in-out&#39;;}else{iH.style.animation=&#39;none&#39;;}&quot;</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="stringliteral">&quot;const iL=document.getElementById(&#39;ico_lung&#39;);&quot;</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="stringliteral">&quot;if(d.fr&gt;0){const s=(60/d.fr).toFixed(2);iL.style.animation=&#39;breathe &#39;+s+&#39;s infinite ease-in-out&#39;;}else{iL.style.animation=&#39;none&#39;;}&quot;</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="stringliteral">&quot;const fcB=document.getElementById(&#39;fc_st&#39;);&quot;</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="stringliteral">&quot;fcB.className=d.al_fc?&#39;badge alerta&#39;:&#39;badge ok&#39;;&quot;</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="stringliteral">&quot;document.getElementById(&#39;fc_txt&#39;).innerText=d.al_fc?&#39;ALERTA! ECG&#39;:&#39;NORMAL&#39;;&quot;</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="stringliteral">&quot;const frB=document.getElementById(&#39;fr_st&#39;);&quot;</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="stringliteral">&quot;frB.className=d.al_fr?&#39;badge alerta&#39;:&#39;badge ok&#39;;&quot;</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="stringliteral">&quot;document.getElementById(&#39;fr_txt&#39;).innerText=d.al_fr?&#39;ALERTA! RESPIRAT&#39;:&#39;NORMAL&#39;;&quot;</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">/* Estado del Paciente con Emoji */</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="stringliteral">&quot;const pBadge=document.getElementById(&#39;pat_st_badge&#39;);&quot;</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="stringliteral">&quot;const pEmoji=document.getElementById(&#39;pat_emoji&#39;);&quot;</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="stringliteral">&quot;const pTxt=document.getElementById(&#39;pat_st_txt&#39;);&quot;</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="stringliteral">&quot;const pSub=document.getElementById(&#39;pat_sub_txt&#39;);&quot;</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="stringliteral">&quot;if(d.pat_req){&quot;</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="stringliteral">&quot;pBadge.className=&#39;badge alerta&#39;;&quot;</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="stringliteral">&quot;pEmoji.innerHTML=&#39;&amp;#128543;&#39;;&quot;</span> <span class="comment">// Cara triste / preocupada</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="stringliteral">&quot;pTxt.innerText=&#39;ATENCIÓN&#39;;&quot;</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="stringliteral">&quot;pSub.innerText=&#39;Paciente requiere atención!&#39;;&quot;</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="stringliteral">&quot;pSub.style.color=&#39;#fca5a5&#39;;&quot;</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="stringliteral">&quot;}else{&quot;</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="stringliteral">&quot;pBadge.className=&#39;badge ok&#39;;&quot;</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="stringliteral">&quot;pEmoji.innerHTML=&#39;&amp;#128522;&#39;;&quot;</span> <span class="comment">// Cara feliz / normal</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="stringliteral">&quot;pTxt.innerText=&#39;NORMAL&#39;;&quot;</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="stringliteral">&quot;pSub.innerText=&#39;Paciente estable en reposo&#39;;&quot;</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="stringliteral">&quot;pSub.style.color=&#39;#64748b&#39;;&quot;</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="stringliteral">&quot;}&quot;</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="stringliteral">&quot;const tNum=parseFloat(d.temp);const tagT=document.getElementById(&#39;tag_t&#39;);&quot;</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="stringliteral">&quot;tagT.className=(!isNaN(tNum)&amp;&amp;(tNum&lt;15||tNum&gt;40))?&#39;tag-amb alerta&#39;:&#39;tag-amb ok&#39;;&quot;</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="stringliteral">&quot;const hNum=parseFloat(d.hum);const tagH=document.getElementById(&#39;tag_h&#39;);&quot;</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="stringliteral">&quot;tagH.className=(!isNaN(hNum)&amp;&amp;(hNum&lt;30||hNum&gt;80))?&#39;tag-amb alerta&#39;:&#39;tag-amb ok&#39;;&quot;</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="stringliteral">&quot;const tagG=document.getElementById(&#39;tag_g&#39;);&quot;</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="stringliteral">&quot;if(!d.mq3_rdy){tagG.className=&#39;tag-amb ok&#39;;document.getElementById(&#39;g_val&#39;).innerText=&#39;Calentando (1 min)&#39;;}&quot;</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="stringliteral">&quot;else if(d.mq3_al){tagG.className=&#39;tag-amb alerta&#39;;document.getElementById(&#39;g_val&#39;).innerText=&#39;ALERTA GASES (&#39;+d.mq3_s+&#39;s)&#39;;}&quot;</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="stringliteral">&quot;else{tagG.className=&#39;tag-amb ok&#39;;document.getElementById(&#39;g_val&#39;).innerText=&#39;Normal&#39;;}&quot;</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="stringliteral">&quot;const tagP=document.getElementById(&#39;tag_p&#39;);&quot;</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="stringliteral">&quot;if(d.pir){tagP.className=&#39;tag-amb alerta&#39;;document.getElementById(&#39;p_val&#39;).innerText=&#39;! MOVIMIENTO !&#39;;}&quot;</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="stringliteral">&quot;else{tagP.className=&#39;tag-amb ok&#39;;document.getElementById(&#39;p_val&#39;).innerText=&#39;SIN MOV.&#39;;}&quot;</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="stringliteral">&quot;const fTop=document.getElementById(&#39;fifo_top&#39;);&quot;</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="stringliteral">&quot;fTop.innerText=d.fifo_txt;fTop.style.color=(d.fifo_n&gt;0)?&#39;#fca5a5&#39;:&#39;#00e676&#39;;&quot;</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="stringliteral">&quot;const gB=document.getElementById(&#39;global_badge&#39;);&quot;</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="stringliteral">&quot;if(d.fifo_n&gt;0||d.al_fc||d.al_fr||d.pat_req){gB.className=&#39;badge alerta&#39;;gB.innerText=&#39;ALERTA ACTIVA (&#39;+d.fifo_n+&#39;)&#39;;}&quot;</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="stringliteral">&quot;else{gB.className=&#39;badge ok&#39;;gB.innerText=&#39;SISTEMA NORMAL&#39;;}&quot;</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="stringliteral">&quot;const sm=[&#39;Ajuste local inactivo&#39;,&#39;Tecla 1 activa: Simulando FC&#39;,&#39;Tecla 2 activa: Simulando FR&#39;];&quot;</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="stringliteral">&quot;document.getElementById(&#39;sim_txt&#39;).innerText=&#39;IP: &#39;+d.ip+&#39; | &#39;+sm[d.sim||0];&quot;</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="stringliteral">&quot;}catch(e){}}&quot;</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="stringliteral">&quot;function drawPlot(cid,labels,vals,yMin,yMax,color,limLow,limHigh){&quot;</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="stringliteral">&quot;const cv=document.getElementById(cid);const ctx=cv.getContext(&#39;2d&#39;);&quot;</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="stringliteral">&quot;const W=cv.width,H=cv.height,padL=42,padR=16,padT=14,padB=26;&quot;</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="stringliteral">&quot;const pW=W-padL-padR,pH=H-padT-padB;&quot;</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="stringliteral">&quot;ctx.clearRect(0,0,W,H);ctx.strokeStyle=&#39;#1e293b&#39;;ctx.fillStyle=&#39;#94a3b8&#39;;ctx.font=&#39;11px Arial&#39;;&quot;</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="stringliteral">&quot;for(let i=0;i&lt;=4;i++){const y=padT+(pH*i/4);const v=(yMax-(yMax-yMin)*(i/4)).toFixed(0);&quot;</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="stringliteral">&quot;ctx.beginPath();ctx.moveTo(padL,y);ctx.lineTo(W-padR,y);ctx.stroke();ctx.fillText(v,6,y+4);}&quot;</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="stringliteral">&quot;if(limLow!==null){const yL=padT+pH*(1-(limLow-yMin)/(yMax-yMin));ctx.strokeStyle=&#39;#ef444488&#39;;ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(padL,yL);ctx.lineTo(W-padR,yL);ctx.stroke();}&quot;</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="stringliteral">&quot;if(limHigh!==null){const yH=padT+pH*(1-(limHigh-yMin)/(yMax-yMin));ctx.strokeStyle=&#39;#ef444488&#39;;ctx.setLineDash([4,4]);ctx.beginPath();ctx.moveTo(padL,yH);ctx.lineTo(W-padR,yH);ctx.stroke();}&quot;</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="stringliteral">&quot;ctx.setLineDash([]);if(vals.length===0)return;&quot;</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="stringliteral">&quot;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();&quot;</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="stringliteral">&quot;for(let i=0;i&lt;vals.length;i++){const x=padL+(vals.length&gt;1?(pW*i/(vals.length-1)):pW/2);&quot;</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="stringliteral">&quot;let cl=Math.max(yMin,Math.min(yMax,vals[i]));const y=padT+pH*(1-(cl-yMin)/(yMax-yMin));&quot;</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="stringliteral">&quot;if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();&quot;</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="stringliteral">&quot;for(let i=0;i&lt;vals.length;i++){const x=padL+(vals.length&gt;1?(pW*i/(vals.length-1)):pW/2);&quot;</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="stringliteral">&quot;let cl=Math.max(yMin,Math.min(yMax,vals[i]));const y=padT+pH*(1-(cl-yMin)/(yMax-yMin));&quot;</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="stringliteral">&quot;ctx.fillStyle=(limLow!==null&amp;&amp;(vals[i]&lt;limLow||vals[i]&gt;limHigh))?&#39;#ef4444&#39;:color;&quot;</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="stringliteral">&quot;ctx.beginPath();ctx.arc(x,y,3.8,0,Math.PI*2);ctx.fill();&quot;</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="stringliteral">&quot;if(i===0||i===vals.length-1||i%Math.max(1,Math.floor(vals.length/5))===0){ctx.fillStyle=&#39;#94a3b8&#39;;ctx.fillText(labels[i],x-20,H-6);}}}&quot;</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="stringliteral">&quot;function drawEvents(cid,labels,gasArr,movArr){&quot;</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="stringliteral">&quot;const cv=document.getElementById(cid);const ctx=cv.getContext(&#39;2d&#39;);&quot;</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="stringliteral">&quot;const W=cv.width,H=cv.height,padL=42,padR=16,padT=18,padB=26,pW=W-padL-padR,pH=H-padT-padB;&quot;</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="stringliteral">&quot;ctx.clearRect(0,0,W,H);ctx.font=&#39;11px Arial&#39;;ctx.fillStyle=&#39;#94a3b8&#39;;&quot;</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="stringliteral">&quot;ctx.fillText(&#39;1 (Sí)&#39;,4,padT+6);ctx.fillText(&#39;0 (No)&#39;,4,padT+pH+4);&quot;</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="stringliteral">&quot;ctx.strokeStyle=&#39;#1e293b&#39;;ctx.beginPath();ctx.moveTo(padL,padT);ctx.lineTo(W-padR,padT);ctx.moveTo(padL,padT+pH);ctx.lineTo(W-padR,padT+pH);ctx.stroke();&quot;</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="stringliteral">&quot;for(let i=0;i&lt;labels.length;i++){const x=padL+(labels.length&gt;1?(pW*i/(labels.length-1)):pW/2);&quot;</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span><span class="stringliteral">&quot;const yG=padT+pH*(1-gasArr[i]);const yM=padT+pH*(1-movArr[i]);&quot;</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="stringliteral">&quot;ctx.fillStyle=&#39;#bfbfbf&#39;;ctx.beginPath();ctx.arc(x-3,yG,4,0,Math.PI*2);ctx.fill();&quot;</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span><span class="stringliteral">&quot;ctx.fillStyle=&#39;#ff0000&#39;;ctx.beginPath();ctx.arc(x+3,yM,4,0,Math.PI*2);ctx.fill();&quot;</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="stringliteral">&quot;if(i===0||i===labels.length-1||i%Math.max(1,Math.floor(labels.length/5))===0){ctx.fillStyle=&#39;#94a3b8&#39;;ctx.fillText(labels[i],x-20,H-6);}}}&quot;</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="stringliteral">&quot;async function loadCharts(){&quot;</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="stringliteral">&quot;const r=await fetch(&#39;/api/sd_history&#39;);const d=await r.json();&quot;</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="stringliteral">&quot;document.getElementById(&#39;charts_wrap&#39;).style.display=&#39;block&#39;;&quot;</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="stringliteral">&quot;const rows=d.rows||[];const lbl=[],fc=[],fr=[],t=[],h=[],g=[],m=[];&quot;</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="stringliteral">&quot;for(let i=0;i&lt;rows.length;i++){lbl.push(rows[i][1]);fc.push(rows[i][2]);fr.push(rows[i][3]);t.push(rows[i][4]);h.push(rows[i][5]);g.push(rows[i][6]);m.push(rows[i][7]);}&quot;</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="stringliteral">&quot;drawPlot(&#39;cv_fc&#39;,lbl,fc,40,140,&#39;#38bdf8&#39;,50,130);&quot;</span></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="stringliteral">&quot;drawPlot(&#39;cv_fr&#39;,lbl,fr,8,24,&#39;#34d399&#39;,12,20);&quot;</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="stringliteral">&quot;drawPlot(&#39;cv_t&#39;,lbl,t,10,45,&#39;#fb7185&#39;,15,40);&quot;</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="stringliteral">&quot;drawPlot(&#39;cv_h&#39;,lbl,h,0,100,&#39;#60a5fa&#39;,30,80);&quot;</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="stringliteral">&quot;drawEvents(&#39;cv_ev&#39;,lbl,g,m);}&quot;</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="stringliteral">&quot;async function sendText(u,id){const v=document.getElementById(id).value;&quot;</span></div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="stringliteral">&quot;await fetch(u,{method:&#39;POST&#39;,headers:{&#39;Content-Type&#39;:&#39;text/plain&#39;},body:v});upd();}&quot;</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span><span class="stringliteral">&quot;async function postAct(u){await fetch(u,{method:&#39;POST&#39;});upd();}&quot;</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="stringliteral">&quot;setInterval(upd,1000);upd();&quot;</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="stringliteral">&quot;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;&quot;</span>;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="keyword">static</span> esp_err_t get_root_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword">static</span> esp_err_t get_status_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="keyword">static</span> esp_err_t post_patient_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="keyword">static</span> esp_err_t post_msg_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="keyword">static</span> esp_err_t post_clear_alert_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword">static</span> esp_err_t post_sound_warn_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="keyword">static</span> esp_err_t post_play_voice_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keyword">static</span> esp_err_t post_time_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="keyword">static</span> esp_err_t get_sd_history_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keyword">static</span> esp_err_t get_sd_csv_handler(httpd_req_t *req);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="keyword">static</span> <span class="keywordtype">void</span> iniciar_servidor_http(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="keyword">static</span> <span class="keywordtype">void</span> wifi_event_handler(<span class="keywordtype">void</span>* arg, esp_event_base_t event_base, int32_t event_id, <span class="keywordtype">void</span>* event_data);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="comment">/*==================[internal functions definition]==========================*/</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="keyword">static</span> esp_err_t get_root_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    httpd_resp_set_type(req, <span class="stringliteral">&quot;text/html; charset=utf-8&quot;</span>);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    httpd_resp_send(req, INDEX_HTML, HTTPD_RESP_USE_STRLEN);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>}</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span><span class="keyword">static</span> esp_err_t get_status_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="keywordtype">char</span> fila0[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a> + 1];</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    <a class="code hl_struct" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> copia;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <span class="comment">// 1. Obtiene el texto vigente de la Fila 0 del display LCD (BIENVENIDO!, Mensaje, Paciente o IP)</span></div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <a class="code hl_function" href="web__unidad__paciente_8c.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a>(fila0);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="comment">     * 2. Lectura atómica mediante sección crítica (portENTER_CRITICAL / portEXIT_CRITICAL):</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span><span class="comment">     *    Deshabilita temporalmente las interrupciones y el cambio de contexto mientras se copia</span></div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="comment">     *    la estructura completa s_datos_actuales hacia la variable local &#39;copia&#39;, garantizando que</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="comment">     *    TaskDisplayLCD no modifique ningún campo a mitad de la lectura.</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    copia = s_datos_actuales;</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="comment">     * 3. Desglose aritmético de punto fijo (décimas) a parte entera y dígito decimal:</span></div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span><span class="comment">     *    - t_ent = temp_decimas_c / 10 (ej. 254 -&gt; 25), t_dec = abs(temp_decimas_c % 10) (ej. 254 -&gt; 4).</span></div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="comment">     *    - h_ent = hum_decimas_pct / 10 (ej. 528 -&gt; 52), h_dec = hum_decimas_pct % 10 (ej. 528 -&gt; 8).</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    int16_t t_ent = copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">temp_decimas_c</a> / 10;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    int16_t t_dec = abs(copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">temp_decimas_c</a> % 10);</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    uint16_t h_ent = copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">hum_decimas_pct</a> / 10;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    uint16_t h_dec = copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">hum_decimas_pct</a> % 10;</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    <span class="comment">// 4. Construcción del documento JSON sobre el buffer estático s_json_status_buf (en sección .bss)</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    snprintf(s_json_status_buf, <span class="keyword">sizeof</span>(s_json_status_buf),</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>             <span class="stringliteral">&quot;{\&quot;fc\&quot;:%u,\&quot;fr\&quot;:%u,\&quot;al_fc\&quot;:%s,\&quot;al_fr\&quot;:%s,\&quot;sim\&quot;:%u,&quot;</span></div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>             <span class="stringliteral">&quot;\&quot;pat_req\&quot;:%s,&quot;</span></div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>             <span class="stringliteral">&quot;\&quot;temp\&quot;:\&quot;%d.%d\&quot;,\&quot;hum\&quot;:\&quot;%u.%u\&quot;,&quot;</span></div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>             <span class="stringliteral">&quot;\&quot;mq3_rdy\&quot;:%s,\&quot;mq3_al\&quot;:%s,\&quot;mq3_s\&quot;:%lu,&quot;</span></div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>             <span class="stringliteral">&quot;\&quot;pir\&quot;:%s,\&quot;pir_n\&quot;:%lu,&quot;</span></div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>             <span class="stringliteral">&quot;\&quot;fifo_n\&quot;:%u,\&quot;fifo_txt\&quot;:\&quot;%s\&quot;,&quot;</span></div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>             <span class="stringliteral">&quot;\&quot;fila0\&quot;:\&quot;%s\&quot;,\&quot;ip\&quot;:\&quot;%s\&quot;,&quot;</span></div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>             <span class="stringliteral">&quot;\&quot;sd_ok\&quot;:%s,\&quot;sd_n\&quot;:%lu,\&quot;rtc_ok\&quot;:%s,&quot;</span></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>             <span class="stringliteral">&quot;\&quot;fecha\&quot;:\&quot;%s\&quot;,\&quot;hora\&quot;:\&quot;%s\&quot;}&quot;</span>,</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">fc_bpm</a>,</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">fr_rpm</a>,</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">alerta_fc</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">alerta_fr</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">modo_sim_local</a>,</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">paciente_requiere_atencion</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>             t_ent, t_dec,</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>             h_ent, h_dec,</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">mq3_precalentado</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">mq3_alcohol_detectado</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>             (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">mq3_segundos_bajo</a>,</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">pir_movimiento</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>             (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">pir_contador_eventos</a>,</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">alertas_fifo_cant</a>,</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2">alerta_fifo_actual</a>,</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>             fila0,</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>             s_ip_asignada,</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">sd_montada</a> ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>             (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">sd_registros_totales</a>,</div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>             <a class="code hl_function" href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5">MicroSdRelojSincronizado</a>() ? <span class="stringliteral">&quot;true&quot;</span> : <span class="stringliteral">&quot;false&quot;</span>,</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#a86efa0b5bae8e03576cb84072f774d75">fecha_actual</a>,</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>             copia.<a class="code hl_variable" href="structestado__unidad__paciente__t.html#aec878bbeb6690e5b26d7ee28ed1fef20">hora_actual</a>);</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <span class="comment">// 5. Envía la respuesta JSON al navegador cliente</span></div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>    httpd_resp_set_type(req, <span class="stringliteral">&quot;application/json; charset=utf-8&quot;</span>);</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>    httpd_resp_send(req, s_json_status_buf, HTTPD_RESP_USE_STRLEN);</div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>}</div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span> </div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span><span class="keyword">static</span> esp_err_t post_patient_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>    <span class="keywordtype">char</span> buf[24] = {0};</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    <span class="comment">// Lee el payload enviado por fetch() desde el socket TCP</span></div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keywordtype">int</span> len = httpd_req_recv(req, buf, <span class="keyword">sizeof</span>(buf) - 1);</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    <span class="keywordflow">if</span> (len &gt;= 0) {</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>        buf[len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>        portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>        strncpy(s_nombre_paciente, buf, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>        s_nombre_paciente[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>        portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    }</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>}</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span> </div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="keyword">static</span> esp_err_t post_msg_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>    <span class="keywordtype">char</span> buf[24] = {0};</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keywordtype">int</span> len = httpd_req_recv(req, buf, <span class="keyword">sizeof</span>(buf) - 1);</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keywordflow">if</span> (len &gt;= 0) {</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        buf[len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>        portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>        strncpy(s_mensaje_activo, buf, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>        s_mensaje_activo[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>        <span class="keywordflow">if</span> (strcmp(s_mensaje_activo, <span class="stringliteral">&quot;AYUDA EN CAMINO&quot;</span>) == 0) {</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>            s_req_play_voice = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>        }</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>        portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>    }</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>}</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="keyword">static</span> esp_err_t post_clear_alert_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>    s_req_clear_alert = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>}</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span> </div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="keyword">static</span> esp_err_t post_sound_warn_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    s_req_warn_3s = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>}</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="keyword">static</span> esp_err_t post_play_voice_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>    s_req_play_voice = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>}</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span> </div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="keyword">static</span> esp_err_t post_time_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keywordtype">char</span> buf[32] = {0};</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    <span class="keywordtype">int</span> len = httpd_req_recv(req, buf, <span class="keyword">sizeof</span>(buf) - 1);</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    <span class="keywordflow">if</span> (len &gt; 0) {</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        buf[len] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        int64_t epoch_sec = atoll(buf);</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        <a class="code hl_function" href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f">MicroSdSincronizarRelojEpoch</a>(epoch_sec);</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    }</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    httpd_resp_send(req, <span class="stringliteral">&quot;OK&quot;</span>, 2);</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>}</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span> </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="keyword">static</span> esp_err_t get_sd_history_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>    <a class="code hl_function" href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb">MicroSdLeerUltimosRegistrosJson</a>(s_json_history_buf, <span class="keyword">sizeof</span>(s_json_history_buf), 40);</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    httpd_resp_set_type(req, <span class="stringliteral">&quot;application/json; charset=utf-8&quot;</span>);</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    httpd_resp_send(req, s_json_history_buf, HTTPD_RESP_USE_STRLEN);</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>}</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="keyword">static</span> esp_err_t get_sd_csv_handler(httpd_req_t *req) {</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7">MicroSdEnviarCsvCompletoHttp</a>(req);</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>}</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span><span class="keyword">static</span> <span class="keywordtype">void</span> iniciar_servidor_http(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    httpd_config_t config = HTTPD_DEFAULT_CONFIG();</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    config.stack_size = 8192;</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    config.max_uri_handlers = 12;</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span> </div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    httpd_handle_t server = NULL;</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keywordflow">if</span> (httpd_start(&amp;server, &amp;config) == ESP_OK) {</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>        <span class="keyword">const</span> httpd_uri_t u_root  = {.uri=<span class="stringliteral">&quot;/&quot;</span>,                .method=HTTP_GET,  .handler=get_root_handler};</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        <span class="keyword">const</span> httpd_uri_t u_stat  = {.uri=<span class="stringliteral">&quot;/api/status&quot;</span>,      .method=HTTP_GET,  .handler=get_status_handler};</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        <span class="keyword">const</span> httpd_uri_t u_pat   = {.uri=<span class="stringliteral">&quot;/api/patient&quot;</span>,     .method=HTTP_POST, .handler=post_patient_handler};</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        <span class="keyword">const</span> httpd_uri_t u_msg   = {.uri=<span class="stringliteral">&quot;/api/msg&quot;</span>,         .method=HTTP_POST, .handler=post_msg_handler};</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>        <span class="keyword">const</span> httpd_uri_t u_clr   = {.uri=<span class="stringliteral">&quot;/api/clear_alert&quot;</span>, .method=HTTP_POST, .handler=post_clear_alert_handler};</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>        <span class="keyword">const</span> httpd_uri_t u_warn  = {.uri=<span class="stringliteral">&quot;/api/sound_warn&quot;</span>,  .method=HTTP_POST, .handler=post_sound_warn_handler};</div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>        <span class="keyword">const</span> httpd_uri_t u_voice = {.uri=<span class="stringliteral">&quot;/api/play_voice&quot;</span>,  .method=HTTP_POST, .handler=post_play_voice_handler};</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        <span class="keyword">const</span> httpd_uri_t u_time  = {.uri=<span class="stringliteral">&quot;/api/time&quot;</span>,        .method=HTTP_POST, .handler=post_time_handler};</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        <span class="keyword">const</span> httpd_uri_t u_sdh   = {.uri=<span class="stringliteral">&quot;/api/sd_history&quot;</span>,  .method=HTTP_GET,  .handler=get_sd_history_handler};</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>        <span class="keyword">const</span> httpd_uri_t u_sdc   = {.uri=<span class="stringliteral">&quot;/api/sd_csv&quot;</span>,      .method=HTTP_GET,  .handler=get_sd_csv_handler};</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span> </div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>        httpd_register_uri_handler(server, &amp;u_root);</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>        httpd_register_uri_handler(server, &amp;u_stat);</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>        httpd_register_uri_handler(server, &amp;u_pat);</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>        httpd_register_uri_handler(server, &amp;u_msg);</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>        httpd_register_uri_handler(server, &amp;u_clr);</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>        httpd_register_uri_handler(server, &amp;u_warn);</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>        httpd_register_uri_handler(server, &amp;u_voice);</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>        httpd_register_uri_handler(server, &amp;u_time);</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>        httpd_register_uri_handler(server, &amp;u_sdh);</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>        httpd_register_uri_handler(server, &amp;u_sdc);</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    }</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>}</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span> </div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span><span class="keyword">static</span> <span class="keywordtype">void</span> wifi_event_handler(<span class="keywordtype">void</span>* arg, esp_event_base_t event_base, int32_t event_id, <span class="keywordtype">void</span>* event_data) {</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    <span class="keywordflow">if</span> (event_base == WIFI_EVENT &amp;&amp; event_id == WIFI_EVENT_STA_START) {</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>        esp_wifi_connect();</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event_base == WIFI_EVENT &amp;&amp; event_id == WIFI_EVENT_STA_DISCONNECTED) {</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        s_conectado_wifi = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>        esp_wifi_connect();</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event_base == IP_EVENT &amp;&amp; event_id == IP_EVENT_STA_GOT_IP) {</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        ip_event_got_ip_t* <span class="keyword">event</span> = (ip_event_got_ip_t*) event_data;</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        snprintf(s_ip_asignada, <span class="keyword">sizeof</span>(s_ip_asignada), IPSTR, IP2STR(&amp;event-&gt;ip_info.ip));</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>        s_conectado_wifi = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    }</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>}</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span> </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2">  671</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#a9caf0810e72cc89f00234f94041588d2">WebUnidadPacienteInit</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span><span class="comment">     * 1. Inicialización de la partición NVS (Non-Volatile Storage) en memoria Flash:</span></div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span><span class="comment">     *    Requerida por el driver Wi-Fi de ESP-IDF para almacenar datos de calibración de RF.</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="comment">     *    Si la partición está llena o cambió de versión, se formatea e inicializa nuevamente.</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>    esp_err_t ret = nvs_flash_init();</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    <span class="keywordflow">if</span> (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>        nvs_flash_erase();</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>        nvs_flash_init();</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>    }</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span> </div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span><span class="comment">     * 2. Inicialización de la interfaz de red (esp_netif), del bucle de eventos por defecto</span></div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span><span class="comment">     *    del sistema y vinculación del adaptador Wi-Fi Station con la pila TCP/IP lwIP.</span></div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    esp_netif_init();</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    esp_event_loop_create_default();</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    esp_netif_create_default_wifi_sta();</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="comment">// 3. Reserva de recursos de hardware y tarea interna del driver Wi-Fi con configuración por defecto</span></div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>    esp_wifi_init(&amp;cfg);</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>    <span class="comment">// 4. Registro de callbacks para escuchar eventos de capa de enlace (WIFI_EVENT) y de capa de red (IP_EVENT)</span></div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>    esp_event_handler_instance_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &amp;wifi_event_handler, NULL, NULL);</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>    esp_event_handler_instance_register(IP_EVENT, IP_EVENT_STA_GOT_IP, &amp;wifi_event_handler, NULL, NULL);</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span> </div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="comment">     * 5. Carga de credenciales de red (SSID y Password) con umbral de seguridad mínimo WPA2-PSK,</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span><span class="comment">     *    selección del modo Estación (WIFI_MODE_STA) y puesta en marcha del transceptor (esp_wifi_start).</span></div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    wifi_config_t wifi_config = {</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>        .sta = {</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>            .ssid = <a class="code hl_define" href="web__unidad__paciente_8h.html#a4078c5e2403f6b2eae094514509bf3d0">WIFI_SSID_DEFAULT</a>,</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>            .password = <a class="code hl_define" href="web__unidad__paciente_8h.html#a8347fb95224b8b70ab93fe76a52d94b2">WIFI_PASS_DEFAULT</a>,</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>            .threshold.authmode = WIFI_AUTH_WPA2_PSK,</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>        },</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>    };</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>    esp_wifi_set_mode(WIFI_MODE_STA);</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    esp_wifi_set_config(WIFI_IF_STA, &amp;wifi_config);</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    esp_wifi_start();</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span> </div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    <span class="comment">// 6. Puesta en marcha del servidor HTTP en el puerto 80</span></div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    iniciar_servidor_http();</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>}</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span> </div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a1975bdb3b46a94898c5051408a1862a9">  722</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#a1975bdb3b46a94898c5051408a1862a9">WebUnidadPacienteActualizarDatos</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> *nuevo_estado) {</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>    <span class="keywordflow">if</span> (nuevo_estado == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    s_datos_actuales = *nuevo_estado;</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>}</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span> </div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1">  734</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a>(<span class="keywordtype">char</span> *buffer_17_bytes) {</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <span class="keywordflow">if</span> (buffer_17_bytes == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span> </div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span><span class="comment">     * Evaluación jerárquica bajo sección crítica:</span></div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span><span class="comment">     * 1. Si aún no obtuvo dirección IPv4 del router (!s_conectado_wifi) -&gt; &quot;BIENVENIDO!&quot;.</span></div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span><span class="comment">     * 2. Si el operador envió un mensaje clínico predefinido (s_mensaje_activo no vacío) -&gt; muestra el mensaje.</span></div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span><span class="comment">     * 3. Si el operador ingresó el nombre del paciente (s_nombre_paciente no vacío) -&gt; muestra el nombre.</span></div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span><span class="comment">     * 4. Por defecto (campos web vacíos y Wi-Fi conectado) -&gt; muestra la dirección IPv4 asignada (s_ip_asignada).</span></div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>    <span class="keywordflow">if</span> (!s_conectado_wifi) {</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>        strncpy(buffer_17_bytes, <span class="stringliteral">&quot;BIENVENIDO!&quot;</span>, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s_mensaje_activo[0] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>        strncpy(buffer_17_bytes, s_mensaje_activo, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (s_nombre_paciente[0] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>        strncpy(buffer_17_bytes, s_nombre_paciente, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>        strncpy(buffer_17_bytes, s_ip_asignada, <a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>);</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    }</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    buffer_17_bytes[<a class="code hl_define" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>}</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span> </div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">  762</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">WebUnidadPacienteConsumirSolicitudClearAlert</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>    <span class="keywordtype">bool</span> req = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>    <span class="keywordflow">if</span> (s_req_clear_alert) {</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        req = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>        s_req_clear_alert = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    }</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">return</span> req;</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>}</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#ae3830104c26d813790850c299ac93f51">  777</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#ae3830104c26d813790850c299ac93f51">WebUnidadPacienteConsumirSolicitudAdvertencia3s</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    <span class="keywordtype">bool</span> req = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    <span class="keywordflow">if</span> (s_req_warn_3s) {</div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>        req = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>        s_req_warn_3s = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    }</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    <span class="keywordflow">return</span> req;</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>}</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span> </div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a738a228b1ce326dc905b786b96bd5436">  792</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8c.html#a738a228b1ce326dc905b786b96bd5436">WebUnidadPacienteConsumirSolicitudVozAyuda</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <span class="keywordtype">bool</span> req = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    portENTER_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <span class="keywordflow">if</span> (s_req_play_voice) {</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>        req = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        s_req_play_voice = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    }</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    portEXIT_CRITICAL(&amp;s_web_spinlock);</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <span class="keywordflow">return</span> req;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>}</div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span> </div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html"><div class="ttname"><a href="microsd__datalogger_8h.html">microsd_datalogger.h</a></div><div class="ttdoc">Driver de la capa de dispositivos para el almacenamiento clínico no volátil en tarjeta MicroSD de 2GB...</div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a1612e345a1df5f26d7c15e52e865acdb"><div class="ttname"><a href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb">MicroSdLeerUltimosRegistrosJson</a></div><div class="ttdeci">int MicroSdLeerUltimosRegistrosJson(char *json_buf, size_t max_len, uint16_t max_registros)</div><div class="ttdoc">Ejecuta la Fase 3 (Apertura y Lectura SPI con CMD17) posicionándose al final de DATALOG....</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00254">microsd_datalogger.c:254</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a581f739f95d26f7a2e9b9772592012a5"><div class="ttname"><a href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5">MicroSdRelojSincronizado</a></div><div class="ttdeci">bool MicroSdRelojSincronizado(void)</div><div class="ttdoc">Indica si el reloj RTC ya fue sincronizado con la fecha/hora real desde la interfaz web.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00250">microsd_datalogger.c:250</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_ad29abca0ce8909e237f186bf9714f41f"><div class="ttname"><a href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f">MicroSdSincronizarRelojEpoch</a></div><div class="ttdeci">void MicroSdSincronizarRelojEpoch(int64_t epoch_sec)</div><div class="ttdoc">Ajusta el reloj de tiempo real (RTC) interno del ESP32-C6 a partir de un timestamp Unix (segundos) re...</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00223">microsd_datalogger.c:223</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_ae292d38a7d1265b371e7ea902750b2f7"><div class="ttname"><a href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7">MicroSdEnviarCsvCompletoHttp</a></div><div class="ttdeci">esp_err_t MicroSdEnviarCsvCompletoHttp(httpd_req_t *req)</div><div class="ttdoc">Lee el archivo DATALOG.CSV en bloques por SPI y lo transmite por streaming HTTP para su descarga dire...</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00343">microsd_datalogger.c:343</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html"><div class="ttname"><a href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a></div><div class="ttdoc">Estructura integral de datos del sistema publicada hacia el Dashboard Web cada 200 ms por TaskDisplay...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00161">web_unidad_paciente.h:161</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a155e403ed7bdc088d94f086f239711be"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">estado_unidad_paciente_t::modo_sim_local</a></div><div class="ttdeci">uint8_t modo_sim_local</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00166">web_unidad_paciente.h:166</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a2475f9b29535a25bf4b44bc29a738985"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">estado_unidad_paciente_t::mq3_segundos_bajo</a></div><div class="ttdeci">uint32_t mq3_segundos_bajo</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00171">web_unidad_paciente.h:171</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a33ac274581418205bfea84e6bca28905"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">estado_unidad_paciente_t::pir_contador_eventos</a></div><div class="ttdeci">uint32_t pir_contador_eventos</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00173">web_unidad_paciente.h:173</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a3cdd121c6553041bd8b55da5eb4cfd09"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">estado_unidad_paciente_t::sd_registros_totales</a></div><div class="ttdeci">uint32_t sd_registros_totales</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00177">web_unidad_paciente.h:177</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a40258bb299315a220435b6b7d21b454e"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">estado_unidad_paciente_t::fc_bpm</a></div><div class="ttdeci">uint16_t fc_bpm</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00162">web_unidad_paciente.h:162</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a41f888629a05b6b6eaa5797bec7bea8a"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">estado_unidad_paciente_t::alerta_fc</a></div><div class="ttdeci">bool alerta_fc</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00164">web_unidad_paciente.h:164</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a60622f67fd08f363012448ee3218b2e5"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">estado_unidad_paciente_t::mq3_alcohol_detectado</a></div><div class="ttdeci">bool mq3_alcohol_detectado</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00170">web_unidad_paciente.h:170</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a60ea4a5bc2b3dca005260774118d50ba"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">estado_unidad_paciente_t::pir_movimiento</a></div><div class="ttdeci">bool pir_movimiento</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00172">web_unidad_paciente.h:172</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a69aa12c5302a5dd0fd713316a804d8a2"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2">estado_unidad_paciente_t::alerta_fifo_actual</a></div><div class="ttdeci">char alerta_fifo_actual[17]</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00175">web_unidad_paciente.h:175</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a86efa0b5bae8e03576cb84072f774d75"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a86efa0b5bae8e03576cb84072f774d75">estado_unidad_paciente_t::fecha_actual</a></div><div class="ttdeci">char fecha_actual[12]</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00178">web_unidad_paciente.h:178</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a8b8996298a2fd3bd650940bbec9352f8"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">estado_unidad_paciente_t::paciente_requiere_atencion</a></div><div class="ttdeci">bool paciente_requiere_atencion</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00180">web_unidad_paciente.h:180</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a98acd259101bc02f0260f1b3ade49ead"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">estado_unidad_paciente_t::alerta_fr</a></div><div class="ttdeci">bool alerta_fr</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00165">web_unidad_paciente.h:165</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ab23ce23cbccdec8b5ccf4fa2092244bd"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">estado_unidad_paciente_t::fr_rpm</a></div><div class="ttdeci">uint16_t fr_rpm</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00163">web_unidad_paciente.h:163</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_abc2cf335f2f3c292d82a7d269bfe0507"><div class="ttname"><a href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">estado_unidad_paciente_t::alertas_fifo_cant</a></div><div class="ttdeci">uint8_t alertas_fifo_cant</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00174">web_unidad_paciente.h:174</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ad8ba7fef88e4c0bc3800566ca8c8d9e6"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">estado_unidad_paciente_t::mq3_precalentado</a></div><div class="ttdeci">bool mq3_precalentado</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00169">web_unidad_paciente.h:169</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_adbff86445a1dc1b41643eb26b0683f75"><div class="ttname"><a href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">estado_unidad_paciente_t::temp_decimas_c</a></div><div class="ttdeci">int16_t temp_decimas_c</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00167">web_unidad_paciente.h:167</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ae997555196ed24e28d395d2626e87328"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">estado_unidad_paciente_t::sd_montada</a></div><div class="ttdeci">bool sd_montada</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00176">web_unidad_paciente.h:176</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_aec878bbeb6690e5b26d7ee28ed1fef20"><div class="ttname"><a href="structestado__unidad__paciente__t.html#aec878bbeb6690e5b26d7ee28ed1fef20">estado_unidad_paciente_t::hora_actual</a></div><div class="ttdeci">char hora_actual[10]</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00179">web_unidad_paciente.h:179</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_afb4d944c56251217dc37c5090a64b935"><div class="ttname"><a href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">estado_unidad_paciente_t::hum_decimas_pct</a></div><div class="ttdeci">uint16_t hum_decimas_pct</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00168">web_unidad_paciente.h:168</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_a1975bdb3b46a94898c5051408a1862a9"><div class="ttname"><a href="web__unidad__paciente_8c.html#a1975bdb3b46a94898c5051408a1862a9">WebUnidadPacienteActualizarDatos</a></div><div class="ttdeci">void WebUnidadPacienteActualizarDatos(const estado_unidad_paciente_t *nuevo_estado)</div><div class="ttdoc">Copia de forma segura el nuevo estado del sistema hacia la estructura interna del servidor web.</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00722">web_unidad_paciente.c:722</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_a738a228b1ce326dc905b786b96bd5436"><div class="ttname"><a href="web__unidad__paciente_8c.html#a738a228b1ce326dc905b786b96bd5436">WebUnidadPacienteConsumirSolicitudVozAyuda</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudVozAyuda(void)</div><div class="ttdoc">Consume de manera atómica la solicitud remota de reproducción de voz LPCM (&quot;Ayuda en camino&quot;).</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00792">web_unidad_paciente.c:792</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_a865db6c1a2b8c1fcba620b61ac0779d1"><div class="ttname"><a href="web__unidad__paciente_8c.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a></div><div class="ttdeci">void WebUnidadPacienteObtenerTextoFila0(char *buffer_17_bytes)</div><div class="ttdoc">Determina el texto de hasta 16 caracteres que debe exhibirse en la Fila 0 del display LCD 16x2 cuando...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00734">web_unidad_paciente.c:734</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_a9caf0810e72cc89f00234f94041588d2"><div class="ttname"><a href="web__unidad__paciente_8c.html#a9caf0810e72cc89f00234f94041588d2">WebUnidadPacienteInit</a></div><div class="ttdeci">void WebUnidadPacienteInit(void)</div><div class="ttdoc">Inicializa el subsistema de almacenamiento NVS, la pila de red TCP/IP, el cliente Wi-Fi STA y el serv...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00671">web_unidad_paciente.c:671</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_ae3830104c26d813790850c299ac93f51"><div class="ttname"><a href="web__unidad__paciente_8c.html#ae3830104c26d813790850c299ac93f51">WebUnidadPacienteConsumirSolicitudAdvertencia3s</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudAdvertencia3s(void)</div><div class="ttdoc">Consume de manera atómica la solicitud remota de aviso sonoro de advertencia.</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00777">web_unidad_paciente.c:777</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8c_html_afe624ede23b6e7f2b8ca75c2f4bf81e9"><div class="ttname"><a href="web__unidad__paciente_8c.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">WebUnidadPacienteConsumirSolicitudClearAlert</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudClearAlert(void)</div><div class="ttdoc">Consume de manera atómica la solicitud remota de desencolado de alerta FIFO.</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00762">web_unidad_paciente.c:762</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html"><div class="ttname"><a href="web__unidad__paciente_8h.html">web_unidad_paciente.h</a></div><div class="ttdoc">Módulo de conectividad Wi-Fi (Modo Estación) y Servidor Web HTTP embebido para la supervisión clínica...</div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a4078c5e2403f6b2eae094514509bf3d0"><div class="ttname"><a href="web__unidad__paciente_8h.html#a4078c5e2403f6b2eae094514509bf3d0">WIFI_SSID_DEFAULT</a></div><div class="ttdeci">#define WIFI_SSID_DEFAULT</div><div class="ttdoc">Nombre de la red Wi-Fi (SSID) de 2.4 GHz a la que se conecta la estación (reemplazar antes de compila...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00149">web_unidad_paciente.h:149</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a8347fb95224b8b70ab93fe76a52d94b2"><div class="ttname"><a href="web__unidad__paciente_8h.html#a8347fb95224b8b70ab93fe76a52d94b2">WIFI_PASS_DEFAULT</a></div><div class="ttdeci">#define WIFI_PASS_DEFAULT</div><div class="ttdoc">Contraseña WPA2-PSK de la red Wi-Fi (reemplazar antes de compilar)</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00152">web_unidad_paciente.h:152</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a8c15d59726c7ef931534a0653837c80b"><div class="ttname"><a href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a></div><div class="ttdeci">#define WEB_LCD_TEXT_MAX_LEN</div><div class="ttdoc">Longitud máxima de caracteres visibles en una fila del display LCD 16x2.</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00155">web_unidad_paciente.h:155</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="web__unidad__paciente_8c.html">web_unidad_paciente.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

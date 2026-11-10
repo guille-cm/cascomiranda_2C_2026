@@ -70,6 +70,7 @@ void AnalogInputInit(analog_input_config_t *config);
  * @return null
  */
 void AnalogOutputInit(void);
+void AnalogOutput2Init(void);
 
 /**
  * @brief Read single channel.
@@ -108,6 +109,7 @@ void AnalogInputReadContinuous(adc_ch_t channel, uint16_t *values);
  * @param value Digital value to convert (from 0 to 255)
  */
 void AnalogOutputWrite(uint8_t value);
+void AnalogOutput2Write(uint8_t value);
 
 /** @} doxygen end group definition */
 /** @} doxygen end group definition */

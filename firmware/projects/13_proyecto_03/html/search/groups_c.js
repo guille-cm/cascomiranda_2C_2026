@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['real_20time_20clock_0',['Real Time Clock',['../group___r_t_c.html',1,'']]]
+  ['timer_0',['Timer',['../group___timer.html',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['giop_5ffast_0',['GIOP_FAST',['../group___g_i_o_p___f_a_s_t.html',1,'']]],
-  ['gpio_1',['GPIO',['../group___g_i_o_p.html',1,'']]]
+  ['i2c_0',['I2C',['../group___i2_c.html',1,'']]],
+  ['icons_1',['Icons',['../group___i_c_o_n_s.html',1,'']]],
+  ['ili9341_2',['ILI9341',['../group___i_l_i9341.html',1,'']]]
 ];

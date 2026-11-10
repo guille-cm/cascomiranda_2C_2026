@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Referencia de la estructura analog_input_config_t</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Referencia de la Estructura analog_input_config_t</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('structanalog__input__config__t.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('structanalog__input__config__t.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,50 +87,43 @@ $(function(){initNavTree('structanalog__input__config__t.html',''); initResizabl
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Campos de datos</a>  </div>
-  <div class="headertitle"><div class="title">Referencia de la estructura analog_input_config_t<div class="ingroups"><a class="el" href="group___drivers___programable.html">Drivers Programable</a> &raquo; <a class="el" href="group___drivers___microcontroller.html">Drivers microcontroller</a> &raquo; <a class="el" href="group___analog___i_o.html">Analog IO</a></div></div></div>
+  <div class="headertitle"><div class="title">Referencia de la Estructura analog_input_config_t<div class="ingroups"><a class="el" href="group___drivers___programable.html">Drivers Programable</a> &raquo; <a class="el" href="group___drivers___microcontroller.html">Drivers microcontroller</a> &raquo; <a class="el" href="group___analog___i_o.html">Analog IO</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Analog inputs config structure.  
- <a href="#details">Más...</a></p>
+ <a href="structanalog__input__config__t.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Campos de datos</h2></td></tr>
-<tr class="memitem:a16d10b35d778a5d4fdbda4d75981d310" id="r_a16d10b35d778a5d4fdbda4d75981d310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___analog___i_o.html#gac537c4efc9fd03387fe824872bae8830">adc_ch_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16d10b35d778a5d4fdbda4d75981d310">input</a></td></tr>
+<tr class="memitem:a16d10b35d778a5d4fdbda4d75981d310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___analog___i_o.html#gac537c4efc9fd03387fe824872bae8830">adc_ch_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalog__input__config__t.html#a16d10b35d778a5d4fdbda4d75981d310">input</a></td></tr>
 <tr class="separator:a16d10b35d778a5d4fdbda4d75981d310"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56cce61871ae1c1c5317d84d747f87c1" id="r_a56cce61871ae1c1c5317d84d747f87c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___analog___i_o.html#ga3e4744e022398e776a8dbdd97903a629">adc_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56cce61871ae1c1c5317d84d747f87c1">mode</a></td></tr>
+<tr class="memitem:a56cce61871ae1c1c5317d84d747f87c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___analog___i_o.html#ga3e4744e022398e776a8dbdd97903a629">adc_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalog__input__config__t.html#a56cce61871ae1c1c5317d84d747f87c1">mode</a></td></tr>
 <tr class="separator:a56cce61871ae1c1c5317d84d747f87c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672985730d2c0cf9105559adc9759a3a" id="r_a672985730d2c0cf9105559adc9759a3a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672985730d2c0cf9105559adc9759a3a">func_p</a></td></tr>
+<tr class="memitem:a672985730d2c0cf9105559adc9759a3a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalog__input__config__t.html#a672985730d2c0cf9105559adc9759a3a">func_p</a></td></tr>
 <tr class="separator:a672985730d2c0cf9105559adc9759a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad5f5715cb799d57b86e98fe3bf701e1" id="r_aad5f5715cb799d57b86e98fe3bf701e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5f5715cb799d57b86e98fe3bf701e1">param_p</a></td></tr>
+<tr class="memitem:aad5f5715cb799d57b86e98fe3bf701e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalog__input__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">param_p</a></td></tr>
 <tr class="separator:aad5f5715cb799d57b86e98fe3bf701e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25204106348e34dfe9da6ac6e61b08c8" id="r_a25204106348e34dfe9da6ac6e61b08c8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25204106348e34dfe9da6ac6e61b08c8">sample_frec</a></td></tr>
+<tr class="memitem:a25204106348e34dfe9da6ac6e61b08c8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanalog__input__config__t.html#a25204106348e34dfe9da6ac6e61b08c8">sample_frec</a></td></tr>
 <tr class="separator:a25204106348e34dfe9da6ac6e61b08c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Analog inputs config structure. </p>
+<div class="textblock"><p >Analog inputs config structure. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00048">48</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
-</div><h2 class="groupheader">Documentación de campos</h2>
+</div><h2 class="groupheader">Documentación de los campos</h2>
 <a id="a672985730d2c0cf9105559adc9759a3a" name="a672985730d2c0cf9105559adc9759a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a672985730d2c0cf9105559adc9759a3a">&#9670;&#160;</a></span>func_p</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a672985730d2c0cf9105559adc9759a3a">&#9670;&nbsp;</a></span>func_p</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,14 +133,14 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to callback function for convertion end (only for continuous mode) </p>
+<p >Pointer to callback function for convertion end (only for continuous mode) </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00051">51</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
 
 </div>
 </div>
 <a id="a16d10b35d778a5d4fdbda4d75981d310" name="a16d10b35d778a5d4fdbda4d75981d310"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d10b35d778a5d4fdbda4d75981d310">&#9670;&#160;</a></span>input</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d10b35d778a5d4fdbda4d75981d310">&#9670;&nbsp;</a></span>input</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,16 +150,16 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Inputs: CH0, CH1, CH2, CH3 </p>
+<p >Inputs: CH0, CH1, CH2, CH3 </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00049">49</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="analog__io__mcu_8c_source.html#l00046">AnalogInputInit()</a> y <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
 
 </div>
 </div>
 <a id="a56cce61871ae1c1c5317d84d747f87c1" name="a56cce61871ae1c1c5317d84d747f87c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56cce61871ae1c1c5317d84d747f87c1">&#9670;&#160;</a></span>mode</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a56cce61871ae1c1c5317d84d747f87c1">&#9670;&nbsp;</a></span>mode</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,16 +169,16 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Mode: single read or continuous read </p>
+<p >Mode: single read or continuous read </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00050">50</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
 
-<p class="reference">Referenciado por <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>.</p>
+<p class="reference">Referenciado por <a class="el" href="analog__io__mcu_8c_source.html#l00046">AnalogInputInit()</a>.</p>
 
 </div>
 </div>
 <a id="aad5f5715cb799d57b86e98fe3bf701e1" name="aad5f5715cb799d57b86e98fe3bf701e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad5f5715cb799d57b86e98fe3bf701e1">&#9670;&#160;</a></span>param_p</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5f5715cb799d57b86e98fe3bf701e1">&#9670;&nbsp;</a></span>param_p</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,14 +188,14 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to callback function parameters (only for continuous mode) </p>
+<p >Pointer to callback function parameters (only for continuous mode) </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00052">52</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
 
 </div>
 </div>
 <a id="a25204106348e34dfe9da6ac6e61b08c8" name="a25204106348e34dfe9da6ac6e61b08c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25204106348e34dfe9da6ac6e61b08c8">&#9670;&#160;</a></span>sample_frec</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25204106348e34dfe9da6ac6e61b08c8">&#9670;&nbsp;</a></span>sample_frec</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,14 +205,14 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sample frequency min: 20kHz - max: 2MHz (only for continuous mode) <br  />
+<p >Sample frequency min: 20kHz - max: 2MHz (only for continuous mode) <br  />
  </p>
 
 <p class="definition">Definición en la línea <a class="el" href="analog__io__mcu_8h_source.html#l00053">53</a> del archivo <a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>.</p>
 
 </div>
 </div>
-<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<hr/>La documentación para esta estructura fue generada a partir del siguiente fichero:<ul>
 <li>D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/microcontroller/inc/<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -233,7 +221,7 @@ Campos de datos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structanalog__input__config__t.html">analog_input_config_t</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

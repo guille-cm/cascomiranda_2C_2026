@@ -24,6 +24,7 @@ adc_cali_handle_t adc_calibration_single_0, adc_calibration_single_1, adc_calibr
 adc_oneshot_unit_handle_t adc1_single; 
 adc_continuous_handle_t adc2_cont;
 sdm_channel_handle_t dac = NULL;
+static sdm_channel_handle_t dac2 = NULL;
 bool adc1_single_used = false;
 /*==================[internal functions declaration]=========================*/
 
@@ -127,6 +128,16 @@ void AnalogOutputInit(void){
 	sdm_channel_enable(dac);
 }
 
+void AnalogOutput2Init(void) {
+    sdm_config_t config = {
+        .clk_src = SDM_CLK_SRC_DEFAULT,
+        .sample_rate_hz = 1000 * 1000,
+        .gpio_num = 18, /*!< Salida Sigma-Delta para Respirograma en GPIO_18 */
+    };
+    sdm_new_channel(&config, &dac2);
+    sdm_channel_enable(dac2);
+}
+
 void AnalogInputReadSingle(adc_ch_t channel, uint16_t *value){
     switch(channel){
 		case CH0:
@@ -159,6 +170,11 @@ void AnalogInputReadContinuous(adc_ch_t channel, uint16_t *values){
 void AnalogOutputWrite(uint8_t value){
 	int8_t density = value - 128;
 	sdm_channel_set_pulse_density(dac, density);
+}
+
+void AnalogOutput2Write(uint8_t value) {
+    int8_t density = (int8_t)((int16_t)value - 128);
+    sdm_channel_set_pulse_density(dac2, density);
 }
 
 /** @} doxygen end group definition */

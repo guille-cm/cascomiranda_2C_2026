@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Globales</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('globals_defs_d.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('globals_defs_d.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,26 +87,24 @@ $(function(){initNavTree('globals_defs_d.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="contents">
-<div class="textblock">Lista de todas las macros con enlaces a los archivos a los que corresponden:</div>
+&#160;
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>DAC&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga4aa2a4ab86ce00c23035e5cee2e7fc7e">analog_io_mcu.h</a></li>
 <li>DC_100&#160;:&#160;<a class="el" href="pwm__mcu_8c.html#a684bac99a5de1348b0cf76f80c31ae3d">pwm_mcu.c</a></li>
 <li>DC_MAX&#160;:&#160;<a class="el" href="pwm__mcu_8c.html#a701d2222601b84faafa94cb1909df104">pwm_mcu.c</a></li>
 <li>DEC&#160;:&#160;<a class="el" href="_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad">CMakeCCompilerId.c</a>, <a class="el" href="_c_make_c_x_x_compiler_id_8cpp.html#ad1280362da42492bbc11aa78cbf776ad">CMakeCXXCompilerId.cpp</a></li>
+<li>DHT22_DEFAULT_GPIO&#160;:&#160;<a class="el" href="dht22__sensor_8h.html#a788a0aa8570bd99cc9d5cc056076558a">dht22_sensor.h</a></li>
+<li>DHT22_MAX_EDGES&#160;:&#160;<a class="el" href="dht22__sensor_8c.html#aefa1fc95907ea484bdaa24c35ec7b110">dht22_sensor.c</a></li>
+<li>DHT22_PERIOD_THRESHOLD_US&#160;:&#160;<a class="el" href="dht22__sensor_8c.html#a4dbfc2bf74c8b05b9ab8b2026521ade5">dht22_sensor.c</a></li>
+<li>DHT22_START_LOW_US&#160;:&#160;<a class="el" href="dht22__sensor_8c.html#a153f0f172c370bc863737d884dc8b326">dht22_sensor.c</a></li>
+<li>DIGITS_COUNT&#160;:&#160;<a class="el" href="display__reloj__3dig_8h.html#ada138122d34cdcf50af12ac598fba678">display_reloj_3dig.h</a></li>
 <li>DISP_FUN_CTRL&#160;:&#160;<a class="el" href="ili9341_8c.html#ab17423783bb85a590da679a849ea5c57">ili9341.c</a></li>
 <li>DISPLAY_INV_OFF&#160;:&#160;<a class="el" href="ili9341_8c.html#a61f0dfed825350751d2c07c7c50a35ff">ili9341.c</a></li>
 <li>DISPLAY_INV_ON&#160;:&#160;<a class="el" href="ili9341_8c.html#aa9833fa99863f5c2648202085044620a">ili9341.c</a></li>
@@ -126,7 +119,7 @@ $(function(){initNavTree('globals_defs_d.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

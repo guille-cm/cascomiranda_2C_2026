@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Referencia del archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/projects/13_proyecto_03/main/monitor_unidad_paciente.c</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/projects/13_proyecto_03/main/monitor_unidad_paciente.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('monitor__unidad__paciente_8c.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('monitor__unidad__paciente_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,100 +87,861 @@ $(function(){initNavTree('monitor__unidad__paciente_8c.html',''); initResizable(
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
 <a href="#func-members">Funciones</a>  </div>
-  <div class="headertitle"><div class="title">Referencia del archivo monitor_unidad_paciente.c</div></div>
+  <div class="headertitle"><div class="title">Referencia del Archivo monitor_unidad_paciente.c</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sistema embebido de monitoreo y asistencia para una unidad de paciente.  
+<p>Sistema embebido de monitoreo clínico, supervisión ambiental, registro no volátil y asistencia remota para una unidad de paciente basado en FreeRTOS sobre ESP32-C6.  
 <a href="#details">Más...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;esp_log.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="display__16_x2__i2c_8h_source.html">display_16x2_i2c.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="web__unidad__paciente_8h_source.html">web_unidad_paciente.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dht22__sensor_8h_source.html">dht22_sensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mq3__alc__sensor_8h_source.html">mq3_alc_sensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hcsr501__pir__sensor_8h_source.html">hcsr501_pir_sensor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="relevador__remoto_8h_source.html">relevador_remoto.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aviso__sonoro_8h_source.html">aviso_sonoro.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="buzzer__melodies_8h_source.html">buzzer_melodies.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>&quot;</code><br />
 </div>
 <p><a href="monitor__unidad__paciente_8c_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a6b20d41d6252e9871430c242cb1a56e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</a>&#160;&#160;&#160;231</td></tr>
+<tr class="separator:a6b20d41d6252e9871430c242cb1a56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c13e2bb4dcfcaf93c3b959371cfc93b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a5c13e2bb4dcfcaf93c3b959371cfc93b">R_PEAK_INDEX</a>&#160;&#160;&#160;133</td></tr>
+<tr class="separator:a5c13e2bb4dcfcaf93c3b959371cfc93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48fb888fc5fe8c142d41ba6484c1cbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#ad48fb888fc5fe8c142d41ba6484c1cbc">RESP_PEAK_INDEX</a>&#160;&#160;&#160;92</td></tr>
+<tr class="separator:ad48fb888fc5fe8c142d41ba6484c1cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fada87638c4956d4adad9612805b2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#aa6fada87638c4956d4adad9612805b2f">CONFIG_PERIOD_TIMER_A</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:aa6fada87638c4956d4adad9612805b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049d58c18fdb78ea9498a4644ced1684"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a049d58c18fdb78ea9498a4644ced1684">CONFIG_PERIOD_TIMER_B</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:a049d58c18fdb78ea9498a4644ced1684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09e57208e607cf7d05ee36823b1aa0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#ac09e57208e607cf7d05ee36823b1aa0c">FC_MIN</a>&#160;&#160;&#160;40</td></tr>
+<tr class="separator:ac09e57208e607cf7d05ee36823b1aa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646ada8db1ad0f47084d9d89b64ab01c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a646ada8db1ad0f47084d9d89b64ab01c">FC_MAX</a>&#160;&#160;&#160;140</td></tr>
+<tr class="separator:a646ada8db1ad0f47084d9d89b64ab01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498ac3bb6c39158f78d2aff7e62eec41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a498ac3bb6c39158f78d2aff7e62eec41">FC_NORMAL_MIN</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a498ac3bb6c39158f78d2aff7e62eec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e77e7ce6ccdc71e617bfe4a2507645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a50e77e7ce6ccdc71e617bfe4a2507645">FC_NORMAL_MAX</a>&#160;&#160;&#160;130</td></tr>
+<tr class="separator:a50e77e7ce6ccdc71e617bfe4a2507645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58adbce8ee020c0d9ab9c12170262d9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a58adbce8ee020c0d9ab9c12170262d9f">FR_MIN</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a58adbce8ee020c0d9ab9c12170262d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40100c3725c72f6cb563c5e7e04feeb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a40100c3725c72f6cb563c5e7e04feeb1">FR_MAX</a>&#160;&#160;&#160;24</td></tr>
+<tr class="separator:a40100c3725c72f6cb563c5e7e04feeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc52eef7e318309283b59c6a7954792f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#adc52eef7e318309283b59c6a7954792f">FR_NORMAL_MIN</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:adc52eef7e318309283b59c6a7954792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a618e2b1423dab6097d693a1973ef1dd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a618e2b1423dab6097d693a1973ef1dd1">FR_NORMAL_MAX</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a618e2b1423dab6097d693a1973ef1dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a994a8cb585340c2068290beefe973b66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a994a8cb585340c2068290beefe973b66">TEMP_MIN_DECIMAS_C</a>&#160;&#160;&#160;150</td></tr>
+<tr class="separator:a994a8cb585340c2068290beefe973b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7447d139cc2eabef6be1b8823e78ee5e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a7447d139cc2eabef6be1b8823e78ee5e">TEMP_MAX_DECIMAS_C</a>&#160;&#160;&#160;400</td></tr>
+<tr class="separator:a7447d139cc2eabef6be1b8823e78ee5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7382829311893a4da8345f0b397b6210"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a7382829311893a4da8345f0b397b6210">HUM_MIN_DECIMAS_PCT</a>&#160;&#160;&#160;300</td></tr>
+<tr class="separator:a7382829311893a4da8345f0b397b6210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3d245c31bc94f81ec1f4ef233d10fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#aca3d245c31bc94f81ec1f4ef233d10fc">HUM_MAX_DECIMAS_PCT</a>&#160;&#160;&#160;800</td></tr>
+<tr class="separator:aca3d245c31bc94f81ec1f4ef233d10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ace3dbfc93b519c94d88017125b278d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a9ace3dbfc93b519c94d88017125b278d">FIFO_MAX_ALERTAS</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a9ace3dbfc93b519c94d88017125b278d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a63fb6f00694ff9f4318b4142c5c868"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a3a63fb6f00694ff9f4318b4142c5c868">ADC_MAX_VAL</a>&#160;&#160;&#160;3300</td></tr>
+<tr class="separator:a3a63fb6f00694ff9f4318b4142c5c868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9ff1807c0cab47f882f47c0c25cf21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#aea9ff1807c0cab47f882f47c0c25cf21">PERIODO_CICLO_LCD_MS</a>&#160;&#160;&#160;200</td></tr>
+<tr class="separator:aea9ff1807c0cab47f882f47c0c25cf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212bc6a58d03414f3b150f81914fe9cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a212bc6a58d03414f3b150f81914fe9cc">PERIODO_TAREA_AMB_MS</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a212bc6a58d03414f3b150f81914fe9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a86bc376b5c695551cb20cc89306c6f4a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4a">modo_simulacion_t</a> { <a class="el" href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4aa118b718c3eb5383b60531ce2123b2220">MODO_SIM_NINGUNO</a> = 0
+, <a class="el" href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4aa88e2b2d439fb0604313179e170899188">MODO_SIM_FC</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4aadd8d513ce35e8ea3fb2dbc3d174b2d54">MODO_SIM_FR</a>
+ }</td></tr>
+<tr class="memdesc:a86bc376b5c695551cb20cc89306c6f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máquina de estados de habilitación excluyente del potenciómetro gobernada por SWITCH_1 y SWITCH_2.  <a href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4a">Más...</a><br /></td></tr>
+<tr class="separator:a86bc376b5c695551cb20cc89306c6f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3311b33bac6c32fec7a62be763983873"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873">tipo_alerta_id_t</a> { <br />
+&#160;&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ac87cb31f7c63c1f3e45eb53bfae5deec">ALERTA_ID_NINGUNA</a> = 0
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ae01050aaa6761ec6ddbbb08a3004c93a">ALERTA_ID_LLAMADO_PACIENTE</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a1d182f180194e970f258fdf6889a3989">ALERTA_ID_ECG</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a179556117741480ae8949155a23142b8">ALERTA_ID_RESPIRAT</a>
+, <br />
+&#160;&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a829284a92403860652f8bec4541dda7c">ALERTA_ID_TEMP_BAJA</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873aaabb5b813a39c95fd2404d4e71d685e0">ALERTA_ID_TEMP_ALTA</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ad9e3decedbc34c04f024d3f2884a6c9f">ALERTA_ID_HUMEDAD_BAJA</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873afd88a549ac826b8fcd564edca8e94d16">ALERTA_ID_HUMEDAD_ALTA</a>
+, <br />
+&#160;&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a8449d478e7392496da567bdf5d3fb225">ALERTA_ID_ALCOHOL</a>
+, <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873aff4dce43bd0754bb206dc0e939269bbc">ALERTA_ID_MOVIMIENTO</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a3311b33bac6c32fec7a62be763983873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificadores unívocos de eventos de alarma para la Cola FIFO circular del sistema.  <a href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873">Más...</a><br /></td></tr>
+<tr class="separator:a3311b33bac6c32fec7a62be763983873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="monitor__unidad__paciente_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memdesc:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Punto de entrada de la aplicación en ESP-IDF. Ejecuta la secuencia ordenada de inicialización de periféricos, buses de comunicación, temporizadores de hardware y creación de tareas de FreeRTOS.  <a href="monitor__unidad__paciente_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">Más...</a><br /></td></tr>
 <tr class="separator:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Sistema embebido de monitoreo y asistencia para una unidad de paciente. </p>
-<p>El sistema constituye un prototipo educativo de una unidad de monitoreo como parte de una sala de internación, integrando adquisición de variables ambientales, señales fisiológicas simuladas, detección de eventos, alarmas y actuadores locales, con supervisión y control mediante una interfaz web local. <br  />
+<div class="textblock"><p >Sistema embebido de monitoreo clínico, supervisión ambiental, registro no volátil y asistencia remota para una unidad de paciente basado en FreeRTOS sobre ESP32-C6. </p>
+<p >El sistema constituye un prototipo integral de una unidad de monitoreo hospitalario para sala de internación, combinando la generación y adquisición en tiempo real de señales fisiológicas (electrocardiograma y respirograma), el relevamiento continuo de variables higrotérmicas y de seguridad ambiental, el almacenamiento no volátil en tarjeta MicroSD, la gestión priorizada de alarmas audiovisuales (incluyendo síntesis de voz digital LPCM y melodías RTTTL) y la telemetría bidireccional mediante un servidor web HTTP embebido. <br  />
 </p>
-<p>Este sistema permite plantear un punto de partida para el agregado de señales fisiológicas reales, y de otros tipos. De forma análoga, sensores de otro tipo, para otras necesidades pueden adicionarse e implementarse. <br  />
+<p >Su arquitectura modular permite proyectar la incorporación futura de transductores biomédicos analógicos o digitales adicionales sin alterar el núcleo del sistema. Asimismo, al operar como cliente inalámbrico (Modo Estación) dentro de la red local del centro de salud, múltiples unidades de monitoreo pueden coexistir simultáneamente, siendo identificadas de forma individual a través de la dirección IPv4 exhibida en su pantalla LCD local al establecer enlace con el router. <br  />
 </p>
-<p>Además, esta unidad también está planteada como cliente de una red del propio router con el que cuento para simular una red de un centro de salud, de manera que cuando se necesiten otras unidades de monitoreo, estos puedan agregarse a la red, para luego establecer una comunicación bidireccional desde la web que ya se plantea aquí con mDNS. <br  />
-</p>
-<p>Estos lineamientos son generales, como punto de partida, y pueden sufrir modificaciones conforme avance la resolución del proyecto.</p>
+<h1><a class="anchor" id="arq_modular"></a>
+Arquitectura de Software en Capas, Comunicaciones e Integración en FreeRTOS</h1>
+<h2><a class="anchor" id="cap_diseno"></a>
+1. Programación Modular y Diseño en Capas (Layered Architecture)</h2>
+<p >El firmware ha sido estructurado siguiendo un modelo estricto de abstracción por capas que desacopla la lógica clínica de alto nivel de los registros físicos del microcontrolador ESP32-C6:</p><ul>
+<li><b>Capa de Aplicación (<code><a class="el" href="monitor__unidad__paciente_8c.html" title="Sistema embebido de monitoreo clínico, supervisión ambiental, registro no volátil y asistencia remota...">monitor_unidad_paciente.c</a></code>):</b> Actúa como director de orquesta del sistema. Define las políticas clínicas (umbrales de bradicardia/taquicardia, bradipnea/taquipnea y rangos higrotérmicos), administra la cola FIFO circular de alertas, ejecuta el procesamiento digital de señales (acumuladores de fase DDS y filtrado exponencial IIR) y coordina las tareas concurrentes del sistema operativo FreeRTOS.</li>
+<li><b>Capa de Dispositivos (<code>drivers/devices/</code>):</b> Encapsula el protocolo específico de cada periférico externo exponiendo interfaces de programación (APIs) limpias y orientadas a acciones:<ul>
+<li><code><a class="el" href="display__16_x2__i2c_8h.html" title="Archivo de cabecera para el controlador del display LCD 16x2 mediante bus I2C (expansor PCF8574).">display_16x2_i2c.h</a></code> / <code></code>.c : Controlador de pantalla alfanumérica HD44780 en modo de 4 bits a través del expansor de E/S I2C PCF8574 (dirección <code>0x27</code>).</li>
+<li><code><a class="el" href="dht22__sensor_8h.html" title="Driver de la capa de dispositivos para el sensor digital de temperatura y humedad DHT22 (ASAIR AM2302...">dht22_sensor.h</a></code> / <code></code>.c : Decodificador Single-Wire no bloqueante por captura de flancos descendentes mediante interrupción (ISR) en <code>GPIO_9</code>.</li>
+<li><code><a class="el" href="mq3__alc__sensor_8h.html" title="Driver de la capa de dispositivos para el sensor de vapor de alcohol y gases inflamables MQ-3 en GPIO...">mq3_alc_sensor.h</a></code> / <code></code>.c : Supervisor de gases inflamables y vapores de alcohol en <code>GPIO_19</code> con ventana de inhibición térmica inicial de 60 segundos y cronometraje de pulso activo.</li>
+<li><code><a class="el" href="hcsr501__pir__sensor_8h.html" title="Driver de la capa de dispositivos para el sensor piroeléctrico de movimiento HC-SR501 en GPIO_12.">hcsr501_pir_sensor.h</a></code> / <code></code>.c : Detector piroeléctrico de movimiento en <code>GPIO_12</code> con supresión de pulso espurio de encendido (<em>Power-On Reset</em>) durante los primeros 3 segundos.</li>
+<li><code><a class="el" href="relevador__remoto_8h.html" title="Driver de la capa de dispositivos para el accionamiento por relevador a control remoto y pulsador de ...">relevador_remoto.h</a></code> / <code></code>.c : Gestor de entrada digital acondicionada en <code>GPIO_8</code> vinculada al contacto seco Normalmente Abierto (NO) del receptor RF de 433 MHz (<code>RX1C</code>).</li>
+<li><code><a class="el" href="aviso__sonoro_8h.html">aviso_sonoro.h</a></code> / <code></code>.c + <code><a class="el" href="ayuda__en__camino_8h.html" title="Muestras de audio LPCM (8 bits con signo, Mono, 8000 Hz) para la locución &quot;Ayuda en camino&quot;.">sonidos_lpcm/ayuda_en_camino.h</a></code> + <code><a class="el" href="buzzer__melodies_8h.html">buzzer_melodies.h</a></code> : Motor acústico asíncrono en <code>GPIO_23</code> capaz de sintetizar voz hablada LPCM a 8 kHz sobre portadora PWM Clase D de 32 kHz y ejecutar partituras musicales RTTTL en segundo plano.</li>
+<li><code><a class="el" href="microsd__datalogger_8h.html" title="Driver de la capa de dispositivos para el almacenamiento clínico no volátil en tarjeta MicroSD de 2GB...">microsd_datalogger.h</a></code> / <code></code>.c : Controlador de almacenamiento masivo FAT16 sobre bus SPI2 (<code>GPIO_13</code>, <code>GPIO_20</code>, <code>GPIO_21</code>, <code>GPIO_22</code>) y administrador del reloj de tiempo real (RTC).</li>
+<li><code><a class="el" href="web__unidad__paciente_8h.html" title="Módulo de conectividad Wi-Fi (Modo Estación) y Servidor Web HTTP embebido para la supervisión clínica...">web_unidad_paciente.h</a></code> / <code></code>.c : Cliente Wi-Fi IEEE 802.11 STA y servidor HTTP REST con interfaz gráfica HTML5/Canvas alojada en memoria Flash (<code></code>.rodata).</li>
+<li><code><a class="el" href="led_8h.html">led.h</a></code> y <code><a class="el" href="switch_8h.html">switch.h</a></code> : Controladores de señalización luminosa y teclas de la placa base.</li>
+</ul>
+</li>
+<li><b>Capa de Abstracción de Hardware y Microcontrolador (<code>drivers/microcontroller/</code> y ESP-IDF):</b> Gestiona los periféricos internos del SoC RISC-V (<code>analog_io_mcu</code>, <code>timer_mcu</code>, <code>uart_mcu</code>, <code>i2c_mcu</code>, <code>gpio_mcu</code>, <code>esp_driver_ledc</code>, <code>esp_driver_spi</code>, <code>esp_timer</code>, <code>fatfs</code>, <code>lwip</code>).</li>
+</ul>
+<h2><a class="anchor" id="com_buses"></a>
+2. Síntesis de Protocolos de Comunicación e Interfaces Físicas</h2>
+<p >El módulo principal coordina de manera simultánea ocho tecnologías de interfaz hardware:</p><ol type="1">
+<li><b>Modulación Sigma-Delta (DAC) y Conversión SAR (ADC) en Lazo Cerrado (500 Hz):</b> Los canales Sigma-Delta en <code>GPIO_0</code> (ECG) y <code>GPIO_18</code> (Respirograma) generan trenes de pulsos de alta frecuencia cuyo valor medio es reconstruido por sendos filtros pasabajos pasivos RC externos (<b>R = 100 kΩ</b>, <b>C = 100 nF</b>, frecuencia de corte <b>f<sub>c</sub> ≈ 15.9 Hz</b>). Las tensiones analógicas suavizadas reingresan a los canales del conversor analógico-digital de aproximaciones sucesivas (SAR ADC) <code>CH1</code> (<code>GPIO_1</code>) y <code>CH3</code> (<code>GPIO_3</code>), mientras que el canal <code>CH2</code> (<code>GPIO_2</code>) digitaliza la posición del potenciómetro de ajuste manual.</li>
+<li><b>Comunicación Serie Asincrónica UART (115200 bps, 8N1):</b> Vincula el microcontrolador con la herramienta gráfica Teleplot en la PC a través del puente USB-UART0. Para impedir que la preempción del sistema operativo fragmente o mezcle los textos de ambas señales, <code>TaskLeerECG_UART</code> construye paquetes atómicos unificados mediante <code>snprintf()</code> y los despacha en una única invocación a <code><a class="el" href="group___u_a_r_t.html#ga60db217694ea24ad75fcedda3336a3a8" title="Send a String trough serial port.">UartSendString()</a></code>.</li>
+<li><b>Bus Serie Sincrónico I2C (100 kHz, Open-Drain con Conversión de Nivel 3.3V a 5V):</b> A través de las líneas <code>SDA</code> (<code>GPIO_6</code>) y <code>SCL</code> (<code>GPIO_7</code>), el maestro envía tramas de 27 bits hacia la dirección <code>0x27</code> (<code>0x4E</code> en escritura) del expansor PCF8574 para gobernar en modo de 4 bits (<code>D7</code>..D4) y líneas de control (<code>RS</code>, <code>RW</code>, <code>EN</code>, <code>BL</code>) al display LCD 16x2.</li>
+<li><b>Protocolo Bidireccional Single-Wire por Captura de Tiempo en ISR (DHT22 en GPIO_9):</b> La tarea ambiental inicia la lectura con un pulso bajo de <b>2 ms</b> y cede la CPU en estado <code>Blocked</code> durante <b>20 ms</b>; entretanto, una rutina de interrupción alojada en memoria IRAM estampa con <code>esp_timer_get_time()</code> cada flanco descendente de los 40 bits de datos, discriminando ceros (<b>≈ 76 µs</b>) y unos (<b>≈ 120 µs</b>) con inmunidad absoluta frente a las interrupciones de <b>500 Hz</b>.</li>
+<li><b>Bus Serie Sincrónico Full-Duplex SPI2 (4 MHz, Modo 0) y Sistema FAT16:</b> Conecta el lector de tarjeta MicroSD de 2 GB mediante las líneas <code>CS</code> (<code>GPIO_13</code>, con el transceptor <code>USB_D+</code> desacoplado por software), <code>SCK</code> (<code>GPIO_20</code>), <code>MOSI</code> (<code>GPIO_21</code>) y <code>MISO</code> (<code>GPIO_22</code>). Cada 10 segundos ejecuta las Fases 1 y 2 relevadas en osciloscopio (apertura en modo <em>append</em>, escritura de línea CSV y cierre <code>fclose()</code> con <em>flush</em> inmediato a la tabla FAT16 mientras <code>MISO</code> indica estado <em>busy</em>), resguardando el historial clínico ante cortes de suministro eléctrico.</li>
+<li><b>Modulación PWM Clase D (32 kHz) y Etapa de Potencia Push-Pull Aislada (GPIO_23):</b> El periférico <code>LEDC</code> y el temporizador <code>SYSTIMER</code> sintetizan tanto ondas cuadradas tonales (melodías RTTTL) como audio digital LPCM de 8 bits a <b>8000 Hz</b> (<b>125 µs</b> por muestra). La señal en <code>GPIO_23</code> excita a través de un resistor de <b>220 Ω</b> las bases del par complementario NPN/PNP (<code>C1815</code> / <code>A1015</code>), cuyo colector NPN está desacoplado del bus de <b>+5V</b> mediante un diodo <code>1N4007</code> y un capacitor tanque electrolítico de <b>1000 µF</b> a masa, atacando al parlante dinámico de <b>4 Ω</b> mediante un capacitor de acople de <b>220 µF</b> y un resistor serie de <b>10 Ω</b>.</li>
+<li><b>Elevación Conmutada Step-Up (5V a 12V) y Acondicionamiento Antirrebote RC en GPIO_8:</b> A partir de los <b>+5V</b> del puerto USB (filtrados a la entrada con <b>100 µF</b> electrolítico y <b>100 nF</b> cerámico), un convertidor elevador <code>MT3608</code> genera <b>+12.0V</b> (filtrados a la salida con <b>220 µF / 35V</b> y <b>100 nF</b>) para alimentar al módulo receptor de radiofrecuencia de <b>433 MHz</b> (<code>RX1C</code>). Sus contactos secos aislados (<code>COM</code> a <code>GND</code> y <code>NO</code> al nodo de señal) gobiernan el pin <code>GPIO_8</code> mediante una red de acondicionamiento idéntica a la de las teclas del sistema: resistor <em>pull-up</em> de <b>10 kΩ</b> a <b>+3.3V</b>, capacitor cerámico lenteja <code>104</code> (<b>100 nF</b>) a masa para supresión física de rebotes mecánicos, y resistor serie de protección de <b>1 kΩ</b> hacia el pin <code>GPIO_8</code>.</li>
+<li><b>Conectividad Inalámbrica Wi-Fi (IEEE 802.11 b/g/n) y Servidor HTTP REST:</b> Provee telemetría JSON cada <b>1 s</b> (<code>/api/status</code>), sincronización automática y manual del reloj RTC (<code>/api/time</code>), consulta de las últimas 40 muestras de la MicroSD para graficación en 5 lienzos Canvas apilados (<code>/api/sd_history</code>), descarga del archivo <code>DATALOG.CSV</code> completo (<code>/api/sd_csv</code>) y recepción de comandos remotos de control.</li>
+</ol>
+<h2><a class="anchor" id="rtos_arch"></a>
+3. Arquitectura Multitarea en FreeRTOS: Prioridades, Estados y Sincronización</h2>
+<p >El diseño explota el planificador apropiativo (<em>preemptive scheduler</em>) por prioridades de FreeRTOS, organizando la carga computacional en cinco tareas de aplicación más los servicios de sistema:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Tarea FreeRTOS / ISR   </th><th class="markdownTableHeadCenter">Prioridad   </th><th class="markdownTableHeadCenter">Stack (Bytes)   </th><th class="markdownTableHeadLeft">Activación / Período   </th><th class="markdownTableHeadLeft">Rol Funcional y Transición de Estados (Running / Ready / Blocked)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>FuncTimerA</code> / <code>B</code> (ISR)   </td><td class="markdownTableBodyCenter">Hardware   </td><td class="markdownTableBodyCenter">Contexto ISR   </td><td class="markdownTableBodyLeft">Cada 2000 µs (500 Hz)   </td><td class="markdownTableBodyLeft">Interrupciones de hardware (<code>GPTimer</code>). Envían notificación directa (<code>vTaskNotifyGiveFromISR</code>) y despiertan a las tareas críticas.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>TaskGenerarECG</code>   </td><td class="markdownTableBodyCenter"><b>5 (Máx)</b>   </td><td class="markdownTableBodyCenter">2048   </td><td class="markdownTableBodyLeft">Notificación 500 Hz   </td><td class="markdownTableBodyLeft">Permanece en <b>Blocked</b> sobre <code>ulTaskNotifyTake()</code>. Al recibir la notificación pasa a <b>Running</b>, actualiza acumuladores DDS y escribe en ambos DACs.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>TaskLeerECG_UART</code>   </td><td class="markdownTableBodyCenter"><b>4 (Alta)</b>   </td><td class="markdownTableBodyCenter">2048   </td><td class="markdownTableBodyLeft">Notificación 500 Hz   </td><td class="markdownTableBodyLeft">Permanece en <b>Blocked</b> sobre <code>ulTaskNotifyTake()</code>. Al ejecutarse muestrea ADC (<code>CH1</code>, <code>CH3</code> a 50 Hz, <code>CH2</code> a 20 Hz) y transmite por UART.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>TaskPotenciometro_LED</code>   </td><td class="markdownTableBodyCenter"><b>2 (Media)</b>   </td><td class="markdownTableBodyCenter">2048   </td><td class="markdownTableBodyLeft"><code>vTaskDelay(20 ms)</code>   </td><td class="markdownTableBodyLeft">Ejecuta filtrado IIR de potenciómetro, máquina de estados de teclas, lógica dual de <code>GPIO_8</code>, umbrales con histéresis y destellos de LED 1 y LED 2.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>TaskDisplayLCD</code>   </td><td class="markdownTableBodyCenter"><b>2 (Media)</b>   </td><td class="markdownTableBodyCenter">4096   </td><td class="markdownTableBodyLeft"><code>vTaskDelay(200 ms)</code>   </td><td class="markdownTableBodyLeft">Publica estado hacia el servidor web cada 200 ms y cada 1 s (5 ciclos) refresca las 2 filas del LCD I2C, la baliza LED 3 y la melodía de alerta.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>TaskSensoresAmbientales</code>   </td><td class="markdownTableBodyCenter"><b>2 (Media)</b>   </td><td class="markdownTableBodyCenter">8192   </td><td class="markdownTableBodyLeft"><code>vTaskDelay(100 ms)</code>   </td><td class="markdownTableBodyLeft">Muestrea PIR y MQ-3 cada 100 ms (activando <em>latches</em>), lee el DHT22 cada 1.5 s (15 ciclos) y vuelca el registro a la MicroSD cada 10 s (100 ciclos).   </td></tr>
+</table>
+<p ><b>Mecanismos de Sincronización y Protección de Recursos Compartidos:</b></p><ul>
+<li><b>Notificaciones Directas a Tarea (<code>vTaskNotifyGiveFromISR</code> / <code>ulTaskNotifyTake</code>):</b> Empleadas en lugar de semáforos binarios convencionales para vincular <code>TIMER_A</code> y <code>TIMER_B</code> con las tareas de <b>500 Hz</b>, logrando una conmutación de contexto hasta un 45% más veloz y sin sobrecarga de RAM.</li>
+<li><b>Muestreo Unificado del Periférico SAR ADC (<code>pot_raw_compartido</code>):</b> Dado que el convertidor ADC1 del ESP32-C6 es un recurso físico único compartido por <code>CH1</code>, <code>CH2</code> y <code>CH3</code>, si dos tareas de distinta prioridad invocaran <code><a class="el" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9" title="Read single channel.">AnalogInputReadSingle()</a></code> de forma asincrónica se produciría una colisión en los registros del convertidor. Para evitarlo por diseño, <code>TaskLeerECG_UART</code> centraliza la totalidad de las lecturas ADC (muestreando el potenciómetro <code>CH2</code> cada 25 ciclos = <b>50 ms</b>) y deposita el resultado en la variable volátil <code>pot_raw_compartido</code>, la cual es leída sin bloqueos por <code>TaskPotenciometro_LED</code>.</li>
+<li><b>Secciones Críticas con Spinlock de Hardware (<code>portMUX_TYPE</code> <code>s_fifo_spinlock</code>):</b> Protegen las operaciones de encolado, desencolado y búsqueda sobre la cola circular <code>s_cola_fifo</code>[], garantizando atomicidad cuando múltiples tareas (<code>TaskPotenciometro_LED</code>, <code>TaskSensoresAmbientales</code> y <code>TaskDisplayLCD</code>) acceden concurrentemente a la estructura de alarmas.</li>
+<li><b>Banderas de Retención Temporal (<em>Latches</em> <code>s_latch_gases_10s</code> y <code>s_latch_movimiento_10s</code>):</b> Dado que el período de muestreo de los sensores de seguridad (<b>100 ms</b>) es cien veces más rápido que el período de escritura en la tarjeta MicroSD (<b>10.000 ms</b>), estas banderas actúan como memorias biestables que capturan cualquier evento fugaz de gas o movimiento ocurrido dentro de la ventana de 10 segundos y solo se limpian una vez confirmado el cierre exitoso (<code>fclose</code>) del archivo CSV.</li>
+</ul>
 <h1><a class="anchor" id="diseño"></a>
-<h2><b>Explicación del diseño y funcionamiento de la aplicación</b></h2>
-</h1>
-<p>El sistema monitorea de forma continua la unidad del paciente combinando la lectura de variables ambientales con la simulación en tiempo real de signos vitales. Una interrupción de hardware configurada a 500 Hz asegura el determinismo del sistema, actualizando los ciclos de trabajo (PWM) que representan la morfología del electrocardiograma (ECG) y el respirograma. Estas señales digitales pasan por filtros RC externos para suavizarse y son leídas de nuevo mediante los canales ADC del microcontrolador. Durante la misma interrupción, estos valores analógicos capturados se transmiten por el puerto UART hacia el Teleport de VSC, garantizando el trazado ininterrumpido de las curvas fisiológicas. En paralelo, potenciómetros locales permiten al operador modificar la frecuencia cardíaca y respiratoria, de manera que puedan agregarse otras alertas cuando estas variables salgan del rango normal.</p>
-<p>Simultáneamente, el sistema operativo FreeRTOS administra tareas de menor prioridad a 1 Hz, como la lectura de gases (MQ-3), detección de movimiento (PIR) y lectura de temperatura/humedad mediante un periférico de hardware dedicado (RMT) que evita bloquear la CPU. Si se detectan anomalías ambientales o se accionan los pulsadores de auxilio (Ayuda o Equipamiento), el evento ingresa a una cola FIFO de alarmas. Esta gestión dispara la interfaz hombre-máquina local (pantalla LCD I2C, destellos LED y buzzer PWM) y actualiza el servidor web HTTP integrado. A través de la red Wi-Fi local y el dominio mDNS unidad1.local, el personal médico puede supervisar desde cualquier navegador las métricas numéricas del paciente, el estado del entorno y gestionar la cola de alertas de manera fluida y estable.</p>
+Explicación del diseño y funcionamiento de la aplicación</h1>
+<p >El sistema monitorea de forma continua la unidad del paciente combinando la lectura de variables ambientales con la simulación en tiempo real de signos vitales. Dos interrupciones de hardware configuradas a 500 Hz aseguran el determinismo del sistema, actualizando las salidas analógicas Sigma-Delta que representan la morfología del electrocardiograma (ECG en GPIO_0) y el respirograma (en GPIO_18). Estas señales pasan por filtros RC externos para suavizarse y son leídas de nuevo mediante los canales ADC del microcontrolador (CH1 en GPIO_1 y CH3 en GPIO_3). Durante el mismo ritmo de muestreo, estos valores analógicos capturados se transmiten por el puerto UART hacia el complemento Teleplot de Visual Studio Code, garantizando el trazado ininterrumpido de las curvas fisiológicas. En paralelo, un potenciómetro local en GPIO_2 (CH2) habilitado de manera excluyente mediante las teclas 1 y 2 permite al operador modificar de forma independiente la frecuencia cardíaca (40 a 140 bpm, rango normal de 50 a 130 bpm) y la frecuencia respiratoria (8 a 24 rpm, rango normal de 12 a 20 rpm), disparando alertas cuando estas variables salen del rango normal.</p>
+<p >Simultáneamente, el sistema operativo FreeRTOS administra tareas de prioridad media para la supervisión de vapores de alcohol y gases inflamables (MQ-3 en GPIO_19 con espera de precalentamiento de 1 minuto), detección de movimiento por flanco ascendente (PIR HC-SR501 en GPIO_12), lectura de temperatura y humedad cada 1.5 s (DHT22 / AM2302 en GPIO_9 por captura de flancos con ISR) y almacenamiento clínico no volátil cada 10 s en tarjeta MicroSD (bus SPI en GPIO_13, GPIO_20, GPIO_21 y GPIO_22) sin bloquear la CPU. Asimismo, la entrada acondicionada en GPIO_8 (accionada mediante el relevador inalámbrico de 433 MHz alimentado a 12V con un elevador MT3608) cumple una función dual: si la cola FIFO está vacía, permite al paciente solicitar atención (encendiendo fijo el LED 3 y reproduciendo la melodía Drama); si existen alertas en la cola FIFO, cada pulsación desencola la alerta más antigua. Toda anomalía fisiológica o ambiental ingresa a la cola FIFO de alarmas, gobernando la interfaz hombre-máquina local (pantalla LCD I2C en GPIO_6/GPIO_7, LED 3 y aviso sonoro RTTTL / síntesis de voz LPCM en Clase D por GPIO_23) y actualizando el servidor web HTTP integrado. Al iniciar el sistema el LCD exhibe "BIENVENIDO!" y, tras conectarse al router Wi-Fi, mantiene visible la dirección IP asignada hasta que el personal médico configure el nombre del paciente o un mensaje desde el navegador web, o bien se presente una alerta activa.</p>
 <hr  />
 <h1><a class="anchor" id="requerimientos"></a>
-<h2><b>Requerimientos de diseño</b></h2>
-</h1>
+Requerimientos de diseño</h1>
 <h2><a class="anchor" id="req_funcionales"></a>
-<h3><b>1. Requerimientos Funcionales y de Adquisición</b></h3>
-</h2>
+1. Requerimientos Funcionales y de Adquisición</h2>
 <ul>
-<li><b>Muestreo y Generación Determinística:</b> Uso de temporizadores de hardware a 500 Hz para la actualización del PWM de señales fisiológicas, lectura del ADC en configuración de loopback y transmisión inmediata de la trama de datos por puerto serie (UART).</li>
-<li><b>Adquisición Asíncrona:</b> Implementación del periférico RMT para decodificar la señal Single-Wire del sensor DHT11 por hardware, evitando colisiones con la interrupción de alta frecuencia.</li>
-<li><b>Sensores Secundarios:</b> Lectura analógica y digital a 1 Hz para concentraciones de gas (MQ-3), movimiento en accesos (PIR) y regulación manual de frecuencias mediante potenciómetros.</li>
+<li><b>Muestreo y Generación Determinística:</b> Uso de temporizadores de hardware a 500 Hz para la actualización de las salidas Sigma-Delta de señales fisiológicas, lectura del ADC en configuración de lazo cerrado (<em>loopback</em>) y transmisión inmediata de la trama de datos por puerto serie (UART).</li>
+<li><b>Adquisición Asíncrona por ISR:</b> Implementación de decodificación Single-Wire mediante interrupción de flanco descendente en GPIO_9 para el sensor DHT22 (AM2302), evitando pérdidas de bits durante las preempciones de 500 Hz del ECG y la UART.</li>
+<li><b>Sensores Secundarios y Registro No Volátil:</b> Lectura digital con divisor resistivo y espera de calentamiento (60 s) para alcohol/gases (MQ-3 en GPIO_19), detección por flanco en accesos (PIR HC-SR501 en GPIO_12), regulación manual de frecuencias mediante potenciómetro y teclas de selección, y guardado periódico cada 10 s en archivo CSV sobre tarjeta MicroSD (FAT16 vía SPI) con estampa de fecha y hora RTC.</li>
 </ul>
 <h2><a class="anchor" id="req_alarmas"></a>
-<h3><b>2. Gestión de Alarmas e Interfaz Hombre-Máquina (HMI)</b></h3>
-</h2>
+2. Gestión de Alarmas e Interfaz Hombre-Máquina (HMI)</h2>
 <ul>
-<li><b>Procesamiento de Eventos:</b> Estructura de datos en cola FIFO capaz de retener múltiples alertas concurrentes (botones de pánico de paciente, fallas de equipo o variables ambientales fuera de rango) sin pérdida de información.</li>
-<li><b>Interfaz Local:</b> Visualización del estado y la alerta más prioritaria en una pantalla LCD 16x2 vía bus I2C.</li>
-<li><b>Señalización Audiovisual:</b> LEDs indicadores de pulso cardíaco y respiratorio, LED baliza intermitente de alerta, y tonos de alarma / advertencia generados por un buzzer pasivo vía PWM.</li>
+<li><b>Procesamiento de Eventos:</b> Estructura de datos en cola FIFO capaz de retener múltiples alertas concurrentes (llamado de paciente, signos vitales o variables ambientales fuera de rango) sin pérdida de información, desencolables mediante el relevador remoto en GPIO_8 o vía Web.</li>
+<li><b>Interfaz Local:</b> Visualización del estado, dirección IP y la alerta más prioritaria en una pantalla LCD 16x2 vía bus I2C adaptado mediante conversor de nivel lógico bidireccional (3.3V a 5V).</li>
+<li><b>Señalización Audiovisual:</b> LEDs indicadores de pulso cardíaco (LED 1) y respiratorio (LED 2), LED 3 baliza de alerta (fijo en llamado de paciente o intermitente 1s/1s en alertas), melodías polifónicas monocanales RTTTL (Mario Hurry Up, Drama, Pacman) y locución de voz LPCM a 8 kHz en GPIO_23 sobre etapa de potencia Push-Pull C1815/A1015 con aislamiento de fuente y tanque capacitivo de 1000 uF.</li>
 </ul>
 <h2><a class="anchor" id="req_conectividad"></a>
-<h3><b>3. Conectividad, Software y Arquitectura Web</b></h3>
-</h2>
+3. Conectividad, Software y Arquitectura Web</h2>
 <ul>
-<li><b>Sistema Operativo en Tiempo Real (RTOS):</b> Arquitectura basada en FreeRTOS para el manejo seguro de múltiples tareas (sensores, red, UI local) protegiendo recursos compartidos.</li>
-<li><b>Dashboard Web Ligero:</b> Servidor HTTP embebido en modo estación (STA) y resolución de dominio mDNS. La interfaz web mostrará únicamente estadísticas numéricas calculadas y estado de alarmas, delegando el trazado de las curvas en tiempo real exclusivamente al puerto UART para mantener la estabilidad del núcleo y la red TCP/IP.</li>
+<li><b>Sistema Operativo en Tiempo Real (RTOS):</b> Arquitectura basada en FreeRTOS para el manejo seguro de múltiples tareas (síntesis, telemetría, sensores, datalogger SD, UI local y servidor HTTP) protegiendo los recursos compartidos mediante notificaciones directas, spinlocks y semáforos mutex.</li>
+<li><b>Dashboard Web con Graficación Histórica:</b> Servidor HTTP embebido en modo estación (STA) accesible directamente mediante la dirección IPv4 mostrada en el display LCD. La interfaz web muestra en tiempo real las variables clínicas y ambientales con animaciones sincronizadas, sincroniza el reloj RTC, permite descargar el archivo <code>DATALOG.CSV</code> completo y grafica en 5 lienzos Canvas apilados los últimos registros almacenados en la tarjeta MicroSD.</li>
+</ul>
+<h1><a class="anchor" id="hardConn"></a>
+Hardware Connection</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Periférico / Señal   </th><th class="markdownTableHeadLeft">Pin ESP32-C6   </th><th class="markdownTableHeadLeft">Conexión Hardware / Circuito Externo (función)    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Tecla 1 (SWITCH_1)   </td><td class="markdownTableBodyLeft">GPIO_4   </td><td class="markdownTableBodyLeft">Integrado en placa ESP-EDU (Habilita/deshabilita el ajuste de FC)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Tecla 2 (SWITCH_2)   </td><td class="markdownTableBodyLeft">GPIO_15   </td><td class="markdownTableBodyLeft">Integrado en placa ESP-EDU (Habilita/deshabilita el ajuste de FR)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">LED 1 (Pulso / Alerta ECG)   </td><td class="markdownTableBodyLeft">GPIO_11   </td><td class="markdownTableBodyLeft">Integrado en placa ESP-EDU (Destella 60 ms en pico R o fijo en alerta FC)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">LED 2 (Pulso / Alerta Resp)   </td><td class="markdownTableBodyLeft">GPIO_10   </td><td class="markdownTableBodyLeft">Integrado en placa ESP-EDU (Destella 120 ms en pico inspiratorio o fijo en alerta FR)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">LED 3 (Alerta General FIFO)   </td><td class="markdownTableBodyLeft">GPIO_5   </td><td class="markdownTableBodyLeft">Integrado en placa ESP-EDU (Fijo en llamado paciente o baliza 1s ON / 1s OFF)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Salida DAC ECG (Sigma-Delta)   </td><td class="markdownTableBodyLeft">GPIO_0   </td><td class="markdownTableBodyLeft">A extremo de resistencia R1 = 100 kΩ del filtro RC pasabajos    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Entrada ADC (ECG)   </td><td class="markdownTableBodyLeft">GPIO_1 (CH1)   </td><td class="markdownTableBodyLeft">Al nodo central entre R1 (100 kΩ) y C1 (100 nF a GND)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Salida DAC Resp(Sigma-Delta)   </td><td class="markdownTableBodyLeft">GPIO_18   </td><td class="markdownTableBodyLeft">A extremo de resistencia R2 = 100 kΩ del filtro RC pasabajos    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Entrada ADC (Respirograma)   </td><td class="markdownTableBodyLeft">GPIO_3 (CH3)   </td><td class="markdownTableBodyLeft">Al nodo central entre R2 (100 kΩ) y C2 (100 nF a GND)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Entrada ADC (Potenciómetro)   </td><td class="markdownTableBodyLeft">GPIO_2 (CH2)   </td><td class="markdownTableBodyLeft">Al cursor central del potenciómetro entre 3.3V y GND (ajusta FC y FR)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Puerto UART PC   </td><td class="markdownTableBodyLeft">USB-UART0   </td><td class="markdownTableBodyLeft">115200 baudios, 8N1 (Envío de tramas atómicas a Teleplot)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Bus I2C Datos (SDA 3.3V)   </td><td class="markdownTableBodyLeft">GPIO_6   </td><td class="markdownTableBodyLeft">Pin TX1LCH1 del conv. nivel -&gt; TX0HCH1 a SDA PCF8574 (0x27)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Bus I2C Reloj (SCL 3.3V)   </td><td class="markdownTableBodyLeft">GPIO_7   </td><td class="markdownTableBodyLeft">Pin TX1LCH2 del conv. nivel -&gt; TX0HCH2 a SCL PCF8574 (0x27)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Referencia Baja Tensión   </td><td class="markdownTableBodyLeft">3V3   </td><td class="markdownTableBodyLeft">Pin LV del conv. de nivel, pot., pull-up GPIO_8 y VCC de DHT22    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Alimentación Alta Tensión   </td><td class="markdownTableBodyLeft">5V   </td><td class="markdownTableBodyLeft">Pin HV conv. nivel, VCC PCF8574 (+100 uF/100 nF), PIR, MQ-3, MicroSD, MT3608 y Audio    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Masa común (GND)   </td><td class="markdownTableBodyLeft">GND   </td><td class="markdownTableBodyLeft">Plano de referencia común de 0V para todos los subsistemas    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Relevador Remoto RF 433 MHz   </td><td class="markdownTableBodyLeft">GPIO_8   </td><td class="markdownTableBodyLeft">Nodo con 10 kΩ a 3.3V, cap. 104 (100 nF) a GND, 1 kΩ serie a GPIO_8 y contacto NO a COM (GND)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Elevador Step-Up MT3608   </td><td class="markdownTableBodyLeft">5V -&gt; 12.0V   </td><td class="markdownTableBodyLeft">Entrada 5V (con 100 uF + 100 nF a GND) -&gt; Salida 12.0V (con 220 uF/35V + 100 nF) a módulo RX1C    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Sensor Movimiento HC-SR501   </td><td class="markdownTableBodyLeft">GPIO_12   </td><td class="markdownTableBodyLeft">Salida OUT directa a GPIO_12 (VCC=5V, salida lógica nativa de 3.3V)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Sensor DHT22 (AM2302)   </td><td class="markdownTableBodyLeft">GPIO_9   </td><td class="markdownTableBodyLeft">Pin 2 DATA directo a GPIO_9 (VCC=3.3V con pull-up externo de 5.6 kΩ a 3.3V)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Sensor Alcohol/Gas MQ-3   </td><td class="markdownTableBodyLeft">GPIO_19   </td><td class="markdownTableBodyLeft">Salida DOUT vía divisor resistivo: 5.6 kΩ en serie y 10 kΩ a GND (VCC=5V)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Bus SPI Lector MicroSD (CS)   </td><td class="markdownTableBodyLeft">GPIO_13   </td><td class="markdownTableBodyLeft">Salida digital CS (Transceptor USB_D+ interno deshabilitado por software)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Bus SPI Lector MicroSD (SCK)   </td><td class="markdownTableBodyLeft">GPIO_20   </td><td class="markdownTableBodyLeft">Reloj SPI Maestro a 4 MHz hacia pin SCK del módulo MicroSD    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Bus SPI Lector MicroSD (MOSI)   </td><td class="markdownTableBodyLeft">GPIO_21   </td><td class="markdownTableBodyLeft">Datos Maestro -&gt; Esclavo hacia pin MOSI del módulo MicroSD    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Bus SPI Lector MicroSD (MISO)   </td><td class="markdownTableBodyLeft">GPIO_22   </td><td class="markdownTableBodyLeft">Datos Esclavo -&gt; Maestro (3.3V nativos) desde pin MISO/MOSO del módulo MicroSD    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Bus SPI Lector MicroSD (VCC)   </td><td class="markdownTableBodyLeft">5V   </td><td class="markdownTableBodyLeft">Alimentación +5V DC desacoplada con 220 uF electrolítico y 100 nF cerámico a GND    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Aviso Sonoro (PWM / LPCM)   </td><td class="markdownTableBodyLeft">GPIO_23   </td><td class="markdownTableBodyLeft">A 220 Ω -&gt; Bases C1815/A1015 (Colector NPN con diodo + 1000 uF a GND) -&gt; 220 uF -&gt; 10 Ω -&gt; Parlante 4 Ω   </td></tr>
+</table>
+<h3><a class="anchor" id="autotoc_md1"></a>
+Implementaciones de hardware y software en videos de prueba subidos a YouTube:</h3>
+<h4><a class="anchor" id="autotoc_md2"></a>
+1. Proyecto Finalizado (Demostración Integral en Ambas Placas):</h4>
+<ul>
+<li><b><a href="https://youtu.be/qIbY7SjvQnA">Monitor Unidad Paciente (mi ESP32)</a></b> <br  />
+ Monitor Unidad Paciente finalizado, corriendo sobre mi ESP32-C6-WROOM-1 V1.2, Single-Core, RISC-V 32-bit, 160 MHz, kit de desarrollo: Muse Lab. <br  />
+</li>
+<li><b><a href="https://youtu.be/X56GXF_a68k">Monitor Unidad Paciente (ESP-EDU)</a></b> <br  />
+ Monitor Unidad Paciente finalizado, corriendo sobre ESP-EDU. <br  />
+ </li>
+</ul>
+<h4><a class="anchor" id="autotoc_md3"></a>
+2. Salida Digital-Analógica (DAC Sigma-Delta), Filtro RC, ECG y Respirograma:</h4>
+<ul>
+<li><b><a href="https://youtube.com/shorts/sI_Fc5lGRFs">Prueba salida GPIO_0</a></b> <br  />
+ Verificación inicial en osciloscopio de la señal modulada entre 0 y 3.3 V en GPIO_0 con GPIO_1 flotando. <br  />
+</li>
+<li><b><a href="https://youtu.be/fAqSIl8k_Ok">Guia 2 - Act 4 - 01 puente entre GPIO_0 y GPIO_1</a></b> <br  />
+ Se realiza un puente entre GPIO_0 y GPIO_1 comprobando en osciloscopio físico y por puerto serie (COM11 a 115200 baudios) la señal capturada por el canal 1 del ADC1. <br  />
+</li>
+<li><b><a href="https://youtu.be/91VUybTmg7U">Guia 2, act 4 - 02 ECG entre GPIO_0 y GPIO_1</a></b> <br  />
+ Conexión entre el pin GPIO_0 y GPIO_1 mediante un divisor de tensión RC, cuyo punto medio filtra y suaviza la señal sigma-delta reconstruyendo la forma de onda de un ECG. <br  />
+</li>
+<li><b><a href="https://youtu.be/Rb2sv9CD0vM">Mi DAC - prueba variante sencilla de ESP-EDU</a></b> <br  />
+ Mejora del aspecto visual de la señal ECG generada por la salida sigma-delta en GPIO_0 del ESP32-C6 mediante el ajuste del filtro RC pasabajos. <br  />
+</li>
+<li><b><a href="https://youtu.be/w0FN1_etG9A">Mi DAC para ECG final</a></b> <br  />
+ Resultado final de la implementación del filtro RC a partir de lo experimentado con la resistencia variable. <br  />
+</li>
+<li><b><a href="https://youtu.be/pI7VuOgxYBg">ECG frecuencia variable, con pulsos y alarma</a></b> <br  />
+ Prueba del bloque ECG con frecuencia variable visualizando la señal, frecuencia cardíaca, pulsaciones y alertas en Teleplot (UART), osciloscopio y LED 1. <br  />
+</li>
+<li><b><a href="https://youtu.be/MppDgt1LKZQ">Respirograma y ECG, frecuencias variables, pulsos, alarmas, independientes, display 16x2</a></b> <br  />
+ Ajuste independiente de frecuencias cardíaca y respiratoria mediante ventanas de programación con potenciómetro, indicación en display 16x2, encendido continuo de LEDs en alerta y trazado en Teleplot. <br  />
+</li>
+<li><b><a href="https://youtu.be/-Qa2UPxSq94">Respirograma y ECG - comprobación con osciloscopio</a></b> <br  />
+ Comprobación en osciloscopio en tiempo real del modelado, generación y captura simultánea del ECG y el respirograma por parte del ESP32-C6. <br  />
+ </li>
+</ul>
+<h4><a class="anchor" id="autotoc_md4"></a>
+3. Sensores Ambientales (DHT22 y MQ-3) y Display I2C:</h4>
+<ul>
+<li><b><a href="https://youtube.com/shorts/58nJPL-9mYg">Conexión I2C ESP32, conversor de nivel, conversor I2C, y display LCD 16x2</a></b> <br  />
+ Interposición de un conversor de nivel lógico bidireccional (3.3 V a 5 V) entre el ESP32-C6 y el expansor I2C para lograr un funcionamiento adecuado en brillo, contraste y comunicación con el display LCD 16x2. <br  />
+</li>
+<li><b><a href="https://youtu.be/vintphlcF2E">DHT22 sensor temp. y hum. comunicación</a></b> <br  />
+ El sensor de temperatura y humedad DHT22 se comunica mediante un protocolo Single-Wire en donde la duración de sus pulsos determina los ceros y unos que codifican las variables sensadas. <br  />
+</li>
+<li><b><a href="https://youtube.com/shorts/1Po57KtMRjY">Calibración sensor alcohol y gases inflamables</a></b> <br  />
+ Ajuste del potenciómetro del sensor MQ-3 para detectar la presencia de vapores de alcohol (bebidas alcohólicas o alcohol al 70% en piel) y gases inflamables contenidos en aerosoles. <br  />
+ </li>
+</ul>
+<h4><a class="anchor" id="autotoc_md5"></a>
+4. Audio LPCM / PWM, Datalogger MicroSD y Conectividad Web Wi-Fi:</h4>
+<ul>
+<li><b><a href="https://youtu.be/Lmkvz8ZtWx4">Etapa sonido para avisos LPCM y PWM</a></b> <br  />
+ Mediante la modulación LPCM sobre portadora PWM pueden enviarse sonidos elaborados como mensajes hablados hacia el monitor unidad paciente. <br  />
+</li>
+<li><b><a href="https://youtu.be/hTUDn0Bl0bQ">Registro y visualizacion de datos, y sincronización fecha y hora</a></b> <br  />
+ El ESP32 obtiene una fecha y hora actual para vincular a los datos registrados cada diez segundos en la MicroSD. Los datos pueden descargarse de la web y visualizarse en forma de gráfica/función en la misma web. <br  />
+</li>
+<li><b><a href="https://youtu.be/K3T0wrf6PqI">Conexion WiFi LAN y visualizacion web</a></b> <br  />
+ Comprobación del enlace entre el ESP32 y la red WiFi LAN, visualizando en tiempo real las variables registradas por la unidad paciente en la página web alojada en el microcontrolador. <br  />
+</li>
+<li><b><a href="https://youtube.com/shorts/NUhS4IJ7fCM">Ejecución de comandos vía web</a></b> <br  />
+ Comunicación WiFi LAN desde notebook hacia el ESP32 para la ejecución remota de órdenes sobre la unidad paciente. <br  />
+</li>
+<li><b><a href="https://youtu.be/ey6NkgmBr6s">Ejecución de comandos celular/tablet</a></b> <br  />
+ Comunicación bidireccional desde el celular o tablet hacia el monitor unidad paciente y visualización del estado del monitor en la web. <br  />
+</li>
+<li><b><a href="https://youtu.be/uvIX7M69ZE0">Diseño web</a></b> <br  />
+ Diseño web online en tiempo real desde phcode.dev/tools/es/html-viewer.html. <br  />
+</li>
+<li><b><a href="https://youtu.be/DE7KnygfEy8">Velocidad de enlace a la red local en 1 segundo</a></b> <br  />
+ Observación del tiempo de arranque desde cero tras el flasheo: tiempo de enlace a la red local inferior a 2 segundos, y conexión mDNS/DNS público inferior a 3 segundos. <br  />
+ </li>
 </ul>
 <h1><a class="anchor" id="docu"></a>
-Documentación y Adjuntos</h1>
-<dl class="section see"><dt>Ver también</dt><dd><a href="../diagrama_en_bloques_monitor_unidad_paciente.png">Diagrama en bloques</a> </dd>
+Documentación Experimental, Capturas de Osciloscopio y Adjuntos</h1>
+<dl class="section see"><dt>Ver también</dt><dd><a href="../00_Analisis_de_Especificaciones_y_Portabilidad_-_mi_ESP32_y_ESP32_facultad_PINOUT_ESQUEMATICO.pdf">Análisis de Especificaciones, Portabilidad, Pinout y Esquemático (Mi ESP32 vs. ESP-EDU)</a> </dd>
 <dd>
 <a href="../Tarea_Anteproyecto_Proyecto_3_Monitoreo_unidad_paciente.pdf">Ver Anteproyecto original</a> </dd>
 <dd>
-<a href="../anteproyecto_entregado.png">Anteproyecto entregado</a></dd></dl>
+<a href="../anteproyecto_entregado.png">Anteproyecto entregado</a> </dd>
+<dd>
+<a href="../diagrama_en_bloques_monitor_unidad_paciente.png">Diagrama en bloques inicial</a> </dd>
+<dd>
+<a href="../diagrama_de_bloques_final.png">Diagrama en Bloques Final del Sistema</a> </dd>
+<dd>
+<a href="../diagrama_de_flujo_final.png">Diagrama de Flujo Final y Arquitectura FreeRTOS</a> </dd>
+<dd>
+<a href="../Monitor_unidad_paciente_01.jpg">Prototipo Final Monitor Unidad de Paciente - Vista 1</a> </dd>
+<dd>
+<a href="../Monitor_unidad_paciente_02.jpg">Prototipo Final Monitor Unidad de Paciente - Vista 2</a> </dd>
+<dd>
+<a href="../esp32_mia_1.jpg">Acondicionamiento de Mi ESP32 en Protoboard - Vista 1</a> </dd>
+<dd>
+<a href="../esp32_mia_2.jpg">Acondicionamiento de Mi ESP32 en Protoboard - Vista 2</a> </dd>
+<dd>
+<a href="../mi_DAC.png">Reconstrucción Analógica RC de Mi DAC para ECG</a> </dd>
+<dd>
+<a href="../DAC_ECG_frecuencia_variable.png">Señal DAC ECG con Frecuencia Variable en Osciloscopio</a> </dd>
+<dd>
+<a href="../DAC_ECG_y_respirograma_frecuencia_variable.png">Señales DAC de ECG y Respirograma de Frecuencia Variable en Osciloscopio</a> </dd>
+<dd>
+<a href="../01_conversor_I2C_para_display_16x2.txt">Registro de Prueba del Conversor I2C para Display 16x2</a> </dd>
+<dd>
+<a href="../i2c_conversor_I2C_PCF8574T_pinout.png">Pinout del Conversor I2C PCF8574T</a> </dd>
+<dd>
+<a href="../i2c_todos_los_pulsos_de_prueba.png">Tren de Pulsos de Prueba del Bus I2C en Osciloscopio</a> </dd>
+<dd>
+<a href="../display_y_expansor_i2c.jpg">Módulo Display LCD 16x2 y Expansor I2C</a> </dd>
+<dd>
+<a href="../DHT22_pinout.png">Pinout y Conexión del Sensor DHT22</a> </dd>
+<dd>
+<a href="../dht22_tren_de_pulsos.png">Tren de Pulsos Single-Wire del Sensor DHT22 en Osciloscopio</a> </dd>
+<dd>
+<a href="../MQ3_osciloscopio.png">Respuesta en Escalón del Sensor MQ-3 en Osciloscopio</a> </dd>
+<dd>
+<a href="../MQ3_respuesta.png">Curva de Respuesta y Recuperación del Sensor MQ-3</a> </dd>
+<dd>
+<a href="../HC-SR501_pinout.png">Pinout y Controles del Sensor PIR HC-SR501</a> </dd>
+<dd>
+<a href="../amplificador.jpg">Esquema de la Etapa Amplificadora Push-Pull de Audio</a> </dd>
+<dd>
+<a href="../formateo_tarjeta_micro_sd_2GB.png">Capacidad y Formato FAT16 de la Tarjeta MicroSD de 2 GB</a> </dd>
+<dd>
+<a href="../pinout_lector_micro_sd.png">Pinout y Arquitectura del Módulo Lector MicroSD</a> </dd>
+<dd>
+<a href="../escritura_cierre_y_lectura_micro_sd_por_spi.png">Relevamiento en Osciloscopio de Escritura, Cierre y Lectura SPI</a> </dd>
+<dd>
+<a href="../recursos_consumidos_version_1MB.png">Recursos de Memoria Flash y SRAM Consumidos (Versión 1 MB)</a></dd></dl>
 <h1><a class="anchor" id="changelog"></a>
 Changelog</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">2026-09-30   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
+<td class="markdownTableBodyLeft">2026-09-30   </td><td class="markdownTableBodyLeft">Creación del documento base e implementación de síntesis y muestreo ECG a 500 Hz    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2026-10-07   </td><td class="markdownTableBodyLeft">Integración de visualización en display LCD 16x2 I2C sin bloqueo de temporizadores    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Agregado de generación y adquisición de Respirograma, control de LED 2 y alertas FR    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Selección excluyente de ajuste FC/FR con SWITCH_1 y SWITCH_2, y tramas UART atómicas    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Integración del módulo web_unidad_paciente (Wi-Fi STA y servidor HTTP)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Integración modular de dht22_sensor, mq3_alc_sensor, hcsr501_pir_sensor, relevador_remoto, aviso_sonoro y Cola FIFO    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-09   </td><td class="markdownTableBodyLeft">Incorporación de datalogger clínico en tarjeta MicroSD (FAT16 por SPI), reloj RTC, melodías RTTTL y lógica dual en GPIO_8    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2026-10-09   </td><td class="markdownTableBodyLeft">Documentación integral de arquitectura en capas, buses de comunicación y planificación en FreeRTOS   </td></tr>
 </table>
-<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>2.0 </dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
 
 <p class="definition">Definición en el archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
-</div><h2 class="groupheader">Documentación de funciones</h2>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a3a63fb6f00694ff9f4318b4142c5c868" name="a3a63fb6f00694ff9f4318b4142c5c868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a63fb6f00694ff9f4318b4142c5c868">&#9670;&nbsp;</a></span>ADC_MAX_VAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ADC_MAX_VAL&#160;&#160;&#160;3300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Fondo de escala de tensión del conversor analógico-digital (ADC) expresado en milivoltios (3300 mV) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00389">389</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a6b20d41d6252e9871430c242cb1a56e7" name="a6b20d41d6252e9871430c242cb1a56e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b20d41d6252e9871430c242cb1a56e7">&#9670;&nbsp;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUFFER_SIZE&#160;&#160;&#160;231</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Cantidad total de muestras discretas que conforman un ciclo completo de las tablas de ECG y Respirograma </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00364">364</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="aa6fada87638c4956d4adad9612805b2f" name="aa6fada87638c4956d4adad9612805b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fada87638c4956d4adad9612805b2f">&#9670;&nbsp;</a></span>CONFIG_PERIOD_TIMER_A</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_TIMER_A&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período de interrupción del Temporizador A en microsegundos (2000 us = 500 Hz) para síntesis analógica DA </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00368">368</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a049d58c18fdb78ea9498a4644ced1684" name="a049d58c18fdb78ea9498a4644ced1684"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049d58c18fdb78ea9498a4644ced1684">&#9670;&nbsp;</a></span>CONFIG_PERIOD_TIMER_B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_PERIOD_TIMER_B&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período de interrupción del Temporizador B en microsegundos (2000 us = 500 Hz) para adquisición AD y envío UART </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00369">369</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a646ada8db1ad0f47084d9d89b64ab01c" name="a646ada8db1ad0f47084d9d89b64ab01c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a646ada8db1ad0f47084d9d89b64ab01c">&#9670;&nbsp;</a></span>FC_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FC_MAX&#160;&#160;&#160;140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Frecuencia cardíaca máxima seleccionable mediante el potenciómetro en latidos por minuto (bpm) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00372">372</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="ac09e57208e607cf7d05ee36823b1aa0c" name="ac09e57208e607cf7d05ee36823b1aa0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09e57208e607cf7d05ee36823b1aa0c">&#9670;&nbsp;</a></span>FC_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FC_MIN&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Frecuencia cardíaca mínima seleccionable mediante el potenciómetro en latidos por minuto (bpm) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00371">371</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a50e77e7ce6ccdc71e617bfe4a2507645" name="a50e77e7ce6ccdc71e617bfe4a2507645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e77e7ce6ccdc71e617bfe4a2507645">&#9670;&nbsp;</a></span>FC_NORMAL_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FC_NORMAL_MAX&#160;&#160;&#160;130</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral clínico superior normal de frecuencia cardíaca en bpm (valores mayores disparan alerta de taquicardia) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00374">374</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a498ac3bb6c39158f78d2aff7e62eec41" name="a498ac3bb6c39158f78d2aff7e62eec41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a498ac3bb6c39158f78d2aff7e62eec41">&#9670;&nbsp;</a></span>FC_NORMAL_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FC_NORMAL_MIN&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral clínico inferior normal de frecuencia cardíaca en bpm (valores menores disparan alerta de bradicardia) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00373">373</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a9ace3dbfc93b519c94d88017125b278d" name="a9ace3dbfc93b519c94d88017125b278d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ace3dbfc93b519c94d88017125b278d">&#9670;&nbsp;</a></span>FIFO_MAX_ALERTAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FIFO_MAX_ALERTAS&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Capacidad máxima de almacenamiento de eventos concurrentes en la cola FIFO circular de alarmas </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00387">387</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a40100c3725c72f6cb563c5e7e04feeb1" name="a40100c3725c72f6cb563c5e7e04feeb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40100c3725c72f6cb563c5e7e04feeb1">&#9670;&nbsp;</a></span>FR_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FR_MAX&#160;&#160;&#160;24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Frecuencia respiratoria máxima seleccionable mediante el potenciómetro en respiraciones por minuto (rpm) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00377">377</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a58adbce8ee020c0d9ab9c12170262d9f" name="a58adbce8ee020c0d9ab9c12170262d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58adbce8ee020c0d9ab9c12170262d9f">&#9670;&nbsp;</a></span>FR_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FR_MIN&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Frecuencia respiratoria mínima seleccionable mediante el potenciómetro en respiraciones por minuto (rpm) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00376">376</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a618e2b1423dab6097d693a1973ef1dd1" name="a618e2b1423dab6097d693a1973ef1dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a618e2b1423dab6097d693a1973ef1dd1">&#9670;&nbsp;</a></span>FR_NORMAL_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FR_NORMAL_MAX&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral clínico superior normal de frecuencia respiratoria en rpm (valores mayores disparan alerta de taquipnea) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00379">379</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="adc52eef7e318309283b59c6a7954792f" name="adc52eef7e318309283b59c6a7954792f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc52eef7e318309283b59c6a7954792f">&#9670;&nbsp;</a></span>FR_NORMAL_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FR_NORMAL_MIN&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral clínico inferior normal de frecuencia respiratoria en rpm (valores menores disparan alerta de bradipnea) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00378">378</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="aca3d245c31bc94f81ec1f4ef233d10fc" name="aca3d245c31bc94f81ec1f4ef233d10fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3d245c31bc94f81ec1f4ef233d10fc">&#9670;&nbsp;</a></span>HUM_MAX_DECIMAS_PCT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HUM_MAX_DECIMAS_PCT&#160;&#160;&#160;800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral superior normal de humedad relativa ambiente expresado en décimas de % (800 décimas = 80.0 %), intencionalmente alta para poner a prueba la estabilidad del sistema. Se fuerza respirando en frente del sensor para probar la alerta fuera de rango <br  />
+ </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00385">385</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a7382829311893a4da8345f0b397b6210" name="a7382829311893a4da8345f0b397b6210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7382829311893a4da8345f0b397b6210">&#9670;&nbsp;</a></span>HUM_MIN_DECIMAS_PCT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HUM_MIN_DECIMAS_PCT&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral inferior normal de humedad relativa ambiente expresado en décimas de % (300 décimas = 30.0 %) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00384">384</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="aea9ff1807c0cab47f882f47c0c25cf21" name="aea9ff1807c0cab47f882f47c0c25cf21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9ff1807c0cab47f882f47c0c25cf21">&#9670;&nbsp;</a></span>PERIODO_CICLO_LCD_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PERIODO_CICLO_LCD_MS&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período base de bloqueo de la tarea TaskDisplayLCD en milisegundos (200 ms; 5 ciclos conforman 1 segundo) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00390">390</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a212bc6a58d03414f3b150f81914fe9cc" name="a212bc6a58d03414f3b150f81914fe9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212bc6a58d03414f3b150f81914fe9cc">&#9670;&nbsp;</a></span>PERIODO_TAREA_AMB_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PERIODO_TAREA_AMB_MS&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período base de bloqueo de la tarea TaskSensoresAmbientales en milisegundos (100 ms) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00391">391</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c13e2bb4dcfcaf93c3b959371cfc93b" name="a5c13e2bb4dcfcaf93c3b959371cfc93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c13e2bb4dcfcaf93c3b959371cfc93b">&#9670;&nbsp;</a></span>R_PEAK_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_PEAK_INDEX&#160;&#160;&#160;133</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Índice dentro del vector ecg[] donde se localiza el máximo del complejo QRS (pico R = 253) para disparo del LED 1 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00365">365</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="ad48fb888fc5fe8c142d41ba6484c1cbc" name="ad48fb888fc5fe8c142d41ba6484c1cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48fb888fc5fe8c142d41ba6484c1cbc">&#9670;&nbsp;</a></span>RESP_PEAK_INDEX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESP_PEAK_INDEX&#160;&#160;&#160;92</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Índice dentro del vector respirograma[] correspondiente al máximo de inspiración para disparo del LED 2 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00366">366</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a7447d139cc2eabef6be1b8823e78ee5e" name="a7447d139cc2eabef6be1b8823e78ee5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7447d139cc2eabef6be1b8823e78ee5e">&#9670;&nbsp;</a></span>TEMP_MAX_DECIMAS_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMP_MAX_DECIMAS_C&#160;&#160;&#160;400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral superior normal de temperatura ambiental expresado en décimas de °C (400 décimas = 35.0 °C), intencionalmente alta para poner a prueba la estabilidad del sistema. Se fuerza con aire caliente para probar la alerta fuera de rango </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00382">382</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a994a8cb585340c2068290beefe973b66" name="a994a8cb585340c2068290beefe973b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a994a8cb585340c2068290beefe973b66">&#9670;&nbsp;</a></span>TEMP_MIN_DECIMAS_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMP_MIN_DECIMAS_C&#160;&#160;&#160;150</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral inferior normal de temperatura ambiental expresado en décimas de °C (150 décimas = 15.0 °C) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00381">381</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
+<a id="a86bc376b5c695551cb20cc89306c6f4a" name="a86bc376b5c695551cb20cc89306c6f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bc376b5c695551cb20cc89306c6f4a">&#9670;&nbsp;</a></span>modo_simulacion_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="monitor__unidad__paciente_8c.html#a86bc376b5c695551cb20cc89306c6f4a">modo_simulacion_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Máquina de estados de habilitación excluyente del potenciómetro gobernada por SWITCH_1 y SWITCH_2. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a86bc376b5c695551cb20cc89306c6f4aa118b718c3eb5383b60531ce2123b2220" name="a86bc376b5c695551cb20cc89306c6f4aa118b718c3eb5383b60531ce2123b2220"></a>MODO_SIM_NINGUNO&#160;</td><td class="fielddoc"><p >Ajuste manual desactivado: FC y FR conservan su último valor configurado </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bc376b5c695551cb20cc89306c6f4aa88e2b2d439fb0604313179e170899188" name="a86bc376b5c695551cb20cc89306c6f4aa88e2b2d439fb0604313179e170899188"></a>MODO_SIM_FC&#160;</td><td class="fielddoc"><p >Ventana de simulación cardíaca activa (SWITCH_1): el potenciómetro regula FC </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a86bc376b5c695551cb20cc89306c6f4aadd8d513ce35e8ea3fb2dbc3d174b2d54" name="a86bc376b5c695551cb20cc89306c6f4aadd8d513ce35e8ea3fb2dbc3d174b2d54"></a>MODO_SIM_FR&#160;</td><td class="fielddoc"><p >Ventana de simulación respiratoria activa (SWITCH_2): el potenciómetro regula FR </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00397">397</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a3311b33bac6c32fec7a62be763983873" name="a3311b33bac6c32fec7a62be763983873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3311b33bac6c32fec7a62be763983873">&#9670;&nbsp;</a></span>tipo_alerta_id_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873">tipo_alerta_id_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identificadores unívocos de eventos de alarma para la Cola FIFO circular del sistema. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873ac87cb31f7c63c1f3e45eb53bfae5deec" name="a3311b33bac6c32fec7a62be763983873ac87cb31f7c63c1f3e45eb53bfae5deec"></a>ALERTA_ID_NINGUNA&#160;</td><td class="fielddoc"><p >Valor nulo: indica ausencia de alertas en la cola FIFO </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873ae01050aaa6761ec6ddbbb08a3004c93a" name="a3311b33bac6c32fec7a62be763983873ae01050aaa6761ec6ddbbb08a3004c93a"></a>ALERTA_ID_LLAMADO_PACIENTE&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "LLAMADO PACIENTE" - Disparado por el paciente desde GPIO_8 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873a1d182f180194e970f258fdf6889a3989" name="a3311b33bac6c32fec7a62be763983873a1d182f180194e970f258fdf6889a3989"></a>ALERTA_ID_ECG&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA! ECG" - FC fuera del rango [50, 130] bpm </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873a179556117741480ae8949155a23142b8" name="a3311b33bac6c32fec7a62be763983873a179556117741480ae8949155a23142b8"></a>ALERTA_ID_RESPIRAT&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA! RESPIRAT" - FR fuera del rango [12, 20] rpm </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873a829284a92403860652f8bec4541dda7c" name="a3311b33bac6c32fec7a62be763983873a829284a92403860652f8bec4541dda7c"></a>ALERTA_ID_TEMP_BAJA&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA: Temp&lt;15C" - Temperatura ambiental menor a 15.0 °C </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873aaabb5b813a39c95fd2404d4e71d685e0" name="a3311b33bac6c32fec7a62be763983873aaabb5b813a39c95fd2404d4e71d685e0"></a>ALERTA_ID_TEMP_ALTA&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA: Temp&gt;35C" - Temperatura ambiental mayor a 35.0 °C </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873ad9e3decedbc34c04f024d3f2884a6c9f" name="a3311b33bac6c32fec7a62be763983873ad9e3decedbc34c04f024d3f2884a6c9f"></a>ALERTA_ID_HUMEDAD_BAJA&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA: Hum&lt;30p" - Humedad relativa menor a 30.0 % </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873afd88a549ac826b8fcd564edca8e94d16" name="a3311b33bac6c32fec7a62be763983873afd88a549ac826b8fcd564edca8e94d16"></a>ALERTA_ID_HUMEDAD_ALTA&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA: Hum&gt;80p" - Humedad relativa mayor a 80.0 % </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873a8449d478e7392496da567bdf5d3fb225" name="a3311b33bac6c32fec7a62be763983873a8449d478e7392496da567bdf5d3fb225"></a>ALERTA_ID_ALCOHOL&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "ALERTA: GASES !" - Detección en sensor MQ-3 (GPIO_19) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3311b33bac6c32fec7a62be763983873aff4dce43bd0754bb206dc0e939269bbc" name="a3311b33bac6c32fec7a62be763983873aff4dce43bd0754bb206dc0e939269bbc"></a>ALERTA_ID_MOVIMIENTO&#160;</td><td class="fielddoc"><p >Texto LCD/Web: "! MOVIMIENTO !" - Detección en sensor PIR HC-SR501 (GPIO_12) </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00406">406</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
 <a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&nbsp;</a></span>app_main()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,13 +949,18 @@ Changelog</h1>
         <tr>
           <td class="memname">void app_main </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l00101">101</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+<p>Punto de entrada de la aplicación en ESP-IDF. Ejecuta la secuencia ordenada de inicialización de periféricos, buses de comunicación, temporizadores de hardware y creación de tareas de FreeRTOS. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">1244</a> del archivo <a class="el" href="monitor__unidad__paciente_8c_source.html">monitor_unidad_paciente.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00046">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00131">AnalogOutput2Init()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00121">AnalogOutputInit()</a>, <a class="el" href="aviso__sonoro_8c_source.html#l00304">AvisoSonoroInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00033">CH2</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00034">CH3</a>, <a class="el" href="monitor__unidad__paciente_8c_source.html#l00368">CONFIG_PERIOD_TIMER_A</a>, <a class="el" href="dht22__sensor_8h_source.html#l00069">DHT22_DEFAULT_GPIO</a>, <a class="el" href="dht22__sensor_8c_source.html#l00059">Dht22Init()</a>, <a class="el" href="display__16x2__i2c_8c_source.html#l00246">Display16x2I2cInit()</a>, <a class="el" href="display__16x2__i2c_8c_source.html#l00357">Display16x2I2cWriteLine()</a>, <a class="el" href="hcsr501__pir__sensor_8h_source.html#l00050">HCSR501_PIR_DEFAULT_GPIO</a>, <a class="el" href="hcsr501__pir__sensor_8c_source.html#l00028">HcSr501PirInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00049">analog_input_config_t::input</a>, <a class="el" href="display__16_x2__i2c_8h_source.html#l00285">LCD_ROW_0</a>, <a class="el" href="display__16_x2__i2c_8h_source.html#l00286">LCD_ROW_1</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="microsd__datalogger_8c_source.html#l00141">MicroSdInit()</a>, <a class="el" href="mq3__alc__sensor_8h_source.html#l00065">MQ3_ALC_DEFAULT_GPIO</a>, <a class="el" href="mq3__alc__sensor_8c_source.html#l00026">Mq3AlcInit()</a>, <a class="el" href="uart__mcu_8h_source.html#l00039">serial_config_t::port</a>, <a class="el" href="relevador__remoto_8h_source.html#l00075">RELEVADOR_DEFAULT_GPIO</a>, <a class="el" href="relevador__remoto_8c_source.html#l00026">RelevadorRemotoInit()</a>, <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00021">timer_a</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a> y <a class="el" href="web__unidad__paciente_8c_source.html#l00671">WebUnidadPacienteInit()</a>.</p>
 
 </div>
 </div>
@@ -209,7 +970,7 @@ Changelog</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a class="el" href="dir_e2398baaf98b503d952c570257964a35.html">13_proyecto_03</a></li><li class="navelem"><a class="el" href="dir_37c44c2691df62879852a75b626046ac.html">main</a></li><li class="navelem"><a class="el" href="monitor__unidad__paciente_8c.html">monitor_unidad_paciente.c</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Globales</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('globals_vars.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('globals_vars.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,20 +87,13 @@ $(function(){initNavTree('globals_vars.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="contents">
-<div class="textblock">Lista de todas las variables con enlaces a los archivos a los que corresponden:</div>
+&#160;
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>adc1_single&#160;:&#160;<a class="el" href="analog__io__mcu_8c.html#a6db1b5bb87100014c45838465c4faaf4">analog_io_mcu.c</a></li>
@@ -221,6 +209,7 @@ $(function(){initNavTree('globals_vars.html',''); initResizable(true); });
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>mem_acc_ctrl&#160;:&#160;<a class="el" href="ili9341_8c.html#a1aec16dc7650a4729f08ed5e4b529b42">ili9341.c</a></li>
+<li>my_number&#160;:&#160;<a class="el" href="display__reloj__3dig_8h.html#aa51e847c20446573b834f7a1916becf9">display_reloj_3dig.h</a>, <a class="el" href="display__reloj__3dig_8c.html#aa51e847c20446573b834f7a1916becf9">display_reloj_3dig.c</a></li>
 </ul>
 
 
@@ -254,8 +243,10 @@ $(function(){initNavTree('globals_vars.html',''); initResizable(true); });
 <li>SCALE&#160;:&#160;<a class="el" href="hx711_8c.html#a11d946235bb0123edad7b8947df9ac8a">hx711.c</a></li>
 <li>song20thCenFox&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga16b07deabed31bae3aad37ad800668bc">buzzer_melodies.h</a></li>
 <li>songBond&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafb2f2f3fa572e7a3eaf1df2221088bdd">buzzer_melodies.h</a></li>
+<li>songDrama_version_guille_cm&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga97b422f26cf212e6520c15b5e635309f">buzzer_melodies.h</a></li>
 <li>songEntertainer&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gacc190bf3b9965a19ebcbf651ecf6809a">buzzer_melodies.h</a></li>
 <li>songFlinstones&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gab77a9e67c1ac6fa975f2e402c6abb3a4">buzzer_melodies.h</a></li>
+<li>songFunky_Town_version_guille_cm&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga3230abdc382806d244d13b83bf77085b">buzzer_melodies.h</a></li>
 <li>songGadget&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafaa3d63e0e3a5b452f90111ce1e9c071">buzzer_melodies.h</a></li>
 <li>songGoodBad&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga945933180724eb179ebc8634a0df665b">buzzer_melodies.h</a></li>
 <li>songIndiana&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf409956ffdede76fdeb60a765d3b89a1">buzzer_melodies.h</a></li>
@@ -263,9 +254,11 @@ $(function(){initNavTree('globals_vars.html',''); initResizable(true); });
 <li>songLeisureSuit&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gadb16195915033c2ce10535a9c5d96ed6">buzzer_melodies.h</a></li>
 <li>songLooney&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga0888ccbb6af1a543eddae88864e32a4a">buzzer_melodies.h</a></li>
 <li>songMahnaMahna&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga551dcf240d56183001398ee4f0619c21">buzzer_melodies.h</a></li>
+<li>songMarioHurryUp_version_guille_cm&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6437a55e32ba249878849626de440392">buzzer_melodies.h</a></li>
 <li>songMASH&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga73b8a76e8f634d6148abadae585ba569">buzzer_melodies.h</a></li>
 <li>songMissionImp&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635">buzzer_melodies.h</a></li>
 <li>songMuppets&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf2f04d7f06f0872d9dacf39ef8174588">buzzer_melodies.h</a></li>
+<li>songPacman_version_guille_cm&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6f23313469146ec4af7fe80b12933fec">buzzer_melodies.h</a></li>
 <li>songSimpsons&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga7cec4cc7584b3a02d8403dc3a8434040">buzzer_melodies.h</a></li>
 <li>songSmurfs&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf3ea05115c18f0d0bb2d56ec93d825d4">buzzer_melodies.h</a></li>
 <li>songStarWars&#160;:&#160;<a class="el" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaec9d97c53964b30b78becf443a99c352">buzzer_melodies.h</a></li>
@@ -331,7 +324,7 @@ $(function(){initNavTree('globals_vars.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/display_16x2_i2c.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('display__16x2__i2c_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">display_16x2_i2c.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="display__16x2__i2c_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &quot;<a class="code" href="display__16_x2__i2c_8h.html">display_16x2_i2c.h</a>&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a037b4951fa5e60d07c6d195cad447d56">   68</a></span><span class="preprocessor">#define I2C_CLOCK_RATE_HZ   100000  </span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a7cc4b31027e0d66fef50ad204a98a83d">   70</a></span><span class="preprocessor">#define MASK_RS             0x01    </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#aa8bdfcca18a26d46a6e3cf84e5d8cf48">   71</a></span><span class="preprocessor">#define MASK_RW             0x02    </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a2a351631e638edcc6de6bf4960029558">   72</a></span><span class="preprocessor">#define MASK_EN             0x04    </span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a534546500d08df37479e68c17d7ebee9">   73</a></span><span class="preprocessor">#define MASK_BL             0x08    </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#aaf06b66b754e094f64d15a72e63e2834">   75</a></span><span class="preprocessor">#define CMD_CLEAR_DISPLAY   0x01    </span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#abc02afe61fec16fa0cb9ab197571cf03">   76</a></span><span class="preprocessor">#define CMD_ENTRY_MODE_SET  0x06    </span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a1d811ed7f4bbdbe75186cf216e9cd63e">   77</a></span><span class="preprocessor">#define CMD_DISPLAY_ON      0x0C    </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#ace7e8a9b876b4ab910dd8198515134f6">   78</a></span><span class="preprocessor">#define CMD_FUNCTION_SET_4B 0x28    </span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a190d51c7cc15ab6dbbc4e2d610b3d9ef">   79</a></span><span class="preprocessor">#define CMD_SET_DDRAM_ROW0  0x80    </span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="display__16x2__i2c_8c.html#a75a0de7bee1d39700c382b55eb268f7b">   80</a></span><span class="preprocessor">#define CMD_SET_DDRAM_ROW1  0xC0    </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">/*==================[internal data declaration]==============================*/</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">static</span> <span class="keywordtype">bool</span> backlight_state = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">static</span> <span class="keywordtype">void</span> pcf8574_write(uint8_t data);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_nibble(uint8_t nibble, <span class="keywordtype">bool</span> is_data);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_byte(uint8_t value, <span class="keywordtype">bool</span> is_data);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_command(uint8_t cmd);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">/*==================[internal functions definition]==========================*/</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">static</span> <span class="keywordtype">void</span> pcf8574_write(uint8_t data) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">/* </span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">     * Invoca la primitiva de escritura I2C pasando la dirección de 7 bits LCD_I2C_ADDR (0x27,</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment">     * que en el bus físico se transmite como (0x27 &lt;&lt; 1) | 0 = 0x4E).</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">     * Como el PCF8574 no posee registros internos direccionables, se duplica el argumento &#39;data&#39;</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">     * tanto en el campo de dirección de registro como en el de dato útil.</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment">     * El PCF8574 vuelca el primer byte &#39;data&#39; a sus pines P7..P0 en el primer ACK y ratifica</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">     * exactamente el mismo valor binario en el segundo ACK. A una frecuencia de reloj SCL de</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">     * 100 kHz, esta transacción completa de 27 bits insume ~270 us, proporcionando de forma</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">     * intrínseca el tiempo de establecimiento requerido por el controlador HD44780 sin bloquear</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">     * temporizadores de hardware.</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="group___i2_c.html#ga6525bb5162f38b6350d6bc3a3c9c98d7">I2C_writeByte</a>(<a class="code hl_define" href="display__16_x2__i2c_8h.html#af679cf68e64fdb5d310a0d9944142c76">LCD_I2C_ADDR</a>, data, data);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_nibble(uint8_t nibble, <span class="keywordtype">bool</span> is_data) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">     * 1. Enmascaramiento y alineación del cuarteto de datos hacia el nibble superior (bits 7..4):</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment">     *    - La operación (nibble &amp; 0x0F) limpia por seguridad los 4 bits superiores (bits 7..4 = 0000),</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment">     *      reteniendo únicamente los 4 bits inferiores útiles (bits 3..0).</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">     *    - El desplazamiento de 4 posiciones hacia la izquierda (&lt;&lt; 4) traslada esos 4 bits a las</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">     *      posiciones 7..4 del byte &#39;data&#39;, las cuales corresponden físicamente a las salidas P7..P4</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment">     *      del PCF8574 (conectadas a los pines D7..D4 del módulo display 1602A Ver5.5).</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">     *    - Los 4 bits inferiores de &#39;data&#39; (bits 3..0, salidas P3..P0) quedan inicialmente en 0000</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">     *      (lo que garantiza implícitamente que el bit P1 = MASK_RW permanezca en 0 = Modo Escritura).</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    uint8_t data = (uint8_t)((nibble &amp; 0x0F) &lt;&lt; 4);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">     * 2. Configuración del bit P0 (Selección de Registro RS):</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">     *    - Si &#39;is_data&#39; es true (envío de un carácter ASCII a la memoria gráfica DDRAM), se aplica</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">     *      una operación OR bit a bit con MASK_RS (0x01 = 00000001b), poniendo P0 en nivel ALTO (1).</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">     *    - Si &#39;is_data&#39; es false (envío de una instrucción de control), el bit P0 permanece en BAJO (0).</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">if</span> (is_data) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        data |= <a class="code hl_define" href="display__16x2__i2c_8c.html#a7cc4b31027e0d66fef50ad204a98a83d">MASK_RS</a>; <span class="comment">// Activa el bit 0 (P0 -&gt; RS = 1) para seleccionar el Registro de Datos</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="comment">     * 3. Retención del bit P3 (Control de Retroiluminación BL):</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">     *    - Si la variable de estado &#39;backlight_state&#39; es true, se aplica una operación OR bit a bit</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">     *      con MASK_BL (0x08 = 00001000b) para mantener polarizado el transistor que enciende el LED</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">     *      de luz de fondo del display durante toda la transferencia.</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> (backlight_state) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        data |= <a class="code hl_define" href="display__16x2__i2c_8c.html#a534546500d08df37479e68c17d7ebee9">MASK_BL</a>; <span class="comment">// Activa el bit 3 (P3 -&gt; BL = 1) manteniendo encendida la retroiluminación</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">     * 4. Primera transferencia I2C (Establecimiento de datos y flanco ascendente de Enable):</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">     *    - La operación OR bit a bit (data | MASK_EN) pone en 1 el bit 2 (0x04 = 00000100b -&gt; P2 = 1).</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">     *    - Al transmitirse por I2C, el PCF8574 presenta simultáneamente el cuarteto de datos en D7..D4,</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">     *      el nivel de RS en el pin 4 y eleva el pin 6 (Enable) a +5V durante ~270 us.</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    pcf8574_write(data | <a class="code hl_define" href="display__16x2__i2c_8c.html#a2a351631e638edcc6de6bf4960029558">MASK_EN</a>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">     * 5. Segunda transferencia I2C (Flanco descendente de Enable y captura en el HD44780):</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">     *    - El operador de complemento a uno (~MASK_EN) invierte los bits de 0x04 (00000100b),</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">     *      produciendo la máscara 0xFB (11111011b).</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">     *    - La operación AND bit a bit (data &amp; ~MASK_EN) fuerza a 0 únicamente el bit 2 (P2 -&gt; EN = 0),</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">     *      conservando intactos los bits de datos (P7..P4), el bit de Backlight (P3) y el bit RS (P0).</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">     *    - Esta transición de 1 a 0 en el pin Enable genera el flanco descendente que ordena al</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">     *      controlador HD44780 latchear internamente el cuarteto presente en D7..D4.</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    pcf8574_write(data &amp; (uint8_t)(~<a class="code hl_define" href="display__16x2__i2c_8c.html#a2a351631e638edcc6de6bf4960029558">MASK_EN</a>));</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_byte(uint8_t value, <span class="keywordtype">bool</span> is_data) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">     * En modo de interfaz de 4 bits, el protocolo del controlador HD44780 exige recibir primero</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">     * los 4 bits más significativos (nibble alto, bits 7..4) y luego los 4 bits menos significativos</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">     * (nibble bajo, bits 3..0):</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment">     * 1. (value &gt;&gt; 4): Desplaza el byte 4 posiciones hacia la derecha, ubicando los bits 7..4</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">     *    en las posiciones 3..0 para ser procesados y enviados en primer término por send_nibble().</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    send_nibble(value &gt;&gt; 4, is_data);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">     * 2. (value &amp; 0x0F): Aplica una máscara AND con 00001111b para aislar los bits 3..0 originales</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment">     *    del byte y transmitirlos en segundo término, completando la reconstrucción del byte de 8 bits</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment">     *    dentro del registro interno del controlador HD44780.</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    send_nibble(value &amp; 0x0F, is_data);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">static</span> <span class="keywordtype">void</span> send_command(uint8_t cmd) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">/* Invoca send_byte fijando is_data = false para direccionar el Registro de Instrucciones (RS = 0) */</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    send_byte(cmd, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a48278e912b02df97d5543d4eef47cf5e">  246</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a48278e912b02df97d5543d4eef47cf5e">Display16x2I2cInit</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// Configura el periférico I2C maestro del ESP32-C6 a una velocidad de reloj SCL de 100 kHz</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_function" href="group___i2_c.html#gae2cec986d327013569df22dd2945ff58">I2C_initialize</a>(<a class="code hl_define" href="display__16x2__i2c_8c.html#a037b4951fa5e60d07c6d195cad447d56">I2C_CLOCK_RATE_HZ</a>);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="comment">// Cede la CPU en estado Blocked durante 100 ms hasta que la fuente de +5V supere los 4.5V requeridos por el HD44780</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    vTaskDelay(pdMS_TO_TICKS(100));</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="comment">// Paso 1 de sincronización (Reset por instrucción): Envía el nibble 0x03 (D7..D4 = 0011b, equivalente a Function Set 8 bits)</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="comment">// Trama en bus I2C: [0x4E, 0x3C, 0x3C] (EN=1) seguido de [0x4E, 0x38, 0x38] (EN=0)</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    send_nibble(0x03, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="comment">// Espera de 10 ms en estado Blocked (la hoja de datos del HD44780 exige un mínimo de 4.1 ms tras el primer 0x03)</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    vTaskDelay(pdMS_TO_TICKS(10));</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">// Paso 2 de sincronización: Segundo envío del nibble 0x03 para asegurar alineación si el display estaba a mitad de un byte en 4 bits</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    send_nibble(0x03, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// Espera de 2 ms en estado Blocked (la hoja de datos exige un mínimo de 100 us tras el segundo 0x03)</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    vTaskDelay(pdMS_TO_TICKS(2));</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// Paso 3 de sincronización: Tercer envío del nibble 0x03; a partir de aquí el HD44780 se encuentra garantizadamente en modo de 8 bits</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    send_nibble(0x03, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="comment">// Espera de 2 ms antes de conmutar el ancho de bus</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    vTaskDelay(pdMS_TO_TICKS(2));</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// Conmutación definitiva a interfaz de 4 bits: Envía un único nibble 0x02 (D7..D4 = 0010b -&gt; DL = 0)</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// Trama en bus I2C: [0x4E, 0x2C, 0x2C] (EN=1) seguido de [0x4E, 0x28, 0x28] (EN=0)</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    send_nibble(0x02, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">// Espera de 2 ms para que el controlador interno reconfigure su máquina de estados a recepción por pares de nibbles</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    vTaskDelay(pdMS_TO_TICKS(2));</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">// Envía ya en modo de 4 bits (2 nibbles por comando) la configuración de formato 0x28 (DL=0: 4 bits, N=1: 2 filas, F=0: 5x8 puntos)</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    send_command(<a class="code hl_define" href="display__16x2__i2c_8c.html#ace7e8a9b876b4ab910dd8198515134f6">CMD_FUNCTION_SET_4B</a>);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="comment">// Envía el comando 0x0C (D=1: enciende cristal líquido, C=0: apaga subrayado de cursor, B=0: apaga parpadeo de celda)</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    send_command(<a class="code hl_define" href="display__16x2__i2c_8c.html#a1d811ed7f4bbdbe75186cf216e9cd63e">CMD_DISPLAY_ON</a>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="comment">// Ejecuta el comando 0x01 para escribir el código ASCII 0x20 (espacio) en las 80 posiciones de la memoria DDRAM y esperar 5 ms</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_function" href="display__16x2__i2c_8c.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a>();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="comment">// Envía el comando 0x06 (I/D=1: incrementa automáticamente la dirección DDRAM tras cada carácter, S=0: pantalla estática)</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    send_command(<a class="code hl_define" href="display__16x2__i2c_8c.html#abc02afe61fec16fa0cb9ab197571cf03">CMD_ENTRY_MODE_SET</a>);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>}</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a7e2c78671bc2090fccf1559ec2bf6678">  291</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="comment">// Transmite el comando 0x01 (nibble alto 0x0 y nibble bajo 0x1 con RS=0)</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    send_command(<a class="code hl_define" href="display__16x2__i2c_8c.html#aaf06b66b754e094f64d15a72e63e2834">CMD_CLEAR_DISPLAY</a>);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="comment">// La instrucción Clear Display requiere 1.52 ms internos en el HD44780; se bloquea la tarea por 5 ms cediendo la CPU</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    vTaskDelay(pdMS_TO_TICKS(5));</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a949aeb443c225d253d812e04abb25ae7">  305</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a>(uint8_t row, uint8_t col) {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">// Acota por seguridad el índice de columna al límite máximo físico de la pantalla (columna 15)</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordflow">if</span> (col &gt;= <a class="code hl_define" href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">LCD_COLS</a>) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        col = <a class="code hl_define" href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">LCD_COLS</a> - 1;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">     * Cálculo de la instrucción Set DDRAM Address (bit 7 = 1, bits 6..0 = dirección de celda):</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">     * - En el controlador HD44780, las 16 celdas visibles de la Fila 0 mapean en las direcciones</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">     *   DDRAM 0x00 a 0x0F (con el bit 7 en 1: 0x80 + col -&gt; rango 0x80 a 0x8F).</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">     * - Las 16 celdas visibles de la Fila 1 mapean en las direcciones DDRAM 0x40 a 0x4F</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="comment">     *   (con el bit 7 en 1: 0xC0 + col -&gt; rango 0xC0 a 0xCF).</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    uint8_t address = (row == <a class="code hl_define" href="display__16_x2__i2c_8h.html#aefd56ac088ed46da2f10aceb6f3eb584">LCD_ROW_0</a>) ? (<a class="code hl_define" href="display__16x2__i2c_8c.html#a190d51c7cc15ab6dbbc4e2d610b3d9ef">CMD_SET_DDRAM_ROW0</a> + col) : (<a class="code hl_define" href="display__16x2__i2c_8c.html#a75a0de7bee1d39700c382b55eb268f7b">CMD_SET_DDRAM_ROW1</a> + col);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="comment">// Envía el byte de posicionamiento al Registro de Instrucciones (RS = 0)</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    send_command(address);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>}</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a0185871886f0979aa0d5b6f791606cec">  327</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a>(<span class="keywordtype">char</span> ch) {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="comment">// Convierte el carácter a uint8_t y lo transmite con is_data = true (RS = 1, Registro de Datos DDRAM)</span></div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    send_byte((uint8_t)ch, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a0f78ea246ace68f839a2b1af81f5cea1">  338</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a0f78ea246ace68f839a2b1af81f5cea1">Display16x2I2cWriteString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str) {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="comment">// Validación contra puntero nulo para prevenir accesos inválidos a memoria</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">if</span> (str == NULL) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="comment">// Recorre byte a byte la cadena hasta hallar el delimitador nulo (&#39;\0&#39; = 0x00)</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">while</span> (*str != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <a class="code hl_function" href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a>(*str); <span class="comment">// Envía el carácter apuntado actualmente (el HD44780 avanza el cursor solo)</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        str++;                         <span class="comment">// Incrementa el puntero al siguiente carácter en memoria</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>}</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a0c3f87ba7b27a16a29241e974f288f21">  357</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#a0c3f87ba7b27a16a29241e974f288f21">Display16x2I2cWriteLine</a>(uint8_t row, <span class="keyword">const</span> <span class="keywordtype">char</span> *str) {</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="comment">// 1. Envía el comando de posicionamiento al extremo izquierdo de la fila (columna 0) -&gt; 1 byte = 4 tramas I2C</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <a class="code hl_function" href="display__16x2__i2c_8c.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a>(row, 0);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    uint8_t i = 0;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    <span class="comment">// 2. Transmite los caracteres válidos de la cadena sin exceder las 16 columnas físicas de la fila</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    <span class="keywordflow">if</span> (str != NULL) {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>        <span class="keywordflow">while</span> (str[i] != <span class="charliteral">&#39;\0&#39;</span> &amp;&amp; i &lt; <a class="code hl_define" href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">LCD_COLS</a>) {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <a class="code hl_function" href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a>(str[i]);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            i++;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    <span class="comment">// 3. Si la cadena tenía menos de 16 caracteres, rellena las columnas restantes con espacios (&#39; &#39; = 0x20)</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="comment">//    para sobrescribir y limpiar cualquier carácter perteneciente a un mensaje anterior más largo</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordflow">while</span> (i &lt; <a class="code hl_define" href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">LCD_COLS</a>) {</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <a class="code hl_function" href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a>(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        i++;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    }</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>}</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#acfd37e13f9bd0d2b03f247ba5a4d8953">  383</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Display16x2I2cSetBacklight</a>(<span class="keywordtype">bool</span> state) {</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="comment">// Actualiza la bandera estática para que las futuras llamadas a send_nibble() conserven este estado</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    backlight_state = state;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="comment">// Selecciona la máscara 0x08 (P3=1, resto de pines en 0) si se enciende, o 0x00 si se apaga</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    uint8_t data = backlight_state ? <a class="code hl_define" href="display__16x2__i2c_8c.html#a534546500d08df37479e68c17d7ebee9">MASK_BL</a> : 0x00;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>    <span class="comment">// Aplica inmediatamente el cambio en las salidas físicas del expansor PCF8574</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    pcf8574_write(data);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>}</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#aea5729251688c81a87abd16581c5e183">  413</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16x2__i2c_8c.html#aea5729251688c81a87abd16581c5e183">Display16x2I2cTestPulseTrain</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="comment">// Tabla de máscaras de un único bit activo (walking one) para excitar individualmente cada salida P0..P7</span></div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keyword">const</span> uint8_t pulse_sequence[] = {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        0x01, <span class="comment">/* Bit 0 (00000001b) -&gt; Salida P0: Pin 4 del display en ALTO (RS) */</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        0x02, <span class="comment">/* Bit 1 (00000010b) -&gt; Salida P1: Pin 5 del display en ALTO (RW) */</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        0x04, <span class="comment">/* Bit 2 (00000100b) -&gt; Salida P2: Pin 6 del display en ALTO (EN) */</span></div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        0x08, <span class="comment">/* Bit 3 (00001000b) -&gt; Salida P3: Pin 16 del display en BAJO (Backlight encendido) */</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        0x10, <span class="comment">/* Bit 4 (00010000b) -&gt; Salida P4: Pin 11 del display en ALTO (D4) */</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        0x20, <span class="comment">/* Bit 5 (00100000b) -&gt; Salida P5: Pin 12 del display en ALTO (D5) */</span></div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        0x40, <span class="comment">/* Bit 6 (01000000b) -&gt; Salida P6: Pin 13 del display en ALTO (D6) */</span></div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        0x80  <span class="comment">/* Bit 7 (10000000b) -&gt; Salida P7: Pin 14 del display en ALTO (D7) */</span></div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    };</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <span class="comment">// Recorre las 8 posiciones enviando la trama I2C y manteniendo cada estado durante 500 ms</span></div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; 8; i++) {</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        pcf8574_write(pulse_sequence[i]);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        vTaskDelay(pdMS_TO_TICKS(500)); <span class="comment">/* Retardo no bloqueante de 500 ms para observación en osciloscopio */</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>    }</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>}</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html"><div class="ttname"><a href="display__16_x2__i2c_8h.html">display_16X2_i2c.h</a></div><div class="ttdoc">Archivo de cabecera para el controlador del display LCD 16x2 mediante bus I2C (expansor PCF8574).</div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a0afb537ac0813a7acc2f797a4d3baa0b"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">LCD_COLS</a></div><div class="ttdeci">#define LCD_COLS</div><div class="ttdef"><b>Definition:</b> <a href="display__16_x2__i2c_8h_source.html#l00283">display_16X2_i2c.h:283</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_aefd56ac088ed46da2f10aceb6f3eb584"><div class="ttname"><a href="display__16_x2__i2c_8h.html#aefd56ac088ed46da2f10aceb6f3eb584">LCD_ROW_0</a></div><div class="ttdeci">#define LCD_ROW_0</div><div class="ttdef"><b>Definition:</b> <a href="display__16_x2__i2c_8h_source.html#l00285">display_16X2_i2c.h:285</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_af679cf68e64fdb5d310a0d9944142c76"><div class="ttname"><a href="display__16_x2__i2c_8h.html#af679cf68e64fdb5d310a0d9944142c76">LCD_I2C_ADDR</a></div><div class="ttdeci">#define LCD_I2C_ADDR</div><div class="ttdef"><b>Definition:</b> <a href="display__16_x2__i2c_8h_source.html#l00282">display_16X2_i2c.h:282</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a0185871886f0979aa0d5b6f791606cec"><div class="ttname"><a href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a></div><div class="ttdeci">void Display16x2I2cWriteChar(char ch)</div><div class="ttdoc">Escribe un único carácter ASCII en la posición actual del cursor.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00327">display_16x2_i2c.c:327</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a037b4951fa5e60d07c6d195cad447d56"><div class="ttname"><a href="display__16x2__i2c_8c.html#a037b4951fa5e60d07c6d195cad447d56">I2C_CLOCK_RATE_HZ</a></div><div class="ttdeci">#define I2C_CLOCK_RATE_HZ</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00068">display_16x2_i2c.c:68</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a0c3f87ba7b27a16a29241e974f288f21"><div class="ttname"><a href="display__16x2__i2c_8c.html#a0c3f87ba7b27a16a29241e974f288f21">Display16x2I2cWriteLine</a></div><div class="ttdeci">void Display16x2I2cWriteLine(uint8_t row, const char *str)</div><div class="ttdoc">Escribe una línea completa de texto en una fila específica, rellenando el resto con espacios.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00357">display_16x2_i2c.c:357</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a0f78ea246ace68f839a2b1af81f5cea1"><div class="ttname"><a href="display__16x2__i2c_8c.html#a0f78ea246ace68f839a2b1af81f5cea1">Display16x2I2cWriteString</a></div><div class="ttdeci">void Display16x2I2cWriteString(const char *str)</div><div class="ttdoc">Escribe una cadena completa de caracteres terminada en carácter nulo.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00338">display_16x2_i2c.c:338</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a190d51c7cc15ab6dbbc4e2d610b3d9ef"><div class="ttname"><a href="display__16x2__i2c_8c.html#a190d51c7cc15ab6dbbc4e2d610b3d9ef">CMD_SET_DDRAM_ROW0</a></div><div class="ttdeci">#define CMD_SET_DDRAM_ROW0</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00079">display_16x2_i2c.c:79</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a1d811ed7f4bbdbe75186cf216e9cd63e"><div class="ttname"><a href="display__16x2__i2c_8c.html#a1d811ed7f4bbdbe75186cf216e9cd63e">CMD_DISPLAY_ON</a></div><div class="ttdeci">#define CMD_DISPLAY_ON</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00077">display_16x2_i2c.c:77</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a2a351631e638edcc6de6bf4960029558"><div class="ttname"><a href="display__16x2__i2c_8c.html#a2a351631e638edcc6de6bf4960029558">MASK_EN</a></div><div class="ttdeci">#define MASK_EN</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00072">display_16x2_i2c.c:72</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a48278e912b02df97d5543d4eef47cf5e"><div class="ttname"><a href="display__16x2__i2c_8c.html#a48278e912b02df97d5543d4eef47cf5e">Display16x2I2cInit</a></div><div class="ttdeci">bool Display16x2I2cInit(void)</div><div class="ttdoc">Inicializa el bus I2C y ejecuta la secuencia estricta de configuración del controlador HD44780 para e...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00246">display_16x2_i2c.c:246</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a534546500d08df37479e68c17d7ebee9"><div class="ttname"><a href="display__16x2__i2c_8c.html#a534546500d08df37479e68c17d7ebee9">MASK_BL</a></div><div class="ttdeci">#define MASK_BL</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00073">display_16x2_i2c.c:73</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a75a0de7bee1d39700c382b55eb268f7b"><div class="ttname"><a href="display__16x2__i2c_8c.html#a75a0de7bee1d39700c382b55eb268f7b">CMD_SET_DDRAM_ROW1</a></div><div class="ttdeci">#define CMD_SET_DDRAM_ROW1</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00080">display_16x2_i2c.c:80</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a7cc4b31027e0d66fef50ad204a98a83d"><div class="ttname"><a href="display__16x2__i2c_8c.html#a7cc4b31027e0d66fef50ad204a98a83d">MASK_RS</a></div><div class="ttdeci">#define MASK_RS</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00070">display_16x2_i2c.c:70</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a7e2c78671bc2090fccf1559ec2bf6678"><div class="ttname"><a href="display__16x2__i2c_8c.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a></div><div class="ttdeci">void Display16x2I2cClear(void)</div><div class="ttdoc">Borra todo el contenido visualizado en el display LCD y retorna el cursor a la posición inicial.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00291">display_16x2_i2c.c:291</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_a949aeb443c225d253d812e04abb25ae7"><div class="ttname"><a href="display__16x2__i2c_8c.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a></div><div class="ttdeci">void Display16x2I2cSetCursor(uint8_t row, uint8_t col)</div><div class="ttdoc">Posiciona el cursor de escritura en una coordenada específica de la pantalla.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00305">display_16x2_i2c.c:305</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_aaf06b66b754e094f64d15a72e63e2834"><div class="ttname"><a href="display__16x2__i2c_8c.html#aaf06b66b754e094f64d15a72e63e2834">CMD_CLEAR_DISPLAY</a></div><div class="ttdeci">#define CMD_CLEAR_DISPLAY</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00075">display_16x2_i2c.c:75</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_abc02afe61fec16fa0cb9ab197571cf03"><div class="ttname"><a href="display__16x2__i2c_8c.html#abc02afe61fec16fa0cb9ab197571cf03">CMD_ENTRY_MODE_SET</a></div><div class="ttdeci">#define CMD_ENTRY_MODE_SET</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00076">display_16x2_i2c.c:76</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_ace7e8a9b876b4ab910dd8198515134f6"><div class="ttname"><a href="display__16x2__i2c_8c.html#ace7e8a9b876b4ab910dd8198515134f6">CMD_FUNCTION_SET_4B</a></div><div class="ttdeci">#define CMD_FUNCTION_SET_4B</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00078">display_16x2_i2c.c:78</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_acfd37e13f9bd0d2b03f247ba5a4d8953"><div class="ttname"><a href="display__16x2__i2c_8c.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Display16x2I2cSetBacklight</a></div><div class="ttdeci">void Display16x2I2cSetBacklight(bool state)</div><div class="ttdoc">Controla el estado de encendido o apagado de la luz de fondo del display.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00383">display_16x2_i2c.c:383</a></div></div>
+<div class="ttc" id="adisplay__16x2__i2c_8c_html_aea5729251688c81a87abd16581c5e183"><div class="ttname"><a href="display__16x2__i2c_8c.html#aea5729251688c81a87abd16581c5e183">Display16x2I2cTestPulseTrain</a></div><div class="ttdeci">void Display16x2I2cTestPulseTrain(void)</div><div class="ttdoc">Ejecuta una secuencia experimental de barrido de bit desplazado (walking one, 0x01 a 0x80) sobre las ...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00413">display_16x2_i2c.c:413</a></div></div>
+<div class="ttc" id="agroup___i2_c_html_ga6525bb5162f38b6350d6bc3a3c9c98d7"><div class="ttname"><a href="group___i2_c.html#ga6525bb5162f38b6350d6bc3a3c9c98d7">I2C_writeByte</a></div><div class="ttdeci">bool I2C_writeByte(uint8_t devAddr, uint8_t regAddr, uint8_t data)</div><div class="ttdoc">Write single byte to an 8-bit device register.</div><div class="ttdef"><b>Definition:</b> <a href="i2c__mcu_8c_source.html#l00248">i2c_mcu.c:248</a></div></div>
+<div class="ttc" id="agroup___i2_c_html_gae2cec986d327013569df22dd2945ff58"><div class="ttname"><a href="group___i2_c.html#gae2cec986d327013569df22dd2945ff58">I2C_initialize</a></div><div class="ttdeci">bool I2C_initialize(uint32_t clockRateHz)</div><div class="ttdoc">Initialize I2C0.</div><div class="ttdef"><b>Definition:</b> <a href="i2c__mcu_8c_source.html#l00067">i2c_mcu.c:67</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="display__16x2__i2c_8c.html">display_16x2_i2c.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

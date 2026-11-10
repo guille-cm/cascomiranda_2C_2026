@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Referencia de la estructura gpioConf_t</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Referencia de la Estructura gpioConf_t</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('structgpio_conf__t.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('structgpio_conf__t.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,47 +87,40 @@ $(function(){initNavTree('structgpio_conf__t.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Campos de datos</a>  </div>
-  <div class="headertitle"><div class="title">Referencia de la estructura gpioConf_t</div></div>
+  <div class="headertitle"><div class="title">Referencia de la Estructura gpioConf_t</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Estructura de configuración para pines GPIO. <br  />
 Aquí se definine esta estructura, y se crea un alias de tipo mediante typedef estructura forma parte de la interfaz pública (API) de tu driver. Dado que funciones como bcdToGpio y lcdDisplay reciben punteros a <a class="el" href="structgpio_conf__t.html" title="Estructura de configuración para pines GPIO.  Aquí se definine esta estructura, y se crea un alias de...">gpioConf_t</a> como argumentos, cualquier archivo main.c que consuma el módulo necesita conocer la estructura para poder declarar e inicializar los vectores de pines. FIN.  
- <a href="#details">Más...</a></p>
+ <a href="structgpio_conf__t.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Campos de datos</h2></td></tr>
-<tr class="memitem:aca3d4c5920a3f389dfded4a9726473a9" id="r_aca3d4c5920a3f389dfded4a9726473a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3d4c5920a3f389dfded4a9726473a9">pin</a></td></tr>
+<tr class="memitem:aca3d4c5920a3f389dfded4a9726473a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpio_conf__t.html#aca3d4c5920a3f389dfded4a9726473a9">pin</a></td></tr>
 <tr class="separator:aca3d4c5920a3f389dfded4a9726473a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f9801ec3144d1e53252a902330c58a1" id="r_a8f9801ec3144d1e53252a902330c58a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___g_i_o_p.html#ga423620ef7d69894833f70cfc395caaa9">io_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9801ec3144d1e53252a902330c58a1">dir</a></td></tr>
+<tr class="memitem:a8f9801ec3144d1e53252a902330c58a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___g_i_o_p.html#ga423620ef7d69894833f70cfc395caaa9">io_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgpio_conf__t.html#a8f9801ec3144d1e53252a902330c58a1">dir</a></td></tr>
 <tr class="separator:a8f9801ec3144d1e53252a902330c58a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Estructura de configuración para pines GPIO. <br  />
+<div class="textblock"><p >Estructura de configuración para pines GPIO. <br  />
 Aquí se definine esta estructura, y se crea un alias de tipo mediante typedef estructura forma parte de la interfaz pública (API) de tu driver. Dado que funciones como bcdToGpio y lcdDisplay reciben punteros a <a class="el" href="structgpio_conf__t.html" title="Estructura de configuración para pines GPIO.  Aquí se definine esta estructura, y se crea un alias de...">gpioConf_t</a> como argumentos, cualquier archivo main.c que consuma el módulo necesita conocer la estructura para poder declarar e inicializar los vectores de pines. FIN. </p>
-<p>&lt; Incluye la configuración de los GPIO </p>
+<p >&lt; Incluye la configuración de los GPIO </p>
 
-<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00080">80</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
-</div><h2 class="groupheader">Documentación de campos</h2>
+<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00083">83</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los campos</h2>
 <a id="a8f9801ec3144d1e53252a902330c58a1" name="a8f9801ec3144d1e53252a902330c58a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f9801ec3144d1e53252a902330c58a1">&#9670;&#160;</a></span>dir</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9801ec3144d1e53252a902330c58a1">&#9670;&nbsp;</a></span>dir</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,14 +130,14 @@ Aquí se definine esta estructura, y se crea un alias de tipo mediante typedef e
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Dirección del puerto: GPIO_INPUT (0) o GPIO_OUTPUT (1) </p>
+<p >Dirección del puerto: GPIO_INPUT (0) o GPIO_OUTPUT (1) </p>
 
-<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00082">82</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00085">85</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
 
 </div>
 </div>
 <a id="aca3d4c5920a3f389dfded4a9726473a9" name="aca3d4c5920a3f389dfded4a9726473a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca3d4c5920a3f389dfded4a9726473a9">&#9670;&#160;</a></span>pin</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3d4c5920a3f389dfded4a9726473a9">&#9670;&nbsp;</a></span>pin</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,13 +147,13 @@ Aquí se definine esta estructura, y se crea un alias de tipo mediante typedef e
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Número de pin GPIO asignado </p>
+<p >Número de pin GPIO asignado </p>
 
-<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00081">81</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="bcd___l_c_d_8h_source.html#l00084">84</a> del archivo <a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a>.</p>
 
 </div>
 </div>
-<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<hr/>La documentación para esta estructura fue generada a partir del siguiente fichero:<ul>
 <li>D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/<a class="el" href="bcd___l_c_d_8h_source.html">bcd_LCD.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -174,7 +162,7 @@ Aquí se definine esta estructura, y se crea un alias de tipo mediante typedef e
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structgpio_conf__t.html">gpioConf_t</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

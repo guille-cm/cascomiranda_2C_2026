@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Globales</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('globals_a.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('globals_a.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,20 +87,13 @@ $(function(){initNavTree('globals_a.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="contents">
-<div class="textblock">Lista de todas las funciones, variables, «defines», enumeraciones y «typedefs» con enlaces a los archivos a los que corresponden:</div>
+<div class="textblock">Lista de todas las funciones, variables, 'defines', enumeraciones y 'typedefs' con enlaces a los ficheros a los que corresponden:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>A_1&#160;:&#160;<a class="el" href="l293_8c.html#a3846181cf670f578e43772faa4bd3f75">l293.c</a></li>
@@ -125,6 +113,7 @@ $(function(){initNavTree('globals_a.html',''); initResizable(true); });
 <li>adc_ch_t&#160;:&#160;<a class="el" href="group___analog___i_o.html#gac537c4efc9fd03387fe824872bae8830">analog_io_mcu.h</a></li>
 <li>adc_config_single&#160;:&#160;<a class="el" href="analog__io__mcu_8c.html#a2253f0d5ed152dd9f9d316728dec787a">analog_io_mcu.c</a></li>
 <li>ADC_CONTINUOUS&#160;:&#160;<a class="el" href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a2c63a9e4a7bd5a4da1cb97f40f1cb49d">analog_io_mcu.h</a></li>
+<li>ADC_MAX_VAL&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3a63fb6f00694ff9f4318b4142c5c868">monitor_unidad_paciente.c</a></li>
 <li>adc_mode&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga51acd785c14953090a3507d4fa8e5939">analog_io_mcu.h</a></li>
 <li>adc_mode_t&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga3e4744e022398e776a8dbdd97903a629">analog_io_mcu.h</a></li>
 <li>ADC_SINGLE&#160;:&#160;<a class="el" href="group___analog___i_o.html#gga51acd785c14953090a3507d4fa8e5939a3b0a8cf9a7759ea8b7c9494eb7fb3dd4">analog_io_mcu.h</a></li>
@@ -132,25 +121,56 @@ $(function(){initNavTree('globals_a.html',''); initResizable(true); });
 <li>alarm_config_a&#160;:&#160;<a class="el" href="timer__mcu_8c.html#a8f80c9f90e73dfe1745dbe48d9b558b7">timer_mcu.c</a></li>
 <li>alarm_config_b&#160;:&#160;<a class="el" href="timer__mcu_8c.html#ac7bf7495349e2867c97e245f6ee01d1b">timer_mcu.c</a></li>
 <li>alarm_config_c&#160;:&#160;<a class="el" href="timer__mcu_8c.html#a87435505df054fd2dbfd2eb83d69c089">timer_mcu.c</a></li>
+<li>ALERTA_ID_ALCOHOL&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a8449d478e7392496da567bdf5d3fb225">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_ECG&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a1d182f180194e970f258fdf6889a3989">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_HUMEDAD_ALTA&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873afd88a549ac826b8fcd564edca8e94d16">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_HUMEDAD_BAJA&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ad9e3decedbc34c04f024d3f2884a6c9f">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_LLAMADO_PACIENTE&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ae01050aaa6761ec6ddbbb08a3004c93a">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_MOVIMIENTO&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873aff4dce43bd0754bb206dc0e939269bbc">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_NINGUNA&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873ac87cb31f7c63c1f3e45eb53bfae5deec">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_RESPIRAT&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a179556117741480ae8949155a23142b8">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_TEMP_ALTA&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873aaabb5b813a39c95fd2404d4e71d685e0">monitor_unidad_paciente.c</a></li>
+<li>ALERTA_ID_TEMP_BAJA&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a3311b33bac6c32fec7a62be763983873a829284a92403860652f8bec4541dda7c">monitor_unidad_paciente.c</a></li>
 <li>AnalogInputInit()&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#ga24ce5556aa4682468220b982f151cdfe">analog_io_mcu.c</a></li>
 <li>AnalogInputReadContinuous()&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga042e3964ac18e816a5eb4dfca78bb223">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#ga042e3964ac18e816a5eb4dfca78bb223">analog_io_mcu.c</a></li>
 <li>AnalogInputReadSingle()&#160;:&#160;<a class="el" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#gab5ae00a35744f407072230979e593fd9">analog_io_mcu.c</a></li>
+<li>AnalogOutput2Init()&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga1118a6993661638bad84a3d085f8d57b">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#ga1118a6993661638bad84a3d085f8d57b">analog_io_mcu.c</a></li>
+<li>AnalogOutput2Write()&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga82600e8fcf687d9a993bee5895343c15">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#ga82600e8fcf687d9a993bee5895343c15">analog_io_mcu.c</a></li>
 <li>AnalogOutputInit()&#160;:&#160;<a class="el" href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#gab57399e946247652a096a0e2d3a1b69a">analog_io_mcu.c</a></li>
 <li>AnalogOutputWrite()&#160;:&#160;<a class="el" href="group___analog___i_o.html#gad3fea4064bfa31ae309d4da542347198">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#gad3fea4064bfa31ae309d4da542347198">analog_io_mcu.c</a></li>
 <li>AnalogStartContinuous()&#160;:&#160;<a class="el" href="group___analog___i_o.html#ga59d18db7ff84dc756b4a66f5331a23eb">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#ga59d18db7ff84dc756b4a66f5331a23eb">analog_io_mcu.c</a></li>
 <li>AnalogStopContinuous()&#160;:&#160;<a class="el" href="group___analog___i_o.html#gaea40f5dd5d020c0854734479d52458c2">analog_io_mcu.h</a>, <a class="el" href="group___analog___i_o.html#gaea40f5dd5d020c0854734479d52458c2">analog_io_mcu.c</a></li>
 <li>ANG_RANGE&#160;:&#160;<a class="el" href="servo__sg90_8c.html#a99ea7d692f294ea773d8dd1becfa5281">servo_sg90.c</a></li>
 <li>Angle2DutyCicle()&#160;:&#160;<a class="el" href="servo__sg90_8c.html#a03ba1a24bc9550bccedcb7ed8f014553">servo_sg90.c</a></li>
+<li>ANODO_1&#160;:&#160;<a class="el" href="mi__display__7s__x2_8c.html#a9dfc379bdea455f415edcd49f0ea0053">mi_display_7s_x2.c</a></li>
+<li>ANODO_2&#160;:&#160;<a class="el" href="mi__display__7s__x2_8c.html#ae5ba5b907b7c92e4bd666feba48e0d18">mi_display_7s_x2.c</a></li>
+<li>ANODO_3&#160;:&#160;<a class="el" href="mi__display__7s__x2_8c.html#a792f87cca19106f527fbf4419023c0a6">mi_display_7s_x2.c</a></li>
+<li>ANODO_4&#160;:&#160;<a class="el" href="mi__display__7s__x2_8c.html#a91f682a39596faf4ce5c2d7c513e6d0e">mi_display_7s_x2.c</a></li>
 <li>app_main()&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70">monitor_unidad_paciente.c</a></li>
 <li>ARCHITECTURE_ID&#160;:&#160;<a class="el" href="_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28">CMakeCCompilerId.c</a>, <a class="el" href="_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28">CMakeCXXCompilerId.cpp</a></li>
 <li>ATT_SVC_HID&#160;:&#160;<a class="el" href="ble__hid__mcu_8c.html#a120ccad3a7e1b92bda154619fbb25ea8">ble_hid_mcu.c</a></li>
+<li>AVISO_LEDC_CHANNEL&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#add0303201b9f5cd7f56c13ebab7ff791">aviso_sonoro.c</a></li>
+<li>AVISO_LEDC_MODE&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a97f0a2cfa417b6942f831672e0c64b69">aviso_sonoro.c</a></li>
+<li>AVISO_LEDC_TIMER&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a2d337a2cc759faa9e2e371e85f77e342">aviso_sonoro.c</a></li>
+<li>AVISO_PCM_CARRIER_HZ&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a94f93c102a4ff913f94d240153d8abe2">aviso_sonoro.c</a></li>
+<li>AVISO_PCM_NEUTRAL_DUTY&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#aba869d355c1f74b00f3cd09472092548">aviso_sonoro.c</a></li>
+<li>AVISO_PCM_SAMPLE_PERIOD_US&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a6263d09a5beb30f393a1cdbfa915cb0e">aviso_sonoro.c</a></li>
+<li>AvisoSonoroApagar()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#aa37ee1ed2fbf3b0a4393b82e13d49ef0">aviso_sonoro.c</a></li>
+<li>AvisoSonoroDetenerRtttl()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a3abf6c099121a6ff8694f21b446d5138">aviso_sonoro.c</a></li>
+<li>AvisoSonoroEncenderTono()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a8ebde66030572a187528c170694e578e">aviso_sonoro.c</a></li>
+<li>AvisoSonoroInit()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#aeaa9d5448f2952936202a31cd4cb6a75">aviso_sonoro.c</a></li>
+<li>AvisoSonoroReproduciendoRtttl()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a0661dfa0fbb22ba9d161b4304ee3a59e">aviso_sonoro.c</a></li>
+<li>AvisoSonoroReproduciendoVoz()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#ac39ab5509147e3e13980ef40e3403dc0">aviso_sonoro.c</a></li>
+<li>AvisoSonoroReproducirPcm()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#aea7cd994a9d1215d54a3716e308f18b4">aviso_sonoro.c</a></li>
+<li>AvisoSonoroReproducirRtttl()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a100473093fc38d9147e303b1f42f3d79">aviso_sonoro.c</a></li>
+<li>AvisoSonoroReproducirVozAyuda()&#160;:&#160;<a class="el" href="aviso__sonoro_8c.html#a9aefefa2a62d9e1367f2e1f479ab9995">aviso_sonoro.c</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

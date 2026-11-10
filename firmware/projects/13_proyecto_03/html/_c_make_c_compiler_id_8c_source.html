@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/build/CMakeFiles/3.24.0/CompilerIdC/CMakeCCompilerId.c</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/build/CMakeFiles/3.24.0/CompilerIdC/CMakeCCompilerId.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -692,7 +680,7 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="preprocessor">#  elif _M_ARM == 5</span></div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="preprocessor">#   define ARCHITECTURE_ID &quot;ARMV5I&quot;</span></div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="preprocessor">#  else</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="preprocessor">#   define ARCHITECTURE_ID &quot;ARMV&quot; STRINGIFY(_M_ARM)</span></div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="preprocessor">#   define ARCHITECTURE_ID &quot;ARMV&quot;</span> STRINGIFY(_M_ARM)</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="preprocessor">#  endif</span></div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="preprocessor"># elif defined(_M_MIPS)</span></div>
@@ -799,7 +787,6 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span><span class="comment">/* Convert integer to decimal digit literals.  */</span></div>
-<div class="foldopen" id="foldopen00692" data-start="" data-end="">
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno"><a class="line" href="_c_make_c_compiler_id_8c.html#ad1280362da42492bbc11aa78cbf776ad">  692</a></span><span class="preprocessor">#define DEC(n)                   \</span></div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span><span class="preprocessor">  (&#39;0&#39; + (((n) / 10000000)%10)), \</span></div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span><span class="preprocessor">  (&#39;0&#39; + (((n) / 1000000)%10)),  \</span></div>
@@ -809,10 +796,8 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span><span class="preprocessor">  (&#39;0&#39; + (((n) / 100)%10)),      \</span></div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span><span class="preprocessor">  (&#39;0&#39; + (((n) / 10)%10)),       \</span></div>
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span><span class="preprocessor">  (&#39;0&#39; +  ((n) % 10))</span></div>
-</div>
 <div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span> </div>
 <div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span><span class="comment">/* Convert integer to hex digit literals.  */</span></div>
-<div class="foldopen" id="foldopen00703" data-start="" data-end="">
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno"><a class="line" href="_c_make_c_compiler_id_8c.html#a46d5d95daa1bef867bd0179594310ed5">  703</a></span><span class="preprocessor">#define HEX(n)             \</span></div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span><span class="preprocessor">  (&#39;0&#39; + ((n)&gt;&gt;28 &amp; 0xF)), \</span></div>
 <div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span><span class="preprocessor">  (&#39;0&#39; + ((n)&gt;&gt;24 &amp; 0xF)), \</span></div>
@@ -822,7 +807,6 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="preprocessor">  (&#39;0&#39; + ((n)&gt;&gt;8  &amp; 0xF)), \</span></div>
 <div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="preprocessor">  (&#39;0&#39; + ((n)&gt;&gt;4  &amp; 0xF)), \</span></div>
 <div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span><span class="preprocessor">  (&#39;0&#39; + ((n)     &amp; 0xF))</span></div>
-</div>
 <div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span> </div>
 <div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span><span class="comment">/* Construct a string literal encoding the version number. */</span></div>
 <div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span><span class="preprocessor">#ifdef COMPILER_VERSION</span></div>
@@ -922,7 +906,6 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="preprocessor"># if defined(__CLASSIC_C__)</span></div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span><span class="keywordtype">int</span> <a class="code hl_function" href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(argc, argv) <span class="keywordtype">int</span> argc; <span class="keywordtype">char</span> *argv[];</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><span class="preprocessor"># else</span></div>
-<div class="foldopen" id="foldopen00811" data-start="{" data-end="}">
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno"><a class="line" href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">  811</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span><span class="preprocessor"># endif</span></div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>{</div>
@@ -950,25 +933,24 @@ $(function(){initNavTree('_c_make_c_compiler_id_8c_source.html',''); initResizab
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>  (void)argv;</div>
 <div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>  <span class="keywordflow">return</span> require;</div>
 <div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>}</div>
-</div>
 <div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="#l00811">CMakeCCompilerId.c:811</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a0f46a8a39e09d9b803c4766904fd7e99"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a0f46a8a39e09d9b803c4766904fd7e99">info_language_extensions_default</a></div><div class="ttdeci">const char * info_language_extensions_default</div><div class="ttdef"><b>Definition</b> <a href="#l00793">CMakeCCompilerId.c:793</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a2321403dee54ee23f0c2fa849c60f7d4"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4">info_platform</a></div><div class="ttdeci">char const  * info_platform</div><div class="ttdef"><b>Definition</b> <a href="#l00768">CMakeCCompilerId.c:768</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a4607cccf070750927b458473ca82c090"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a4607cccf070750927b458473ca82c090">info_language_standard_default</a></div><div class="ttdeci">const char * info_language_standard_default</div><div class="ttdef"><b>Definition</b> <a href="#l00790">CMakeCCompilerId.c:790</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a4b0efeb7a5d59313986b3a0390f050f6"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a4b0efeb7a5d59313986b3a0390f050f6">info_compiler</a></div><div class="ttdeci">char const  * info_compiler</div><div class="ttdef"><b>Definition</b> <a href="#l00430">CMakeCCompilerId.c:430</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a59647e99d304ed33b15cb284c27ed391"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a59647e99d304ed33b15cb284c27ed391">info_arch</a></div><div class="ttdeci">char const  * info_arch</div><div class="ttdef"><b>Definition</b> <a href="#l00769">CMakeCCompilerId.c:769</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a81dee0709ded976b2e0319239f72d174"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174">COMPILER_ID</a></div><div class="ttdeci">#define COMPILER_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00423">CMakeCCompilerId.c:423</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_aba35d0d200deaeb06aee95ca297acb28"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28">ARCHITECTURE_ID</a></div><div class="ttdeci">#define ARCHITECTURE_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00688">CMakeCCompilerId.c:688</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_adaee3ee7c5a7a22451ea25e762e1d7d5"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#adaee3ee7c5a7a22451ea25e762e1d7d5">C_VERSION</a></div><div class="ttdeci">#define C_VERSION</div><div class="ttdef"><b>Definition</b> <a href="#l00777">CMakeCCompilerId.c:777</a></div></div>
-<div class="ttc" id="a_c_make_c_compiler_id_8c_html_adbc5372f40838899018fadbc89bd588b"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b">PLATFORM_ID</a></div><div class="ttdeci">#define PLATFORM_ID</div><div class="ttdef"><b>Definition</b> <a href="#l00554">CMakeCCompilerId.c:554</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00811">CMakeCCompilerId.c:811</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a0f46a8a39e09d9b803c4766904fd7e99"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a0f46a8a39e09d9b803c4766904fd7e99">info_language_extensions_default</a></div><div class="ttdeci">const char * info_language_extensions_default</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00793">CMakeCCompilerId.c:793</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a2321403dee54ee23f0c2fa849c60f7d4"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a2321403dee54ee23f0c2fa849c60f7d4">info_platform</a></div><div class="ttdeci">char const  * info_platform</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00768">CMakeCCompilerId.c:768</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a4607cccf070750927b458473ca82c090"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a4607cccf070750927b458473ca82c090">info_language_standard_default</a></div><div class="ttdeci">const char * info_language_standard_default</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00790">CMakeCCompilerId.c:790</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a4b0efeb7a5d59313986b3a0390f050f6"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a4b0efeb7a5d59313986b3a0390f050f6">info_compiler</a></div><div class="ttdeci">char const  * info_compiler</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00430">CMakeCCompilerId.c:430</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a59647e99d304ed33b15cb284c27ed391"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a59647e99d304ed33b15cb284c27ed391">info_arch</a></div><div class="ttdeci">char const  * info_arch</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00769">CMakeCCompilerId.c:769</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_a81dee0709ded976b2e0319239f72d174"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174">COMPILER_ID</a></div><div class="ttdeci">#define COMPILER_ID</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00423">CMakeCCompilerId.c:423</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_aba35d0d200deaeb06aee95ca297acb28"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28">ARCHITECTURE_ID</a></div><div class="ttdeci">#define ARCHITECTURE_ID</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00688">CMakeCCompilerId.c:688</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_adaee3ee7c5a7a22451ea25e762e1d7d5"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#adaee3ee7c5a7a22451ea25e762e1d7d5">C_VERSION</a></div><div class="ttdeci">#define C_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00777">CMakeCCompilerId.c:777</a></div></div>
+<div class="ttc" id="a_c_make_c_compiler_id_8c_html_adbc5372f40838899018fadbc89bd588b"><div class="ttname"><a href="_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b">PLATFORM_ID</a></div><div class="ttdeci">#define PLATFORM_ID</div><div class="ttdef"><b>Definition:</b> <a href="_c_make_c_compiler_id_8c_source.html#l00554">CMakeCCompilerId.c:554</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_4de97de63615a26e95e8ebfd6a24f3a3.html">build</a></li><li class="navelem"><a class="el" href="dir_f9b2e6c2b6d84db1204288fca932899b.html">CMakeFiles</a></li><li class="navelem"><a class="el" href="dir_0f4317b5e35828500d61b835c9e20eaa.html">3.24.0</a></li><li class="navelem"><a class="el" href="dir_c61b8b9d5b54a4c3df31aa56b6613b83.html">CompilerIdC</a></li><li class="navelem"><a class="el" href="_c_make_c_compiler_id_8c.html">CMakeCCompilerId.c</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

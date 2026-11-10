@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Led</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('group___l_e_d.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('group___l_e_d.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('group___l_e_d.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -115,50 +103,50 @@ $(function(){initNavTree('group___l_e_d.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 typedefs</h2></td></tr>
-<tr class="memitem:ga5de8a7d972b1b2f68e7c698f0de2dd0c" id="r_ga5de8a7d972b1b2f68e7c698f0de2dd0c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td></tr>
-<tr class="memdesc:ga5de8a7d972b1b2f68e7c698f0de2dd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED driver for the ESP-EDU Board.  <br /></td></tr>
+<tr class="memitem:ga5de8a7d972b1b2f68e7c698f0de2dd0c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td></tr>
+<tr class="memdesc:ga5de8a7d972b1b2f68e7c698f0de2dd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED driver for the ESP-EDU Board.  <a href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">Más...</a><br /></td></tr>
 <tr class="separator:ga5de8a7d972b1b2f68e7c698f0de2dd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumeraciones</h2></td></tr>
-<tr class="memitem:gab6831a7d06c0a2bc69f9b024f6445a80" id="r_gab6831a7d06c0a2bc69f9b024f6445a80"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a> { <a class="el" href="#ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3">LED_3</a> = (1 &lt;&lt; 0)
-, <a class="el" href="#ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41">LED_2</a> = (1 &lt;&lt; 1)
-, <a class="el" href="#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a> = (1 &lt;&lt; 2)
+<tr class="memitem:gab6831a7d06c0a2bc69f9b024f6445a80"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a> { <a class="el" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3">LED_3</a> = (1 &lt;&lt; 0)
+, <a class="el" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41">LED_2</a> = (1 &lt;&lt; 1)
+, <a class="el" href="group___l_e_d.html#ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b">LED_1</a> = (1 &lt;&lt; 2)
  }</td></tr>
-<tr class="memdesc:gab6831a7d06c0a2bc69f9b024f6445a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED driver for the ESP-EDU Board.  <a href="#gab6831a7d06c0a2bc69f9b024f6445a80">Más...</a><br /></td></tr>
+<tr class="memdesc:gab6831a7d06c0a2bc69f9b024f6445a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED driver for the ESP-EDU Board.  <a href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80">Más...</a><br /></td></tr>
 <tr class="separator:gab6831a7d06c0a2bc69f9b024f6445a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:gacba669c3e8f52e45d1bea50c2e63b250" id="r_gacba669c3e8f52e45d1bea50c2e63b250"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacba669c3e8f52e45d1bea50c2e63b250">LedsInit</a> (void)</td></tr>
-<tr class="memdesc:gacba669c3e8f52e45d1bea50c2e63b250"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP-EDU LEDs initialization.  <br /></td></tr>
+<tr class="memitem:gacba669c3e8f52e45d1bea50c2e63b250"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#gacba669c3e8f52e45d1bea50c2e63b250">LedsInit</a> (void)</td></tr>
+<tr class="memdesc:gacba669c3e8f52e45d1bea50c2e63b250"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP-EDU LEDs initialization.  <a href="group___l_e_d.html#gacba669c3e8f52e45d1bea50c2e63b250">Más...</a><br /></td></tr>
 <tr class="separator:gacba669c3e8f52e45d1bea50c2e63b250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga883021aaef65f080a52b1852172ecbc3" id="r_ga883021aaef65f080a52b1852172ecbc3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga883021aaef65f080a52b1852172ecbc3">LedOn</a> (<a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
-<tr class="memdesc:ga883021aaef65f080a52b1852172ecbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on a specific LED.  <br /></td></tr>
+<tr class="memitem:ga883021aaef65f080a52b1852172ecbc3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#ga883021aaef65f080a52b1852172ecbc3">LedOn</a> (<a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
+<tr class="memdesc:ga883021aaef65f080a52b1852172ecbc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on a specific LED.  <a href="group___l_e_d.html#ga883021aaef65f080a52b1852172ecbc3">Más...</a><br /></td></tr>
 <tr class="separator:ga883021aaef65f080a52b1852172ecbc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4fd07c9f7fab15d0d07389a38f4a39d8" id="r_ga4fd07c9f7fab15d0d07389a38f4a39d8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4fd07c9f7fab15d0d07389a38f4a39d8">LedOff</a> (<a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
-<tr class="memdesc:ga4fd07c9f7fab15d0d07389a38f4a39d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off a specific LED.  <br /></td></tr>
+<tr class="memitem:ga4fd07c9f7fab15d0d07389a38f4a39d8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#ga4fd07c9f7fab15d0d07389a38f4a39d8">LedOff</a> (<a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
+<tr class="memdesc:ga4fd07c9f7fab15d0d07389a38f4a39d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off a specific LED.  <a href="group___l_e_d.html#ga4fd07c9f7fab15d0d07389a38f4a39d8">Más...</a><br /></td></tr>
 <tr class="separator:ga4fd07c9f7fab15d0d07389a38f4a39d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga787ec5815e0eb2680bf1845562731beb" id="r_ga787ec5815e0eb2680bf1845562731beb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a> (<a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
-<tr class="memdesc:ga787ec5815e0eb2680bf1845562731beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert a specific LED state.  <br /></td></tr>
+<tr class="memitem:ga787ec5815e0eb2680bf1845562731beb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">LedToggle</a> (<a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a> led)</td></tr>
+<tr class="memdesc:ga787ec5815e0eb2680bf1845562731beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert a specific LED state.  <a href="group___l_e_d.html#ga787ec5815e0eb2680bf1845562731beb">Más...</a><br /></td></tr>
 <tr class="separator:ga787ec5815e0eb2680bf1845562731beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafcc4fefa23689ea53feedb349c8a9eb6" id="r_gafcc4fefa23689ea53feedb349c8a9eb6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafcc4fefa23689ea53feedb349c8a9eb6">LedsOffAll</a> (void)</td></tr>
-<tr class="memdesc:gafcc4fefa23689ea53feedb349c8a9eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off all LEDs.  <br /></td></tr>
+<tr class="memitem:gafcc4fefa23689ea53feedb349c8a9eb6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#gafcc4fefa23689ea53feedb349c8a9eb6">LedsOffAll</a> (void)</td></tr>
+<tr class="memdesc:gafcc4fefa23689ea53feedb349c8a9eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off all LEDs.  <a href="group___l_e_d.html#gafcc4fefa23689ea53feedb349c8a9eb6">Más...</a><br /></td></tr>
 <tr class="separator:gafcc4fefa23689ea53feedb349c8a9eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf0920e222837036abc96894b17b93b34" id="r_gaf0920e222837036abc96894b17b93b34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf0920e222837036abc96894b17b93b34">LedsMask</a> (uint8_t mask)</td></tr>
-<tr class="memdesc:gaf0920e222837036abc96894b17b93b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on or off leds from a mask.  <br /></td></tr>
+<tr class="memitem:gaf0920e222837036abc96894b17b93b34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l_e_d.html#gaf0920e222837036abc96894b17b93b34">LedsMask</a> (uint8_t mask)</td></tr>
+<tr class="memdesc:gaf0920e222837036abc96894b17b93b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on or off leds from a mask.  <a href="group___l_e_d.html#gaf0920e222837036abc96894b17b93b34">Más...</a><br /></td></tr>
 <tr class="separator:gaf0920e222837036abc96894b17b93b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<h2 class="groupheader">Documentación de «typedef»</h2>
+<h2 class="groupheader">Documentación de los 'typedefs'</h2>
 <a id="ga5de8a7d972b1b2f68e7c698f0de2dd0c" name="ga5de8a7d972b1b2f68e7c698f0de2dd0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">&#9670;&#160;</a></span>led_t</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">&#9670;&nbsp;</a></span>led_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a> <a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td>
+          <td class="memname">typedef enum <a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a> <a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -174,19 +162,19 @@ Changelog</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">23/10/2023   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
 </table>
-<p>List of available LEDs in ESP-EDU board. </p>
+<p >List of available LEDs in ESP-EDU board. </p>
 
 </div>
 </div>
-<h2 class="groupheader">Documentación de enumeraciones</h2>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
 <a id="gab6831a7d06c0a2bc69f9b024f6445a80" name="gab6831a7d06c0a2bc69f9b024f6445a80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab6831a7d06c0a2bc69f9b024f6445a80">&#9670;&#160;</a></span>LEDs</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6831a7d06c0a2bc69f9b024f6445a80">&#9670;&nbsp;</a></span>LEDs</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a></td>
+          <td class="memname">enum <a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80">LEDs</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -202,13 +190,13 @@ Changelog</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">23/10/2023   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
 </table>
-<p>List of available LEDs in ESP-EDU board. </p>
+<p >List of available LEDs in ESP-EDU board. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3" name="ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3"></a>LED_3&#160;</td><td class="fielddoc"><p>Color red. Routed to GPIO_5 </p>
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3" name="ggab6831a7d06c0a2bc69f9b024f6445a80a3e1b1af0f74f675e4eb7bd18229adfd3"></a>LED_3&#160;</td><td class="fielddoc"><p >Color red. Routed to GPIO_5 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41" name="ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41"></a>LED_2&#160;</td><td class="fielddoc"><p>Color yellow. Routed to GPIO_10 </p>
+<tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41" name="ggab6831a7d06c0a2bc69f9b024f6445a80a00af6b2437d9982f1f125d2cc2537c41"></a>LED_2&#160;</td><td class="fielddoc"><p >Color yellow. Routed to GPIO_10 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b" name="ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b"></a>LED_1&#160;</td><td class="fielddoc"><p>Color green. Routed to GPIO_11 </p>
+<tr><td class="fieldname"><a id="ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b" name="ggab6831a7d06c0a2bc69f9b024f6445a80a11a9adb9054de1fe01d6a6750075f57b"></a>LED_1&#160;</td><td class="fielddoc"><p >Color green. Routed to GPIO_11 </p>
 </td></tr>
 </table>
 
@@ -216,9 +204,9 @@ Changelog</h1>
 
 </div>
 </div>
-<h2 class="groupheader">Documentación de funciones</h2>
+<h2 class="groupheader">Documentación de las funciones</h2>
 <a id="ga4fd07c9f7fab15d0d07389a38f4a39d8" name="ga4fd07c9f7fab15d0d07389a38f4a39d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4fd07c9f7fab15d0d07389a38f4a39d8">&#9670;&#160;</a></span>LedOff()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fd07c9f7fab15d0d07389a38f4a39d8">&#9670;&nbsp;</a></span>LedOff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +214,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedOff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td>          <td class="paramname"><span class="paramname"><em>led</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a>&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -248,7 +237,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga883021aaef65f080a52b1852172ecbc3" name="ga883021aaef65f080a52b1852172ecbc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga883021aaef65f080a52b1852172ecbc3">&#9670;&#160;</a></span>LedOn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga883021aaef65f080a52b1852172ecbc3">&#9670;&nbsp;</a></span>LedOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +245,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedOn </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td>          <td class="paramname"><span class="paramname"><em>led</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a>&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -279,7 +269,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="gacba669c3e8f52e45d1bea50c2e63b250" name="gacba669c3e8f52e45d1bea50c2e63b250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacba669c3e8f52e45d1bea50c2e63b250">&#9670;&#160;</a></span>LedsInit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacba669c3e8f52e45d1bea50c2e63b250">&#9670;&nbsp;</a></span>LedsInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +277,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedsInit </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -295,17 +286,19 @@ Changelog</h1>
 
 <p>ESP-EDU LEDs initialization. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>uint8_t </dd></dl>
-<p>Configuration of the GPIO</p>
-<p>Turn off leds</p>
+<p >Configuration of the GPIO</p>
+<p >Turn off leds</p>
 
 <p class="definition">Definición en la línea <a class="el" href="led_8c_source.html#l00031">31</a> del archivo <a class="el" href="led_8c_source.html">led.c</a>.</p>
 
 <p class="reference">Hace referencia a <a class="el" href="led_8c_source.html#l00016">GPIO_LED1</a>, <a class="el" href="led_8c_source.html#l00017">GPIO_LED2</a>, <a class="el" href="led_8c_source.html#l00018">GPIO_LED3</a>, <a class="el" href="gpio__mcu_8h_source.html#l00044">GPIO_OUTPUT</a>, <a class="el" href="gpio__mcu_8c_source.html#l00067">GPIOInit()</a> y <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>.</p>
 
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
 </div>
 </div>
 <a id="gaf0920e222837036abc96894b17b93b34" name="gaf0920e222837036abc96894b17b93b34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf0920e222837036abc96894b17b93b34">&#9670;&#160;</a></span>LedsMask()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0920e222837036abc96894b17b93b34">&#9670;&nbsp;</a></span>LedsMask()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +306,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedsMask </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mask</em></span></td><td>)</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -335,7 +329,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="gafcc4fefa23689ea53feedb349c8a9eb6" name="gafcc4fefa23689ea53feedb349c8a9eb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafcc4fefa23689ea53feedb349c8a9eb6">&#9670;&#160;</a></span>LedsOffAll()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafcc4fefa23689ea53feedb349c8a9eb6">&#9670;&nbsp;</a></span>LedsOffAll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +337,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedsOffAll </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -359,7 +354,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga787ec5815e0eb2680bf1845562731beb" name="ga787ec5815e0eb2680bf1845562731beb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga787ec5815e0eb2680bf1845562731beb">&#9670;&#160;</a></span>LedToggle()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga787ec5815e0eb2680bf1845562731beb">&#9670;&nbsp;</a></span>LedToggle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +362,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t LedToggle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a></td>          <td class="paramname"><span class="paramname"><em>led</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___l_e_d.html#ga5de8a7d972b1b2f68e7c698f0de2dd0c">led_t</a>&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -393,7 +389,7 @@ Changelog</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

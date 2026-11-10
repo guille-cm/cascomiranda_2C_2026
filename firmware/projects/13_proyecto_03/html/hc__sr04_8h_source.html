@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/hc_sr04.h</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/hc_sr04.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('hc__sr04_8h_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('hc__sr04_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('hc__sr04_8h_source.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -135,17 +123,17 @@ $(function(){initNavTree('hc__sr04_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="ttc" id="agpio__mcu_8h_html"><div class="ttname"><a href="gpio__mcu_8h.html">gpio_mcu.h</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_gac6f7bd4f7ee306a4519f04641cbf2d67"><div class="ttname"><a href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a></div><div class="ttdeci">enum gpio_list gpio_t</div><div class="ttdoc">ESP32-C6 available GPIOs (not all of them are available in ESP-EDU)</div></div>
-<div class="ttc" id="agroup___h_c___s_r04_html_ga549ba28c76f1282cfd92f57f3bca3ff0"><div class="ttname"><a href="group___h_c___s_r04.html#ga549ba28c76f1282cfd92f57f3bca3ff0">HcSr04Deinit</a></div><div class="ttdeci">bool HcSr04Deinit(void)</div><div class="ttdoc">HC_SR04 de-initialization.</div><div class="ttdef"><b>Definition</b> <a href="hc__sr04_8c_source.html#l00089">hc_sr04.c:89</a></div></div>
-<div class="ttc" id="agroup___h_c___s_r04_html_ga73a5aaa2183e55d104d4e0c2c435e251"><div class="ttname"><a href="group___h_c___s_r04.html#ga73a5aaa2183e55d104d4e0c2c435e251">HcSr04ReadDistanceInCentimeters</a></div><div class="ttdeci">uint16_t HcSr04ReadDistanceInCentimeters(void)</div><div class="ttdoc">Read distance.</div><div class="ttdef"><b>Definition</b> <a href="hc__sr04_8c_source.html#l00045">hc_sr04.c:45</a></div></div>
-<div class="ttc" id="agroup___h_c___s_r04_html_ga9d26cc017fe45c607d08231ebffb46c4"><div class="ttname"><a href="group___h_c___s_r04.html#ga9d26cc017fe45c607d08231ebffb46c4">HcSr04Init</a></div><div class="ttdeci">bool HcSr04Init(gpio_t echo, gpio_t trigger)</div><div class="ttdoc">Driver for reading distance with HC-SR04 module.</div><div class="ttdef"><b>Definition</b> <a href="hc__sr04_8c_source.html#l00034">hc_sr04.c:34</a></div></div>
-<div class="ttc" id="agroup___h_c___s_r04_html_gad819b1b0326d1edca15ec7d153aa5700"><div class="ttname"><a href="group___h_c___s_r04.html#gad819b1b0326d1edca15ec7d153aa5700">HcSr04ReadDistanceInInches</a></div><div class="ttdeci">uint16_t HcSr04ReadDistanceInInches(void)</div><div class="ttdoc">Read distance.</div><div class="ttdef"><b>Definition</b> <a href="hc__sr04_8c_source.html#l00067">hc_sr04.c:67</a></div></div>
+<div class="ttc" id="agroup___h_c___s_r04_html_ga549ba28c76f1282cfd92f57f3bca3ff0"><div class="ttname"><a href="group___h_c___s_r04.html#ga549ba28c76f1282cfd92f57f3bca3ff0">HcSr04Deinit</a></div><div class="ttdeci">bool HcSr04Deinit(void)</div><div class="ttdoc">HC_SR04 de-initialization.</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00089">hc_sr04.c:89</a></div></div>
+<div class="ttc" id="agroup___h_c___s_r04_html_ga73a5aaa2183e55d104d4e0c2c435e251"><div class="ttname"><a href="group___h_c___s_r04.html#ga73a5aaa2183e55d104d4e0c2c435e251">HcSr04ReadDistanceInCentimeters</a></div><div class="ttdeci">uint16_t HcSr04ReadDistanceInCentimeters(void)</div><div class="ttdoc">Read distance.</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00045">hc_sr04.c:45</a></div></div>
+<div class="ttc" id="agroup___h_c___s_r04_html_ga9d26cc017fe45c607d08231ebffb46c4"><div class="ttname"><a href="group___h_c___s_r04.html#ga9d26cc017fe45c607d08231ebffb46c4">HcSr04Init</a></div><div class="ttdeci">bool HcSr04Init(gpio_t echo, gpio_t trigger)</div><div class="ttdoc">Driver for reading distance with HC-SR04 module.</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00034">hc_sr04.c:34</a></div></div>
+<div class="ttc" id="agroup___h_c___s_r04_html_gad819b1b0326d1edca15ec7d153aa5700"><div class="ttname"><a href="group___h_c___s_r04.html#gad819b1b0326d1edca15ec7d153aa5700">HcSr04ReadDistanceInInches</a></div><div class="ttdeci">uint16_t HcSr04ReadDistanceInInches(void)</div><div class="ttdoc">Read distance.</div><div class="ttdef"><b>Definition:</b> <a href="hc__sr04_8c_source.html#l00067">hc_sr04.c:67</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="hc__sr04_8h.html">hc_sr04.h</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

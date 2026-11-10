@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/buzzer_melodies.h</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/buzzer_melodies.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('buzzer__melodies_8h_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('buzzer__melodies_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('buzzer__melodies_8h_source.html',''); initResizable(tr
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -138,39 +126,48 @@ $(function(){initNavTree('buzzer__melodies_8h_source.html',''); initResizable(tr
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga551dcf240d56183001398ee4f0619c21">   47</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga551dcf240d56183001398ee4f0619c21">songMahnaMahna</a> = <span class="stringliteral">&quot;MahnaMahna:d=16,o=6,b=125:c#,c.,b5,8a#.5,8f.,4g#,a#,g.,4d#,8p,c#,c.,b5,8a#.5,8f.,g#.,8a#.,4g,8p,c#,c.,b5,8a#.5,8f.,4g#,f,g.,8d#.,f,g.,8d#.,f,8g,8d#.,f,8g,d#,8c,a#5,8d#.,8d#.,4d#,8d#.&quot;</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gadb16195915033c2ce10535a9c5d96ed6">   48</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gadb16195915033c2ce10535a9c5d96ed6">songLeisureSuit</a> = <span class="stringliteral">&quot;LeisureSuit:d=16,o=6,b=56:f.5,f#.5,g.5,g#5,32a#5,f5,g#.5,a#.5,32f5,g#5,32a#5,g#5,8c#.,a#5,32c#,a5,a#.5,c#.,32a5,a#5,32c#,d#,8e,c#.,f.,f.,f.,f.,f,32e,d#,8d,a#.5,e,32f,e,32f,c#,d#.,c#&quot;</span>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635">   49</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635">songMissionImp</a> = <span class="stringliteral">&quot;MissionImp:d=16,o=6,b=95:32d,32d#,32d,32d#,32d,32d#,32d,32d#,32d,32d,32d#,32e,32f,32f#,32g,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,a#,g,2d,32p,a#,g,2c#,32p,a#,g,2c,a#5,8c,2p,32p,a#5,g5,2f#,32p,a#5,g5,2f,32p,a#5,g5,2e,d#,8d&quot;</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">/*==================[external functions declaration]=========================*/</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">/* MELODIES_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6437a55e32ba249878849626de440392">   50</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6437a55e32ba249878849626de440392">songMarioHurryUp_version_guille_cm</a> = <span class="stringliteral">&quot;MarioHurry:d=16,o=5,b=200:e,8d6,p,d6,32p,d6,p,f,8d#6,p,d#6,32p,d#6,p,f#,8e6,p,e6,32p,e6,p,8f6,p,4f6,4p,e6,32p,e6,p,e6,p,c6,e6,p,8g6,8p,8g,8p,8c6,p,8g,p,8e,p,8a,b,p,a#,8a,p,8g,8e6,8g6,8a6,f6,g6,p,8e6,c6,d6,8b,p,8c6,p,8g,p,8e,p,8a,b,p,a#,8a,p,8g,8e6,8g6,8a6,f6,g6,p,8e6,c6,d6,8b,8p,p,g6,f#6,f6,8d#6,e6,p,g#,a,c6,p,a,c6,d6,p,g6,f#6,f6,8d#6,e6,p,c7,32p,c7,32p,8c7,8p,p,g6,f#6,f6,8d#6,e6,p,g#,a,c6,p,a,c6,d6,p,8d#6,p,8d6,p,8c6&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga97b422f26cf212e6520c15b5e635309f">   51</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga97b422f26cf212e6520c15b5e635309f">songDrama_version_guille_cm</a> = <span class="stringliteral">&quot;Drama:d=8,o=5,b=180:d6,g,g,d6,g,g,d6,g,d#6,g,d6,g,g,d6,g,g,d6,g,d#6,g,c#6,f#,f#,c#6,f#,f#,c#6,f#,d6,f#,c#6,f#,f#,c#6,f#,f#,c#6,f#,d6,f#&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6f23313469146ec4af7fe80b12933fec">   52</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6f23313469146ec4af7fe80b12933fec">songPacman_version_guille_cm</a> = <span class="stringliteral">&quot;Pacman:d=4,o=5,b=112:p,32b,32p,32b6,32p,32f#6,32p,32d#6,32p,32b6,32f#6,16p,16d#6,16p,32c6,32p,32c7,32p,32g6,32p,32e6,32p,32c7,32g6,16p,16e6,16p,32b,32p,32b6,32p,32f#6,32p,32d#6,32p,32b6,32f#6,16p,16d#6,16p,32d#6,32e6,32f6,32p,32f6,32f#6,32g6,32p,32g6,32g#6,32a6,32p,32b6.,p&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga3230abdc382806d244d13b83bf77085b">   53</a></span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga3230abdc382806d244d13b83bf77085b">songFunky_Town_version_guille_cm</a> = <span class="stringliteral">&quot;Funky Town:d=8,o=4,b=125:c6,c6,a#5,c6,p,g5,p,g5,c6,f6,e6,c6,2p,c6,c6,a#5,c6,p,g5,p,g5,c6,f6,e6,c6&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">/*==================[external functions declaration]=========================*/</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/*==================[end of file]============================================*/</span></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga0888ccbb6af1a543eddae88864e32a4a"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga0888ccbb6af1a543eddae88864e32a4a">songLooney</a></div><div class="ttdeci">const char * songLooney</div><div class="ttdef"><b>Definition</b> <a href="#l00035">buzzer_melodies.h:35</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga16b07deabed31bae3aad37ad800668bc"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga16b07deabed31bae3aad37ad800668bc">song20thCenFox</a></div><div class="ttdeci">const char * song20thCenFox</div><div class="ttdef"><b>Definition</b> <a href="#l00036">buzzer_melodies.h:36</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga551dcf240d56183001398ee4f0619c21"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga551dcf240d56183001398ee4f0619c21">songMahnaMahna</a></div><div class="ttdeci">const char * songMahnaMahna</div><div class="ttdef"><b>Definition</b> <a href="#l00047">buzzer_melodies.h:47</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga62d067ec17a6b170dc9e59d9dfd772ff"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga62d067ec17a6b170dc9e59d9dfd772ff">songTeam</a></div><div class="ttdeci">const char * songTeam</div><div class="ttdef"><b>Definition</b> <a href="#l00042">buzzer_melodies.h:42</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga73b8a76e8f634d6148abadae585ba569"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga73b8a76e8f634d6148abadae585ba569">songMASH</a></div><div class="ttdeci">const char * songMASH</div><div class="ttdef"><b>Definition</b> <a href="#l00038">buzzer_melodies.h:38</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga763c934b470734f763930b292324c9df"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga763c934b470734f763930b292324c9df">songJeopardy</a></div><div class="ttdeci">const char * songJeopardy</div><div class="ttdef"><b>Definition</b> <a href="#l00044">buzzer_melodies.h:44</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga7cec4cc7584b3a02d8403dc3a8434040"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga7cec4cc7584b3a02d8403dc3a8434040">songSimpsons</a></div><div class="ttdeci">const char * songSimpsons</div><div class="ttdoc">RTTTL Melodies for play with Buzzer.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">buzzer_melodies.h:29</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga8a58d0f8863e14f8cf2345a1a33acc0c"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga8a58d0f8863e14f8cf2345a1a33acc0c">songTakeOnMe</a></div><div class="ttdeci">const char * songTakeOnMe</div><div class="ttdef"><b>Definition</b> <a href="#l00031">buzzer_melodies.h:31</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga945933180724eb179ebc8634a0df665b"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga945933180724eb179ebc8634a0df665b">songGoodBad</a></div><div class="ttdeci">const char * songGoodBad</div><div class="ttdef"><b>Definition</b> <a href="#l00040">buzzer_melodies.h:40</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gab77a9e67c1ac6fa975f2e402c6abb3a4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gab77a9e67c1ac6fa975f2e402c6abb3a4">songFlinstones</a></div><div class="ttdeci">const char * songFlinstones</div><div class="ttdef"><b>Definition</b> <a href="#l00043">buzzer_melodies.h:43</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gacc190bf3b9965a19ebcbf651ecf6809a"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gacc190bf3b9965a19ebcbf651ecf6809a">songEntertainer</a></div><div class="ttdeci">const char * songEntertainer</div><div class="ttdef"><b>Definition</b> <a href="#l00032">buzzer_melodies.h:32</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gad75548f6b235cc90a1f480e2e5498635"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635">songMissionImp</a></div><div class="ttdeci">const char * songMissionImp</div><div class="ttdef"><b>Definition</b> <a href="#l00049">buzzer_melodies.h:49</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gadb16195915033c2ce10535a9c5d96ed6"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gadb16195915033c2ce10535a9c5d96ed6">songLeisureSuit</a></div><div class="ttdeci">const char * songLeisureSuit</div><div class="ttdef"><b>Definition</b> <a href="#l00048">buzzer_melodies.h:48</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gae4456a4726f28e66e43bafebb82bfdb4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae4456a4726f28e66e43bafebb82bfdb4">songXfiles</a></div><div class="ttdeci">const char * songXfiles</div><div class="ttdef"><b>Definition</b> <a href="#l00034">buzzer_melodies.h:34</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gae80e60c46cc189a59d24c7e48f4c833f"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae80e60c46cc189a59d24c7e48f4c833f">songTopGun</a></div><div class="ttdeci">const char * songTopGun</div><div class="ttdef"><b>Definition</b> <a href="#l00041">buzzer_melodies.h:41</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaec9d97c53964b30b78becf443a99c352"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaec9d97c53964b30b78becf443a99c352">songStarWars</a></div><div class="ttdeci">const char * songStarWars</div><div class="ttdef"><b>Definition</b> <a href="#l00039">buzzer_melodies.h:39</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf2f04d7f06f0872d9dacf39ef8174588"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf2f04d7f06f0872d9dacf39ef8174588">songMuppets</a></div><div class="ttdeci">const char * songMuppets</div><div class="ttdef"><b>Definition</b> <a href="#l00033">buzzer_melodies.h:33</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf3ea05115c18f0d0bb2d56ec93d825d4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf3ea05115c18f0d0bb2d56ec93d825d4">songSmurfs</a></div><div class="ttdeci">const char * songSmurfs</div><div class="ttdef"><b>Definition</b> <a href="#l00046">buzzer_melodies.h:46</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf409956ffdede76fdeb60a765d3b89a1"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf409956ffdede76fdeb60a765d3b89a1">songIndiana</a></div><div class="ttdeci">const char * songIndiana</div><div class="ttdef"><b>Definition</b> <a href="#l00030">buzzer_melodies.h:30</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gafaa3d63e0e3a5b452f90111ce1e9c071"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafaa3d63e0e3a5b452f90111ce1e9c071">songGadget</a></div><div class="ttdeci">const char * songGadget</div><div class="ttdef"><b>Definition</b> <a href="#l00045">buzzer_melodies.h:45</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gafb2f2f3fa572e7a3eaf1df2221088bdd"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafb2f2f3fa572e7a3eaf1df2221088bdd">songBond</a></div><div class="ttdeci">const char * songBond</div><div class="ttdef"><b>Definition</b> <a href="#l00037">buzzer_melodies.h:37</a></div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">/* MELODIES_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga0888ccbb6af1a543eddae88864e32a4a"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga0888ccbb6af1a543eddae88864e32a4a">songLooney</a></div><div class="ttdeci">const char * songLooney</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00035">buzzer_melodies.h:35</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga16b07deabed31bae3aad37ad800668bc"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga16b07deabed31bae3aad37ad800668bc">song20thCenFox</a></div><div class="ttdeci">const char * song20thCenFox</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00036">buzzer_melodies.h:36</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga3230abdc382806d244d13b83bf77085b"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga3230abdc382806d244d13b83bf77085b">songFunky_Town_version_guille_cm</a></div><div class="ttdeci">const char * songFunky_Town_version_guille_cm</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00053">buzzer_melodies.h:53</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga551dcf240d56183001398ee4f0619c21"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga551dcf240d56183001398ee4f0619c21">songMahnaMahna</a></div><div class="ttdeci">const char * songMahnaMahna</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00047">buzzer_melodies.h:47</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga62d067ec17a6b170dc9e59d9dfd772ff"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga62d067ec17a6b170dc9e59d9dfd772ff">songTeam</a></div><div class="ttdeci">const char * songTeam</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00042">buzzer_melodies.h:42</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga6437a55e32ba249878849626de440392"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6437a55e32ba249878849626de440392">songMarioHurryUp_version_guille_cm</a></div><div class="ttdeci">const char * songMarioHurryUp_version_guille_cm</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00050">buzzer_melodies.h:50</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga6f23313469146ec4af7fe80b12933fec"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga6f23313469146ec4af7fe80b12933fec">songPacman_version_guille_cm</a></div><div class="ttdeci">const char * songPacman_version_guille_cm</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00052">buzzer_melodies.h:52</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga73b8a76e8f634d6148abadae585ba569"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga73b8a76e8f634d6148abadae585ba569">songMASH</a></div><div class="ttdeci">const char * songMASH</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00038">buzzer_melodies.h:38</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga763c934b470734f763930b292324c9df"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga763c934b470734f763930b292324c9df">songJeopardy</a></div><div class="ttdeci">const char * songJeopardy</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00044">buzzer_melodies.h:44</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga7cec4cc7584b3a02d8403dc3a8434040"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga7cec4cc7584b3a02d8403dc3a8434040">songSimpsons</a></div><div class="ttdeci">const char * songSimpsons</div><div class="ttdoc">RTTTL Melodies for play with Buzzer.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00029">buzzer_melodies.h:29</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga8a58d0f8863e14f8cf2345a1a33acc0c"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga8a58d0f8863e14f8cf2345a1a33acc0c">songTakeOnMe</a></div><div class="ttdeci">const char * songTakeOnMe</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00031">buzzer_melodies.h:31</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga945933180724eb179ebc8634a0df665b"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga945933180724eb179ebc8634a0df665b">songGoodBad</a></div><div class="ttdeci">const char * songGoodBad</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00040">buzzer_melodies.h:40</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_ga97b422f26cf212e6520c15b5e635309f"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#ga97b422f26cf212e6520c15b5e635309f">songDrama_version_guille_cm</a></div><div class="ttdeci">const char * songDrama_version_guille_cm</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00051">buzzer_melodies.h:51</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gab77a9e67c1ac6fa975f2e402c6abb3a4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gab77a9e67c1ac6fa975f2e402c6abb3a4">songFlinstones</a></div><div class="ttdeci">const char * songFlinstones</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00043">buzzer_melodies.h:43</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gacc190bf3b9965a19ebcbf651ecf6809a"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gacc190bf3b9965a19ebcbf651ecf6809a">songEntertainer</a></div><div class="ttdeci">const char * songEntertainer</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00032">buzzer_melodies.h:32</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gad75548f6b235cc90a1f480e2e5498635"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gad75548f6b235cc90a1f480e2e5498635">songMissionImp</a></div><div class="ttdeci">const char * songMissionImp</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00049">buzzer_melodies.h:49</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gadb16195915033c2ce10535a9c5d96ed6"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gadb16195915033c2ce10535a9c5d96ed6">songLeisureSuit</a></div><div class="ttdeci">const char * songLeisureSuit</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00048">buzzer_melodies.h:48</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gae4456a4726f28e66e43bafebb82bfdb4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae4456a4726f28e66e43bafebb82bfdb4">songXfiles</a></div><div class="ttdeci">const char * songXfiles</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00034">buzzer_melodies.h:34</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gae80e60c46cc189a59d24c7e48f4c833f"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gae80e60c46cc189a59d24c7e48f4c833f">songTopGun</a></div><div class="ttdeci">const char * songTopGun</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00041">buzzer_melodies.h:41</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaec9d97c53964b30b78becf443a99c352"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaec9d97c53964b30b78becf443a99c352">songStarWars</a></div><div class="ttdeci">const char * songStarWars</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00039">buzzer_melodies.h:39</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf2f04d7f06f0872d9dacf39ef8174588"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf2f04d7f06f0872d9dacf39ef8174588">songMuppets</a></div><div class="ttdeci">const char * songMuppets</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00033">buzzer_melodies.h:33</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf3ea05115c18f0d0bb2d56ec93d825d4"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf3ea05115c18f0d0bb2d56ec93d825d4">songSmurfs</a></div><div class="ttdeci">const char * songSmurfs</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00046">buzzer_melodies.h:46</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gaf409956ffdede76fdeb60a765d3b89a1"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gaf409956ffdede76fdeb60a765d3b89a1">songIndiana</a></div><div class="ttdeci">const char * songIndiana</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00030">buzzer_melodies.h:30</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gafaa3d63e0e3a5b452f90111ce1e9c071"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafaa3d63e0e3a5b452f90111ce1e9c071">songGadget</a></div><div class="ttdeci">const char * songGadget</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00045">buzzer_melodies.h:45</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r___m_e_l_o_d_i_e_s_html_gafb2f2f3fa572e7a3eaf1df2221088bdd"><div class="ttname"><a href="group___b_u_z_z_e_r___m_e_l_o_d_i_e_s.html#gafb2f2f3fa572e7a3eaf1df2221088bdd">songBond</a></div><div class="ttdeci">const char * songBond</div><div class="ttdef"><b>Definition:</b> <a href="buzzer__melodies_8h_source.html#l00037">buzzer_melodies.h:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="buzzer__melodies_8h.html">buzzer_melodies.h</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

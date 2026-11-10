@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/web_unidad_paciente.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('web__unidad__paciente_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo web_unidad_paciente.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Módulo de conectividad Wi-Fi (Modo Estación) y Servidor Web HTTP embebido para la supervisión clínica en tiempo real, control remoto de alarmas, sincronización de reloj RTC y graficación histórica desde tarjeta MicroSD mediante dirección IPv4.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div>
+<p><a href="web__unidad__paciente_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura integral de datos del sistema publicada hacia el Dashboard Web cada 200 ms por <code>TaskDisplayLCD</code>.  <a href="structestado__unidad__paciente__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a4078c5e2403f6b2eae094514509bf3d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a4078c5e2403f6b2eae094514509bf3d0">WIFI_SSID_DEFAULT</a>&#160;&#160;&#160;&quot;Mi_humilde_red&quot;</td></tr>
+<tr class="memdesc:a4078c5e2403f6b2eae094514509bf3d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de la red Wi-Fi (SSID) de 2.4 GHz a la que se conecta la estación (reemplazar antes de compilar)  <a href="web__unidad__paciente_8h.html#a4078c5e2403f6b2eae094514509bf3d0">Más...</a><br /></td></tr>
+<tr class="separator:a4078c5e2403f6b2eae094514509bf3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8347fb95224b8b70ab93fe76a52d94b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a8347fb95224b8b70ab93fe76a52d94b2">WIFI_PASS_DEFAULT</a>&#160;&#160;&#160;&quot;contraseniasencilla1234&quot;</td></tr>
+<tr class="memdesc:a8347fb95224b8b70ab93fe76a52d94b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contraseña WPA2-PSK de la red Wi-Fi (reemplazar antes de compilar)  <a href="web__unidad__paciente_8h.html#a8347fb95224b8b70ab93fe76a52d94b2">Más...</a><br /></td></tr>
+<tr class="separator:a8347fb95224b8b70ab93fe76a52d94b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c15d59726c7ef931534a0653837c80b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">WEB_LCD_TEXT_MAX_LEN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a8c15d59726c7ef931534a0653837c80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Longitud máxima de caracteres visibles en una fila del display LCD 16x2.  <a href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">Más...</a><br /></td></tr>
+<tr class="separator:a8c15d59726c7ef931534a0653837c80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9caf0810e72cc89f00234f94041588d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2">WebUnidadPacienteInit</a> (void)</td></tr>
+<tr class="memdesc:a9caf0810e72cc89f00234f94041588d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la partición Flash NVS, la pila TCP/IP lwIP, el bucle de eventos, el cliente Wi-Fi en Modo Estación (STA) y pone en marcha el servidor HTTP en el puerto 80 registrando sus 10 URI handlers.  <a href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2">Más...</a><br /></td></tr>
+<tr class="separator:a9caf0810e72cc89f00234f94041588d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1975bdb3b46a94898c5051408a1862a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a1975bdb3b46a94898c5051408a1862a9">WebUnidadPacienteActualizarDatos</a> (const <a class="el" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> *nuevo_estado)</td></tr>
+<tr class="memdesc:a1975bdb3b46a94898c5051408a1862a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza de forma atómica (mediante spinlock de sección crítica) la estructura interna de telemetría que es servida en formato JSON a través del endpoint <code>GET</code> /api/status.  <a href="web__unidad__paciente_8h.html#a1975bdb3b46a94898c5051408a1862a9">Más...</a><br /></td></tr>
+<tr class="separator:a1975bdb3b46a94898c5051408a1862a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865db6c1a2b8c1fcba620b61ac0779d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a> (char *buffer_17_bytes)</td></tr>
+<tr class="memdesc:a865db6c1a2b8c1fcba620b61ac0779d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene de forma segura el texto normalizado de hasta 16 caracteres para la Fila 0 del LCD en condición normal:  <a href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1">Más...</a><br /></td></tr>
+<tr class="separator:a865db6c1a2b8c1fcba620b61ac0779d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe624ede23b6e7f2b8ca75c2f4bf81e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">WebUnidadPacienteConsumirSolicitudClearAlert</a> (void)</td></tr>
+<tr class="memdesc:afe624ede23b6e7f2b8ca75c2f4bf81e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica y consume atómicamente la bandera activada por el botón web "Desactivar Alerta más Antigua (FIFO)".  <a href="web__unidad__paciente_8h.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">Más...</a><br /></td></tr>
+<tr class="separator:afe624ede23b6e7f2b8ca75c2f4bf81e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3830104c26d813790850c299ac93f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#ae3830104c26d813790850c299ac93f51">WebUnidadPacienteConsumirSolicitudAdvertencia3s</a> (void)</td></tr>
+<tr class="memdesc:ae3830104c26d813790850c299ac93f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica y consume atómicamente la bandera activada por el botón web "Tono Advertencia (3s)".  <a href="web__unidad__paciente_8h.html#ae3830104c26d813790850c299ac93f51">Más...</a><br /></td></tr>
+<tr class="separator:ae3830104c26d813790850c299ac93f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738a228b1ce326dc905b786b96bd5436"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="web__unidad__paciente_8h.html#a738a228b1ce326dc905b786b96bd5436">WebUnidadPacienteConsumirSolicitudVozAyuda</a> (void)</td></tr>
+<tr class="memdesc:a738a228b1ce326dc905b786b96bd5436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica y consume atómicamente la solicitud de reproducción del mensaje de voz LPCM ("Ayuda en camino").  <a href="web__unidad__paciente_8h.html#a738a228b1ce326dc905b786b96bd5436">Más...</a><br /></td></tr>
+<tr class="separator:a738a228b1ce326dc905b786b96bd5436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Módulo de conectividad Wi-Fi (Modo Estación) y Servidor Web HTTP embebido para la supervisión clínica en tiempo real, control remoto de alarmas, sincronización de reloj RTC y graficación histórica desde tarjeta MicroSD mediante dirección IPv4. </p>
+<p >Gestiona la conexión automática a la red Wi-Fi de 2.4 GHz del centro de salud u hogar y aloja un servidor HTTP ligero en el puerto TCP 80. Mientras el operador no ingrese un nombre de paciente ni un mensaje personalizado desde la página web, la función <code><a class="el" href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1" title="Obtiene de forma segura el texto normalizado de hasta 16 caracteres para la Fila 0 del LCD en condici...">WebUnidadPacienteObtenerTextoFila0()</a></code> suministra automáticamente la dirección IPv4 asignada por el router para que permanezca visible en la Fila 0 del display LCD 16x2. <br  />
+ </p>
+<h1><a class="anchor" id="web_comm_strategy"></a>
+Arquitectura de Conectividad Wi-Fi STA, Protocolo HTTP/REST, Interfaz Gráfica e Integración con RTC y MicroSD</h1>
+<h3><a class="anchor" id="autotoc_md16"></a>
+1. Estrategia de Conexión Wi-Fi (Modo Estación 802.11 b/g/n) e Intercambio con el Router</h3>
+<p >El microcontrolador ESP32-C6 se configura como cliente inalámbrico (<b>Modo Estación / <code>WIFI_MODE_STA</b></code>) para integrarse a la infraestructura de red local existente del centro de salud. El proceso de enlace sigue una máquina de estados asincrónica gobernada por el bucle de eventos del sistema (<code>esp_event</code>):</p><ol type="1">
+<li><b>Inicialización de Memoria No Volátil (NVS) y Pila TCP/IP (<code>lwIP</code>):</b> En <code><a class="el" href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2" title="Inicializa la partición Flash NVS, la pila TCP/IP lwIP, el bucle de eventos, el cliente Wi-Fi en Modo...">WebUnidadPacienteInit()</a></code> se inicializa la partición Flash NVS (donde el transceptor de radiofrecuencia almacena los parámetros de calibración PHY y claves de red) y se crea la interfaz de red virtual (<code>esp_netif_create_default_wifi_sta()</code>) vinculada a la pila ligera TCP/IP <b>lwIP</b>.</li>
+<li><b>Barrido, Autenticación y Asociación IEEE 802.11:</b> Al dispararse el evento <code>WIFI_EVENT_STA_START</code>, el driver invoca <code>esp_wifi_connect()</code>. El radio busca las tramas <em>Beacon</em> del punto de acceso (router) cuyo identificador coincide con <code>WIFI_SSID_DEFAULT</code>, intercambia las tramas de Autenticación Abierta y Solicitud de Asociación (<em>Association Request / Response</em>), y ejecuta el protocolo criptográfico <b>4-Way Handshake WPA2-PSK (AES-CCMP)</b> empleando la clave <code>WIFI_PASS_DEFAULT</code>.</li>
+<li><b>Negociación DHCP (<em>Dynamic Host Configuration Protocol</em>):</b> Una vez establecido el enlace de capa 2, el cliente DHCP de la pila lwIP intercambia con el router los cuatro paquetes UDP de configuración de red: <b>DHCP Discover → DHCP Offer → DHCP Request → DHCP ACK</b>.</li>
+<li><b>Obtención de Dirección IPv4 y Reconexión Automática:</b> Al completarse el protocolo DHCP, el router otorga la dirección IPv4 (por ejemplo, <code>192.168.1.7</code>), disparando el evento <code>IP_EVENT_STA_GOT_IP</code>. El manejador convierte los 4 octetos binarios de la dirección a cadena ASCII mediante la macro <code>IP2STR</code> y la almacena en <code>s_ip_asignada</code>, mostrándola inmediatamente en la Fila 0 del display LCD 16x2 para que el personal médico conozca a qué dirección conectarse desde cualquier teléfono celular, tablet o PC. Si el enlace cae temporalmente (<code>WIFI_EVENT_STA_DISCONNECTED</code>), el manejador reintenta la conexión de manera automática sin bloquear las tareas de monitoreo fisiológico.</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md17"></a>
+2. Estructura Gráfica del Dashboard Web (HTML5 + CSS3 + SVG + Canvas en Memoria Flash)</h3>
+<p >El documento completo de la aplicación web de página única (<em>Single-Page Application</em>, <code>INDEX_HTML</code>[]) reside en la sección <code></code>.rodata de la memoria Flash y está estructurado visualmente en tarjetas (<code></code>.card) responsivas adaptables a pantallas de teléfonos móviles, tablets y computadoras de escritorio:</p><ul>
+<li><b>Encabezado Global (<code></code>.header):</b> Muestra el título de la unidad, la dirección IPv4 activa, el estado actual de las teclas locales de simulación (<code>SWITCH_1</code> para FC y <code>SWITCH_2</code> para FR) y un indicador maestro superior (<code>SISTEMA</code> NORMAL en verde o <code>ALERTA</code> ACTIVA (N) con animación de parpadeo rojo).</li>
+<li><b>Tarjeta Unificada de Signos Vitales y Estado del Paciente:</b> Agrupa dentro de un mismo contenedor visual dividido por bordes horizontales (<code></code>.patient-sub-block) los tres indicadores clínicos esenciales:<ol type="1">
+<li><b>Frecuencia Cardíaca (ECG):</b> Valor numérico en <code>bpm</code> y etiqueta de estado a su derecha acompañada de un ícono de corazón cuya animación CSS (<code>@keyframes</code>  beat) ajusta dinámicamente su período de latido a <b>T = 60 / FC segundos</b> para latir en sincronía exacta con el pulso del paciente.</li>
+<li><b>Frecuencia Respiratoria:</b> Valor numérico en <code>rpm</code> y etiqueta de estado a su derecha con un gráfico vectorial <b>SVG de pulmones</b> cuya animación de expansión y contracción (<code>@keyframes</code>  breathe) ajusta su período en tiempo real a <b>T = 60 / FR segundos</b>.</li>
+<li><b>Estado del Paciente:</b> Informa la condición general con un ícono dinámico (rostro sonriente con etiqueta verde <code>NORMAL</code> en reposo, que conmuta a rostro afligido con etiqueta roja parpadeante <code>ATENCIÓN</code> y leyenda <em>"Paciente requiere atención!"</em> cuando el paciente acciona el control remoto inalámbrico de 433 MHz sobre <code>GPIO_8</code>).</li>
+</ol>
+</li>
+<li><b>Tarjeta Ambiente:</b> Presenta en filas apiladas verticalmente la <b>Temperatura</b> (rango normal <b>15 a 35 °C</b>), la <b>Humedad Relativa</b> (rango normal <b>30 a 80 %</b>), el estado de <b>Gases inflamables</b> (indicando el minuto de calentamiento inicial o la duración en segundos del pulso de detección) y el <b>Movimiento de personas</b> junto con su contador histórico de eventos PIR. Cada magnitud posee su propio recuadro (<code></code>.tag-amb) que pasa de verde a rojo intermitente cuando la variable sale de rango o permanece encolada en la FIFO.</li>
+<li><b>Tarjeta de Identificación de Paciente y Mensajes al LCD 16x2:</b> Permite visualizar en vivo el texto de la Fila 0 del display físico, ingresar el nombre del paciente o enviar mensajes predefinidos a la sala (incluyendo <em>"AYUDA EN CAMINO"</em>, que dispara simultáneamente la locución hablada LPCM en el parlante).</li>
+<li><b>Tarjeta de Cola FIFO de Alarmas y Aviso Sonoro:</b> Muestra la cantidad de alertas pendientes, destaca centrada horizontalmente la primera alerta a atender (frente de la cola FIFO) y ofrece tres botones de comando remoto: desactivar la alerta más antigua, disparar la melodía de advertencia (<em>Pacman</em>) o reproducir la voz LPCM.</li>
+<li><b>Tarjeta de Registro en MicroSD y Gráficas Históricas:</b> Presenta en líneas independientes el estado físico de la tarjeta (<code>MONTADA</code> (FAT16) o <code>NO</code> DETECTADA), el total de registros grabados y la fecha/hora actual del reloj RTC del ESP32-C6, junto con controles para sincronizar la hora, descargar el archivo <code>DATALOG.CSV</code> completo o desplegar <b>5 gráficas históricas de puntos y líneas apiladas verticalmente</b> dibujadas mediante la API 2D de <code>canvas</code> (1. FC con bandas límite en 50-130 bpm; 2. FR con bandas en 12-20 rpm; 3. Temperatura con bandas en 15-35 °C; 4. Humedad con bandas en 30-80 %; 5. Eventos discretos 0/1 de Gases y Movimiento).</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md18"></a>
+3. Mecanismo de Comunicación Cliente-Servidor (Polling JSON cada 1 s y Comandos POST REST)</h3>
+<p >La interacción entre el navegador web y el servidor HTTP del ESP32-C6 se realiza de forma asíncrona mediante la API <code>fetch()</code> de JavaScript sin recargar la página:</p><ul>
+<li><b>Actualización de Telemetría (<code>GET</code> /api/status):</b> Un temporizador JavaScript (<code>setInterval(upd, 1000)</code>) solicita cada 1 segundo el documento JSON de estado. El servidor toma una copia atómica de la estructura <code>s_datos_actuales</code> protegida por un <em>spinlock</em> de hardware (<code>portENTER_CRITICAL(&amp;s_web_spinlock)</code>), formatea las décimas de temperatura y humedad en punto fijo y responde utilizando el buffer estático <code>s_json_status_buf</code> alojado en la sección <code></code>.bss para no sobrecargar la pila de la tarea <code>httpd</code>.</li>
+<li><b>Envío de Órdenes Remotas (<code>POST</code>):</b> Cuando el usuario presiona un botón en la interfaz, el navegador emite una petición <code>POST</code> hacia el endpoint correspondiente (<code>/api/patient</code>, <code>/api/msg</code>, <code>/api/clear_alert</code>, <code>/api/sound_warn</code>, <code>/api/play_voice</code>). Los manejadores HTTP en el ESP32-C6 activan banderas booleanas volátiles protegidas por sección crítica (<code>s_req_clear_alert</code>, <code>s_req_warn_3s</code>, <code>s_req_play_voice</code>), las cuales son consumidas cada 20 ms por <code>TaskPotenciometro_LED</code> mediante las funciones <code>WebUnidadPacienteConsumir</code>...().</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md19"></a>
+4. Sincronización de Fecha/Hora (RTC) e Interacción con la Tarjeta MicroSD</h3>
+<ul>
+<li><b>Sincronización Transparente y Manual del Reloj RTC (<code>POST</code> /api/time):</b> En la primera respuesta de <code>/api/status</code>, el navegador inspecciona el campo booleano <code>d.rtc_ok</code> (provisto por <code><a class="el" href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5" title="Indica si el reloj RTC ya fue sincronizado con la fecha/hora real desde la interfaz web.">MicroSdRelojSincronizado()</a></code>). Si es <code>false</code> (el microcontrolador acaba de encenderse y corre sobre su fecha base), el script de la página obtiene automáticamente la hora del teléfono o PC (<code>new</code> Date()), compensa el huso horario local restando <code>getTimezoneOffset()</code> * 60000, convierte el valor a segundos Unix y lo envía en segundo plano a <code>/api/time</code>. El manejador <code>post_time_handler</code> convierte la cadena a entero de 64 bits (<code>atoll</code>) e invoca <code><a class="el" href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f" title="Ajusta el reloj de tiempo real (RTC) interno del ESP32-C6 a partir de un timestamp Unix (segundos) re...">MicroSdSincronizarRelojEpoch()</a></code> para poner en hora el RTC del ESP32-C6 sin intervención humana. Adicionalmente, el usuario puede fijar cualquier fecha y hora manualmente con el selector <code>datetime-local</code>.</li>
+<li><b>Supervisión, Graficación de los Últimos Registros (<code>GET</code> /api/sd_history) y Descarga (<code>GET</code> /api/sd_csv):</b> El estado de conexión de la tarjeta y el número de líneas escritas viajan cada segundo en <code>/api/status</code> (<code>sd_ok</code> y <code>sd_n</code>). Cuando el usuario pulsa <em>"Consultar / Actualizar Gráficas desde MicroSD"</em>, el navegador solicita <code>GET</code> /api/sd_history; el servidor invoca <code><a class="el" href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb" title="Ejecuta la Fase 3 (Apertura y Lectura SPI con CMD17) posicionándose al final de DATALOG....">MicroSdLeerUltimosRegistrosJson()</a></code> sobre el buffer estático <code>s_json_history_buf</code> (3072 bytes en <code></code>.bss), que lee mediante <code>fseek()</code> el tramo final de <code>DATALOG.CSV</code> en el bus SPI (bajo protección de Mutex) y devuelve las últimas muestras en formato de matriz JSON para que <code>drawPlot()</code> y <code>drawEvents()</code> tracen las 5 curvas apiladas, coloreando en rojo los puntos que excedan los umbrales clínicos. Si el usuario pulsa <em>"Descargar DATALOG.CSV"</em>, el endpoint <code>GET</code> /api/sd_csv invoca <code><a class="el" href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7" title="Lee el archivo DATALOG.CSV en bloques por SPI y lo transmite por streaming HTTP para su descarga dire...">MicroSdEnviarCsvCompletoHttp()</a></code>, transmitiendo el archivo completo en fragmentos de 512 bytes.</li>
+</ul>
+<h1><a class="anchor" id="web_operation"></a>
+Flujo Operacional del Texto en la Fila 0 del Display LCD 16x2</h1>
+<ul>
+<li><b>Arranque inicial:</b> Antes de obtener IP del router, el texto base de la Fila 0 es <code>"BIENVENIDO!"</code>.</li>
+<li><b>Conexión establecida:</b> Al recibir el evento <code>IP_EVENT_STA_GOT_IP</code>, el texto base de la Fila 0 pasa a mostrar permanentemente la dirección IPv4 asignada (ej. <code>"192.168.1.7"</code>).</li>
+<li><b>Personalización remota:</b> Cuando el operador guarda un nombre de paciente o selecciona un mensaje desde el navegador web, dicho texto reemplaza a la dirección IP en la Fila 0 (siempre que no existan alertas activas en la cola FIFO ni una ventana de simulación local abierta).</li>
+</ul>
+<h1><a class="anchor" id="web_media"></a>
+Videos Experimentales de Conectividad Wi-Fi, Control Remoto y Diseño Web</h1>
+<ul>
+<li><b><a href="https://youtu.be/DE7KnygfEy8">Velocidad de enlace a la red local en 1 segundo</a></b> <br  />
+ Tiempo de enlace a la red local inferior a 2 segundos (observado desde el arranque en frío tras el flasheo). Para la conexión mDNS y DNS público, inferior a 3 segundos. <br  />
+</li>
+<li><b><a href="https://youtu.be/K3T0wrf6PqI">Conexion WiFi LAN y visualizacion web</a></b> <br  />
+ Se comprueba la conexión esperada entre el ESP32 y la red WiFi LAN creada para tal fin y se visualizan las variables registradas por la unidad paciente. <br  />
+</li>
+<li><b><a href="https://youtube.com/shorts/NUhS4IJ7fCM">Ejecución de comandos vía web</a></b> <br  />
+ Comunicación WiFi LAN desde notebook hacia ESP32 y ejecución remota de órdenes vía WiFi. <br  />
+</li>
+<li><b><a href="https://youtu.be/ey6NkgmBr6s">Ejecución de comandos celular/tablet</a></b> <br  />
+ Comunicación desde el celular o tablet hacia el monitor unidad paciente y lectura inversa de las variables que el monitor maneja. <br  />
+</li>
+<li><b><a href="https://youtu.be/hTUDn0Bl0bQ">Registro y visualizacion de datos, y sincronización fecha y hora</a></b> <br  />
+ Sincronización de fecha y hora actual con el navegador para vincular a los datos registrados cada diez segundos, descarga de CSV y visualización de gráficas en la web. <br  />
+</li>
+<li><b><a href="https://youtu.be/uvIX7M69ZE0">Diseño web</a></b> <br  />
+ Diseño web online en tiempo real desde phcode.dev/tools/es/html-viewer.html. <br  />
+ </li>
+</ul>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Creación del módulo de conectividad Wi-Fi STA y servidor HTTP    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">2026-10-09   </td><td class="markdownTableBodyLeft">Simplificación sin mDNS, IP persistente en Fila 0 hasta cambio web y estilo FIFO    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-09   </td><td class="markdownTableBodyLeft">Reorganización de los elementos, y agregado de funcionalidades como decarga y visualización de datos en microSD   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.2 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="web__unidad__paciente_8h_source.html">web_unidad_paciente.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="a8c15d59726c7ef931534a0653837c80b" name="a8c15d59726c7ef931534a0653837c80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c15d59726c7ef931534a0653837c80b">&#9670;&nbsp;</a></span>WEB_LCD_TEXT_MAX_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WEB_LCD_TEXT_MAX_LEN&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Longitud máxima de caracteres visibles en una fila del display LCD 16x2. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8h_source.html#l00155">155</a> del archivo <a class="el" href="web__unidad__paciente_8h_source.html">web_unidad_paciente.h</a>.</p>
+
+</div>
+</div>
+<a id="a8347fb95224b8b70ab93fe76a52d94b2" name="a8347fb95224b8b70ab93fe76a52d94b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8347fb95224b8b70ab93fe76a52d94b2">&#9670;&nbsp;</a></span>WIFI_PASS_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIFI_PASS_DEFAULT&#160;&#160;&#160;&quot;contraseniasencilla1234&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contraseña WPA2-PSK de la red Wi-Fi (reemplazar antes de compilar) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8h_source.html#l00152">152</a> del archivo <a class="el" href="web__unidad__paciente_8h_source.html">web_unidad_paciente.h</a>.</p>
+
+</div>
+</div>
+<a id="a4078c5e2403f6b2eae094514509bf3d0" name="a4078c5e2403f6b2eae094514509bf3d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4078c5e2403f6b2eae094514509bf3d0">&#9670;&nbsp;</a></span>WIFI_SSID_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIFI_SSID_DEFAULT&#160;&#160;&#160;&quot;Mi_humilde_red&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nombre de la red Wi-Fi (SSID) de 2.4 GHz a la que se conecta la estación (reemplazar antes de compilar) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8h_source.html#l00149">149</a> del archivo <a class="el" href="web__unidad__paciente_8h_source.html">web_unidad_paciente.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a1975bdb3b46a94898c5051408a1862a9" name="a1975bdb3b46a94898c5051408a1862a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1975bdb3b46a94898c5051408a1862a9">&#9670;&nbsp;</a></span>WebUnidadPacienteActualizarDatos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebUnidadPacienteActualizarDatos </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> *&#160;</td>
+          <td class="paramname"><em>nuevo_estado</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza de forma atómica (mediante spinlock de sección crítica) la estructura interna de telemetría que es servida en formato JSON a través del endpoint <code>GET</code> /api/status. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nuevo_estado</td><td>Puntero constante a la estructura con los valores actuales recopilados en el sistema.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Actualiza de forma atómica (mediante spinlock de sección crítica) la estructura interna de telemetría que es servida en formato JSON a través del endpoint <code>GET</code> /api/status.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nuevo_estado</td><td>Puntero a la estructura actualizada por <code>TaskDisplayLCD</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00722">722</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3830104c26d813790850c299ac93f51" name="ae3830104c26d813790850c299ac93f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3830104c26d813790850c299ac93f51">&#9670;&nbsp;</a></span>WebUnidadPacienteConsumirSolicitudAdvertencia3s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebUnidadPacienteConsumirSolicitudAdvertencia3s </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica y consume atómicamente la bandera activada por el botón web "Tono Advertencia (3s)". </p>
+<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> una única vez por cada pulsación del botón en el navegador web; <code>false</code> si no hubo solicitud.</dd></dl>
+<p>Verifica y consume atómicamente la bandera activada por el botón web "Tono Advertencia (3s)".</p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si había una solicitud pendiente (y la limpia a false); false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00777">777</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="afe624ede23b6e7f2b8ca75c2f4bf81e9" name="afe624ede23b6e7f2b8ca75c2f4bf81e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe624ede23b6e7f2b8ca75c2f4bf81e9">&#9670;&nbsp;</a></span>WebUnidadPacienteConsumirSolicitudClearAlert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebUnidadPacienteConsumirSolicitudClearAlert </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica y consume atómicamente la bandera activada por el botón web "Desactivar Alerta más Antigua (FIFO)". </p>
+<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> una única vez por cada pulsación del botón en el navegador web; <code>false</code> si no hubo solicitud.</dd></dl>
+<p>Verifica y consume atómicamente la bandera activada por el botón web "Desactivar Alerta más Antigua (FIFO)".</p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si había una solicitud pendiente (y la limpia a false); false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00762">762</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a738a228b1ce326dc905b786b96bd5436" name="a738a228b1ce326dc905b786b96bd5436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738a228b1ce326dc905b786b96bd5436">&#9670;&nbsp;</a></span>WebUnidadPacienteConsumirSolicitudVozAyuda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebUnidadPacienteConsumirSolicitudVozAyuda </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica y consume atómicamente la solicitud de reproducción del mensaje de voz LPCM ("Ayuda en camino"). </p>
+<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si se solicitó reproducir el mensaje de voz desde la web; <code>false</code> en caso contrario.</dd></dl>
+<p>Verifica y consume atómicamente la solicitud de reproducción del mensaje de voz LPCM ("Ayuda en camino").</p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si había una solicitud pendiente (y la limpia a false); false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00792">792</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+<a id="a9caf0810e72cc89f00234f94041588d2" name="a9caf0810e72cc89f00234f94041588d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9caf0810e72cc89f00234f94041588d2">&#9670;&nbsp;</a></span>WebUnidadPacienteInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebUnidadPacienteInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la partición Flash NVS, la pila TCP/IP lwIP, el bucle de eventos, el cliente Wi-Fi en Modo Estación (STA) y pone en marcha el servidor HTTP en el puerto 80 registrando sus 10 URI handlers. </p>
+<p >Inicializa la partición Flash NVS, la pila TCP/IP lwIP, el bucle de eventos, el cliente Wi-Fi en Modo Estación (STA) y pone en marcha el servidor HTTP en el puerto 80 registrando sus 10 URI handlers. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00671">671</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a865db6c1a2b8c1fcba620b61ac0779d1" name="a865db6c1a2b8c1fcba620b61ac0779d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865db6c1a2b8c1fcba620b61ac0779d1">&#9670;&nbsp;</a></span>WebUnidadPacienteObtenerTextoFila0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebUnidadPacienteObtenerTextoFila0 </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer_17_bytes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene de forma segura el texto normalizado de hasta 16 caracteres para la Fila 0 del LCD en condición normal: </p>
+<ol type="1">
+<li>Si aún no conectó al Wi-Fi, devuelve <code>"BIENVENIDO!"</code>.</li>
+<li>Si el operador seleccionó un mensaje predefinido desde la web, devuelve dicho mensaje.</li>
+<li>Si el operador guardó un nombre de paciente desde la web, devuelve el nombre del paciente.</li>
+<li>Si conectó al Wi-Fi y ambos campos web están vacíos, devuelve la dirección IPv4 asignada (ej. <code>"192.168.1.7"</code>). <dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer_17_bytes</td><td>Búfer de salida de al menos 17 bytes donde se copia la cadena terminada en <code>'\0'</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+Obtiene de forma segura el texto normalizado de hasta 16 caracteres para la Fila 0 del LCD en condición normal:</li>
+</ol>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer_17_bytes</td><td>Buffer de destino de 17 bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="web__unidad__paciente_8c_source.html#l00734">734</a> del archivo <a class="el" href="web__unidad__paciente_8c_source.html">web_unidad_paciente.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="web__unidad__paciente_8h.html">web_unidad_paciente.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

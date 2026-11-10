@@ -11,6 +11,11 @@ var searchData=
   ['alarm_5fconfig_5fa_8',['alarm_config_a',['../timer__mcu_8c.html#a8f80c9f90e73dfe1745dbe48d9b558b7',1,'timer_mcu.c']]],
   ['alarm_5fconfig_5fb_9',['alarm_config_b',['../timer__mcu_8c.html#ac7bf7495349e2867c97e245f6ee01d1b',1,'timer_mcu.c']]],
   ['alarm_5fconfig_5fc_10',['alarm_config_c',['../timer__mcu_8c.html#a87435505df054fd2dbfd2eb83d69c089',1,'timer_mcu.c']]],
-  ['app_5fid_11',['app_id',['../structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c',1,'hidd_inst_t::app_id'],['../structgatts__profile__inst.html#ab7fe10f376247e7e1eacdc0f560e9ef1',1,'gatts_profile_inst::app_id']]],
-  ['att_5ftbl_12',['att_tbl',['../structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b',1,'hidd_inst_t']]]
+  ['alerta_5ffc_11',['alerta_fc',['../structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a',1,'estado_unidad_paciente_t']]],
+  ['alerta_5ffifo_5factual_12',['alerta_fifo_actual',['../structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2',1,'estado_unidad_paciente_t']]],
+  ['alerta_5ffr_13',['alerta_fr',['../structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead',1,'estado_unidad_paciente_t']]],
+  ['alerta_5fgases_14',['alerta_gases',['../structregistro__clinico__sd__t.html#a4bf6b15f5df6b63b0e4c02441aa89979',1,'registro_clinico_sd_t']]],
+  ['alertas_5ffifo_5fcant_15',['alertas_fifo_cant',['../structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507',1,'estado_unidad_paciente_t']]],
+  ['app_5fid_16',['app_id',['../structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c',1,'hidd_inst_t::app_id()'],['../structgatts__profile__inst.html#ab7fe10f376247e7e1eacdc0f560e9ef1',1,'gatts_profile_inst::app_id()']]],
+  ['att_5ftbl_17',['att_tbl',['../structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b',1,'hidd_inst_t']]]
 ];

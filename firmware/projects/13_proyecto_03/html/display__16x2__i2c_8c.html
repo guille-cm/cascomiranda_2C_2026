@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/display_16x2_i2c.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('display__16x2__i2c_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo display_16x2_i2c.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación del driver para display LCD 16x2 mediante conversor I2C PCF8574.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="display__16_x2__i2c_8h_source.html">display_16x2_i2c.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+</div>
+<p><a href="display__16x2__i2c_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a037b4951fa5e60d07c6d195cad447d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a037b4951fa5e60d07c6d195cad447d56">I2C_CLOCK_RATE_HZ</a>&#160;&#160;&#160;100000</td></tr>
+<tr class="separator:a037b4951fa5e60d07c6d195cad447d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc4b31027e0d66fef50ad204a98a83d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a7cc4b31027e0d66fef50ad204a98a83d">MASK_RS</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a7cc4b31027e0d66fef50ad204a98a83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8bdfcca18a26d46a6e3cf84e5d8cf48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#aa8bdfcca18a26d46a6e3cf84e5d8cf48">MASK_RW</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:aa8bdfcca18a26d46a6e3cf84e5d8cf48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a351631e638edcc6de6bf4960029558"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a2a351631e638edcc6de6bf4960029558">MASK_EN</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:a2a351631e638edcc6de6bf4960029558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534546500d08df37479e68c17d7ebee9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a534546500d08df37479e68c17d7ebee9">MASK_BL</a>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:a534546500d08df37479e68c17d7ebee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf06b66b754e094f64d15a72e63e2834"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#aaf06b66b754e094f64d15a72e63e2834">CMD_CLEAR_DISPLAY</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:aaf06b66b754e094f64d15a72e63e2834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc02afe61fec16fa0cb9ab197571cf03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#abc02afe61fec16fa0cb9ab197571cf03">CMD_ENTRY_MODE_SET</a>&#160;&#160;&#160;0x06</td></tr>
+<tr class="separator:abc02afe61fec16fa0cb9ab197571cf03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d811ed7f4bbdbe75186cf216e9cd63e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a1d811ed7f4bbdbe75186cf216e9cd63e">CMD_DISPLAY_ON</a>&#160;&#160;&#160;0x0C</td></tr>
+<tr class="separator:a1d811ed7f4bbdbe75186cf216e9cd63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7e8a9b876b4ab910dd8198515134f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#ace7e8a9b876b4ab910dd8198515134f6">CMD_FUNCTION_SET_4B</a>&#160;&#160;&#160;0x28</td></tr>
+<tr class="separator:ace7e8a9b876b4ab910dd8198515134f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190d51c7cc15ab6dbbc4e2d610b3d9ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a190d51c7cc15ab6dbbc4e2d610b3d9ef">CMD_SET_DDRAM_ROW0</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:a190d51c7cc15ab6dbbc4e2d610b3d9ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a0de7bee1d39700c382b55eb268f7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a75a0de7bee1d39700c382b55eb268f7b">CMD_SET_DDRAM_ROW1</a>&#160;&#160;&#160;0xC0</td></tr>
+<tr class="separator:a75a0de7bee1d39700c382b55eb268f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a48278e912b02df97d5543d4eef47cf5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a48278e912b02df97d5543d4eef47cf5e">Display16x2I2cInit</a> (void)</td></tr>
+<tr class="memdesc:a48278e912b02df97d5543d4eef47cf5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el bus I2C y ejecuta la secuencia estricta de configuración del controlador HD44780 para el display LCD 16x2 modelo 1602A Ver5.5.  <a href="display__16x2__i2c_8c.html#a48278e912b02df97d5543d4eef47cf5e">Más...</a><br /></td></tr>
+<tr class="separator:a48278e912b02df97d5543d4eef47cf5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2c78671bc2090fccf1559ec2bf6678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a> (void)</td></tr>
+<tr class="memdesc:a7e2c78671bc2090fccf1559ec2bf6678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borra todo el contenido visualizado en el display LCD y retorna el cursor a la posición inicial.  <a href="display__16x2__i2c_8c.html#a7e2c78671bc2090fccf1559ec2bf6678">Más...</a><br /></td></tr>
+<tr class="separator:a7e2c78671bc2090fccf1559ec2bf6678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949aeb443c225d253d812e04abb25ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a> (uint8_t row, uint8_t col)</td></tr>
+<tr class="memdesc:a949aeb443c225d253d812e04abb25ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posiciona el cursor de escritura en una coordenada específica de la pantalla.  <a href="display__16x2__i2c_8c.html#a949aeb443c225d253d812e04abb25ae7">Más...</a><br /></td></tr>
+<tr class="separator:a949aeb443c225d253d812e04abb25ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0185871886f0979aa0d5b6f791606cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a> (char ch)</td></tr>
+<tr class="memdesc:a0185871886f0979aa0d5b6f791606cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un único carácter ASCII en la posición actual del cursor.  <a href="display__16x2__i2c_8c.html#a0185871886f0979aa0d5b6f791606cec">Más...</a><br /></td></tr>
+<tr class="separator:a0185871886f0979aa0d5b6f791606cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f78ea246ace68f839a2b1af81f5cea1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a0f78ea246ace68f839a2b1af81f5cea1">Display16x2I2cWriteString</a> (const char *str)</td></tr>
+<tr class="memdesc:a0f78ea246ace68f839a2b1af81f5cea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe una cadena completa de caracteres terminada en carácter nulo.  <a href="display__16x2__i2c_8c.html#a0f78ea246ace68f839a2b1af81f5cea1">Más...</a><br /></td></tr>
+<tr class="separator:a0f78ea246ace68f839a2b1af81f5cea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3f87ba7b27a16a29241e974f288f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#a0c3f87ba7b27a16a29241e974f288f21">Display16x2I2cWriteLine</a> (uint8_t row, const char *str)</td></tr>
+<tr class="memdesc:a0c3f87ba7b27a16a29241e974f288f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe una línea completa de texto en una fila específica, rellenando el resto con espacios.  <a href="display__16x2__i2c_8c.html#a0c3f87ba7b27a16a29241e974f288f21">Más...</a><br /></td></tr>
+<tr class="separator:a0c3f87ba7b27a16a29241e974f288f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd37e13f9bd0d2b03f247ba5a4d8953"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Display16x2I2cSetBacklight</a> (bool state)</td></tr>
+<tr class="memdesc:acfd37e13f9bd0d2b03f247ba5a4d8953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controla el estado de encendido o apagado de la luz de fondo del display.  <a href="display__16x2__i2c_8c.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Más...</a><br /></td></tr>
+<tr class="separator:acfd37e13f9bd0d2b03f247ba5a4d8953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5729251688c81a87abd16581c5e183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display__16x2__i2c_8c.html#aea5729251688c81a87abd16581c5e183">Display16x2I2cTestPulseTrain</a> (void)</td></tr>
+<tr class="memdesc:aea5729251688c81a87abd16581c5e183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta una secuencia experimental de barrido de bit desplazado (<em>walking one</em>, <code>0x01</code> a <code>0x80</code>) sobre las 8 salidas del expansor PCF8574 en la dirección 0x27 para verificación con osciloscopio.  <a href="display__16x2__i2c_8c.html#aea5729251688c81a87abd16581c5e183">Más...</a><br /></td></tr>
+<tr class="separator:aea5729251688c81a87abd16581c5e183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Implementación del driver para display LCD 16x2 mediante conversor I2C PCF8574. </p>
+<p >Emplea el driver oficial i2c_mcu de la cátedra para gestionar la comunicación con el expansor PCF8574 y el controlador HD44780, utilizando retardos no bloqueantes de FreeRTOS y el propio tiempo de trama del bus I2C a 100 kHz. <br  />
+ </p>
+<h1><a class="anchor" id="i2c_addressing"></a>
+Detalle de Direccionamiento I2C (0x27 y 0x4E)</h1>
+<p >La comunicación física entre el microcontrolador ESP32-C6 y el expansor PCF8574 requiere comprender la codificación del byte de direccionamiento en el bus I2C:</p><ul>
+<li><b>Dirección base de 7 bits (0x27):</b> El circuito integrado PCF8574 posee una dirección fija de esclavo que en formato binario de 7 bits se representa como <code>0100111</code>.</li>
+<li><b>Desplazamiento y Byte en el Bus (0x4E):</b> Al transmitir la dirección por el bus físico, el microcontrolador desplaza los 7 bits hacia la izquierda y añade un 8.° bit (LSB) que define la operación de Lectura o Escritura (<code>R/W</code>). Al tratarse de una operación de Escritura, el bit LSB se fija en <code>0</code>. Esto resulta en la secuencia binaria <code>01001110</code>, la cual equivale al valor hexadecimal <b>0x4E</b> observado en el osciloscopio al inicio de cada trama. Véase la captura <a href="../i2c_todos_los_pulsos_de_prueba.png">i2c_todos_los_pulsos_de_prueba.png</a>.</li>
+</ul>
+<h1><a class="anchor" id="byte_processing"></a>
+Transformación de Comandos y Caracteres y Justificación del Envío Duplicado</h1>
+<h3><a class="anchor" id="autotoc_md20"></a>
+&lt;b&gt;1. Formación del Byte hacia el PCF8574 (Desplazamientos y Máscaras)&lt;/b&gt;</h3>
+<p >Todo byte de 8 bits destinado al controlador HD44780 (sea un comando con <code>is_data=false</code> o un carácter ASCII con <code>is_data=true</code>) es procesado por la cadena de funciones <code>send_byte()</code> -&gt; <code>send_nibble()</code> -&gt; <code>pcf8574_write()</code>:</p><ol type="1">
+<li><b>División en dos cuartetos (nibbles):</b> En <code>send_byte()</code>, el byte original se divide en su nibble superior (<code>value</code> &gt;&gt; 4) y su nibble inferior (<code>value</code> &amp; 0x0F).</li>
+<li><b>Alineación a los pines D7..D4 (P7..P4):</b> En <code>send_nibble()</code>, el cuarteto de 4 bits se desplaza 4 posiciones hacia la izquierda (<code></code>(nibble &amp; 0x0F) &lt;&lt; 4) para ocupar los bits 7 a 4 del puerto del expansor PCF8574.</li>
+<li><b>Inserción de bits de control en P3..P0:</b> En los 4 bits inferiores se combinan mediante operaciones OR bit a bit las máscaras de control: <code>MASK_RS</code> (<code>0x01</code> en P0: <code>0</code> para comando, <code>1</code> para carácter ASCII), <code>MASK_RW</code> (<code>0x02</code> en P1: siempre <code>0</code>), <code>MASK_EN</code> (<code>0x04</code> en P2: pulso de validación) y <code>MASK_BL</code> (<code>0x08</code> en P3: retroiluminación activa en <code>1</code>).</li>
+<li><b>Generación del flanco de bajada de Enable:</b> Por cada nibble se realizan dos llamadas sucesivas a <code>pcf8574_write()</code>: la primera con <code>data</code> | MASK_EN (<code>P2=1</code>) y la segunda con <code>data</code> &amp; ~MASK_EN (<code>P2=0</code>). El flanco descendente en el pin 6 (<code>E</code>) del display ordena al HD44780 capturar los 4 bits presentes en los pines 11 a 14 (<code>D4</code>..D7).<ul>
+<li><em>Ejemplo para el comando <code>0x80</code> (Set Cursor Fila 0, Col 0):</em> Nibble alto <code>0x8</code> -&gt; envía <code>0x8C</code> (<code>10001100</code>, <code>EN=1</code>) y <code>0x88</code> (<code>10001000</code>, <code>EN=0</code>); Nibble bajo <code>0x0</code> -&gt; envía <code>0x0C</code> (<code>00001100</code>, <code>EN=1</code>) y <code>0x08</code> (<code>00001000</code>, <code>EN=0</code>), correspondientes exactamente a las Ventanas 4, 5, 6 y 7 de <a href="../i2c_todos_los_pulsos_de_prueba.png">i2c_todos_los_pulsos_de_prueba.png</a>.</li>
+<li><em>Ejemplo para el carácter <code>'B'</code> (<code>0x42</code> = <code>01000010</code>):</em> Al ser dato (<code>RS=1</code>), el nibble alto <code>0x4</code> genera <code>0x4D</code> (<code>EN=1</code>) y <code>0x49</code> (<code>EN=0</code>); el nibble bajo <code>0x2</code> genera <code>0x2D</code> (<code>EN=1</code>) y <code>0x29</code> (<code>EN=0</code>).</li>
+</ul>
+</li>
+</ol>
+<h3><a class="anchor" id="autotoc_md21"></a>
+&lt;b&gt;2. Motivo de la Duplicación del Byte en cada Trama I2C y Eficiencia en el Sistema&lt;/b&gt;</h3>
+<p >En las capturas de osciloscopio se observa que cada trama consta de 3 bytes: <code></code>[0x4E] + <code></code>[dato] + <code></code>[dato]. Esto se debe a que la función oficial <code><a class="el" href="group___i2_c.html#ga6525bb5162f38b6350d6bc3a3c9c98d7" title="Write single byte to an 8-bit device register.">I2C_writeByte(uint8_t devAddr, uint8_t regAddr, uint8_t data)</a></code> del driver <code><a class="el" href="i2c__mcu_8c.html">i2c_mcu.c</a></code> de la cátedra fue concebida para sensores con registros internos direccionables, empaquetando un arreglo de 2 bytes <code>buffer</code>[2] = {regAddr, data} tras la dirección del esclavo. Como el expansor PCF8574 carece de registros internos y vuelca cada byte recibido directamente a sus pines <code>P7</code>..P0 tras cada pulso de <code>ACK</code>, al pasar <code>data</code> tanto en <code>regAddr</code> como en <code>data</code> (<code>I2C_writeByte(LCD_I2C_ADDR, data, data)</code>) el expansor fija sus salidas en el primer byte y mantiene exactamente el mismo estado lógico durante el segundo byte sin generar transiciones espurias.</p>
+<p >Desde el punto de vista del desempeño en el proyecto de monitoreo de unidad de paciente, esta estrategia preserva intacta la capa de abstracción <code><a class="el" href="i2c__mcu_8c.html">i2c_mcu.c</a></code> de la cátedra, garantiza un ancho de pulso <code>Enable</code> de ~180 µs regulado por el propio reloj I2C sin consumir temporizadores de hardware (<code>gptimer</code>), e insume apenas ~58 ms cada 1000 ms (menos del 6% de ocupación del bus) en una tarea de baja prioridad que es preempcionada de forma transparente cada 2 ms por las tareas de 500 Hz del ECG y Respirograma.</p>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-07   </td><td class="markdownTableBodyLeft">Ajuste de implementación a la firma de I2C_writeByte (devAddr, regAddr, data)   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="aaf06b66b754e094f64d15a72e63e2834" name="aaf06b66b754e094f64d15a72e63e2834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf06b66b754e094f64d15a72e63e2834">&#9670;&nbsp;</a></span>CMD_CLEAR_DISPLAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_CLEAR_DISPLAY&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Limpia la pantalla y lleva el cursor a (0,0) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00075">75</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a1d811ed7f4bbdbe75186cf216e9cd63e" name="a1d811ed7f4bbdbe75186cf216e9cd63e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d811ed7f4bbdbe75186cf216e9cd63e">&#9670;&nbsp;</a></span>CMD_DISPLAY_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_DISPLAY_ON&#160;&#160;&#160;0x0C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Enciende el display, oculta el cursor y desactiva el parpadeo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00077">77</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="abc02afe61fec16fa0cb9ab197571cf03" name="abc02afe61fec16fa0cb9ab197571cf03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc02afe61fec16fa0cb9ab197571cf03">&#9670;&nbsp;</a></span>CMD_ENTRY_MODE_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_ENTRY_MODE_SET&#160;&#160;&#160;0x06</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Incrementa el cursor automáticamente y sin desplazamiento de display </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00076">76</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="ace7e8a9b876b4ab910dd8198515134f6" name="ace7e8a9b876b4ab910dd8198515134f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7e8a9b876b4ab910dd8198515134f6">&#9670;&nbsp;</a></span>CMD_FUNCTION_SET_4B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_FUNCTION_SET_4B&#160;&#160;&#160;0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Configura interfaz de 4 bits, 2 líneas y matriz de 5x8 puntos </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00078">78</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a190d51c7cc15ab6dbbc4e2d610b3d9ef" name="a190d51c7cc15ab6dbbc4e2d610b3d9ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190d51c7cc15ab6dbbc4e2d610b3d9ef">&#9670;&nbsp;</a></span>CMD_SET_DDRAM_ROW0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SET_DDRAM_ROW0&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Dirección base de la memoria DDRAM para la Fila 0 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00079">79</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a75a0de7bee1d39700c382b55eb268f7b" name="a75a0de7bee1d39700c382b55eb268f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a0de7bee1d39700c382b55eb268f7b">&#9670;&nbsp;</a></span>CMD_SET_DDRAM_ROW1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SET_DDRAM_ROW1&#160;&#160;&#160;0xC0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Comando HD44780: Dirección base de la memoria DDRAM para la Fila 1 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00080">80</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a037b4951fa5e60d07c6d195cad447d56" name="a037b4951fa5e60d07c6d195cad447d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a037b4951fa5e60d07c6d195cad447d56">&#9670;&nbsp;</a></span>I2C_CLOCK_RATE_HZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_CLOCK_RATE_HZ&#160;&#160;&#160;100000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Frecuencia del bus I2C estándar (100 kHz) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00068">68</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a534546500d08df37479e68c17d7ebee9" name="a534546500d08df37479e68c17d7ebee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534546500d08df37479e68c17d7ebee9">&#9670;&nbsp;</a></span>MASK_BL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MASK_BL&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >P3 -&gt; Backlight </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00073">73</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a351631e638edcc6de6bf4960029558" name="a2a351631e638edcc6de6bf4960029558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a351631e638edcc6de6bf4960029558">&#9670;&nbsp;</a></span>MASK_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MASK_EN&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >P2 -&gt; Enable </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00072">72</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a7cc4b31027e0d66fef50ad204a98a83d" name="a7cc4b31027e0d66fef50ad204a98a83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc4b31027e0d66fef50ad204a98a83d">&#9670;&nbsp;</a></span>MASK_RS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MASK_RS&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >P0 -&gt; RS (0: Comando, 1: Dato) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00070">70</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="aa8bdfcca18a26d46a6e3cf84e5d8cf48" name="aa8bdfcca18a26d46a6e3cf84e5d8cf48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8bdfcca18a26d46a6e3cf84e5d8cf48">&#9670;&nbsp;</a></span>MASK_RW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MASK_RW&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >P1 -&gt; RW (Siempre 0 para escritura) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00071">71</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a7e2c78671bc2090fccf1559ec2bf6678" name="a7e2c78671bc2090fccf1559ec2bf6678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2c78671bc2090fccf1559ec2bf6678">&#9670;&nbsp;</a></span>Display16x2I2cClear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cClear </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borra todo el contenido visualizado en el display LCD y retorna el cursor a la posición inicial. </p>
+<p >Borra la totalidad de la memoria DDRAM de la pantalla (comando 0x01), retorna el cursor a la coordenada (0,0) y cede la CPU durante 5 ms en estado Blocked hasta completar la operación.</p>
+<p >Envía el comando de limpieza y aplica un retardo temporal para permitir que el controlador ejecute el borrado de la memoria DDRAM. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00291">291</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a48278e912b02df97d5543d4eef47cf5e" name="a48278e912b02df97d5543d4eef47cf5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48278e912b02df97d5543d4eef47cf5e">&#9670;&nbsp;</a></span>Display16x2I2cInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Display16x2I2cInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el bus I2C y ejecuta la secuencia estricta de configuración del controlador HD44780 para el display LCD 16x2 modelo 1602A Ver5.5. </p>
+<p >Inicializa el periférico I2C a 100 kHz y ejecuta la secuencia de reseteo por instrucción para configurar el controlador HD44780 en interfaz de 4 bits, 2 líneas y matriz de 5x8 puntos.</p>
+<p >El módulo display <b>1602A Ver5.5</b> posee 16 terminales en el orden físico: <code>1</code>:GND, <code>2</code>:VDD, <code>3</code>:VO, <code>4</code>:RS, <code>5</code>:RW, <code>6</code>:E, <code>7</code>..10:D0..D3 (no conectados en modo 4 bits), <code>11</code>..14:D4..D7 (conectados a <code>P4</code>..P7 del PCF8574), <code>15</code>:BLA (ánodo de backlight a +5V) y <code>16</code>:BLK (cátodo de backlight conmutado a masa por el transistor asociado a <code>P3</code> del PCF8574).</p>
+<p >Dado que tras el encendido o tras un reinicio en caliente del microcontrolador el controlador HD44780 puede hallarse en modo de 8 bits o desfasado a mitad de una transferencia de 4 bits, se aplica el procedimiento de inicialización por software (<em>Reset by Instruction</em>) especificado por la hoja de datos:</p><ol type="1">
+<li><b>Estabilización inicial:</b> Espera 100 ms tras el encendido para asegurar que <code>VDD</code> alcance los 5V nominales.</li>
+<li><b>Reseteo por software (Modo 8 bits forzado):</b> Envía el comando preliminar <code>0x03</code> tres veces consecutivas (con retardos de 10 ms y 2 ms) para sincronizar el controlador interno a interfaz de 8 bits sin importar su estado previo.</li>
+<li><b>Conmutación a interfaz de 4 bits:</b> Envía el cuarteto <code>0x02</code> para configurar formalmente el bus de datos a 4 bits sobre las líneas <code>D4</code>..D7 (pines 11 a 14 del módulo 1602A Ver5.5).</li>
+<li><b>Configuración de parámetros del display:</b> Selecciona el funcionamiento en modo de 4 bits, con matrices de 5x8 puntos y 2 líneas de visualización. <br  />
+ <code>CMD_FUNCTION_SET_4B</code> / <code>0x28</code> <br  />
+</li>
+<li><b>Encendido general:</b> Activa el display, ocultando el cursor parpadeante. <br  />
+ <code>CMD_DISPLAY_ON</code> / <code>0x0C</code> <br  />
+</li>
+<li><b>Limpieza de memoria DDRAM:</b> Borra caracteres previos y posiciona el cursor en (0,0). <br  />
+ <code>Display16x2I2cClear</code> <br  />
+</li>
+<li><b>Modo de entrada:</b> Configura el incremento automático del cursor hacia la derecha. <br  />
+ <code>CMD_ENTRY_MODE_SET</code> / <code>0x06</code> <br  />
+<dl class="section return"><dt>Devuelve</dt><dd>true al finalizar exitosamente la inicialización. </dd></dl>
+</li>
+</ol>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00246">246</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="display__16x2__i2c_8c_source.html#l00068">I2C_CLOCK_RATE_HZ</a> y <a class="el" href="i2c__mcu_8c_source.html#l00067">I2C_initialize()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="acfd37e13f9bd0d2b03f247ba5a4d8953" name="acfd37e13f9bd0d2b03f247ba5a4d8953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd37e13f9bd0d2b03f247ba5a4d8953">&#9670;&nbsp;</a></span>Display16x2I2cSetBacklight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cSetBacklight </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Controla el estado de encendido o apagado de la luz de fondo del display. </p>
+<p >Actualiza la retención interna de retroiluminación y conmuta de inmediato el pin P3 del PCF8574.</p>
+<p >Actualiza la variable de estado interna y transmite el patrón correspondiente al expansor I2C. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">state</td><td>Estado deseado: <code>true</code> para encender la retroiluminación, <code>false</code> para apagarla. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00383">383</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a949aeb443c225d253d812e04abb25ae7" name="a949aeb443c225d253d812e04abb25ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949aeb443c225d253d812e04abb25ae7">&#9670;&nbsp;</a></span>Display16x2I2cSetCursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cSetCursor </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Posiciona el cursor de escritura en una coordenada específica de la pantalla. </p>
+<p >Posiciona el puntero de dirección DDRAM del controlador HD44780 en la fila y columna indicadas.</p>
+<p >Calcula la dirección de la memoria DDRAM en función de la fila y columna seleccionadas, asegurando que los límites se mantengan dentro del rango válido del display. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>Fila de destino (<code>LCD_ROW_0</code> o <code>LCD_ROW_1</code>). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>Columna de destino (0 a 15). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00305">305</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="display__16x2__i2c_8c_source.html#l00079">CMD_SET_DDRAM_ROW0</a>, <a class="el" href="display__16x2__i2c_8c_source.html#l00080">CMD_SET_DDRAM_ROW1</a>, <a class="el" href="display__16_x2__i2c_8h_source.html#l00283">LCD_COLS</a> y <a class="el" href="display__16_x2__i2c_8h_source.html#l00285">LCD_ROW_0</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="display__16x2__i2c_8c_source.html#l00357">Display16x2I2cWriteLine()</a>.</p>
+
+</div>
+</div>
+<a id="aea5729251688c81a87abd16581c5e183" name="aea5729251688c81a87abd16581c5e183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5729251688c81a87abd16581c5e183">&#9670;&nbsp;</a></span>Display16x2I2cTestPulseTrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cTestPulseTrain </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta una secuencia experimental de barrido de bit desplazado (<em>walking one</em>, <code>0x01</code> a <code>0x80</code>) sobre las 8 salidas del expansor PCF8574 en la dirección 0x27 para verificación con osciloscopio. </p>
+<p >Ejecuta una secuencia de prueba barriendo los 8 bits de salida del expansor PCF8574 en la dirección 0x27.</p>
+<p >Esta rutina genera un tren de pulsos de bit desplazado (<em>walking one</em>) orientado a la verificación física y experimental del mapeo entre los bits transmitidos por el bus I2C y los terminales del módulo 1602A Ver5.5 (documentada en <code>00_conversor_I2C_para_display_16x2.txt</code>, <code>01_i2c_01.png</code> a <code>01_i2c_06.png</code> y en las 8 capturas de <a href="../01_i2c_todos_los_pulsos_de_prueba.jpg">01_i2c_todos_los_pulsos_de_prueba.jpg</a>).</p>
+<p >Mediante un bucle <code>for</code> de 8 iteraciones espaciadas por <code>vTaskDelay(pdMS_TO_TICKS(500))</code>, invoca a <code>pcf8574_write()</code> con cada potencia de 2 (<code>1</code> &lt;&lt; i), produciendo en el bus I2C las siguientes 8 tramas de 27 bits:</p><ul>
+<li><b>Iteración 0 (P0 - HEX: 0x01):</b> Trama I2C <code></code>[0x4E][0x01][0x01] (binario <code>00000001</code>) -&gt; Pin 4 del display se pone en ALTO (<code>RS</code>).</li>
+<li><b>Iteración 1 (P1 - HEX: 0x02):</b> Trama I2C <code></code>[0x4E][0x02][0x02] (binario <code>00000010</code>) -&gt; Pin 5 del display se pone en ALTO (<code>RW</code>).</li>
+<li><b>Iteración 2 (P2 - HEX: 0x04):</b> Trama I2C <code></code>[0x4E][0x04][0x04] (binario <code>00000100</code>) -&gt; Pin 6 del display se pone en ALTO (<code>EN</code>).</li>
+<li><b>Iteración 3 (P3 - HEX: 0x08):</b> Trama I2C <code></code>[0x4E][0x08][0x08] (binario <code>00001000</code>) -&gt; Pin 16 (<code>BLK</code>) del display se conmuta a BAJO (0V), encendiendo el Backlight.</li>
+<li><b>Iteración 4 (P4 - HEX: 0x10):</b> Trama I2C <code></code>[0x4E][0x10][0x10] (binario <code>00010000</code>) -&gt; Pin 11 del display se pone en ALTO (<code>D4</code>).</li>
+<li><b>Iteración 5 (P5 - HEX: 0x20):</b> Trama I2C <code></code>[0x4E][0x20][0x20] (binario <code>00100000</code>) -&gt; Pin 12 del display se pone en ALTO (<code>D5</code>).</li>
+<li><b>Iteración 6 (P6 - HEX: 0x40):</b> Trama I2C <code></code>[0x4E][0x40][0x40] (binario <code>01000000</code>) -&gt; Pin 13 del display se pone en ALTO (<code>D6</code>).</li>
+<li><b>Iteración 7 (P7 - HEX: 0x80):</b> Trama I2C <code></code>[0x4E][0x80][0x80] (binario <code>10000000</code>) -&gt; Pin 14 del display se pone en ALTO (<code>D7</code>). </li>
+</ul>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00413">413</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+</div>
+</div>
+<a id="a0185871886f0979aa0d5b6f791606cec" name="a0185871886f0979aa0d5b6f791606cec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0185871886f0979aa0d5b6f791606cec">&#9670;&nbsp;</a></span>Display16x2I2cWriteChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cWriteChar </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>ch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe un único carácter ASCII en la posición actual del cursor. </p>
+<p >Transmite un único carácter ASCII al Registro de Datos (<code>RS=1</code>) en la posición actual del cursor.</p>
+<p >Transmite el valor del carácter configurando la línea de selección de registro como dato. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ch</td><td>Carácter alfanumérico a visualizar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00327">327</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="display__16x2__i2c_8c_source.html#l00357">Display16x2I2cWriteLine()</a> y <a class="el" href="display__16x2__i2c_8c_source.html#l00338">Display16x2I2cWriteString()</a>.</p>
+
+</div>
+</div>
+<a id="a0c3f87ba7b27a16a29241e974f288f21" name="a0c3f87ba7b27a16a29241e974f288f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c3f87ba7b27a16a29241e974f288f21">&#9670;&nbsp;</a></span>Display16x2I2cWriteLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cWriteLine </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe una línea completa de texto en una fila específica, rellenando el resto con espacios. </p>
+<p >Posiciona el cursor al inicio de la fila seleccionada, escribe hasta 16 caracteres de la cadena y rellena las celdas restantes con espacios (' ') para suprimir caracteres residuales previos.</p>
+<p >Posiciona el cursor al inicio de la fila indicada (<code>0x80</code> para Fila 0 o <code>0xC0</code> para Fila 1), imprime los caracteres de la cadena hasta completar el ancho de la pantalla (16 columnas) o encontrar el fin de cadena, y completa las celdas restantes con espacios (<code>0x20</code>), produciendo un total de 17 bytes (68 tramas I2C) por cada fila actualizada. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>Fila de destino de la pantalla. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Puntero a la cadena de caracteres a mostrar en la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00357">357</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="display__16x2__i2c_8c_source.html#l00305">Display16x2I2cSetCursor()</a>, <a class="el" href="display__16x2__i2c_8c_source.html#l00327">Display16x2I2cWriteChar()</a> y <a class="el" href="display__16_x2__i2c_8h_source.html#l00283">LCD_COLS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a0f78ea246ace68f839a2b1af81f5cea1" name="a0f78ea246ace68f839a2b1af81f5cea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f78ea246ace68f839a2b1af81f5cea1">&#9670;&nbsp;</a></span>Display16x2I2cWriteString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Display16x2I2cWriteString </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe una cadena completa de caracteres terminada en carácter nulo. </p>
+<p >Imprime secuencialmente una cadena de caracteres terminada en nulo ('\0') desde la posición actual.</p>
+<p >Recorre secuencialmente la cadena de texto invocando la función de escritura de caracteres hasta alcanzar el fin de cadena. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Puntero a la cadena de caracteres a imprimir. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="display__16x2__i2c_8c_source.html#l00338">338</a> del archivo <a class="el" href="display__16x2__i2c_8c_source.html">display_16x2_i2c.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="display__16x2__i2c_8c_source.html#l00327">Display16x2I2cWriteChar()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="display__16x2__i2c_8c.html">display_16x2_i2c.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

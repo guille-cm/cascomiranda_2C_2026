@@ -25,19 +25,19 @@
 var NAVTREE =
 [
   [ "Proyecto 3", "index.html", [
-    [ "Topics", "topics.html", "topics" ],
-    [ "Estructuras de datos", "annotated.html", [
-      [ "Estructuras de datos", "annotated.html", "annotated_dup" ],
-      [ "Índice de estructuras de datos", "classes.html", null ],
+    [ "Módulos", "modules.html", "modules" ],
+    [ "Estructuras de Datos", "annotated.html", [
+      [ "Estructura de datos", "annotated.html", "annotated_dup" ],
+      [ "Índice de estructura de datos", "classes.html", null ],
       [ "Campos de datos", "functions.html", [
-        [ "Todos", "functions.html", null ],
+        [ "Todo", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Archivos", "files.html", [
       [ "Lista de archivos", "files.html", "files_dup" ],
       [ "Globales", "globals.html", [
-        [ "Todos", "globals.html", "globals_dup" ],
+        [ "Todo", "globals.html", "globals_dup" ],
         [ "Funciones", "globals_func.html", "globals_func" ],
         [ "Variables", "globals_vars.html", null ],
         [ "typedefs", "globals_type.html", null ],
@@ -52,14 +52,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_c_compiler_id_8c.html",
-"globals_defs_a.html",
-"group___b_l_e.html#ggaed078c594a86d36a49f51710e35c405baf33f8c506a4c1712b1ff9a4306e5363a",
-"group___i_c_o_n_s.html#gga945c9cb2ded81b38da222e91d09df40ba6076cb04d763ea95f6b858a52ce499b1",
-"group___m_p_u6050.html#ga3a3a4854870a5f354e50fbc4eae196c0",
-"group___m_p_u6050.html#gaa4a4d70bb3b8efe0f09c085e2ed4e173",
-"group___s_p_i.html#gadfb7c2a6a73bfdf993e50505aa92992f",
-"spi__mcu_8c.html#a756bcaa6e44d1879623a058849c66fbb"
+"dir_d160f35dc52f3817b5a745af8a8d0f15.html",
+"group___b_l_e.html#ggaed078c594a86d36a49f51710e35c405ba148b38cbefe926253ab179ad585fa9b7",
+"group___g_i_o_p.html#gacf7eae149edbe60c38faeb4b634b75b6",
+"group___m_p_u6050.html#ga0e0182cc41903f0a093744ecd235387a",
+"group___m_p_u6050.html#ga7c7284b9107a885f21fa7fbfc1d918ef",
+"group___m_p_u6050.html#gaf6833167ba0616ecbae4d097c07a876d",
+"ili9341_8c.html#aa1174c3cbb4307e2913a29c5234ee7e6",
+"struct_c_m_d__t.html#a4635796d5c7e7a2639b11dfe83718acc",
+"web__unidad__paciente_8c.html#ae3830104c26d813790850c299ac93f51"
 ];
 
-var SYNCONMSG = 'pulsar para deshabilitar sincronización';
-var SYNCOFFMSG = 'pulsar para habilitar sincronización';
+var SYNCONMSG = 'click en deshabilitar sincronización';
+var SYNCOFFMSG = 'click en habilitar sincronización';

@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['uart_5fconn_5frx_0',['UART_CONN_RX',['../uart__mcu_8c.html#ac7c92d22ddc5bfc3c9aa3da970c126e9',1,'uart_mcu.c']]],
-  ['uart_5fconn_5ftx_1',['UART_CONN_TX',['../uart__mcu_8c.html#ac5a136fed9300f073616af50ba577b6e',1,'uart_mcu.c']]],
-  ['up_2',['UP',['../ili9341_8c.html#a1965eaca47dbf3f87acdafc2208f04eb',1,'ili9341.c']]],
-  ['us2cm_3',['US2CM',['../hc__sr04_8c.html#a5e52844206c91ee47dcdf1697595b43a',1,'hc_sr04.c']]],
-  ['us2inch_4',['US2INCH',['../hc__sr04_8c.html#a34f3975d94758e78ddea4f3bcac2398b',1,'hc_sr04.c']]],
-  ['us_5fresolution_5fhz_5',['US_RESOLUTION_HZ',['../delay__mcu_8c.html#a0084affffdb426de14a2629cfe92c652',1,'US_RESOLUTION_HZ:&#160;delay_mcu.c'],['../timer__mcu_8c.html#a0084affffdb426de14a2629cfe92c652',1,'US_RESOLUTION_HZ:&#160;timer_mcu.c']]]
+  ['tag_0',['TAG',['../ble__hid__mcu_8c.html#afc3d101f633a076cc1ca84b85b6224b2',1,'TAG():&#160;ble_hid_mcu.c'],['../ble__mcu_8c.html#afc3d101f633a076cc1ca84b85b6224b2',1,'TAG():&#160;ble_mcu.c']]],
+  ['temp_5fmax_5fdecimas_5fc_1',['TEMP_MAX_DECIMAS_C',['../monitor__unidad__paciente_8c.html#a7447d139cc2eabef6be1b8823e78ee5e',1,'monitor_unidad_paciente.c']]],
+  ['temp_5fmin_5fdecimas_5fc_2',['TEMP_MIN_DECIMAS_C',['../monitor__unidad__paciente_8c.html#a994a8cb585340c2068290beefe973b66',1,'monitor_unidad_paciente.c']]],
+  ['tx_5fbuffer_5fsize_3',['TX_BUFFER_SIZE',['../uart__mcu_8c.html#a9ab33647617098646990fe263600b650',1,'uart_mcu.c']]]
 ];

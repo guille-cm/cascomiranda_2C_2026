@@ -6,8 +6,19 @@ var searchData=
   ['a_5f4_3',['A_4',['../l293_8c.html#a45c10761257fe9b986909363bec442a7',1,'l293.c']]],
   ['adc_5fattenuation_4',['ADC_ATTENUATION',['../analog__io__mcu_8c.html#a011dd77da2406fbe9beab9a63e042af9',1,'analog_io_mcu.c']]],
   ['adc_5fbitwidth_5',['ADC_BITWIDTH',['../analog__io__mcu_8c.html#a133ef7b7b4ad7fa713384c3ede19e5f4',1,'analog_io_mcu.c']]],
-  ['adv_5fconfig_5fflag_6',['ADV_CONFIG_FLAG',['../ble__mcu_8c.html#a5d2f5677517e7c8fd4ee8e2287ebec3b',1,'ble_mcu.c']]],
-  ['ang_5frange_7',['ANG_RANGE',['../servo__sg90_8c.html#a99ea7d692f294ea773d8dd1becfa5281',1,'servo_sg90.c']]],
-  ['architecture_5fid_8',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['att_5fsvc_5fhid_9',['ATT_SVC_HID',['../ble__hid__mcu_8c.html#a120ccad3a7e1b92bda154619fbb25ea8',1,'ble_hid_mcu.c']]]
+  ['adc_5fmax_5fval_6',['ADC_MAX_VAL',['../monitor__unidad__paciente_8c.html#a3a63fb6f00694ff9f4318b4142c5c868',1,'monitor_unidad_paciente.c']]],
+  ['adv_5fconfig_5fflag_7',['ADV_CONFIG_FLAG',['../ble__mcu_8c.html#a5d2f5677517e7c8fd4ee8e2287ebec3b',1,'ble_mcu.c']]],
+  ['ang_5frange_8',['ANG_RANGE',['../servo__sg90_8c.html#a99ea7d692f294ea773d8dd1becfa5281',1,'servo_sg90.c']]],
+  ['anodo_5f1_9',['ANODO_1',['../mi__display__7s__x2_8c.html#a9dfc379bdea455f415edcd49f0ea0053',1,'mi_display_7s_x2.c']]],
+  ['anodo_5f2_10',['ANODO_2',['../mi__display__7s__x2_8c.html#ae5ba5b907b7c92e4bd666feba48e0d18',1,'mi_display_7s_x2.c']]],
+  ['anodo_5f3_11',['ANODO_3',['../mi__display__7s__x2_8c.html#a792f87cca19106f527fbf4419023c0a6',1,'mi_display_7s_x2.c']]],
+  ['anodo_5f4_12',['ANODO_4',['../mi__display__7s__x2_8c.html#a91f682a39596faf4ce5c2d7c513e6d0e',1,'mi_display_7s_x2.c']]],
+  ['architecture_5fid_13',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['att_5fsvc_5fhid_14',['ATT_SVC_HID',['../ble__hid__mcu_8c.html#a120ccad3a7e1b92bda154619fbb25ea8',1,'ble_hid_mcu.c']]],
+  ['aviso_5fledc_5fchannel_15',['AVISO_LEDC_CHANNEL',['../aviso__sonoro_8c.html#add0303201b9f5cd7f56c13ebab7ff791',1,'aviso_sonoro.c']]],
+  ['aviso_5fledc_5fmode_16',['AVISO_LEDC_MODE',['../aviso__sonoro_8c.html#a97f0a2cfa417b6942f831672e0c64b69',1,'aviso_sonoro.c']]],
+  ['aviso_5fledc_5ftimer_17',['AVISO_LEDC_TIMER',['../aviso__sonoro_8c.html#a2d337a2cc759faa9e2e371e85f77e342',1,'aviso_sonoro.c']]],
+  ['aviso_5fpcm_5fcarrier_5fhz_18',['AVISO_PCM_CARRIER_HZ',['../aviso__sonoro_8c.html#a94f93c102a4ff913f94d240153d8abe2',1,'aviso_sonoro.c']]],
+  ['aviso_5fpcm_5fneutral_5fduty_19',['AVISO_PCM_NEUTRAL_DUTY',['../aviso__sonoro_8c.html#aba869d355c1f74b00f3cd09472092548',1,'aviso_sonoro.c']]],
+  ['aviso_5fpcm_5fsample_5fperiod_5fus_20',['AVISO_PCM_SAMPLE_PERIOD_US',['../aviso__sonoro_8c.html#a6263d09a5beb30f393a1cdbfa915cb0e',1,'aviso_sonoro.c']]]
 ];

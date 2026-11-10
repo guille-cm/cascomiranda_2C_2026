@@ -1,8 +1,20 @@
 var searchData=
 [
   ['c_5fversion_0',['C_VERSION',['../_c_make_c_compiler_id_8c.html#adaee3ee7c5a7a22451ea25e762e1d7d5',1,'CMakeCCompilerId.c']]],
-  ['char_5fdeclaration_5fsize_1',['CHAR_DECLARATION_SIZE',['../ble__hid__mcu_8c.html#a36dab879c60ad380569b702ffb0caabf',1,'ble_hid_mcu.c']]],
-  ['column_5faddr_5fset_2',['COLUMN_ADDR_SET',['../ili9341_8c.html#ac1ec6d9537a288a39f354c7133fb11c5',1,'ili9341.c']]],
-  ['compiler_5fid_3',['COMPILER_ID',['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID:&#160;CMakeCXXCompilerId.cpp']]],
-  ['cxx_5fstd_4',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
+  ['catodo_5f1_1',['CATODO_1',['../mi__display__7s__x2_8c.html#aaf19c6dfc67b1c3c788dc573435a06bd',1,'mi_display_7s_x2.c']]],
+  ['catodo_5f2_2',['CATODO_2',['../mi__display__7s__x2_8c.html#aae69d6bb9505e5fc2d4aede83997eb0a',1,'mi_display_7s_x2.c']]],
+  ['catodo_5f3_3',['CATODO_3',['../mi__display__7s__x2_8c.html#a82a8fe06ba78edf204809a801f3f6b32',1,'mi_display_7s_x2.c']]],
+  ['catodo_5f4_4',['CATODO_4',['../mi__display__7s__x2_8c.html#aa412be12b51e0267b4b405bca8178dbb',1,'mi_display_7s_x2.c']]],
+  ['char_5fdeclaration_5fsize_5',['CHAR_DECLARATION_SIZE',['../ble__hid__mcu_8c.html#a36dab879c60ad380569b702ffb0caabf',1,'ble_hid_mcu.c']]],
+  ['cmd_5fclear_5fdisplay_6',['CMD_CLEAR_DISPLAY',['../display__16x2__i2c_8c.html#aaf06b66b754e094f64d15a72e63e2834',1,'display_16x2_i2c.c']]],
+  ['cmd_5fdisplay_5fon_7',['CMD_DISPLAY_ON',['../display__16x2__i2c_8c.html#a1d811ed7f4bbdbe75186cf216e9cd63e',1,'display_16x2_i2c.c']]],
+  ['cmd_5fentry_5fmode_5fset_8',['CMD_ENTRY_MODE_SET',['../display__16x2__i2c_8c.html#abc02afe61fec16fa0cb9ab197571cf03',1,'display_16x2_i2c.c']]],
+  ['cmd_5ffunction_5fset_5f4b_9',['CMD_FUNCTION_SET_4B',['../display__16x2__i2c_8c.html#ace7e8a9b876b4ab910dd8198515134f6',1,'display_16x2_i2c.c']]],
+  ['cmd_5fset_5fddram_5frow0_10',['CMD_SET_DDRAM_ROW0',['../display__16x2__i2c_8c.html#a190d51c7cc15ab6dbbc4e2d610b3d9ef',1,'display_16x2_i2c.c']]],
+  ['cmd_5fset_5fddram_5frow1_11',['CMD_SET_DDRAM_ROW1',['../display__16x2__i2c_8c.html#a75a0de7bee1d39700c382b55eb268f7b',1,'display_16x2_i2c.c']]],
+  ['column_5faddr_5fset_12',['COLUMN_ADDR_SET',['../ili9341_8c.html#ac1ec6d9537a288a39f354c7133fb11c5',1,'ili9341.c']]],
+  ['compiler_5fid_13',['COMPILER_ID',['../_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a81dee0709ded976b2e0319239f72d174',1,'COMPILER_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['config_5fperiod_5ftimer_5fa_14',['CONFIG_PERIOD_TIMER_A',['../monitor__unidad__paciente_8c.html#aa6fada87638c4956d4adad9612805b2f',1,'monitor_unidad_paciente.c']]],
+  ['config_5fperiod_5ftimer_5fb_15',['CONFIG_PERIOD_TIMER_B',['../monitor__unidad__paciente_8c.html#a049d58c18fdb78ea9498a4644ced1684',1,'monitor_unidad_paciente.c']]],
+  ['cxx_5fstd_16',['CXX_STD',['../_c_make_c_x_x_compiler_id_8cpp.html#a34cc889e576a1ae6c84ae9e0a851ba21',1,'CMakeCXXCompilerId.cpp']]]
 ];

@@ -21,7 +21,7 @@
  * Esta función, asigna el estado (alto o bajo) de cada dígito de un número, expresado en BCD, 
  * a un estado de un pin GPIO particular de la ESP32.
  * 
- * LLa correspondencia entre los bits de un número BCD y los pines GPIO es de la siguiente manera: @n @n
+ * La correspondencia entre los bits de un número BCD y los pines GPIO es de la siguiente manera: @n @n
  * 
  * b0 --> GPIO_20 @n
  * b1 --> GPIO_21 @n
@@ -54,6 +54,9 @@
  * refiérase a los PDFs e imágenes agregados en la carpeta que contiene este proyecto.
  * 
  * Definición de dicha función, en bcd_LCD.c
+ * 
+ * @see [Prueba manual de conteo de 0 a 9 del dígito menos significativo](https://youtu.be/6-N6dmuXu8M)
+ * @see [Prueba manual de conteo de 0 a 10, para hacer uso del latch](https://youtu.be/mcUrqBuPrnc)
  * 
  * 
  * @section changelog Changelog

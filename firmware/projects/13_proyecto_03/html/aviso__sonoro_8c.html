@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/aviso_sonoro.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('aviso__sonoro_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo aviso_sonoro.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación del motor de avisos acústicos (Tonos PWM, Melodías RTTTL y Síntesis de Voz LPCM a 8 kHz) sobre el periférico LEDC y el temporizador SYSTIMER del ESP32-C6.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="aviso__sonoro_8h_source.html">aviso_sonoro.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &quot;driver/ledc.h&quot;</code><br />
+<code>#include &quot;esp_timer.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ayuda__en__camino_8h_source.html">sonidos_lpcm/ayuda_en_camino.h</a>&quot;</code><br />
+</div>
+<p><a href="aviso__sonoro_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a2d337a2cc759faa9e2e371e85f77e342"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a2d337a2cc759faa9e2e371e85f77e342">AVISO_LEDC_TIMER</a>&#160;&#160;&#160;LEDC_TIMER_0</td></tr>
+<tr class="separator:a2d337a2cc759faa9e2e371e85f77e342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f0a2cfa417b6942f831672e0c64b69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a97f0a2cfa417b6942f831672e0c64b69">AVISO_LEDC_MODE</a>&#160;&#160;&#160;LEDC_LOW_SPEED_MODE</td></tr>
+<tr class="separator:a97f0a2cfa417b6942f831672e0c64b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0303201b9f5cd7f56c13ebab7ff791"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#add0303201b9f5cd7f56c13ebab7ff791">AVISO_LEDC_CHANNEL</a>&#160;&#160;&#160;LEDC_CHANNEL_0</td></tr>
+<tr class="separator:add0303201b9f5cd7f56c13ebab7ff791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f93c102a4ff913f94d240153d8abe2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a94f93c102a4ff913f94d240153d8abe2">AVISO_PCM_CARRIER_HZ</a>&#160;&#160;&#160;32000</td></tr>
+<tr class="separator:a94f93c102a4ff913f94d240153d8abe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6263d09a5beb30f393a1cdbfa915cb0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a6263d09a5beb30f393a1cdbfa915cb0e">AVISO_PCM_SAMPLE_PERIOD_US</a>&#160;&#160;&#160;125</td></tr>
+<tr class="separator:a6263d09a5beb30f393a1cdbfa915cb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba869d355c1f74b00f3cd09472092548"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#aba869d355c1f74b00f3cd09472092548">AVISO_PCM_NEUTRAL_DUTY</a>&#160;&#160;&#160;128</td></tr>
+<tr class="separator:aba869d355c1f74b00f3cd09472092548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aeaa9d5448f2952936202a31cd4cb6a75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#aeaa9d5448f2952936202a31cd4cb6a75">AvisoSonoroInit</a> (<a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin)</td></tr>
+<tr class="memdesc:aeaa9d5448f2952936202a31cd4cb6a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el periférico LEDC y los temporizadores de hardware para síntesis LPCM y melodías RTTTL.  <a href="aviso__sonoro_8c.html#aeaa9d5448f2952936202a31cd4cb6a75">Más...</a><br /></td></tr>
+<tr class="separator:aeaa9d5448f2952936202a31cd4cb6a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ebde66030572a187528c170694e578e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a8ebde66030572a187528c170694e578e">AvisoSonoroEncenderTono</a> (uint32_t freq_hz)</td></tr>
+<tr class="memdesc:a8ebde66030572a187528c170694e578e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activa un tono continuo de onda cuadrada (50% duty) si no hay locución LPCM ni melodía RTTTL activa.  <a href="aviso__sonoro_8c.html#a8ebde66030572a187528c170694e578e">Más...</a><br /></td></tr>
+<tr class="separator:a8ebde66030572a187528c170694e578e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37ee1ed2fbf3b0a4393b82e13d49ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#aa37ee1ed2fbf3b0a4393b82e13d49ef0">AvisoSonoroApagar</a> (void)</td></tr>
+<tr class="memdesc:aa37ee1ed2fbf3b0a4393b82e13d49ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apaga el tono continuo llevando la salida PWM a 0% si no hay voz ni melodía en curso.  <a href="aviso__sonoro_8c.html#aa37ee1ed2fbf3b0a4393b82e13d49ef0">Más...</a><br /></td></tr>
+<tr class="separator:aa37ee1ed2fbf3b0a4393b82e13d49ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a100473093fc38d9147e303b1f42f3d79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a100473093fc38d9147e303b1f42f3d79">AvisoSonoroReproducirRtttl</a> (const char *rtttl_melody)</td></tr>
+<tr class="memdesc:a100473093fc38d9147e303b1f42f3d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analiza el encabezado de una cadena RTTTL e inicia su ejecución asíncrona en segundo plano.  <a href="aviso__sonoro_8c.html#a100473093fc38d9147e303b1f42f3d79">Más...</a><br /></td></tr>
+<tr class="separator:a100473093fc38d9147e303b1f42f3d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abf6c099121a6ff8694f21b446d5138"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a3abf6c099121a6ff8694f21b446d5138">AvisoSonoroDetenerRtttl</a> (void)</td></tr>
+<tr class="memdesc:a3abf6c099121a6ff8694f21b446d5138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detiene inmediatamente la reproducción de la melodía RTTTL en curso y apaga la etapa de potencia.  <a href="aviso__sonoro_8c.html#a3abf6c099121a6ff8694f21b446d5138">Más...</a><br /></td></tr>
+<tr class="separator:a3abf6c099121a6ff8694f21b446d5138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0661dfa0fbb22ba9d161b4304ee3a59e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a0661dfa0fbb22ba9d161b4304ee3a59e">AvisoSonoroReproduciendoRtttl</a> (void)</td></tr>
+<tr class="memdesc:a0661dfa0fbb22ba9d161b4304ee3a59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informa si hay una melodía RTTTL ejecutándose en este instante.  <a href="aviso__sonoro_8c.html#a0661dfa0fbb22ba9d161b4304ee3a59e">Más...</a><br /></td></tr>
+<tr class="separator:a0661dfa0fbb22ba9d161b4304ee3a59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7cd994a9d1215d54a3716e308f18b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#aea7cd994a9d1215d54a3716e308f18b4">AvisoSonoroReproducirPcm</a> (const int8_t *pcm_data, uint32_t num_samples)</td></tr>
+<tr class="memdesc:aea7cd994a9d1215d54a3716e308f18b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia la reproducción asíncrona de un vector de voz LPCM de 8 bits a 8000 Hz sobre portadora de 32 kHz.  <a href="aviso__sonoro_8c.html#aea7cd994a9d1215d54a3716e308f18b4">Más...</a><br /></td></tr>
+<tr class="separator:aea7cd994a9d1215d54a3716e308f18b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aefefa2a62d9e1367f2e1f479ab9995"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#a9aefefa2a62d9e1367f2e1f479ab9995">AvisoSonoroReproducirVozAyuda</a> (void)</td></tr>
+<tr class="memdesc:a9aefefa2a62d9e1367f2e1f479ab9995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reproduce la locución "Ayuda en camino" invocando el vector constante alojado en Flash.  <a href="aviso__sonoro_8c.html#a9aefefa2a62d9e1367f2e1f479ab9995">Más...</a><br /></td></tr>
+<tr class="separator:a9aefefa2a62d9e1367f2e1f479ab9995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39ab5509147e3e13980ef40e3403dc0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aviso__sonoro_8c.html#ac39ab5509147e3e13980ef40e3403dc0">AvisoSonoroReproduciendoVoz</a> (void)</td></tr>
+<tr class="memdesc:ac39ab5509147e3e13980ef40e3403dc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informa si el motor LPCM se encuentra reproduciendo la voz de asistencia actualmente.  <a href="aviso__sonoro_8c.html#ac39ab5509147e3e13980ef40e3403dc0">Más...</a><br /></td></tr>
+<tr class="separator:ac39ab5509147e3e13980ef40e3403dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Implementación del motor de avisos acústicos (Tonos PWM, Melodías RTTTL y Síntesis de Voz LPCM a 8 kHz) sobre el periférico LEDC y el temporizador SYSTIMER del ESP32-C6. </p>
+<p >Este archivo contiene la lógica de control de tiempo real del subsistema de audio:</p><ul>
+<li>Los archivos con los vectores de muestras se incluyen desde la carpeta <code>"sonidos_lpcm/"</code> (por ejemplo, <code>"sonidos_lpcm/ayuda_en_camino.h"</code>).</li>
+<li>Configura explícitamente la fuente de reloj <code>LEDC_USE_XTAL_CLK</code> (40 MHz) para conmutar sin errores de divisor fraccionario entre las frecuencias musicales RTTTL (octavas 3 a 7) y la portadora ultrasónica de 32 kHz empleada en la síntesis LPCM.</li>
+<li>Establece una correspondencia temporal exacta entre el índice <b>n</b> del arreglo en C y el tiempo físico <b>t<sub>n</sub> = n · 125 µs</b>, entregando cada muestra de amplitud al modulador PWM a razón de 8000 actualizaciones por segundo para desplazar la membrana del parlante de <b>4 Ω</b> a través de la etapa Push-Pull (<code>C1815</code> / <code>A1015</code>). <br  />
+ </li>
+</ul>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Implementación inicial del motor LPCM no bloqueante a 8 kHz y tonos PWM   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.1 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="add0303201b9f5cd7f56c13ebab7ff791" name="add0303201b9f5cd7f56c13ebab7ff791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0303201b9f5cd7f56c13ebab7ff791">&#9670;&nbsp;</a></span>AVISO_LEDC_CHANNEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_LEDC_CHANNEL&#160;&#160;&#160;LEDC_CHANNEL_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Canal 0 del periférico LEDC </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00040">40</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a97f0a2cfa417b6942f831672e0c64b69" name="a97f0a2cfa417b6942f831672e0c64b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f0a2cfa417b6942f831672e0c64b69">&#9670;&nbsp;</a></span>AVISO_LEDC_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_LEDC_MODE&#160;&#160;&#160;LEDC_LOW_SPEED_MODE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Modo de velocidad estándar en ESP32-C6 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00039">39</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a2d337a2cc759faa9e2e371e85f77e342" name="a2d337a2cc759faa9e2e371e85f77e342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d337a2cc759faa9e2e371e85f77e342">&#9670;&nbsp;</a></span>AVISO_LEDC_TIMER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_LEDC_TIMER&#160;&#160;&#160;LEDC_TIMER_0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Temporizador LEDC 0 para generación PWM </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00038">38</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a94f93c102a4ff913f94d240153d8abe2" name="a94f93c102a4ff913f94d240153d8abe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f93c102a4ff913f94d240153d8abe2">&#9670;&nbsp;</a></span>AVISO_PCM_CARRIER_HZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_PCM_CARRIER_HZ&#160;&#160;&#160;32000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Portadora ultrasónica PWM Clase D (32 kHz) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00042">42</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="aba869d355c1f74b00f3cd09472092548" name="aba869d355c1f74b00f3cd09472092548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba869d355c1f74b00f3cd09472092548">&#9670;&nbsp;</a></span>AVISO_PCM_NEUTRAL_DUTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_PCM_NEUTRAL_DUTY&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Punto medio de 8 bits (50% duty = 1.65V) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00044">44</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a6263d09a5beb30f393a1cdbfa915cb0e" name="a6263d09a5beb30f393a1cdbfa915cb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6263d09a5beb30f393a1cdbfa915cb0e">&#9670;&nbsp;</a></span>AVISO_PCM_SAMPLE_PERIOD_US</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AVISO_PCM_SAMPLE_PERIOD_US&#160;&#160;&#160;125</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período de muestreo LPCM: 125 us = 8000 Hz </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00043">43</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="aa37ee1ed2fbf3b0a4393b82e13d49ef0" name="aa37ee1ed2fbf3b0a4393b82e13d49ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37ee1ed2fbf3b0a4393b82e13d49ef0">&#9670;&nbsp;</a></span>AvisoSonoroApagar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroApagar </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apaga el tono continuo llevando la salida PWM a 0% si no hay voz ni melodía en curso. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00385">385</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a3abf6c099121a6ff8694f21b446d5138" name="a3abf6c099121a6ff8694f21b446d5138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abf6c099121a6ff8694f21b446d5138">&#9670;&nbsp;</a></span>AvisoSonoroDetenerRtttl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroDetenerRtttl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detiene inmediatamente la reproducción de la melodía RTTTL en curso y apaga la etapa de potencia. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00443">443</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a8ebde66030572a187528c170694e578e" name="a8ebde66030572a187528c170694e578e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebde66030572a187528c170694e578e">&#9670;&nbsp;</a></span>AvisoSonoroEncenderTono()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroEncenderTono </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>freq_hz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activa un tono continuo de onda cuadrada (50% duty) si no hay locución LPCM ni melodía RTTTL activa. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq_hz</td><td>Frecuencia del tono en Hertz. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00373">373</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="aeaa9d5448f2952936202a31cd4cb6a75" name="aeaa9d5448f2952936202a31cd4cb6a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa9d5448f2952936202a31cd4cb6a75">&#9670;&nbsp;</a></span>AvisoSonoroInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el periférico LEDC y los temporizadores de hardware para síntesis LPCM y melodías RTTTL. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pin</td><td>Pin GPIO conectado a la base de la etapa Push-Pull (GPIO_23). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00304">304</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a0661dfa0fbb22ba9d161b4304ee3a59e" name="a0661dfa0fbb22ba9d161b4304ee3a59e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0661dfa0fbb22ba9d161b4304ee3a59e">&#9670;&nbsp;</a></span>AvisoSonoroReproduciendoRtttl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AvisoSonoroReproduciendoRtttl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Informa si hay una melodía RTTTL ejecutándose en este instante. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si está sonando; false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00457">457</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="ac39ab5509147e3e13980ef40e3403dc0" name="ac39ab5509147e3e13980ef40e3403dc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39ab5509147e3e13980ef40e3403dc0">&#9670;&nbsp;</a></span>AvisoSonoroReproduciendoVoz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AvisoSonoroReproduciendoVoz </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Informa si el motor LPCM se encuentra reproduciendo la voz de asistencia actualmente. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la voz está en curso; false si finalizó. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00506">506</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="aea7cd994a9d1215d54a3716e308f18b4" name="aea7cd994a9d1215d54a3716e308f18b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7cd994a9d1215d54a3716e308f18b4">&#9670;&nbsp;</a></span>AvisoSonoroReproducirPcm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroReproducirPcm </td>
+          <td>(</td>
+          <td class="paramtype">const int8_t *&#160;</td>
+          <td class="paramname"><em>pcm_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>num_samples</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia la reproducción asíncrona de un vector de voz LPCM de 8 bits a 8000 Hz sobre portadora de 32 kHz. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pcm_data</td><td>Puntero al arreglo de muestras con signo en memoria Flash. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_samples</td><td>Cantidad total de muestras del arreglo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00466">466</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a100473093fc38d9147e303b1f42f3d79" name="a100473093fc38d9147e303b1f42f3d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a100473093fc38d9147e303b1f42f3d79">&#9670;&nbsp;</a></span>AvisoSonoroReproducirRtttl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroReproducirRtttl </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>rtttl_melody</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analiza el encabezado de una cadena RTTTL e inicia su ejecución asíncrona en segundo plano. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rtttl_melody</td><td>Puntero a la cadena en formato "Nombre:d=...,o=...,b=...:notas". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00398">398</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+<a id="a9aefefa2a62d9e1367f2e1f479ab9995" name="a9aefefa2a62d9e1367f2e1f479ab9995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aefefa2a62d9e1367f2e1f479ab9995">&#9670;&nbsp;</a></span>AvisoSonoroReproducirVozAyuda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AvisoSonoroReproducirVozAyuda </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reproduce la locución "Ayuda en camino" invocando el vector constante alojado en Flash. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="aviso__sonoro_8c_source.html#l00497">497</a> del archivo <a class="el" href="aviso__sonoro_8c_source.html">aviso_sonoro.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="aviso__sonoro_8c.html">aviso_sonoro.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

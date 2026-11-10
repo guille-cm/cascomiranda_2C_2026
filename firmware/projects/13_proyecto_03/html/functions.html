@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Campos de datos</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,22 +87,20 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="contents">
-<div class="textblock">Lista de todos los campos de estructuras y uniones con enlaces a las estructuras/uniones a las que pertenecen:</div>
+<div class="textblock">Lista de todos los campos de estructuras y uniones con enlaces a las estructuras/uniones a que pertenecen:</div>
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>alerta_fc&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">estado_unidad_paciente_t</a></li>
+<li>alerta_fifo_actual&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2">estado_unidad_paciente_t</a></li>
+<li>alerta_fr&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">estado_unidad_paciente_t</a></li>
+<li>alerta_gases&#160;:&#160;<a class="el" href="structregistro__clinico__sd__t.html#a4bf6b15f5df6b63b0e4c02441aa89979">registro_clinico_sd_t</a></li>
+<li>alertas_fifo_cant&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">estado_unidad_paciente_t</a></li>
 <li>app_id&#160;:&#160;<a class="el" href="structgatts__profile__inst.html#ab7fe10f376247e7e1eacdc0f560e9ef1">gatts_profile_inst</a>, <a class="el" href="structhidd__inst__t.html#abdf9761d9e8c90fd70ec6eacaad8be2c">hidd_inst_t</a></li>
 <li>att_tbl&#160;:&#160;<a class="el" href="structhidd__inst__t.html#a4b02da3773a64fb803b4e3e238fb536b">hidd_inst_t</a></li>
 </ul>
@@ -158,9 +151,12 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>fc_bpm&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">estado_unidad_paciente_t</a>, <a class="el" href="structregistro__clinico__sd__t.html#a40258bb299315a220435b6b7d21b454e">registro_clinico_sd_t</a></li>
+<li>fecha_actual&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a86efa0b5bae8e03576cb84072f774d75">estado_unidad_paciente_t</a></li>
 <li>flags&#160;:&#160;<a class="el" href="structhids__hid__info__t.html#aa2585d779da0ab21273a8d92de9a0ebe">hids_hid_info_t</a></li>
 <li>font_height&#160;:&#160;<a class="el" href="struct_font__t.html#a60d2fe30ac50afa789e7058b4f22d0ef">Font_t</a></li>
 <li>format&#160;:&#160;<a class="el" href="structprf__char__pres__fmt.html#a7864fd50d470f893524181b4a59d9828">prf_char_pres_fmt</a></li>
+<li>fr_rpm&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">estado_unidad_paciente_t</a>, <a class="el" href="structregistro__clinico__sd__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">registro_clinico_sd_t</a></li>
 <li>func_p&#160;:&#160;<a class="el" href="structanalog__input__config__t.html#a672985730d2c0cf9105559adc9759a3a">analog_input_config_t</a>, <a class="el" href="structble__config__t.html#a331819affab0b6948eb77bb32a9c8a63">ble_config_t</a>, <a class="el" href="structserial__config__t.html#a672985730d2c0cf9105559adc9759a3a">serial_config_t</a>, <a class="el" href="structspi__mcu__config__t.html#a672985730d2c0cf9105559adc9759a3a">spi_mcu_config_t</a>, <a class="el" href="structtimer__config__t.html#a672985730d2c0cf9105559adc9759a3a">timer_config_t</a></li>
 </ul>
 
@@ -182,7 +178,11 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <li>hidd_inst&#160;:&#160;<a class="el" href="structhidd__le__env__t.html#ab35ec63cfdfb7cb72e2668d069d6b4c8">hidd_le_env_t</a></li>
 <li>hidFlags&#160;:&#160;<a class="el" href="structhid__dev__cfg__t.html#a11563208acc8e846560342314084748d">hid_dev_cfg_t</a></li>
 <li>hids_nb&#160;:&#160;<a class="el" href="structhidd__inst__t.html#a495699a2ab108b1a8a3b946a36b50979">hidd_inst_t</a></li>
+<li>hora_actual&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#aec878bbeb6690e5b26d7ee28ed1fef20">estado_unidad_paciente_t</a></li>
 <li>hour&#160;:&#160;<a class="el" href="structrtc__t.html#ae5af4ff48939d13d480f87e56a9385d6">rtc_t</a></li>
+<li>hum_decimas_pct&#160;:&#160;<a class="el" href="structdht22__data__t.html#afb4d944c56251217dc37c5090a64b935">dht22_data_t</a>, <a class="el" href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">estado_unidad_paciente_t</a>, <a class="el" href="structregistro__clinico__sd__t.html#afb4d944c56251217dc37c5090a64b935">registro_clinico_sd_t</a></li>
+<li>hum_max_pct&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#ac51c396e45b5c0621de06b269951e46b">estado_unidad_paciente_t</a></li>
+<li>hum_min_pct&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a5de44c2a7826689bec860d20386b9553">estado_unidad_paciente_t</a></li>
 </ul>
 
 
@@ -200,6 +200,7 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>lectura_valida&#160;:&#160;<a class="el" href="structdht22__data__t.html#a01691d9477376240a9f711cddb701d55">dht22_data_t</a></li>
 <li>led_write&#160;:&#160;<a class="el" href="unionesp__hidd__cb__param__t.html#a369ae8b85d34d957e6b4e05b9bfe42ee">esp_hidd_cb_param_t</a></li>
 <li>length&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#ae809d5359ac030c60a30a8f0b2294b82">CMD_t</a>, <a class="el" href="structesp__hidd__cb__param__t_1_1hidd__led__write__evt__param.html#ab2b3adeb2a67e656ff030b56727fd0ac">esp_hidd_cb_param_t::hidd_led_write_evt_param</a>, <a class="el" href="structesp__hidd__cb__param__t_1_1hidd__vendor__write__evt__param.html#a1892eba2086d12ac2b09005aeb09ea3b">esp_hidd_cb_param_t::hidd_vendor_write_evt_param</a></li>
 </ul>
@@ -209,7 +210,12 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <li>mday&#160;:&#160;<a class="el" href="structrtc__t.html#a8f4f1d1a3991d8405faca08fd1c3ea9b">rtc_t</a></li>
 <li>min&#160;:&#160;<a class="el" href="structrtc__t.html#ac9b481208b43f7c37ed25e446bdec692">rtc_t</a></li>
 <li>mode&#160;:&#160;<a class="el" href="structanalog__input__config__t.html#a56cce61871ae1c1c5317d84d747f87c1">analog_input_config_t</a>, <a class="el" href="structdigital__io__t.html#a23aeec8098631547d58a797b2ad857c1">digital_io_t</a>, <a class="el" href="structhid__report__map__t.html#a37e90f5e3bd99fac2021fb3a326607d4">hid_report_map_t</a>, <a class="el" href="structhid_rpt_map__t.html#a37e90f5e3bd99fac2021fb3a326607d4">hidRptMap_t</a></li>
+<li>modo_sim_local&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">estado_unidad_paciente_t</a></li>
 <li>month&#160;:&#160;<a class="el" href="structrtc__t.html#a3e00faf7fbf9805e9ec4d2edd6339050">rtc_t</a></li>
+<li>movimiento_sala&#160;:&#160;<a class="el" href="structregistro__clinico__sd__t.html#ab7c0b3e74a4ef2e7c6cf45eb5f46c462">registro_clinico_sd_t</a></li>
+<li>mq3_alcohol_detectado&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">estado_unidad_paciente_t</a></li>
+<li>mq3_precalentado&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">estado_unidad_paciente_t</a></li>
+<li>mq3_segundos_bajo&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">estado_unidad_paciente_t</a></li>
 </ul>
 
 
@@ -226,6 +232,7 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>paciente_requiere_atencion&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">estado_unidad_paciente_t</a></li>
 <li>param_p&#160;:&#160;<a class="el" href="structanalog__input__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">analog_input_config_t</a>, <a class="el" href="structserial__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">serial_config_t</a>, <a class="el" href="structspi__mcu__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">spi_mcu_config_t</a>, <a class="el" href="structtimer__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">timer_config_t</a></li>
 <li>payload&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#a6a25d5789ce87a19e44e0454be6cf6db">CMD_t</a></li>
 <li>pending_evt&#160;:&#160;<a class="el" href="structhidd__inst__t.html#ab3d1d6abcb1adc8485e2b95731213cda">hidd_inst_t</a></li>
@@ -233,6 +240,8 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <li>period&#160;:&#160;<a class="el" href="structtimer__config__t.html#a81b43df06332b4fef558297592bb7ff1">timer_config_t</a></li>
 <li>perm&#160;:&#160;<a class="el" href="structgatts__profile__inst.html#aa9ceec967962d94ff3d01bc583b20eba">gatts_profile_inst</a></li>
 <li>pin&#160;:&#160;<a class="el" href="structdigital__io__t.html#af5e63535711f7fbbc6d5477690f9e487">digital_io_t</a>, <a class="el" href="structgpio_conf__t.html#aca3d4c5920a3f389dfded4a9726473a9">gpioConf_t</a></li>
+<li>pir_contador_eventos&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">estado_unidad_paciente_t</a></li>
+<li>pir_movimiento&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">estado_unidad_paciente_t</a></li>
 <li>port&#160;:&#160;<a class="el" href="structserial__config__t.html#a27067c816e8c5402c7be0da9780678b0">serial_config_t</a></li>
 <li>property&#160;:&#160;<a class="el" href="structgatts__profile__inst.html#a192436b0a8681b65cff06641c7ae118e">gatts_profile_inst</a></li>
 <li>proto_mode&#160;:&#160;<a class="el" href="structhidd__inst__t.html#a952a3c195acc8c36d644a05851803e26">hidd_inst_t</a></li>
@@ -252,6 +261,8 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>sample_frec&#160;:&#160;<a class="el" href="structanalog__input__config__t.html#a25204106348e34dfe9da6ac6e61b08c8">analog_input_config_t</a></li>
+<li>sd_montada&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">estado_unidad_paciente_t</a></li>
+<li>sd_registros_totales&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">estado_unidad_paciente_t</a></li>
 <li>sec&#160;:&#160;<a class="el" href="structrtc__t.html#ad1696900026b287a87c563b733a21bc3">rtc_t</a></li>
 <li>service_handle&#160;:&#160;<a class="el" href="structgatts__profile__inst.html#a363e00d9262febd8d752ed2f933be1e4">gatts_profile_inst</a></li>
 <li>service_id&#160;:&#160;<a class="el" href="structgatts__profile__inst.html#a384758e259cfd64fcba9ecf7cb9bcca3">gatts_profile_inst</a></li>
@@ -264,6 +275,9 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>taskHandle&#160;:&#160;<a class="el" href="struct_c_m_d__t.html#a856a4dc2365377e5fed42c5e1be72043">CMD_t</a></li>
+<li>temp_decimas_c&#160;:&#160;<a class="el" href="structdht22__data__t.html#adbff86445a1dc1b41643eb26b0683f75">dht22_data_t</a>, <a class="el" href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">estado_unidad_paciente_t</a>, <a class="el" href="structregistro__clinico__sd__t.html#adbff86445a1dc1b41643eb26b0683f75">registro_clinico_sd_t</a></li>
+<li>temp_max_c&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a071c10c7c44cd2170b56846f54abbc8a">estado_unidad_paciente_t</a></li>
+<li>temp_min_c&#160;:&#160;<a class="el" href="structestado__unidad__paciente__t.html#a723714d06a32d6cdfbc1db4884bae02e">estado_unidad_paciente_t</a></li>
 <li>timer&#160;:&#160;<a class="el" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer_config_t</a></li>
 <li>trans_id&#160;:&#160;<a class="el" href="structhidd__clcb__t.html#ac8afe9b7ed32bf4983b46f30e62e24c4">hidd_clcb_t</a></li>
 <li>transfer_mode&#160;:&#160;<a class="el" href="structspi__mcu__config__t.html#a84b3bf61c72f30449d7e3e1a389b9ea2">spi_mcu_config_t</a></li>
@@ -295,7 +309,7 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

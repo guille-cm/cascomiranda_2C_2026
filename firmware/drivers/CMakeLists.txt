@@ -8,7 +8,7 @@ set(srcs
     "microcontroller/src/uart_mcu.c"
     # "microcontroller/src/spi_mcu.c"
     # "microcontroller/src/pwm_mcu.c"
-    # "microcontroller/src/i2c_mcu.c"
+    "microcontroller/src/i2c_mcu.c"
     "microcontroller/src/gpio_fast_out_mcu.c"
     "microcontroller/src/analog_io_mcu.c"
     # "microcontroller/src/ble_mcu.c"
@@ -18,6 +18,8 @@ set(srcs
     "devices/src/switch.c"
     "devices/src/lcditse0803.c"
     "devices/src/hc_sr04.c"
+    #"devices/src/display_16x2_i2c.c"
+    #"devices/src/web_unidad_paciente.c"
     # "devices/src/ws2812b.c"
     # "devices/src/neopixel_stripe.c"
     # "devices/src/ili9341.c"
@@ -39,10 +41,15 @@ idf_component_register(SRCS ${srcs}
                        PRIV_REQUIRES esp_driver_gpio 
                        esp_driver_uart 
                        esp_driver_gptimer 
-                    #    esp_driver_ledc # uncomment for PWM support
-                    #    esp_driver_i2c  # uncomment for I2C support
+                       esp_driver_ledc # uncomment for PWM support
+                       esp_driver_i2c  # uncomment for I2C support
                     #    esp_driver_spi  # uncomment for SPI support
                        esp_driver_sdm  # uncomment for DAC support
                        esp_adc         # uncomment for ADC support
-                    #    nvs_flash bt    # uncomment for BLE support
+                       esp_wifi        # Wi-Fi station support
+                       esp_netif       # TCP/IP network interface
+                       esp_event       # Event loop library
+                       esp_http_server # Embedded HTTP server
+                       nvs_flash       # Non-volatile storage for Wi-Fi PHY
+                       lwip            # Lightweight IP stack and UDP mDNS sockets
                        )

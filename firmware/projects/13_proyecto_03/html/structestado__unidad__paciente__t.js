@@ -1,0 +1,26 @@
+var structestado__unidad__paciente__t =
+[
+    [ "alerta_fc", "structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a", null ],
+    [ "alerta_fifo_actual", "structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2", null ],
+    [ "alerta_fr", "structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead", null ],
+    [ "alertas_fifo_cant", "structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507", null ],
+    [ "fc_bpm", "structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e", null ],
+    [ "fecha_actual", "structestado__unidad__paciente__t.html#a86efa0b5bae8e03576cb84072f774d75", null ],
+    [ "fr_rpm", "structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd", null ],
+    [ "hora_actual", "structestado__unidad__paciente__t.html#aec878bbeb6690e5b26d7ee28ed1fef20", null ],
+    [ "hum_decimas_pct", "structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935", null ],
+    [ "hum_max_pct", "structestado__unidad__paciente__t.html#ac51c396e45b5c0621de06b269951e46b", null ],
+    [ "hum_min_pct", "structestado__unidad__paciente__t.html#a5de44c2a7826689bec860d20386b9553", null ],
+    [ "modo_sim_local", "structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be", null ],
+    [ "mq3_alcohol_detectado", "structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5", null ],
+    [ "mq3_precalentado", "structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6", null ],
+    [ "mq3_segundos_bajo", "structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985", null ],
+    [ "paciente_requiere_atencion", "structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8", null ],
+    [ "pir_contador_eventos", "structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905", null ],
+    [ "pir_movimiento", "structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba", null ],
+    [ "sd_montada", "structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328", null ],
+    [ "sd_registros_totales", "structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09", null ],
+    [ "temp_decimas_c", "structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75", null ],
+    [ "temp_max_c", "structestado__unidad__paciente__t.html#a071c10c7c44cd2170b56846f54abbc8a", null ],
+    [ "temp_min_c", "structestado__unidad__paciente__t.html#a723714d06a32d6cdfbc1db4884bae02e", null ]
+];

@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/relevador_remoto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('relevador__remoto_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo relevador_remoto.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Driver de la capa de dispositivos para el accionamiento por relevador a control remoto y pulsador de llamada de paciente sobre el pin de strapping GPIO_8 del ESP32-C6.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="relevador__remoto_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ad495eb4d85c3d775796cdc055acb7d2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="relevador__remoto_8h.html#ad495eb4d85c3d775796cdc055acb7d2d">RELEVADOR_DEFAULT_GPIO</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a1633eaf3914293921cf5e102f5026106">GPIO_8</a></td></tr>
+<tr class="separator:ad495eb4d85c3d775796cdc055acb7d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ac1ddd8e11e2e6e635ba9c00cd8ce0c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="relevador__remoto_8h.html#ac1ddd8e11e2e6e635ba9c00cd8ce0c86">RelevadorRemotoInit</a> (<a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin)</td></tr>
+<tr class="memdesc:ac1ddd8e11e2e6e635ba9c00cd8ce0c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura el pin GPIO_8 como entrada digital con resistencia pull-up activa.  <a href="relevador__remoto_8h.html#ac1ddd8e11e2e6e635ba9c00cd8ce0c86">Más...</a><br /></td></tr>
+<tr class="separator:ac1ddd8e11e2e6e635ba9c00cd8ce0c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcdc665d540dbe3a2bff09968be267c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="relevador__remoto_8h.html#adcdc665d540dbe3a2bff09968be267c9">RelevadorRemotoEventoActivacion</a> (void)</td></tr>
+<tr class="memdesc:adcdc665d540dbe3a2bff09968be267c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detecta el flanco descendente (transición de 3.3V a 0V) originado al cerrar el contacto seco.  <a href="relevador__remoto_8h.html#adcdc665d540dbe3a2bff09968be267c9">Más...</a><br /></td></tr>
+<tr class="separator:adcdc665d540dbe3a2bff09968be267c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abacb0c07adf08adf83401268593cb49c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="relevador__remoto_8h.html#abacb0c07adf08adf83401268593cb49c">RelevadorRemotoEstadoActual</a> (void)</td></tr>
+<tr class="memdesc:abacb0c07adf08adf83401268593cb49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta el nivel lógico instantáneo presente en el pin.  <a href="relevador__remoto_8h.html#abacb0c07adf08adf83401268593cb49c">Más...</a><br /></td></tr>
+<tr class="separator:abacb0c07adf08adf83401268593cb49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Driver de la capa de dispositivos para el accionamiento por relevador a control remoto y pulsador de llamada de paciente sobre el pin de strapping GPIO_8 del ESP32-C6. </p>
+<p >Este módulo gestiona la lectura con acondicionamiento físico y digital de un contacto seco Normalmente Abierto (NO), conmutado tanto por un pulsador cableado como por un módulo receptor inalámbrico de radiofrecuencia de 433 MHz (modelo RX1C).</p>
+<h1><a class="anchor" id="rff_strat"></a>
+Estrategia de Funcionamiento y Acondicionamiento de Hardware</h1>
+<ol type="1">
+<li><b>Etapa de Potencia y Elevación de Tensión:</b> El módulo receptor inalámbrico RX1C incorpora internamente un regulador lineal 78L05 para su circuito lógico y decodificador EV1527, pero la bobina de su relé electromecánico exige una tensión nominal de 12V DC para vencer la fuerza mecánica de su armadura. Dado que todo el sistema se alimenta a través de la interfaz USB de 5V de la computadora o cargador, se emplea un módulo convertidor elevador conmutado (Step-Up) MT3608 ajustado exactamente a 12.0V. Para evitar que el rizado de alta frecuencia (1.2 MHz) del convertidor conmutado interfiera con los buses digitales de 5V (I2C del display LCD y Single-Wire del DHT22), la entrada del MT3608 se desacopla con un capacitor electrolítico de 100 µF en paralelo con un cerámico de 100 nF (104). Asimismo, la salida de 12V cuenta con un capacitor electrolítico de 220 µF a 35V, el cual entrega el pico transitorio de corriente de la bobina (~40 mA) al momento de conmutar.</li>
+<li><b>Aislamiento Galvánico y Red de Filtrado Antirrebote en GPIO_8:</b> Los bornes de salida del relé (COM y NO) constituyen contactos secos mecánicamente aislados de la alimentación de 12V. Para ingresar al microcontrolador de forma inmune a transitorios y ruido electromagnético, se adoptó la topología de acondicionamiento de las teclas del ESP-EDU:<ul>
+<li>Un resistor de pull-up externo de 10 kΩ polariza un nodo central a 3.3V.</li>
+<li>El terminal NO del relé se conecta a dicho nodo y el terminal COM se vincula a masa (GND).</li>
+<li>Un capacitor cerámico multicapa 104 (100 nF) se conecta desde el nodo hacia masa, formando un filtro pasabajos de constante de tiempo RC = 1 ms que amortigua los rebotes mecánicos.</li>
+<li>Desde el nodo central, una resistencia de protección de 1 kΩ ingresa al pin GPIO_8 del microcontrolador.</li>
+</ul>
+</li>
+<li><b>Tratamiento del Pin de Strapping GPIO_8:</b> En el ESP32-C6, GPIO_8 gobierna el modo de arranque durante el reset (debe estar en nivel ALTO durante la descarga del bootloader si GPIO_9 se pone en bajo). Al utilizar el contacto Normalmente Abierto (NO), en reposo el circuito permanece abierto y la resistencia de pull-up de 10 kΩ garantiza un nivel lógico alto de 3.3V permanente, permitiendo flashear el programa y arrancar el microcontrolador sin bloqueos.</li>
+<li><b>Lógica de Doble Propósito en el Sistema Operativo (FreeRTOS):</b> Desde la tarea periódica TaskPotenciometro_LED (ejecutada cada 20 ms), se evalúa la función <a class="el" href="relevador__remoto_8h.html#adcdc665d540dbe3a2bff09968be267c9" title="Detecta el flanco descendente (transición de 3.3V a 0V) originado al cerrar el contacto seco.">RelevadorRemotoEventoActivacion()</a>. Si la cola FIFO de alarmas se encuentra vacía, llevar GPIO_8 a masa indica una llamada prioritaria del paciente (activando la bandera de atención, encendiendo el LED 3 en modo continuo y disparando la melodía RTTTL Drama). Si la cola FIFO contiene al menos una alarma, la misma pulsación desencola la alerta más antigua y apaga los avisos sonoros.</li>
+</ol>
+<h1><a class="anchor" id="hardConn"></a>
+Hardware Connection</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Componente / Terminal   </th><th class="markdownTableHeadLeft">Pin ESP32-C6 / Circuito   </th><th class="markdownTableHeadLeft">Descripción de la Conexión Física    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Entrada USB +5V   </td><td class="markdownTableBodyLeft">VIN+ (MT3608)   </td><td class="markdownTableBodyLeft">Filtrada con 100 µF + 100 nF a masa    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Salida +12.0V MT3608   </td><td class="markdownTableBodyLeft">+V (Módulo RX1C)   </td><td class="markdownTableBodyLeft">Filtrada con 220 µF a 35V a masa    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Masa común   </td><td class="markdownTableBodyLeft">GND (VOUT- / VIN-)   </td><td class="markdownTableBodyLeft">Plano de masa unificado (0V)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Contacto Común (COM)   </td><td class="markdownTableBodyLeft">GND   </td><td class="markdownTableBodyLeft">Conexión a masa del contacto seco    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Contacto Norm. Abierto(NO)   </td><td class="markdownTableBodyLeft">Nodo de disparo   </td><td class="markdownTableBodyLeft">A resistencia pull-up 10 kΩ a 3.3V    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Filtro pasabajos (104)   </td><td class="markdownTableBodyLeft">Nodo a GND   </td><td class="markdownTableBodyLeft">Capacitor cerámico de 100 nF    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Resistor de protección   </td><td class="markdownTableBodyLeft">Nodo a GPIO_8   </td><td class="markdownTableBodyLeft">Resistencia de 1 kΩ en serie   </td></tr>
+</table>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Creación del driver modular para relevador a control remoto en GPIO_8   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.3 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="relevador__remoto_8h_source.html">relevador_remoto.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="ad495eb4d85c3d775796cdc055acb7d2d" name="ad495eb4d85c3d775796cdc055acb7d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad495eb4d85c3d775796cdc055acb7d2d">&#9670;&nbsp;</a></span>RELEVADOR_DEFAULT_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RELEVADOR_DEFAULT_GPIO&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a1633eaf3914293921cf5e102f5026106">GPIO_8</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Pin GPIO asignado al nodo de disparo del relevador </p>
+
+<p class="definition">Definición en la línea <a class="el" href="relevador__remoto_8h_source.html#l00075">75</a> del archivo <a class="el" href="relevador__remoto_8h_source.html">relevador_remoto.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="abacb0c07adf08adf83401268593cb49c" name="abacb0c07adf08adf83401268593cb49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abacb0c07adf08adf83401268593cb49c">&#9670;&nbsp;</a></span>RelevadorRemotoEstadoActual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RelevadorRemotoEstadoActual </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consulta el nivel lógico instantáneo presente en el pin. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si el contacto está cerrado a GND (0V); false si está abierto en reposo (3.3V). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="relevador__remoto_8c_source.html#l00067">67</a> del archivo <a class="el" href="relevador__remoto_8c_source.html">relevador_remoto.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8c_source.html#l00101">GPIORead()</a>.</p>
+
+</div>
+</div>
+<a id="adcdc665d540dbe3a2bff09968be267c9" name="adcdc665d540dbe3a2bff09968be267c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcdc665d540dbe3a2bff09968be267c9">&#9670;&nbsp;</a></span>RelevadorRemotoEventoActivacion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RelevadorRemotoEventoActivacion </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detecta el flanco descendente (transición de 3.3V a 0V) originado al cerrar el contacto seco. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true una única vez por cada accionamiento del control remoto o pulsador; false en reposo. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="relevador__remoto_8c_source.html#l00049">49</a> del archivo <a class="el" href="relevador__remoto_8c_source.html">relevador_remoto.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gpio__mcu_8c_source.html#l00101">GPIORead()</a>.</p>
+
+</div>
+</div>
+<a id="ac1ddd8e11e2e6e635ba9c00cd8ce0c86" name="ac1ddd8e11e2e6e635ba9c00cd8ce0c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ddd8e11e2e6e635ba9c00cd8ce0c86">&#9670;&nbsp;</a></span>RelevadorRemotoInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RelevadorRemotoInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura el pin GPIO_8 como entrada digital con resistencia pull-up activa. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pin</td><td>Pin GPIO asignado al contacto del relevador (por defecto GPIO_8). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="relevador__remoto_8c_source.html#l00026">26</a> del archivo <a class="el" href="relevador__remoto_8c_source.html">relevador_remoto.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="relevador__remoto_8h.html">relevador_remoto.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

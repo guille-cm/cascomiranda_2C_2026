@@ -1,0 +1,45 @@
+prueba de salida pines del conversor/expansor I2C 
+
+FORMATO RESULTADOS
+Número de pin: voltaje sin datos, voltaje al que cambia con el dato especificado
+
+pin  1: 0 V --------------------------------- --> VA A PIN 1 del display (GND)
+pin  2: 5 V --------------------------------- --> VA A PIN 2 del display (+5 VS)
+
+pin  3: variable de 0 a 5 V ----------------- --> VA A PIN 3 del display (REGULA EL CONTRASTE)
+pin  4: 0 V, P0 (HEX:0x01)  4 se pone en ALTO --> VA A PIN 4 del display (función RS)
+
+pin  5: 0 V, P1 (HEX:0x02)  5 se pone en ALTO --> VA A PIN 5 del display (función RW)
+pin  6: 0 V, P2 (HEX:0x04)  6 se pone en ALTO --> VA A PIN 6 del display (función EN)
+
+pin  7: 0 V
+pin  8: 0 V
+
+pin  9: 0 V
+pin 10: 0 V
+
+pin 11: 0 V, P4 (HEX:0x10) 11 se pone en ALTO --> VA A PIN 11 del display (función D4)
+pin 12: 0 V, P5 (HEX:0x20) 12 se pone en ALTO --> VA A PIN 12 del display (función D5)
+
+pin 13: 0 V, P6 (HEX:0x40) 13 se pone en ALTO --> VA A PIN 13 del display (función D6)
+pin 14: 0 V, P7 (HEX:0x80) 14 se pone en ALTO --> VA A PIN 14 del display (función D7)
+
+pin 15: 5 V
+pin 16: 0 V, P3 (HEX:0x08) 16 se pone en bajo <--
+
+---------------------------------------------
+
+MISMOS RESULTADOS, expresados desde los datos enviados:
+
+DATO enviado por microcontrolador:  PIN I2C SALIDA util para display 16x2
+P0 (HEX:0x01) :  4 se pone en ALTO
+P1 (HEX:0x02) :  5 se pone en ALTO
+P2 (HEX:0x04) :  6 se pone en ALTO
+P3 (HEX:0x08) : 16 se pone en bajo <-- para retroiluminación display
+
+P4 (HEX:0x10) : 11 se pone en ALTO
+P5 (HEX:0x20) : 12 se pone en ALTO
+P6 (HEX:0x40) : 13 se pone en ALTO
+P7 (HEX:0x80) : 14 se pone en ALTO
+
+--------------------------------------------

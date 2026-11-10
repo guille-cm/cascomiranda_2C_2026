@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/display_16X2_i2c.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('display__16_x2__i2c_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">display_16X2_i2c.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="display__16_x2__i2c_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DISPLAY_16X2_I2C_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DISPLAY_16X2_I2C_H</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#include &quot;freertos/task.h&quot;</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#include &quot;<a class="code" href="i2c__mcu_8h.html">i2c_mcu.h</a>&quot;</span>    </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#af679cf68e64fdb5d310a0d9944142c76">  282</a></span><span class="preprocessor">#define LCD_I2C_ADDR        0x27    </span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a0afb537ac0813a7acc2f797a4d3baa0b">  283</a></span><span class="preprocessor">#define LCD_COLS            16      </span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a9a59fc4d524d3519a6bd0cb451850a65">  284</a></span><span class="preprocessor">#define LCD_ROWS            2       </span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#aefd56ac088ed46da2f10aceb6f3eb584">  285</a></span><span class="preprocessor">#define LCD_ROW_0           0       </span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="display__16_x2__i2c_8h.html#a1f287bdb38b3252b81e724846959a093">  286</a></span><span class="preprocessor">#define LCD_ROW_1           1       </span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">/*==================[typedef]================================================*/</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">/*==================[external data declaration]==============================*/</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">/*==================[external function declarations]=========================*/</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keywordtype">bool</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a48278e912b02df97d5543d4eef47cf5e">Display16x2I2cInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a>(uint8_t row, uint8_t col);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a>(<span class="keywordtype">char</span> ch);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a0f78ea246ace68f839a2b1af81f5cea1">Display16x2I2cWriteString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#a0c3f87ba7b27a16a29241e974f288f21">Display16x2I2cWriteLine</a>(uint8_t row, <span class="keyword">const</span> <span class="keywordtype">char</span> *str);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Display16x2I2cSetBacklight</a>(<span class="keywordtype">bool</span> state);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="keywordtype">void</span> <a class="code hl_function" href="display__16_x2__i2c_8h.html#aea5729251688c81a87abd16581c5e183">Display16x2I2cTestPulseTrain</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="preprocessor">#endif </span><span class="comment">/* DISPLAY_16X2_I2C_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a0185871886f0979aa0d5b6f791606cec"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a0185871886f0979aa0d5b6f791606cec">Display16x2I2cWriteChar</a></div><div class="ttdeci">void Display16x2I2cWriteChar(char ch)</div><div class="ttdoc">Transmite un único carácter ASCII al Registro de Datos (RS=1) en la posición actual del cursor.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00327">display_16x2_i2c.c:327</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a0c3f87ba7b27a16a29241e974f288f21"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a0c3f87ba7b27a16a29241e974f288f21">Display16x2I2cWriteLine</a></div><div class="ttdeci">void Display16x2I2cWriteLine(uint8_t row, const char *str)</div><div class="ttdoc">Posiciona el cursor al inicio de la fila seleccionada, escribe hasta 16 caracteres de la cadena y rel...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00357">display_16x2_i2c.c:357</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a0f78ea246ace68f839a2b1af81f5cea1"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a0f78ea246ace68f839a2b1af81f5cea1">Display16x2I2cWriteString</a></div><div class="ttdeci">void Display16x2I2cWriteString(const char *str)</div><div class="ttdoc">Imprime secuencialmente una cadena de caracteres terminada en nulo ('\0') desde la posición actual.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00338">display_16x2_i2c.c:338</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a48278e912b02df97d5543d4eef47cf5e"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a48278e912b02df97d5543d4eef47cf5e">Display16x2I2cInit</a></div><div class="ttdeci">bool Display16x2I2cInit(void)</div><div class="ttdoc">Inicializa el periférico I2C a 100 kHz y ejecuta la secuencia de reseteo por instrucción para configu...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00246">display_16x2_i2c.c:246</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a7e2c78671bc2090fccf1559ec2bf6678"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a7e2c78671bc2090fccf1559ec2bf6678">Display16x2I2cClear</a></div><div class="ttdeci">void Display16x2I2cClear(void)</div><div class="ttdoc">Borra la totalidad de la memoria DDRAM de la pantalla (comando 0x01), retorna el cursor a la coordena...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00291">display_16x2_i2c.c:291</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_a949aeb443c225d253d812e04abb25ae7"><div class="ttname"><a href="display__16_x2__i2c_8h.html#a949aeb443c225d253d812e04abb25ae7">Display16x2I2cSetCursor</a></div><div class="ttdeci">void Display16x2I2cSetCursor(uint8_t row, uint8_t col)</div><div class="ttdoc">Posiciona el puntero de dirección DDRAM del controlador HD44780 en la fila y columna indicadas.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00305">display_16x2_i2c.c:305</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_acfd37e13f9bd0d2b03f247ba5a4d8953"><div class="ttname"><a href="display__16_x2__i2c_8h.html#acfd37e13f9bd0d2b03f247ba5a4d8953">Display16x2I2cSetBacklight</a></div><div class="ttdeci">void Display16x2I2cSetBacklight(bool state)</div><div class="ttdoc">Actualiza la retención interna de retroiluminación y conmuta de inmediato el pin P3 del PCF8574.</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00383">display_16x2_i2c.c:383</a></div></div>
+<div class="ttc" id="adisplay__16_x2__i2c_8h_html_aea5729251688c81a87abd16581c5e183"><div class="ttname"><a href="display__16_x2__i2c_8h.html#aea5729251688c81a87abd16581c5e183">Display16x2I2cTestPulseTrain</a></div><div class="ttdeci">void Display16x2I2cTestPulseTrain(void)</div><div class="ttdoc">Ejecuta una secuencia experimental de barrido de bit desplazado (walking one, 0x01 a 0x80) sobre las ...</div><div class="ttdef"><b>Definition:</b> <a href="display__16x2__i2c_8c_source.html#l00413">display_16x2_i2c.c:413</a></div></div>
+<div class="ttc" id="ai2c__mcu_8h_html"><div class="ttname"><a href="i2c__mcu_8h.html">i2c_mcu.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="display__16_x2__i2c_8h.html">display_16X2_i2c.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

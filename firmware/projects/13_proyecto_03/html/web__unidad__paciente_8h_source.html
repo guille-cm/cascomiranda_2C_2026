@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/web_unidad_paciente.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('web__unidad__paciente_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">web_unidad_paciente.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="web__unidad__paciente_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef WEB_UNIDAD_PACIENTE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define WEB_UNIDAD_PACIENTE_H</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a4078c5e2403f6b2eae094514509bf3d0">  149</a></span><span class="preprocessor">#define WIFI_SSID_DEFAULT       &quot;Mi_humilde_red&quot;</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a8347fb95224b8b70ab93fe76a52d94b2">  152</a></span><span class="preprocessor">#define WIFI_PASS_DEFAULT       &quot;contraseniasencilla1234&quot;</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="web__unidad__paciente_8h.html#a8c15d59726c7ef931534a0653837c80b">  155</a></span><span class="preprocessor">#define WEB_LCD_TEXT_MAX_LEN    16</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment">/*==================[typedef]================================================*/</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html">  161</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">  162</a></span>    uint16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">fc_bpm</a>;                 </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">  163</a></span>    uint16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">fr_rpm</a>;                 </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">  164</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">alerta_fc</a>;                  </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">  165</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">alerta_fr</a>;                  </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">  166</a></span>    uint8_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">modo_sim_local</a>;          </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">  167</a></span>    int16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">temp_decimas_c</a>;          </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">  168</a></span>    uint16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">hum_decimas_pct</a>;        </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">  169</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">mq3_precalentado</a>;           </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">  170</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">mq3_alcohol_detectado</a>;      </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">  171</a></span>    uint32_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">mq3_segundos_bajo</a>;      </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">  172</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">pir_movimiento</a>;             </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">  173</a></span>    uint32_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">pir_contador_eventos</a>;   </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">  174</a></span>    uint8_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">alertas_fifo_cant</a>;       </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a69aa12c5302a5dd0fd713316a804d8a2">  175</a></span>    <span class="keywordtype">char</span> alerta_fifo_actual[17];     </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">  176</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">sd_montada</a>;                 </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">  177</a></span>    uint32_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">sd_registros_totales</a>;   </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a86efa0b5bae8e03576cb84072f774d75">  178</a></span>    <span class="keywordtype">char</span> fecha_actual[12];           </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#aec878bbeb6690e5b26d7ee28ed1fef20">  179</a></span>    <span class="keywordtype">char</span> hora_actual[10];            </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">  180</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">paciente_requiere_atencion</a>; </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a723714d06a32d6cdfbc1db4884bae02e">  181</a></span>    int16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a723714d06a32d6cdfbc1db4884bae02e">temp_min_c</a>;              </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a071c10c7c44cd2170b56846f54abbc8a">  182</a></span>    int16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a071c10c7c44cd2170b56846f54abbc8a">temp_max_c</a>;              </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#a5de44c2a7826689bec860d20386b9553">  183</a></span>    uint16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#a5de44c2a7826689bec860d20386b9553">hum_min_pct</a>;            </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="structestado__unidad__paciente__t.html#ac51c396e45b5c0621de06b269951e46b">  184</a></span>    uint16_t <a class="code hl_variable" href="structestado__unidad__paciente__t.html#ac51c396e45b5c0621de06b269951e46b">hum_max_pct</a>;            </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>} <a class="code hl_struct" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">/*==================[external function declarations]=========================*/</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2">WebUnidadPacienteInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#a1975bdb3b46a94898c5051408a1862a9">WebUnidadPacienteActualizarDatos</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a> *nuevo_estado);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">void</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a>(<span class="keywordtype">char</span> *buffer_17_bytes);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">WebUnidadPacienteConsumirSolicitudClearAlert</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#ae3830104c26d813790850c299ac93f51">WebUnidadPacienteConsumirSolicitudAdvertencia3s</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keywordtype">bool</span> <a class="code hl_function" href="web__unidad__paciente_8h.html#a738a228b1ce326dc905b786b96bd5436">WebUnidadPacienteConsumirSolicitudVozAyuda</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">#endif </span><span class="comment">/* WEB_UNIDAD_PACIENTE_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html"><div class="ttname"><a href="structestado__unidad__paciente__t.html">estado_unidad_paciente_t</a></div><div class="ttdoc">Estructura integral de datos del sistema publicada hacia el Dashboard Web cada 200 ms por TaskDisplay...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00161">web_unidad_paciente.h:161</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a071c10c7c44cd2170b56846f54abbc8a"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a071c10c7c44cd2170b56846f54abbc8a">estado_unidad_paciente_t::temp_max_c</a></div><div class="ttdeci">int16_t temp_max_c</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00182">web_unidad_paciente.h:182</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a155e403ed7bdc088d94f086f239711be"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a155e403ed7bdc088d94f086f239711be">estado_unidad_paciente_t::modo_sim_local</a></div><div class="ttdeci">uint8_t modo_sim_local</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00166">web_unidad_paciente.h:166</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a2475f9b29535a25bf4b44bc29a738985"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a2475f9b29535a25bf4b44bc29a738985">estado_unidad_paciente_t::mq3_segundos_bajo</a></div><div class="ttdeci">uint32_t mq3_segundos_bajo</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00171">web_unidad_paciente.h:171</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a33ac274581418205bfea84e6bca28905"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a33ac274581418205bfea84e6bca28905">estado_unidad_paciente_t::pir_contador_eventos</a></div><div class="ttdeci">uint32_t pir_contador_eventos</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00173">web_unidad_paciente.h:173</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a3cdd121c6553041bd8b55da5eb4cfd09"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a3cdd121c6553041bd8b55da5eb4cfd09">estado_unidad_paciente_t::sd_registros_totales</a></div><div class="ttdeci">uint32_t sd_registros_totales</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00177">web_unidad_paciente.h:177</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a40258bb299315a220435b6b7d21b454e"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a40258bb299315a220435b6b7d21b454e">estado_unidad_paciente_t::fc_bpm</a></div><div class="ttdeci">uint16_t fc_bpm</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00162">web_unidad_paciente.h:162</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a41f888629a05b6b6eaa5797bec7bea8a"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a41f888629a05b6b6eaa5797bec7bea8a">estado_unidad_paciente_t::alerta_fc</a></div><div class="ttdeci">bool alerta_fc</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00164">web_unidad_paciente.h:164</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a5de44c2a7826689bec860d20386b9553"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a5de44c2a7826689bec860d20386b9553">estado_unidad_paciente_t::hum_min_pct</a></div><div class="ttdeci">uint16_t hum_min_pct</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00183">web_unidad_paciente.h:183</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a60622f67fd08f363012448ee3218b2e5"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a60622f67fd08f363012448ee3218b2e5">estado_unidad_paciente_t::mq3_alcohol_detectado</a></div><div class="ttdeci">bool mq3_alcohol_detectado</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00170">web_unidad_paciente.h:170</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a60ea4a5bc2b3dca005260774118d50ba"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a60ea4a5bc2b3dca005260774118d50ba">estado_unidad_paciente_t::pir_movimiento</a></div><div class="ttdeci">bool pir_movimiento</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00172">web_unidad_paciente.h:172</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a723714d06a32d6cdfbc1db4884bae02e"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a723714d06a32d6cdfbc1db4884bae02e">estado_unidad_paciente_t::temp_min_c</a></div><div class="ttdeci">int16_t temp_min_c</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00181">web_unidad_paciente.h:181</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a8b8996298a2fd3bd650940bbec9352f8"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a8b8996298a2fd3bd650940bbec9352f8">estado_unidad_paciente_t::paciente_requiere_atencion</a></div><div class="ttdeci">bool paciente_requiere_atencion</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00180">web_unidad_paciente.h:180</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_a98acd259101bc02f0260f1b3ade49ead"><div class="ttname"><a href="structestado__unidad__paciente__t.html#a98acd259101bc02f0260f1b3ade49ead">estado_unidad_paciente_t::alerta_fr</a></div><div class="ttdeci">bool alerta_fr</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00165">web_unidad_paciente.h:165</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ab23ce23cbccdec8b5ccf4fa2092244bd"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">estado_unidad_paciente_t::fr_rpm</a></div><div class="ttdeci">uint16_t fr_rpm</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00163">web_unidad_paciente.h:163</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_abc2cf335f2f3c292d82a7d269bfe0507"><div class="ttname"><a href="structestado__unidad__paciente__t.html#abc2cf335f2f3c292d82a7d269bfe0507">estado_unidad_paciente_t::alertas_fifo_cant</a></div><div class="ttdeci">uint8_t alertas_fifo_cant</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00174">web_unidad_paciente.h:174</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ac51c396e45b5c0621de06b269951e46b"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ac51c396e45b5c0621de06b269951e46b">estado_unidad_paciente_t::hum_max_pct</a></div><div class="ttdeci">uint16_t hum_max_pct</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00184">web_unidad_paciente.h:184</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ad8ba7fef88e4c0bc3800566ca8c8d9e6"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ad8ba7fef88e4c0bc3800566ca8c8d9e6">estado_unidad_paciente_t::mq3_precalentado</a></div><div class="ttdeci">bool mq3_precalentado</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00169">web_unidad_paciente.h:169</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_adbff86445a1dc1b41643eb26b0683f75"><div class="ttname"><a href="structestado__unidad__paciente__t.html#adbff86445a1dc1b41643eb26b0683f75">estado_unidad_paciente_t::temp_decimas_c</a></div><div class="ttdeci">int16_t temp_decimas_c</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00167">web_unidad_paciente.h:167</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_ae997555196ed24e28d395d2626e87328"><div class="ttname"><a href="structestado__unidad__paciente__t.html#ae997555196ed24e28d395d2626e87328">estado_unidad_paciente_t::sd_montada</a></div><div class="ttdeci">bool sd_montada</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00176">web_unidad_paciente.h:176</a></div></div>
+<div class="ttc" id="astructestado__unidad__paciente__t_html_afb4d944c56251217dc37c5090a64b935"><div class="ttname"><a href="structestado__unidad__paciente__t.html#afb4d944c56251217dc37c5090a64b935">estado_unidad_paciente_t::hum_decimas_pct</a></div><div class="ttdeci">uint16_t hum_decimas_pct</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8h_source.html#l00168">web_unidad_paciente.h:168</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a1975bdb3b46a94898c5051408a1862a9"><div class="ttname"><a href="web__unidad__paciente_8h.html#a1975bdb3b46a94898c5051408a1862a9">WebUnidadPacienteActualizarDatos</a></div><div class="ttdeci">void WebUnidadPacienteActualizarDatos(const estado_unidad_paciente_t *nuevo_estado)</div><div class="ttdoc">Actualiza de forma atómica (mediante spinlock de sección crítica) la estructura interna de telemetría...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00722">web_unidad_paciente.c:722</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a738a228b1ce326dc905b786b96bd5436"><div class="ttname"><a href="web__unidad__paciente_8h.html#a738a228b1ce326dc905b786b96bd5436">WebUnidadPacienteConsumirSolicitudVozAyuda</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudVozAyuda(void)</div><div class="ttdoc">Verifica y consume atómicamente la solicitud de reproducción del mensaje de voz LPCM (&quot;Ayuda en camin...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00792">web_unidad_paciente.c:792</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a865db6c1a2b8c1fcba620b61ac0779d1"><div class="ttname"><a href="web__unidad__paciente_8h.html#a865db6c1a2b8c1fcba620b61ac0779d1">WebUnidadPacienteObtenerTextoFila0</a></div><div class="ttdeci">void WebUnidadPacienteObtenerTextoFila0(char *buffer_17_bytes)</div><div class="ttdoc">Obtiene de forma segura el texto normalizado de hasta 16 caracteres para la Fila 0 del LCD en condici...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00734">web_unidad_paciente.c:734</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_a9caf0810e72cc89f00234f94041588d2"><div class="ttname"><a href="web__unidad__paciente_8h.html#a9caf0810e72cc89f00234f94041588d2">WebUnidadPacienteInit</a></div><div class="ttdeci">void WebUnidadPacienteInit(void)</div><div class="ttdoc">Inicializa la partición Flash NVS, la pila TCP/IP lwIP, el bucle de eventos, el cliente Wi-Fi en Modo...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00671">web_unidad_paciente.c:671</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_ae3830104c26d813790850c299ac93f51"><div class="ttname"><a href="web__unidad__paciente_8h.html#ae3830104c26d813790850c299ac93f51">WebUnidadPacienteConsumirSolicitudAdvertencia3s</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudAdvertencia3s(void)</div><div class="ttdoc">Verifica y consume atómicamente la bandera activada por el botón web &quot;Tono Advertencia (3s)&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00777">web_unidad_paciente.c:777</a></div></div>
+<div class="ttc" id="aweb__unidad__paciente_8h_html_afe624ede23b6e7f2b8ca75c2f4bf81e9"><div class="ttname"><a href="web__unidad__paciente_8h.html#afe624ede23b6e7f2b8ca75c2f4bf81e9">WebUnidadPacienteConsumirSolicitudClearAlert</a></div><div class="ttdeci">bool WebUnidadPacienteConsumirSolicitudClearAlert(void)</div><div class="ttdoc">Verifica y consume atómicamente la bandera activada por el botón web &quot;Desactivar Alerta más Antigua (...</div><div class="ttdef"><b>Definition:</b> <a href="web__unidad__paciente_8c_source.html#l00762">web_unidad_paciente.c:762</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="web__unidad__paciente_8h.html">web_unidad_paciente.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

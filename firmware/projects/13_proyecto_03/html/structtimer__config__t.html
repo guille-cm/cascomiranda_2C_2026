@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Referencia de la estructura timer_config_t</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Referencia de la Estructura timer_config_t</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('structtimer__config__t.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('structtimer__config__t.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,48 +87,41 @@ $(function(){initNavTree('structtimer__config__t.html',''); initResizable(true);
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Campos de datos</a>  </div>
-  <div class="headertitle"><div class="title">Referencia de la estructura timer_config_t<div class="ingroups"><a class="el" href="group___drivers___programable.html">Drivers Programable</a> &raquo; <a class="el" href="group___drivers___microcontroller.html">Drivers microcontroller</a> &raquo; <a class="el" href="group___timer.html">Timer</a></div></div></div>
+  <div class="headertitle"><div class="title">Referencia de la Estructura timer_config_t<div class="ingroups"><a class="el" href="group___drivers___programable.html">Drivers Programable</a> &raquo; <a class="el" href="group___drivers___microcontroller.html">Drivers microcontroller</a> &raquo; <a class="el" href="group___timer.html">Timer</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Timer configuration struct.  
- <a href="#details">Más...</a></p>
+ <a href="structtimer__config__t.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Campos de datos</h2></td></tr>
-<tr class="memitem:ab83043b8038c5e630f6a2a05ea007e49" id="r_ab83043b8038c5e630f6a2a05ea007e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___timer.html#ga5b93c89e9ca8359fa618753610f77a8d">timer_mcu_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab83043b8038c5e630f6a2a05ea007e49">timer</a></td></tr>
+<tr class="memitem:ab83043b8038c5e630f6a2a05ea007e49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___timer.html#ga5b93c89e9ca8359fa618753610f77a8d">timer_mcu_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtimer__config__t.html#ab83043b8038c5e630f6a2a05ea007e49">timer</a></td></tr>
 <tr class="separator:ab83043b8038c5e630f6a2a05ea007e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81b43df06332b4fef558297592bb7ff1" id="r_a81b43df06332b4fef558297592bb7ff1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b43df06332b4fef558297592bb7ff1">period</a></td></tr>
+<tr class="memitem:a81b43df06332b4fef558297592bb7ff1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtimer__config__t.html#a81b43df06332b4fef558297592bb7ff1">period</a></td></tr>
 <tr class="separator:a81b43df06332b4fef558297592bb7ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a672985730d2c0cf9105559adc9759a3a" id="r_a672985730d2c0cf9105559adc9759a3a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a672985730d2c0cf9105559adc9759a3a">func_p</a></td></tr>
+<tr class="memitem:a672985730d2c0cf9105559adc9759a3a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtimer__config__t.html#a672985730d2c0cf9105559adc9759a3a">func_p</a></td></tr>
 <tr class="separator:a672985730d2c0cf9105559adc9759a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad5f5715cb799d57b86e98fe3bf701e1" id="r_aad5f5715cb799d57b86e98fe3bf701e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5f5715cb799d57b86e98fe3bf701e1">param_p</a></td></tr>
+<tr class="memitem:aad5f5715cb799d57b86e98fe3bf701e1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtimer__config__t.html#aad5f5715cb799d57b86e98fe3bf701e1">param_p</a></td></tr>
 <tr class="separator:aad5f5715cb799d57b86e98fe3bf701e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Timer configuration struct. </p>
+<div class="textblock"><p >Timer configuration struct. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="timer__mcu_8h_source.html#l00039">39</a> del archivo <a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>.</p>
-</div><h2 class="groupheader">Documentación de campos</h2>
+</div><h2 class="groupheader">Documentación de los campos</h2>
 <a id="a672985730d2c0cf9105559adc9759a3a" name="a672985730d2c0cf9105559adc9759a3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a672985730d2c0cf9105559adc9759a3a">&#9670;&#160;</a></span>func_p</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a672985730d2c0cf9105559adc9759a3a">&#9670;&nbsp;</a></span>func_p</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +131,7 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to callback function to call periodically </p>
+<p >Pointer to callback function to call periodically </p>
 
 <p class="definition">Definición en la línea <a class="el" href="timer__mcu_8h_source.html#l00042">42</a> del archivo <a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>.</p>
 
@@ -152,7 +140,7 @@ Campos de datos</h2></td></tr>
 </div>
 </div>
 <a id="aad5f5715cb799d57b86e98fe3bf701e1" name="aad5f5715cb799d57b86e98fe3bf701e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad5f5715cb799d57b86e98fe3bf701e1">&#9670;&#160;</a></span>param_p</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5f5715cb799d57b86e98fe3bf701e1">&#9670;&nbsp;</a></span>param_p</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +150,7 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to callback function parameter </p>
+<p >Pointer to callback function parameter </p>
 
 <p class="definition">Definición en la línea <a class="el" href="timer__mcu_8h_source.html#l00043">43</a> del archivo <a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>.</p>
 
@@ -171,7 +159,7 @@ Campos de datos</h2></td></tr>
 </div>
 </div>
 <a id="a81b43df06332b4fef558297592bb7ff1" name="a81b43df06332b4fef558297592bb7ff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81b43df06332b4fef558297592bb7ff1">&#9670;&#160;</a></span>period</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b43df06332b4fef558297592bb7ff1">&#9670;&nbsp;</a></span>period</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,7 +169,7 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Period (in us) </p>
+<p >Period (in us) </p>
 
 <p class="definition">Definición en la línea <a class="el" href="timer__mcu_8h_source.html#l00041">41</a> del archivo <a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>.</p>
 
@@ -190,7 +178,7 @@ Campos de datos</h2></td></tr>
 </div>
 </div>
 <a id="ab83043b8038c5e630f6a2a05ea007e49" name="ab83043b8038c5e630f6a2a05ea007e49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab83043b8038c5e630f6a2a05ea007e49">&#9670;&#160;</a></span>timer</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab83043b8038c5e630f6a2a05ea007e49">&#9670;&nbsp;</a></span>timer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +188,7 @@ Campos de datos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Selected timer </p>
+<p >Selected timer </p>
 
 <p class="definition">Definición en la línea <a class="el" href="timer__mcu_8h_source.html#l00040">40</a> del archivo <a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>.</p>
 
@@ -208,7 +196,7 @@ Campos de datos</h2></td></tr>
 
 </div>
 </div>
-<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<hr/>La documentación para esta estructura fue generada a partir del siguiente fichero:<ul>
 <li>D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/microcontroller/inc/<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -217,7 +205,7 @@ Campos de datos</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structtimer__config__t.html">timer_config_t</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

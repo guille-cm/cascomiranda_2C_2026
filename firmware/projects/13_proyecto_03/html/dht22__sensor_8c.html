@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/dht22_sensor.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dht22__sensor_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo dht22_sensor.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación del driver Single-Wire por interrupción de flancos para el sensor DHT22 (AM2302).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="dht22__sensor_8h_source.html">dht22_sensor.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;driver/gpio.h&quot;</code><br />
+<code>#include &quot;esp_timer.h&quot;</code><br />
+<code>#include &quot;esp_rom_sys.h&quot;</code><br />
+<code>#include &quot;esp_attr.h&quot;</code><br />
+</div>
+<p><a href="dht22__sensor_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a153f0f172c370bc863737d884dc8b326"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22__sensor_8c.html#a153f0f172c370bc863737d884dc8b326">DHT22_START_LOW_US</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:a153f0f172c370bc863737d884dc8b326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa1fc95907ea484bdaa24c35ec7b110"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22__sensor_8c.html#aefa1fc95907ea484bdaa24c35ec7b110">DHT22_MAX_EDGES</a>&#160;&#160;&#160;44</td></tr>
+<tr class="separator:aefa1fc95907ea484bdaa24c35ec7b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dbfc2bf74c8b05b9ab8b2026521ade5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22__sensor_8c.html#a4dbfc2bf74c8b05b9ab8b2026521ade5">DHT22_PERIOD_THRESHOLD_US</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a4dbfc2bf74c8b05b9ab8b2026521ade5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a483671b40d650123b16d882cc26801fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22__sensor_8c.html#a483671b40d650123b16d882cc26801fd">Dht22Init</a> (<a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin)</td></tr>
+<tr class="memdesc:a483671b40d650123b16d882cc26801fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el puerto GPIO_9 e instala el servicio de interrupción por flanco descendente.  <a href="dht22__sensor_8c.html#a483671b40d650123b16d882cc26801fd">Más...</a><br /></td></tr>
+<tr class="separator:a483671b40d650123b16d882cc26801fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae027adaeda4a9222c80dd912953a715c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dht22__sensor_8c.html#ae027adaeda4a9222c80dd912953a715c">Dht22Read</a> (<a class="el" href="structdht22__data__t.html">dht22_data_t</a> *out_data)</td></tr>
+<tr class="memdesc:ae027adaeda4a9222c80dd912953a715c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispara la secuencia de inicio, captura los flancos en segundo plano y decodifica los datos.  <a href="dht22__sensor_8c.html#ae027adaeda4a9222c80dd912953a715c">Más...</a><br /></td></tr>
+<tr class="separator:ae027adaeda4a9222c80dd912953a715c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Implementación del driver Single-Wire por interrupción de flancos para el sensor DHT22 (AM2302). </p>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-08   </td><td class="markdownTableBodyLeft">Decodificación de 16 bits por variable con resolución de 0.1   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="aefa1fc95907ea484bdaa24c35ec7b110" name="aefa1fc95907ea484bdaa24c35ec7b110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa1fc95907ea484bdaa24c35ec7b110">&#9670;&nbsp;</a></span>DHT22_MAX_EDGES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DHT22_MAX_EDGES&#160;&#160;&#160;44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Capacidad del buffer: 1 ACK + 40 bits de datos + margen </p>
+
+<p class="definition">Definición en la línea <a class="el" href="dht22__sensor_8c_source.html#l00027">27</a> del archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+
+</div>
+</div>
+<a id="a4dbfc2bf74c8b05b9ab8b2026521ade5" name="a4dbfc2bf74c8b05b9ab8b2026521ade5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbfc2bf74c8b05b9ab8b2026521ade5">&#9670;&nbsp;</a></span>DHT22_PERIOD_THRESHOLD_US</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DHT22_PERIOD_THRESHOLD_US&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Umbral discriminador: bit '0' (~76 us) vs bit '1' (~120 us) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="dht22__sensor_8c_source.html#l00028">28</a> del archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+
+</div>
+</div>
+<a id="a153f0f172c370bc863737d884dc8b326" name="a153f0f172c370bc863737d884dc8b326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153f0f172c370bc863737d884dc8b326">&#9670;&nbsp;</a></span>DHT22_START_LOW_US</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DHT22_START_LOW_US&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Duración del pulso de arranque del maestro: 2.0 ms </p>
+
+<p class="definition">Definición en la línea <a class="el" href="dht22__sensor_8c_source.html#l00026">26</a> del archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="a483671b40d650123b16d882cc26801fd" name="a483671b40d650123b16d882cc26801fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a483671b40d650123b16d882cc26801fd">&#9670;&nbsp;</a></span>Dht22Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dht22Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el puerto GPIO_9 e instala el servicio de interrupción por flanco descendente. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pin</td><td>Pin GPIO conectado a la línea DATA del sensor (por defecto GPIO_9). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="dht22__sensor_8c_source.html#l00059">59</a> del archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="ae027adaeda4a9222c80dd912953a715c" name="ae027adaeda4a9222c80dd912953a715c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae027adaeda4a9222c80dd912953a715c">&#9670;&nbsp;</a></span>Dht22Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dht22Read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdht22__data__t.html">dht22_data_t</a> *&#160;</td>
+          <td class="paramname"><em>out_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispara la secuencia de inicio, captura los flancos en segundo plano y decodifica los datos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_data</td><td>Puntero a la estructura donde se almacenarán las variables físicas calculadas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la trama de 40 bits fue íntegra y el checksum coincidió; false en caso contrario. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="dht22__sensor_8c_source.html#l00082">82</a> del archivo <a class="el" href="dht22__sensor_8c_source.html">dht22_sensor.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="dht22__sensor_8c.html">dht22_sensor.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

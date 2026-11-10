@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: PWM</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('group___p_w_m.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('group___p_w_m.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('group___p_w_m.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -115,57 +103,57 @@ $(function(){initNavTree('group___p_w_m.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 typedefs</h2></td></tr>
-<tr class="memitem:ga1d363970f0a2cf766d46868c4e88c41a" id="r_ga1d363970f0a2cf766d46868c4e88c41a"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td></tr>
-<tr class="memdesc:ga1d363970f0a2cf766d46868c4e88c41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM driver for ESP-EDU board.  <br /></td></tr>
+<tr class="memitem:ga1d363970f0a2cf766d46868c4e88c41a"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group___p_w_m.html#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td></tr>
+<tr class="memdesc:ga1d363970f0a2cf766d46868c4e88c41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM driver for ESP-EDU board.  <a href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">Más...</a><br /></td></tr>
 <tr class="separator:ga1d363970f0a2cf766d46868c4e88c41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumeraciones</h2></td></tr>
-<tr class="memitem:ga5800a2bada92ba802e1cbdb0307f0c7b" id="r_ga5800a2bada92ba802e1cbdb0307f0c7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a> { <a class="el" href="#gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740">PWM_0</a>
-, <a class="el" href="#gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703">PWM_1</a>
-, <a class="el" href="#gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6">PWM_2</a>
-, <a class="el" href="#gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542">PWM_3</a>
+<tr class="memitem:ga5800a2bada92ba802e1cbdb0307f0c7b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a> { <a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740">PWM_0</a>
+, <a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703">PWM_1</a>
+, <a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6">PWM_2</a>
+, <a class="el" href="group___p_w_m.html#gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542">PWM_3</a>
  }</td></tr>
-<tr class="memdesc:ga5800a2bada92ba802e1cbdb0307f0c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM driver for ESP-EDU board.  <a href="#ga5800a2bada92ba802e1cbdb0307f0c7b">Más...</a><br /></td></tr>
+<tr class="memdesc:ga5800a2bada92ba802e1cbdb0307f0c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM driver for ESP-EDU board.  <a href="group___p_w_m.html#ga5800a2bada92ba802e1cbdb0307f0c7b">Más...</a><br /></td></tr>
 <tr class="separator:ga5800a2bada92ba802e1cbdb0307f0c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:ga50ba8fd6442b4799b8fb9b2e2b859bbd" id="r_ga50ba8fd6442b4799b8fb9b2e2b859bbd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga50ba8fd6442b4799b8fb9b2e2b859bbd">PWMInit</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, <a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> gpio, uint16_t freq)</td></tr>
-<tr class="memdesc:ga50ba8fd6442b4799b8fb9b2e2b859bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single PWM output inicialization in selected GPIO.  <br /></td></tr>
+<tr class="memitem:ga50ba8fd6442b4799b8fb9b2e2b859bbd"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga50ba8fd6442b4799b8fb9b2e2b859bbd">PWMInit</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, <a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> gpio, uint16_t freq)</td></tr>
+<tr class="memdesc:ga50ba8fd6442b4799b8fb9b2e2b859bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single PWM output inicialization in selected GPIO.  <a href="group___p_w_m.html#ga50ba8fd6442b4799b8fb9b2e2b859bbd">Más...</a><br /></td></tr>
 <tr class="separator:ga50ba8fd6442b4799b8fb9b2e2b859bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6fe31ebdc570ccdd776a7d4178566062" id="r_ga6fe31ebdc570ccdd776a7d4178566062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6fe31ebdc570ccdd776a7d4178566062">PWMOn</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
-<tr class="memdesc:ga6fe31ebdc570ccdd776a7d4178566062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume PWM output.  <br /></td></tr>
+<tr class="memitem:ga6fe31ebdc570ccdd776a7d4178566062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga6fe31ebdc570ccdd776a7d4178566062">PWMOn</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
+<tr class="memdesc:ga6fe31ebdc570ccdd776a7d4178566062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume PWM output.  <a href="group___p_w_m.html#ga6fe31ebdc570ccdd776a7d4178566062">Más...</a><br /></td></tr>
 <tr class="separator:ga6fe31ebdc570ccdd776a7d4178566062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43660d2e059ccf15efea7fff6a5fbfe4" id="r_ga43660d2e059ccf15efea7fff6a5fbfe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga43660d2e059ccf15efea7fff6a5fbfe4">PWMOff</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
-<tr class="memdesc:ga43660d2e059ccf15efea7fff6a5fbfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause PWM output.  <br /></td></tr>
+<tr class="memitem:ga43660d2e059ccf15efea7fff6a5fbfe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga43660d2e059ccf15efea7fff6a5fbfe4">PWMOff</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
+<tr class="memdesc:ga43660d2e059ccf15efea7fff6a5fbfe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause PWM output.  <a href="group___p_w_m.html#ga43660d2e059ccf15efea7fff6a5fbfe4">Más...</a><br /></td></tr>
 <tr class="separator:ga43660d2e059ccf15efea7fff6a5fbfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga427d00e7908ad5bc30e8a71dd07159ba" id="r_ga427d00e7908ad5bc30e8a71dd07159ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga427d00e7908ad5bc30e8a71dd07159ba">PWMSetDutyCycle</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, uint8_t duty_cycle)</td></tr>
-<tr class="memdesc:ga427d00e7908ad5bc30e8a71dd07159ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change PWM duty cycle of an PWM output.  <br /></td></tr>
+<tr class="memitem:ga427d00e7908ad5bc30e8a71dd07159ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga427d00e7908ad5bc30e8a71dd07159ba">PWMSetDutyCycle</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, uint8_t duty_cycle)</td></tr>
+<tr class="memdesc:ga427d00e7908ad5bc30e8a71dd07159ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change PWM duty cycle of an PWM output.  <a href="group___p_w_m.html#ga427d00e7908ad5bc30e8a71dd07159ba">Más...</a><br /></td></tr>
 <tr class="separator:ga427d00e7908ad5bc30e8a71dd07159ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga223ccf708bb17d7bfb4ffb77d57c0501" id="r_ga223ccf708bb17d7bfb4ffb77d57c0501"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga223ccf708bb17d7bfb4ffb77d57c0501">PWMSetFreq</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, uint32_t freq)</td></tr>
-<tr class="memdesc:ga223ccf708bb17d7bfb4ffb77d57c0501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change frequency of an PWM output.  <br /></td></tr>
+<tr class="memitem:ga223ccf708bb17d7bfb4ffb77d57c0501"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#ga223ccf708bb17d7bfb4ffb77d57c0501">PWMSetFreq</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out, uint32_t freq)</td></tr>
+<tr class="memdesc:ga223ccf708bb17d7bfb4ffb77d57c0501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change frequency of an PWM output.  <a href="group___p_w_m.html#ga223ccf708bb17d7bfb4ffb77d57c0501">Más...</a><br /></td></tr>
 <tr class="separator:ga223ccf708bb17d7bfb4ffb77d57c0501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad2556985508ded35e34bccc1e974fe6b" id="r_gad2556985508ded35e34bccc1e974fe6b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad2556985508ded35e34bccc1e974fe6b">PWMDeinit</a> (<a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
-<tr class="memdesc:gad2556985508ded35e34bccc1e974fe6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM output de-inicialization.  <br /></td></tr>
+<tr class="memitem:gad2556985508ded35e34bccc1e974fe6b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_w_m.html#gad2556985508ded35e34bccc1e974fe6b">PWMDeinit</a> (<a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a> out)</td></tr>
+<tr class="memdesc:gad2556985508ded35e34bccc1e974fe6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM output de-inicialization.  <a href="group___p_w_m.html#gad2556985508ded35e34bccc1e974fe6b">Más...</a><br /></td></tr>
 <tr class="separator:gad2556985508ded35e34bccc1e974fe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<h2 class="groupheader">Documentación de «typedef»</h2>
+<h2 class="groupheader">Documentación de los 'typedefs'</h2>
 <a id="ga1d363970f0a2cf766d46868c4e88c41a" name="ga1d363970f0a2cf766d46868c4e88c41a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1d363970f0a2cf766d46868c4e88c41a">&#9670;&#160;</a></span>pwm_out_t</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d363970f0a2cf766d46868c4e88c41a">&#9670;&nbsp;</a></span>pwm_out_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a> <a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>
+          <td class="memname">typedef enum <a class="el" href="group___p_w_m.html#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a> <a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>PWM driver for ESP-EDU board. </p>
-<p>This driver provide functions to generate PWM signals</p>
+<p >This driver provide functions to generate PWM signals</p>
 <dl class="section note"><dt>Nota</dt><dd>It can setup up to 4 PWM outputs, with independet duty cycle and frequency configuration</dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Albano Peñalva</dd></dl>
 <h1><a class="anchor" id="changelog"></a>
@@ -179,21 +167,21 @@ Changelog</h1>
 
 </div>
 </div>
-<h2 class="groupheader">Documentación de enumeraciones</h2>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
 <a id="ga5800a2bada92ba802e1cbdb0307f0c7b" name="ga5800a2bada92ba802e1cbdb0307f0c7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5800a2bada92ba802e1cbdb0307f0c7b">&#9670;&#160;</a></span>pwm_out</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5800a2bada92ba802e1cbdb0307f0c7b">&#9670;&nbsp;</a></span>pwm_out</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a></td>
+          <td class="memname">enum <a class="el" href="group___p_w_m.html#ga5800a2bada92ba802e1cbdb0307f0c7b">pwm_out</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>PWM driver for ESP-EDU board. </p>
-<p>This driver provide functions to generate PWM signals</p>
+<p >This driver provide functions to generate PWM signals</p>
 <dl class="section note"><dt>Nota</dt><dd>It can setup up to 4 PWM outputs, with independet duty cycle and frequency configuration</dd></dl>
 <dl class="section author"><dt>Autor</dt><dd>Albano Peñalva</dd></dl>
 <h1><a class="anchor" id="changelog"></a>
@@ -205,13 +193,13 @@ Changelog</h1>
 <td class="markdownTableBodyCenter">23/01/2024   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
 </table>
 <table class="fieldtable">
-<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740" name="gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740"></a>PWM_0&#160;</td><td class="fielddoc"><p>PWM output 1 </p>
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740" name="gga5800a2bada92ba802e1cbdb0307f0c7ba857e21e20c27df92dec4574fcddfd740"></a>PWM_0&#160;</td><td class="fielddoc"><p >PWM output 1 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703" name="gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703"></a>PWM_1&#160;</td><td class="fielddoc"><p>PWM output 2 </p>
+<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703" name="gga5800a2bada92ba802e1cbdb0307f0c7baea3b5b1dcb8647c430bc9391799f4703"></a>PWM_1&#160;</td><td class="fielddoc"><p >PWM output 2 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6" name="gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6"></a>PWM_2&#160;</td><td class="fielddoc"><p>PWM output 3 </p>
+<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6" name="gga5800a2bada92ba802e1cbdb0307f0c7bab8296af41c4fdd6fd2dc62d6c761bdf6"></a>PWM_2&#160;</td><td class="fielddoc"><p >PWM output 3 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542" name="gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542"></a>PWM_3&#160;</td><td class="fielddoc"><p>PWM output 4 </p>
+<tr><td class="fieldname"><a id="gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542" name="gga5800a2bada92ba802e1cbdb0307f0c7ba44646d1313a5c911c1500447f531f542"></a>PWM_3&#160;</td><td class="fielddoc"><p >PWM output 4 </p>
 </td></tr>
 </table>
 
@@ -219,9 +207,9 @@ Changelog</h1>
 
 </div>
 </div>
-<h2 class="groupheader">Documentación de funciones</h2>
+<h2 class="groupheader">Documentación de las funciones</h2>
 <a id="gad2556985508ded35e34bccc1e974fe6b" name="gad2556985508ded35e34bccc1e974fe6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2556985508ded35e34bccc1e974fe6b">&#9670;&#160;</a></span>PWMDeinit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2556985508ded35e34bccc1e974fe6b">&#9670;&nbsp;</a></span>PWMDeinit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +217,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t PWMDeinit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -251,7 +240,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga50ba8fd6442b4799b8fb9b2e2b859bbd" name="ga50ba8fd6442b4799b8fb9b2e2b859bbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga50ba8fd6442b4799b8fb9b2e2b859bbd">&#9670;&#160;</a></span>PWMInit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50ba8fd6442b4799b8fb9b2e2b859bbd">&#9670;&nbsp;</a></span>PWMInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,17 +248,25 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t PWMInit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a></td>          <td class="paramname"><span class="paramname"><em>gpio</em></span>, </td>
+          <td class="paramtype"><a class="el" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a>&#160;</td>
+          <td class="paramname"><em>gpio</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>freq</em></span>&#160;)</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>freq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -288,14 +285,14 @@ Changelog</h1>
 
 <p class="definition">Definición en la línea <a class="el" href="pwm__mcu_8c_source.html#l00039">39</a> del archivo <a class="el" href="pwm__mcu_8c_source.html">pwm_mcu.c</a>.</p>
 
-<p class="reference">Hace referencia a <a class="el" href="pwm__mcu_8h_source.html#l00034">PWM_0</a>, <a class="el" href="pwm__mcu_8h_source.html#l00035">PWM_1</a>, <a class="el" href="pwm__mcu_8h_source.html#l00036">PWM_2</a> y <a class="el" href="pwm__mcu_8h_source.html#l00037">PWM_3</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="pwm__mcu_8h_source.html#l00034">PWM_0</a>.</p>
 
 <p class="reference">Referenciado por <a class="el" href="buzzer_8c_source.html#l00043">BuzzerInit()</a>, <a class="el" href="l293_8c_source.html#l00040">L293Init()</a> y <a class="el" href="servo__sg90_8c_source.html#l00033">ServoInit()</a>.</p>
 
 </div>
 </div>
 <a id="ga43660d2e059ccf15efea7fff6a5fbfe4" name="ga43660d2e059ccf15efea7fff6a5fbfe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga43660d2e059ccf15efea7fff6a5fbfe4">&#9670;&#160;</a></span>PWMOff()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43660d2e059ccf15efea7fff6a5fbfe4">&#9670;&nbsp;</a></span>PWMOff()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +300,8 @@ Changelog</h1>
         <tr>
           <td class="memname">void PWMOff </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -326,7 +324,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga6fe31ebdc570ccdd776a7d4178566062" name="ga6fe31ebdc570ccdd776a7d4178566062"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6fe31ebdc570ccdd776a7d4178566062">&#9670;&#160;</a></span>PWMOn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6fe31ebdc570ccdd776a7d4178566062">&#9670;&nbsp;</a></span>PWMOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +332,8 @@ Changelog</h1>
         <tr>
           <td class="memname">void PWMOn </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -357,7 +356,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga427d00e7908ad5bc30e8a71dd07159ba" name="ga427d00e7908ad5bc30e8a71dd07159ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga427d00e7908ad5bc30e8a71dd07159ba">&#9670;&#160;</a></span>PWMSetDutyCycle()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga427d00e7908ad5bc30e8a71dd07159ba">&#9670;&nbsp;</a></span>PWMSetDutyCycle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,12 +364,19 @@ Changelog</h1>
         <tr>
           <td class="memname">void PWMSetDutyCycle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>duty_cycle</em></span>&#160;)</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>duty_cycle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -393,7 +399,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga223ccf708bb17d7bfb4ffb77d57c0501" name="ga223ccf708bb17d7bfb4ffb77d57c0501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga223ccf708bb17d7bfb4ffb77d57c0501">&#9670;&#160;</a></span>PWMSetFreq()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga223ccf708bb17d7bfb4ffb77d57c0501">&#9670;&nbsp;</a></span>PWMSetFreq()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,12 +407,19 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t PWMSetFreq </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a></td>          <td class="paramname"><span class="paramname"><em>out</em></span>, </td>
+          <td class="paramtype"><a class="el" href="group___p_w_m.html#ga1d363970f0a2cf766d46868c4e88c41a">pwm_out_t</a>&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>freq</em></span>&#160;)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>freq</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -434,7 +447,7 @@ Changelog</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

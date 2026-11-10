@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: Globales</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('globals_defs_p.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('globals_defs_p.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,26 +87,21 @@ $(function(){initNavTree('globals_defs_p.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="contents">
-<div class="textblock">Lista de todas las macros con enlaces a los archivos a los que corresponden:</div>
+&#160;
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>PAGE_ADDR_SET&#160;:&#160;<a class="el" href="ili9341_8c.html#a7fa17eb97440c73b81ca87407c164aee">ili9341.c</a></li>
 <li>PAYLOAD_SIZE&#160;:&#160;<a class="el" href="ble__mcu_8c.html#a3fb2dea7d964f6ed95dfac2897c4001d">ble_mcu.c</a></li>
 <li>PERCENT&#160;:&#160;<a class="el" href="servo__sg90_8c.html#a9b321fc8474a410f24deb460c4fa014e">servo_sg90.c</a></li>
 <li>PERIOD_MS&#160;:&#160;<a class="el" href="servo__sg90_8c.html#a5fcd914889df46acf623f7d9a81654d7">servo_sg90.c</a></li>
+<li>PERIODO_CICLO_LCD_MS&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#aea9ff1807c0cab47f882f47c0c25cf21">monitor_unidad_paciente.c</a></li>
+<li>PERIODO_TAREA_AMB_MS&#160;:&#160;<a class="el" href="monitor__unidad__paciente_8c.html#a212bc6a58d03414f3b150f81914fe9cc">monitor_unidad_paciente.c</a></li>
 <li>pgm_read_byte&#160;:&#160;<a class="el" href="group___m_p_u6050.html#ga48c60b057902adf805797f183286728d">mpu6050.h</a></li>
 <li>PIN_NUM_CLK&#160;:&#160;<a class="el" href="spi__mcu_8c.html#a756bcaa6e44d1879623a058849c66fbb">spi_mcu.c</a></li>
 <li>PIN_NUM_CS1&#160;:&#160;<a class="el" href="spi__mcu_8c.html#aa2f6abf259e3a90857564314975b6eeb">spi_mcu.c</a></li>
@@ -140,7 +130,7 @@ $(function(){initNavTree('globals_defs_p.html',''); initResizable(true); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

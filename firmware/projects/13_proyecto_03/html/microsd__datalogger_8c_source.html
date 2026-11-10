@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/microsd_datalogger.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('microsd__datalogger_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">microsd_datalogger.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="microsd__datalogger_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="microsd__datalogger_8h.html">microsd_datalogger.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;sys/time.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;freertos/FreeRTOS.h&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;freertos/semphr.h&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;driver/gpio.h&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;driver/spi_common.h&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;driver/sdspi_host.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;esp_vfs_fat.h&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;sdmmc_cmd.h&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/*==================[macros and definitions]=================================*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="microsd__datalogger_8c.html#aef4b5e5e0e34150f2e99097c567ce310">   40</a></span><span class="preprocessor">#define SD_SPI_HOST_ID              SPI2_HOST</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="microsd__datalogger_8c.html#adfd344ea24056e38f26d2bfda90eef27">   41</a></span><span class="preprocessor">#define SD_SPI_CLOCK_KHZ            4000        </span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">   42</a></span><span class="preprocessor">#define SD_TAIL_READ_BYTES          2560        </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="microsd__datalogger_8c.html#ad09b027f2735ccb5dc05269f3c006429">   43</a></span><span class="preprocessor">#define EPOCH_BASE_DEFAULT          1767225600  </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/*==================[internal data declaration]==============================*/</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">static</span> sdmmc_card_t *s_card = NULL;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">static</span> <span class="keywordtype">bool</span> s_spi_bus_inicializado = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">static</span> <span class="keywordtype">bool</span> s_intento_montaje_hecho = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_sd_montada = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">static</span> <span class="keyword">volatile</span> <span class="keywordtype">bool</span> s_reloj_sincronizado = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">static</span> <span class="keyword">volatile</span> uint32_t s_total_registros_escritos = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">static</span> SemaphoreHandle_t s_sd_mutex = NULL;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_tail_buf[<a class="code hl_define" href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">SD_TAIL_READ_BYTES</a> + 1];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">static</span> <span class="keywordtype">char</span> s_csv_chunk[512];</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">static</span> <span class="keywordtype">bool</span> montar_sistema_fat_sd(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/*==================[internal functions definition]==========================*/</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">static</span> <span class="keywordtype">bool</span> montar_sistema_fat_sd(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (s_sd_montada &amp;&amp; s_card != NULL) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> (s_intento_montaje_hecho) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// Evita re-registrar el dispositivo SPI si la tarjeta no está insertada</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    s_intento_montaje_hecho = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// 1. Configura GPIO_13 (CS) desconectando el transceptor USB_D+ interno</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    gpio_config_t cs_conf = {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        .pin_bit_mask = (1ULL &lt;&lt; <a class="code hl_define" href="microsd__datalogger_8h.html#a88aa1286457fbad71bb14dcf115ae3e1">MICROSD_DEFAULT_CS_GPIO</a>),</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        .mode = GPIO_MODE_OUTPUT,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        .pull_up_en = GPIO_PULLUP_ENABLE,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        .pull_down_en = GPIO_PULLDOWN_DISABLE,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        .intr_type = GPIO_INTR_DISABLE</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    };</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    gpio_config(&amp;cs_conf);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    gpio_set_level((gpio_num_t)<a class="code hl_define" href="microsd__datalogger_8h.html#a88aa1286457fbad71bb14dcf115ae3e1">MICROSD_DEFAULT_CS_GPIO</a>, 1);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// 2. Pull-ups internos en MISO, MOSI y SCK</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    gpio_set_pull_mode((gpio_num_t)<a class="code hl_define" href="microsd__datalogger_8h.html#a76970ef61769f855017826579ec8f5a0">MICROSD_DEFAULT_MISO_GPIO</a>, GPIO_PULLUP_ONLY);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    gpio_set_pull_mode((gpio_num_t)<a class="code hl_define" href="microsd__datalogger_8h.html#a38c46793340c64fbeea11490fc7cfbe5">MICROSD_DEFAULT_MOSI_GPIO</a>, GPIO_PULLUP_ONLY);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    gpio_set_pull_mode((gpio_num_t)<a class="code hl_define" href="microsd__datalogger_8h.html#a162443ad513f8dacfe3c964e8ce1449e">MICROSD_DEFAULT_SCK_GPIO</a>, GPIO_PULLUP_ONLY);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// 3. Inicializa el bus SPI2</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (!s_spi_bus_inicializado) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        spi_bus_config_t <a class="code hl_variable" href="spi__mcu_8c.html#acff5631217f27db20d7049cd58791eaf">bus_cfg</a> = {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            .mosi_io_num = <a class="code hl_define" href="microsd__datalogger_8h.html#a38c46793340c64fbeea11490fc7cfbe5">MICROSD_DEFAULT_MOSI_GPIO</a>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            .miso_io_num = <a class="code hl_define" href="microsd__datalogger_8h.html#a76970ef61769f855017826579ec8f5a0">MICROSD_DEFAULT_MISO_GPIO</a>,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            .sclk_io_num = <a class="code hl_define" href="microsd__datalogger_8h.html#a162443ad513f8dacfe3c964e8ce1449e">MICROSD_DEFAULT_SCK_GPIO</a>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            .quadwp_io_num = -1,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            .quadhd_io_num = -1,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            .max_transfer_sz = 4096</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        };</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">if</span> (spi_bus_initialize(<a class="code hl_define" href="microsd__datalogger_8c.html#aef4b5e5e0e34150f2e99097c567ce310">SD_SPI_HOST_ID</a>, &amp;<a class="code hl_variable" href="spi__mcu_8c.html#acff5631217f27db20d7049cd58791eaf">bus_cfg</a>, SPI_DMA_CH_AUTO) != ESP_OK) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        s_spi_bus_inicializado = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// 4. Monta el volumen FAT16/FAT32 sobre SPI a 4 MHz</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    esp_vfs_fat_sdmmc_mount_config_t mount_config = {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        .format_if_mount_failed = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        .max_files = 3,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        .allocation_unit_size = 16 * 1024</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    };</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    sdmmc_host_t host = SDSPI_HOST_DEFAULT();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    host.slot = <a class="code hl_define" href="microsd__datalogger_8c.html#aef4b5e5e0e34150f2e99097c567ce310">SD_SPI_HOST_ID</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    host.max_freq_khz = <a class="code hl_define" href="microsd__datalogger_8c.html#adfd344ea24056e38f26d2bfda90eef27">SD_SPI_CLOCK_KHZ</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    slot_config.gpio_cs = (gpio_num_t)<a class="code hl_define" href="microsd__datalogger_8h.html#a88aa1286457fbad71bb14dcf115ae3e1">MICROSD_DEFAULT_CS_GPIO</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    slot_config.host_id = <a class="code hl_define" href="microsd__datalogger_8c.html#aef4b5e5e0e34150f2e99097c567ce310">SD_SPI_HOST_ID</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">if</span> (esp_vfs_fat_sdspi_mount(<a class="code hl_define" href="microsd__datalogger_8h.html#a4431237d03acd208165b11a108b1ca29">MICROSD_MOUNT_POINT</a>, &amp;host, &amp;slot_config, &amp;mount_config, &amp;s_card) != ESP_OK) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        s_sd_montada = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        s_card = NULL;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    s_sd_montada = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="comment">// 5. Crea el encabezado de DATALOG.CSV si el archivo no existe o está vacío</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">struct </span>stat st;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordflow">if</span> (stat(<a class="code hl_define" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>, &amp;st) != 0 || st.st_size == 0) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        FILE *f = fopen(<a class="code hl_define" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (f != NULL) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *hdr = <span class="stringliteral">&quot;Fecha,Hora,FC,FR,Temp,Hum,Gases,Movimiento\n&quot;</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            fwrite(hdr, 1, strlen(hdr), f);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            fclose(f);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a39514f523a8e0bec88720e736f32934a">  141</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="microsd__datalogger_8c.html#a39514f523a8e0bec88720e736f32934a">MicroSdInit</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (s_sd_mutex == NULL) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        s_sd_mutex = xSemaphoreCreateMutex();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// Inicializa el RTC interno en 2026-01-01 00:00:00 sin consumir el stack de app_main</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">struct </span>timeval tv_now;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    gettimeofday(&amp;tv_now, NULL);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> (tv_now.tv_sec &lt; <a class="code hl_define" href="microsd__datalogger_8c.html#ad09b027f2735ccb5dc05269f3c006429">EPOCH_BASE_DEFAULT</a>) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        tv_now.tv_sec = <a class="code hl_define" href="microsd__datalogger_8c.html#ad09b027f2735ccb5dc05269f3c006429">EPOCH_BASE_DEFAULT</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        tv_now.tv_usec = 0;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        settimeofday(&amp;tv_now, NULL);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a85288140d87dab1441bf5168c7f20239">  157</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="microsd__datalogger_8c.html#a85288140d87dab1441bf5168c7f20239">MicroSdEscribirRegistro</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structregistro__clinico__sd__t.html">registro_clinico_sd_t</a> *reg) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordflow">if</span> (reg == NULL || s_sd_mutex == NULL) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">if</span> (xSemaphoreTake(s_sd_mutex, pdMS_TO_TICKS(500)) != pdTRUE) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">if</span> (!s_sd_montada) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">if</span> (!montar_sistema_fat_sd()) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">char</span> fecha[12];</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">char</span> hora[10];</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">char</span> linea_csv[80];</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_function" href="microsd__datalogger_8c.html#aa2a14319ea4ef4f176c539018e765d70">MicroSdObtenerFechaHoraActual</a>(fecha, <span class="keyword">sizeof</span>(fecha), hora, <span class="keyword">sizeof</span>(hora));</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// Fase 1: Apertura y escritura de la línea CSV</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    FILE *f = fopen(<a class="code hl_define" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">if</span> (f == NULL) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        esp_vfs_fat_sdcard_unmount(<a class="code hl_define" href="microsd__datalogger_8h.html#a4431237d03acd208165b11a108b1ca29">MICROSD_MOUNT_POINT</a>, s_card);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        s_card = NULL;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        s_sd_montada = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        s_intento_montaje_hecho = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    int16_t t_ent = reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#adbff86445a1dc1b41643eb26b0683f75">temp_decimas_c</a> / 10;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    int16_t t_dec = abs(reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#adbff86445a1dc1b41643eb26b0683f75">temp_decimas_c</a> % 10);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    uint16_t h_ent = reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#afb4d944c56251217dc37c5090a64b935">hum_decimas_pct</a> / 10;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    uint16_t h_dec = reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#afb4d944c56251217dc37c5090a64b935">hum_decimas_pct</a> % 10;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">int</span> len = snprintf(linea_csv, <span class="keyword">sizeof</span>(linea_csv), <span class="stringliteral">&quot;%s,%s,%u,%u,%d.%d,%u.%u,%u,%u\n&quot;</span>,</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                       fecha,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                       hora,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                       (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#a40258bb299315a220435b6b7d21b454e">fc_bpm</a>,</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                       (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">fr_rpm</a>,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                       (<span class="keywordtype">int</span>)t_ent, (<span class="keywordtype">int</span>)t_dec,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                       (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)h_ent, (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)h_dec,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                       reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#a4bf6b15f5df6b63b0e4c02441aa89979">alerta_gases</a> ? 1U : 0U,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                       reg-&gt;<a class="code hl_variable" href="structregistro__clinico__sd__t.html#ab7c0b3e74a4ef2e7c6cf45eb5f46c462">movimiento_sala</a> ? 1U : 0U);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">if</span> (len &gt; 0) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        fwrite(linea_csv, 1, (<span class="keywordtype">size_t</span>)len, f);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="comment">// Fase 2: Cierre del archivo y Flush inmediato a la tabla FAT16</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    fclose(f);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    s_total_registros_escritos++;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a25e558af5b2234c6e920f7146296c50e">  215</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="microsd__datalogger_8c.html#a25e558af5b2234c6e920f7146296c50e">MicroSdEstadoMontada</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">return</span> s_sd_montada;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a214e068be544282bfd91b953a787e12e">  219</a></span>uint32_t <a class="code hl_function" href="microsd__datalogger_8c.html#a214e068be544282bfd91b953a787e12e">MicroSdObtenerTotalEscritos</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">return</span> s_total_registros_escritos;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f">  223</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="microsd__datalogger_8c.html#ad29abca0ce8909e237f186bf9714f41f">MicroSdSincronizarRelojEpoch</a>(int64_t epoch_sec) {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">if</span> (epoch_sec &gt; 1700000000LL) {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keyword">struct </span>timeval tv = {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            .tv_sec = (time_t)epoch_sec,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            .tv_usec = 0</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        };</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        settimeofday(&amp;tv, NULL);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        s_reloj_sincronizado = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#aa2a14319ea4ef4f176c539018e765d70">  234</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="microsd__datalogger_8c.html#aa2a14319ea4ef4f176c539018e765d70">MicroSdObtenerFechaHoraActual</a>(<span class="keywordtype">char</span> *out_fecha, <span class="keywordtype">size_t</span> len_f, <span class="keywordtype">char</span> *out_hora, <span class="keywordtype">size_t</span> len_h) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    time_t now = 0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">struct </span>tm timeinfo = {0};</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    time(&amp;now);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    gmtime_r(&amp;now, &amp;timeinfo);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">if</span> (out_fecha != NULL &amp;&amp; len_f &gt;= 11) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        snprintf(out_fecha, len_f, <span class="stringliteral">&quot;%04d-%02d-%02d&quot;</span>,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                 timeinfo.tm_year + 1900, timeinfo.tm_mon + 1, timeinfo.tm_mday);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">if</span> (out_hora != NULL &amp;&amp; len_h &gt;= 9) {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        snprintf(out_hora, len_h, <span class="stringliteral">&quot;%02d:%02d:%02d&quot;</span>,</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                 timeinfo.tm_hour, timeinfo.tm_min, timeinfo.tm_sec);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5">  250</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="microsd__datalogger_8c.html#a581f739f95d26f7a2e9b9772592012a5">MicroSdRelojSincronizado</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">return</span> s_reloj_sincronizado;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>}</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb">  254</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="microsd__datalogger_8c.html#a1612e345a1df5f26d7c15e52e865acdb">MicroSdLeerUltimosRegistrosJson</a>(<span class="keywordtype">char</span> *json_buf, <span class="keywordtype">size_t</span> max_len, uint16_t max_registros) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordflow">if</span> (json_buf == NULL || max_len &lt; 64) {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">if</span> (s_sd_mutex == NULL || xSemaphoreTake(s_sd_mutex, pdMS_TO_TICKS(500)) != pdTRUE) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">return</span> snprintf(json_buf, max_len, <span class="stringliteral">&quot;{\&quot;sd_ok\&quot;:false,\&quot;rows\&quot;:[]}&quot;</span>);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">if</span> (!s_sd_montada &amp;&amp; !montar_sistema_fat_sd()) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">return</span> snprintf(json_buf, max_len, <span class="stringliteral">&quot;{\&quot;sd_ok\&quot;:false,\&quot;rows\&quot;:[]}&quot;</span>);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// Fase 3: Apertura y lectura SPI desde el final del archivo con fseek</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    FILE *f = fopen(<a class="code hl_define" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span> (f == NULL) {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">return</span> snprintf(json_buf, max_len, <span class="stringliteral">&quot;{\&quot;sd_ok\&quot;:false,\&quot;rows\&quot;:[]}&quot;</span>);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    fseek(f, 0, SEEK_END);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordtype">long</span> file_size = ftell(f);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordtype">long</span> read_offset = 0;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">if</span> (file_size &gt; <a class="code hl_define" href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">SD_TAIL_READ_BYTES</a>) {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        read_offset = file_size - <a class="code hl_define" href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">SD_TAIL_READ_BYTES</a>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    fseek(f, read_offset, SEEK_SET);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordtype">size_t</span> bytes_leidos = fread(s_tail_buf, 1, <a class="code hl_define" href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">SD_TAIL_READ_BYTES</a>, f);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    s_tail_buf[bytes_leidos] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    fclose(f);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">char</span> *lineas[60];</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    uint16_t total_lineas = 0;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordtype">char</span> *saveptr = NULL;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordtype">char</span> *linea = strtok_r(s_tail_buf, <span class="stringliteral">&quot;\r\n&quot;</span>, &amp;saveptr);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keywordflow">if</span> (read_offset &gt; 0 &amp;&amp; linea != NULL) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        linea = strtok_r(NULL, <span class="stringliteral">&quot;\r\n&quot;</span>, &amp;saveptr);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">while</span> (linea != NULL) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">if</span> (strncmp(linea, <span class="stringliteral">&quot;Fecha&quot;</span>, 5) != 0 &amp;&amp; strlen(linea) &gt; 15) {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">if</span> (total_lineas &lt; 60) {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                lineas[total_lineas++] = linea;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                memmove(&amp;lineas[0], &amp;lineas[1], 59 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span> *));</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                lineas[59] = linea;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        linea = strtok_r(NULL, <span class="stringliteral">&quot;\r\n&quot;</span>, &amp;saveptr);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    uint16_t inicio = (total_lineas &gt; max_registros) ? (total_lineas - max_registros) : 0;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keywordtype">size_t</span> pos = snprintf(json_buf, max_len, <span class="stringliteral">&quot;{\&quot;sd_ok\&quot;:true,\&quot;total\&quot;:%lu,\&quot;rows\&quot;:[&quot;</span>,</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                          (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)s_total_registros_escritos);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keywordtype">bool</span> primero = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">for</span> (uint16_t i = inicio; i &lt; total_lineas; i++) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordtype">char</span> *p_save = NULL;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordtype">char</span> *c_fecha = strtok_r(lineas[i], <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordtype">char</span> *c_hora  = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordtype">char</span> *c_fc    = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordtype">char</span> *c_fr    = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordtype">char</span> *c_temp  = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>        <span class="keywordtype">char</span> *c_hum   = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keywordtype">char</span> *c_gas   = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keywordtype">char</span> *c_mov   = strtok_r(NULL, <span class="stringliteral">&quot;,&quot;</span>, &amp;p_save);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">if</span> (c_fecha &amp;&amp; c_hora &amp;&amp; c_fc &amp;&amp; c_fr &amp;&amp; c_temp &amp;&amp; c_hum &amp;&amp; c_gas &amp;&amp; c_mov) {</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="keywordtype">int</span> escritos = snprintf(json_buf + pos, max_len - pos,</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                                    <span class="stringliteral">&quot;%s[\&quot;%s\&quot;,\&quot;%s\&quot;,%s,%s,%s,%s,%s,%s]&quot;</span>,</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                                    primero ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;,&quot;</span>,</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>                                    c_fecha, c_hora, c_fc, c_fr, c_temp, c_hum, c_gas, c_mov);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">if</span> (escritos &gt; 0 &amp;&amp; (pos + (<span class="keywordtype">size_t</span>)escritos + 4) &lt; max_len) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                pos += (size_t)escritos;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                primero = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    pos += snprintf(json_buf + pos, max_len - pos, <span class="stringliteral">&quot;]}&quot;</span>);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)pos;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>}</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7">  343</a></span>esp_err_t <a class="code hl_function" href="microsd__datalogger_8c.html#ae292d38a7d1265b371e7ea902750b2f7">MicroSdEnviarCsvCompletoHttp</a>(httpd_req_t *req) {</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keywordflow">if</span> (s_sd_mutex == NULL || xSemaphoreTake(s_sd_mutex, pdMS_TO_TICKS(1000)) != pdTRUE) {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        httpd_resp_send_err(req, HTTPD_500_INTERNAL_SERVER_ERROR, <span class="stringliteral">&quot;Bus SPI ocupado&quot;</span>);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">return</span> ESP_FAIL;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    FILE *f = fopen(<a class="code hl_define" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">if</span> (f == NULL) {</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        httpd_resp_send_err(req, HTTPD_404_NOT_FOUND, <span class="stringliteral">&quot;DATALOG.CSV no encontrado&quot;</span>);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">return</span> ESP_FAIL;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    httpd_resp_set_type(req, <span class="stringliteral">&quot;text/csv; charset=utf-8&quot;</span>);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    httpd_resp_set_hdr(req, <span class="stringliteral">&quot;Content-Disposition&quot;</span>, <span class="stringliteral">&quot;attachment; filename=\&quot;DATALOG.CSV\&quot;&quot;</span>);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordtype">size_t</span> leidos = 0;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keywordflow">while</span> ((leidos = fread(s_csv_chunk, 1, <span class="keyword">sizeof</span>(s_csv_chunk), f)) &gt; 0) {</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        <span class="keywordflow">if</span> (httpd_resp_send_chunk(req, s_csv_chunk, leidos) != ESP_OK) {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    }</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    fclose(f);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    xSemaphoreGive(s_sd_mutex);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    httpd_resp_send_chunk(req, NULL, 0);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keywordflow">return</span> ESP_OK;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>}</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a1612e345a1df5f26d7c15e52e865acdb"><div class="ttname"><a href="microsd__datalogger_8c.html#a1612e345a1df5f26d7c15e52e865acdb">MicroSdLeerUltimosRegistrosJson</a></div><div class="ttdeci">int MicroSdLeerUltimosRegistrosJson(char *json_buf, size_t max_len, uint16_t max_registros)</div><div class="ttdoc">Ejecuta la Fase 3 (Apertura y Lectura SPI con CMD17) posicionándose al final de DATALOG....</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00254">microsd_datalogger.c:254</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a214e068be544282bfd91b953a787e12e"><div class="ttname"><a href="microsd__datalogger_8c.html#a214e068be544282bfd91b953a787e12e">MicroSdObtenerTotalEscritos</a></div><div class="ttdeci">uint32_t MicroSdObtenerTotalEscritos(void)</div><div class="ttdoc">Devuelve la cantidad de registros grabados exitosamente desde el encendido del sistema.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00219">microsd_datalogger.c:219</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a25e558af5b2234c6e920f7146296c50e"><div class="ttname"><a href="microsd__datalogger_8c.html#a25e558af5b2234c6e920f7146296c50e">MicroSdEstadoMontada</a></div><div class="ttdeci">bool MicroSdEstadoMontada(void)</div><div class="ttdoc">Consulta si la tarjeta MicroSD se encuentra operativa y con el sistema FAT montado.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00215">microsd_datalogger.c:215</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a39514f523a8e0bec88720e736f32934a"><div class="ttname"><a href="microsd__datalogger_8c.html#a39514f523a8e0bec88720e736f32934a">MicroSdInit</a></div><div class="ttdeci">bool MicroSdInit(void)</div><div class="ttdoc">Desconecta el transceptor USB_D+ de GPIO_13, inicializa el bus SPI2 a 4 MHz y monta la partición FAT1...</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00141">microsd_datalogger.c:141</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a494fbaf29be9ea92a8db90f66d37fb19"><div class="ttname"><a href="microsd__datalogger_8c.html#a494fbaf29be9ea92a8db90f66d37fb19">SD_TAIL_READ_BYTES</a></div><div class="ttdeci">#define SD_TAIL_READ_BYTES</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00042">microsd_datalogger.c:42</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a581f739f95d26f7a2e9b9772592012a5"><div class="ttname"><a href="microsd__datalogger_8c.html#a581f739f95d26f7a2e9b9772592012a5">MicroSdRelojSincronizado</a></div><div class="ttdeci">bool MicroSdRelojSincronizado(void)</div><div class="ttdoc">Indica si el reloj RTC ya fue sincronizado con la fecha/hora real desde la interfaz web.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00250">microsd_datalogger.c:250</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_a85288140d87dab1441bf5168c7f20239"><div class="ttname"><a href="microsd__datalogger_8c.html#a85288140d87dab1441bf5168c7f20239">MicroSdEscribirRegistro</a></div><div class="ttdeci">bool MicroSdEscribirRegistro(const registro_clinico_sd_t *reg)</div><div class="ttdoc">Ejecuta un ciclo atómico de Apertura (Fase 1), Escritura CSV y Cierre con Flush FAT (Fase 2)....</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00157">microsd_datalogger.c:157</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_aa2a14319ea4ef4f176c539018e765d70"><div class="ttname"><a href="microsd__datalogger_8c.html#aa2a14319ea4ef4f176c539018e765d70">MicroSdObtenerFechaHoraActual</a></div><div class="ttdeci">void MicroSdObtenerFechaHoraActual(char *out_fecha, size_t len_f, char *out_hora, size_t len_h)</div><div class="ttdoc">Obtiene las cadenas formateadas de fecha (YYYY-MM-DD) y hora (HH:MM:SS) actuales del RTC.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00234">microsd_datalogger.c:234</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_ad09b027f2735ccb5dc05269f3c006429"><div class="ttname"><a href="microsd__datalogger_8c.html#ad09b027f2735ccb5dc05269f3c006429">EPOCH_BASE_DEFAULT</a></div><div class="ttdeci">#define EPOCH_BASE_DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00043">microsd_datalogger.c:43</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_ad29abca0ce8909e237f186bf9714f41f"><div class="ttname"><a href="microsd__datalogger_8c.html#ad29abca0ce8909e237f186bf9714f41f">MicroSdSincronizarRelojEpoch</a></div><div class="ttdeci">void MicroSdSincronizarRelojEpoch(int64_t epoch_sec)</div><div class="ttdoc">Ajusta el reloj de tiempo real (RTC) interno del ESP32-C6 a partir de un timestamp Unix (segundos) re...</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00223">microsd_datalogger.c:223</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_adfd344ea24056e38f26d2bfda90eef27"><div class="ttname"><a href="microsd__datalogger_8c.html#adfd344ea24056e38f26d2bfda90eef27">SD_SPI_CLOCK_KHZ</a></div><div class="ttdeci">#define SD_SPI_CLOCK_KHZ</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00041">microsd_datalogger.c:41</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_ae292d38a7d1265b371e7ea902750b2f7"><div class="ttname"><a href="microsd__datalogger_8c.html#ae292d38a7d1265b371e7ea902750b2f7">MicroSdEnviarCsvCompletoHttp</a></div><div class="ttdeci">esp_err_t MicroSdEnviarCsvCompletoHttp(httpd_req_t *req)</div><div class="ttdoc">Lee el archivo DATALOG.CSV en bloques por SPI y lo transmite por streaming HTTP para su descarga dire...</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00343">microsd_datalogger.c:343</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8c_html_aef4b5e5e0e34150f2e99097c567ce310"><div class="ttname"><a href="microsd__datalogger_8c.html#aef4b5e5e0e34150f2e99097c567ce310">SD_SPI_HOST_ID</a></div><div class="ttdeci">#define SD_SPI_HOST_ID</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8c_source.html#l00040">microsd_datalogger.c:40</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html"><div class="ttname"><a href="microsd__datalogger_8h.html">microsd_datalogger.h</a></div><div class="ttdoc">Driver de la capa de dispositivos para el almacenamiento clínico no volátil en tarjeta MicroSD de 2GB...</div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a162443ad513f8dacfe3c964e8ce1449e"><div class="ttname"><a href="microsd__datalogger_8h.html#a162443ad513f8dacfe3c964e8ce1449e">MICROSD_DEFAULT_SCK_GPIO</a></div><div class="ttdeci">#define MICROSD_DEFAULT_SCK_GPIO</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00095">microsd_datalogger.h:95</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a38c46793340c64fbeea11490fc7cfbe5"><div class="ttname"><a href="microsd__datalogger_8h.html#a38c46793340c64fbeea11490fc7cfbe5">MICROSD_DEFAULT_MOSI_GPIO</a></div><div class="ttdeci">#define MICROSD_DEFAULT_MOSI_GPIO</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00096">microsd_datalogger.h:96</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a4431237d03acd208165b11a108b1ca29"><div class="ttname"><a href="microsd__datalogger_8h.html#a4431237d03acd208165b11a108b1ca29">MICROSD_MOUNT_POINT</a></div><div class="ttdeci">#define MICROSD_MOUNT_POINT</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00099">microsd_datalogger.h:99</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a76970ef61769f855017826579ec8f5a0"><div class="ttname"><a href="microsd__datalogger_8h.html#a76970ef61769f855017826579ec8f5a0">MICROSD_DEFAULT_MISO_GPIO</a></div><div class="ttdeci">#define MICROSD_DEFAULT_MISO_GPIO</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00097">microsd_datalogger.h:97</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_a88aa1286457fbad71bb14dcf115ae3e1"><div class="ttname"><a href="microsd__datalogger_8h.html#a88aa1286457fbad71bb14dcf115ae3e1">MICROSD_DEFAULT_CS_GPIO</a></div><div class="ttdeci">#define MICROSD_DEFAULT_CS_GPIO</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00094">microsd_datalogger.h:94</a></div></div>
+<div class="ttc" id="amicrosd__datalogger_8h_html_ae9ad5061a4b6c4d7e039fce0320935e0"><div class="ttname"><a href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a></div><div class="ttdeci">#define MICROSD_CSV_FILEPATH</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00100">microsd_datalogger.h:100</a></div></div>
+<div class="ttc" id="aspi__mcu_8c_html_acff5631217f27db20d7049cd58791eaf"><div class="ttname"><a href="spi__mcu_8c.html#acff5631217f27db20d7049cd58791eaf">bus_cfg</a></div><div class="ttdeci">const spi_bus_config_t bus_cfg</div><div class="ttdef"><b>Definition:</b> <a href="spi__mcu_8c_source.html#l00027">spi_mcu.c:27</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html"><div class="ttname"><a href="structregistro__clinico__sd__t.html">registro_clinico_sd_t</a></div><div class="ttdoc">Estructura de un registro clínico e higrotérmico para almacenamiento en DATALOG.CSV.</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00107">microsd_datalogger.h:107</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_a40258bb299315a220435b6b7d21b454e"><div class="ttname"><a href="structregistro__clinico__sd__t.html#a40258bb299315a220435b6b7d21b454e">registro_clinico_sd_t::fc_bpm</a></div><div class="ttdeci">uint16_t fc_bpm</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00108">microsd_datalogger.h:108</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_a4bf6b15f5df6b63b0e4c02441aa89979"><div class="ttname"><a href="structregistro__clinico__sd__t.html#a4bf6b15f5df6b63b0e4c02441aa89979">registro_clinico_sd_t::alerta_gases</a></div><div class="ttdeci">bool alerta_gases</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00112">microsd_datalogger.h:112</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_ab23ce23cbccdec8b5ccf4fa2092244bd"><div class="ttname"><a href="structregistro__clinico__sd__t.html#ab23ce23cbccdec8b5ccf4fa2092244bd">registro_clinico_sd_t::fr_rpm</a></div><div class="ttdeci">uint16_t fr_rpm</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00109">microsd_datalogger.h:109</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_ab7c0b3e74a4ef2e7c6cf45eb5f46c462"><div class="ttname"><a href="structregistro__clinico__sd__t.html#ab7c0b3e74a4ef2e7c6cf45eb5f46c462">registro_clinico_sd_t::movimiento_sala</a></div><div class="ttdeci">bool movimiento_sala</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00113">microsd_datalogger.h:113</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_adbff86445a1dc1b41643eb26b0683f75"><div class="ttname"><a href="structregistro__clinico__sd__t.html#adbff86445a1dc1b41643eb26b0683f75">registro_clinico_sd_t::temp_decimas_c</a></div><div class="ttdeci">int16_t temp_decimas_c</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00110">microsd_datalogger.h:110</a></div></div>
+<div class="ttc" id="astructregistro__clinico__sd__t_html_afb4d944c56251217dc37c5090a64b935"><div class="ttname"><a href="structregistro__clinico__sd__t.html#afb4d944c56251217dc37c5090a64b935">registro_clinico_sd_t::hum_decimas_pct</a></div><div class="ttdeci">uint16_t hum_decimas_pct</div><div class="ttdef"><b>Definition:</b> <a href="microsd__datalogger_8h_source.html#l00111">microsd_datalogger.h:111</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="microsd__datalogger_8c.html">microsd_datalogger.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

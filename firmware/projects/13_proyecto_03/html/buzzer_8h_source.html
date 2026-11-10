@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/buzzer.h</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/buzzer.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('buzzer_8h_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('buzzer_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('buzzer_8h_source.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -228,13 +216,13 @@ $(function(){initNavTree('buzzer_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">/*==================[end of file]============================================*/</span></div>
 <div class="ttc" id="agpio__mcu_8h_html"><div class="ttname"><a href="gpio__mcu_8h.html">gpio_mcu.h</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga05804b2cf66e533061b26b491f5d7826"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga05804b2cf66e533061b26b491f5d7826">BuzzerDeinit</a></div><div class="ttdeci">void BuzzerDeinit(void)</div><div class="ttdoc">Buzzer de-initialization.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00191">buzzer.c:191</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga082170de2e447ecd09c20c8cdee5826c"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga082170de2e447ecd09c20c8cdee5826c">BuzzerSetFrec</a></div><div class="ttdeci">void BuzzerSetFrec(uint16_t freq)</div><div class="ttdoc">Change buzzer tone.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00057">buzzer.c:57</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga2d103b0bfc6281c22588fb656fb88988"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga2d103b0bfc6281c22588fb656fb88988">BuzzerInit</a></div><div class="ttdeci">void BuzzerInit(gpio_t pin)</div><div class="ttdoc">Buzzer initialization.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00043">buzzer.c:43</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga5044339a4b4f968150ea884a334ddbd8"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga5044339a4b4f968150ea884a334ddbd8">BuzzerOff</a></div><div class="ttdeci">void BuzzerOff(void)</div><div class="ttdoc">Turn off the buzzer.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00053">buzzer.c:53</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga5c945426454a12192b5dd46a36f45310"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga5c945426454a12192b5dd46a36f45310">BuzzerOn</a></div><div class="ttdeci">void BuzzerOn(void)</div><div class="ttdoc">Turn on the buzzer.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00049">buzzer.c:49</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_gabc0f6e3af015c16185274e9bb7641cca"><div class="ttname"><a href="group___b_u_z_z_e_r.html#gabc0f6e3af015c16185274e9bb7641cca">BuzzerPlayTone</a></div><div class="ttdeci">void BuzzerPlayTone(uint16_t freq, uint16_t duration)</div><div class="ttdoc">Plays a single tone for a duration of time.</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00061">buzzer.c:61</a></div></div>
-<div class="ttc" id="agroup___b_u_z_z_e_r_html_gadff25be12628da232d5ad1fbc2dd7aaa"><div class="ttname"><a href="group___b_u_z_z_e_r.html#gadff25be12628da232d5ad1fbc2dd7aaa">BuzzerPlayRtttl</a></div><div class="ttdeci">void BuzzerPlayRtttl(const char *rtttl_melody)</div><div class="ttdoc">Plays a melody stored in format RTTTL (Ring Tone Text Transfer Language).</div><div class="ttdef"><b>Definition</b> <a href="buzzer_8c_source.html#l00068">buzzer.c:68</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga05804b2cf66e533061b26b491f5d7826"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga05804b2cf66e533061b26b491f5d7826">BuzzerDeinit</a></div><div class="ttdeci">void BuzzerDeinit(void)</div><div class="ttdoc">Buzzer de-initialization.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00191">buzzer.c:191</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga082170de2e447ecd09c20c8cdee5826c"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga082170de2e447ecd09c20c8cdee5826c">BuzzerSetFrec</a></div><div class="ttdeci">void BuzzerSetFrec(uint16_t freq)</div><div class="ttdoc">Change buzzer tone.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00057">buzzer.c:57</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga2d103b0bfc6281c22588fb656fb88988"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga2d103b0bfc6281c22588fb656fb88988">BuzzerInit</a></div><div class="ttdeci">void BuzzerInit(gpio_t pin)</div><div class="ttdoc">Buzzer initialization.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00043">buzzer.c:43</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga5044339a4b4f968150ea884a334ddbd8"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga5044339a4b4f968150ea884a334ddbd8">BuzzerOff</a></div><div class="ttdeci">void BuzzerOff(void)</div><div class="ttdoc">Turn off the buzzer.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00053">buzzer.c:53</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_ga5c945426454a12192b5dd46a36f45310"><div class="ttname"><a href="group___b_u_z_z_e_r.html#ga5c945426454a12192b5dd46a36f45310">BuzzerOn</a></div><div class="ttdeci">void BuzzerOn(void)</div><div class="ttdoc">Turn on the buzzer.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00049">buzzer.c:49</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_gabc0f6e3af015c16185274e9bb7641cca"><div class="ttname"><a href="group___b_u_z_z_e_r.html#gabc0f6e3af015c16185274e9bb7641cca">BuzzerPlayTone</a></div><div class="ttdeci">void BuzzerPlayTone(uint16_t freq, uint16_t duration)</div><div class="ttdoc">Plays a single tone for a duration of time.</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00061">buzzer.c:61</a></div></div>
+<div class="ttc" id="agroup___b_u_z_z_e_r_html_gadff25be12628da232d5ad1fbc2dd7aaa"><div class="ttname"><a href="group___b_u_z_z_e_r.html#gadff25be12628da232d5ad1fbc2dd7aaa">BuzzerPlayRtttl</a></div><div class="ttdeci">void BuzzerPlayRtttl(const char *rtttl_melody)</div><div class="ttdoc">Plays a melody stored in format RTTTL (Ring Tone Text Transfer Language).</div><div class="ttdef"><b>Definition:</b> <a href="buzzer_8c_source.html#l00068">buzzer.c:68</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_gac6f7bd4f7ee306a4519f04641cbf2d67"><div class="ttname"><a href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a></div><div class="ttdeci">enum gpio_list gpio_t</div><div class="ttdoc">ESP32-C6 available GPIOs (not all of them are available in ESP-EDU)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -242,7 +230,7 @@ $(function(){initNavTree('buzzer_8h_source.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="buzzer_8h.html">buzzer.h</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

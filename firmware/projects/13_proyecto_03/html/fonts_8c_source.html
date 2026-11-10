@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/fonts.c</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/fonts.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('fonts_8c_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -118,7 +106,6 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">/*==================[internal functions declaration]=========================*/</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/*==================[internal data definition]===============================*/</span></div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="fonts_8c.html#ac94b8e79e9d2c1454d961efdd0694706">   24</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#ac94b8e79e9d2c1454d961efdd0694706">font11_data</a>[] = {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    0x00, <span class="comment">//   </span></div>
@@ -1355,9 +1342,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>    0x00, <span class="comment">//      </span></div>
 <div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span>    0x00, <span class="comment">//      </span></div>
 <div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>};</div>
-</div>
 <div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span> </div>
-<div class="foldopen" id="foldopen01264" data-start="{" data-end="};">
 <div class="line"><a id="l01264" name="l01264"></a><span class="lineno"><a class="line" href="fonts_8c.html#a21357940ba204c1f36b52fd8d2ee9389"> 1264</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#a21357940ba204c1f36b52fd8d2ee9389">font11_info</a>[] = {</div>
 <div class="line"><a id="l01265" name="l01265"></a><span class="lineno"> 1265</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l01266" name="l01266"></a><span class="lineno"> 1266</span>    {1, 11},        <span class="comment">/* ! */</span> </div>
@@ -1455,9 +1440,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>    {3, 1056},      <span class="comment">/* } */</span> </div>
 <div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>    {5, 1067},      <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>};</div>
-</div>
 <div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span> </div>
-<div class="foldopen" id="foldopen01365" data-start="{" data-end="};">
 <div class="line"><a id="l01365" name="l01365"></a><span class="lineno"><a class="line" href="fonts_8c.html#a399f84ca794080cae7f0a760bd524457"> 1365</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#a399f84ca794080cae7f0a760bd524457">font19_data</a>[] = {</div>
 <div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>    <span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>    0x00, <span class="comment">//   </span></div>
@@ -3454,9 +3437,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l03358" name="l03358"></a><span class="lineno"> 3358</span>    0x00, 0x00, <span class="comment">//          </span></div>
 <div class="line"><a id="l03359" name="l03359"></a><span class="lineno"> 3359</span>    0x00, 0x00, <span class="comment">// </span></div>
 <div class="line"><a id="l03360" name="l03360"></a><span class="lineno"> 3360</span>};</div>
-</div>
 <div class="line"><a id="l03361" name="l03361"></a><span class="lineno"> 3361</span> </div>
-<div class="foldopen" id="foldopen03365" data-start="{" data-end="};">
 <div class="line"><a id="l03365" name="l03365"></a><span class="lineno"><a class="line" href="fonts_8c.html#aee72bcfdf92cc2cce1312ec49e7cf4bd"> 3365</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#aee72bcfdf92cc2cce1312ec49e7cf4bd">font19_info</a>[] = {</div>
 <div class="line"><a id="l03366" name="l03366"></a><span class="lineno"> 3366</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l03367" name="l03367"></a><span class="lineno"> 3367</span>    {2, 19},        <span class="comment">/* ! */</span> </div>
@@ -3554,9 +3535,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l03459" name="l03459"></a><span class="lineno"> 3459</span>    {5, 2489},      <span class="comment">/* } */</span> </div>
 <div class="line"><a id="l03460" name="l03460"></a><span class="lineno"> 3460</span>    {9, 2508},      <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l03461" name="l03461"></a><span class="lineno"> 3461</span>};</div>
-</div>
 <div class="line"><a id="l03462" name="l03462"></a><span class="lineno"> 3462</span> </div>
-<div class="foldopen" id="foldopen03466" data-start="{" data-end="};">
 <div class="line"><a id="l03466" name="l03466"></a><span class="lineno"><a class="line" href="fonts_8c.html#a21dcc03b78bc52d0a3aff354b0a8618f"> 3466</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#a21dcc03b78bc52d0a3aff354b0a8618f">font22_data</a>[] = {</div>
 <div class="line"><a id="l03467" name="l03467"></a><span class="lineno"> 3467</span>    <span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l03468" name="l03468"></a><span class="lineno"> 3468</span>    0x00, <span class="comment">//   </span></div>
@@ -5838,9 +5817,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l05744" name="l05744"></a><span class="lineno"> 5744</span>    0x00, 0x00, <span class="comment">//            </span></div>
 <div class="line"><a id="l05745" name="l05745"></a><span class="lineno"> 5745</span>    0x00, 0x00, <span class="comment">//   </span></div>
 <div class="line"><a id="l05746" name="l05746"></a><span class="lineno"> 5746</span>};</div>
-</div>
 <div class="line"><a id="l05747" name="l05747"></a><span class="lineno"> 5747</span> </div>
-<div class="foldopen" id="foldopen05751" data-start="{" data-end="};">
 <div class="line"><a id="l05751" name="l05751"></a><span class="lineno"><a class="line" href="fonts_8c.html#a5644aa6042a06df55331020e8ae505ee"> 5751</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#a5644aa6042a06df55331020e8ae505ee">font22_info</a>[] = {</div>
 <div class="line"><a id="l05752" name="l05752"></a><span class="lineno"> 5752</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l05753" name="l05753"></a><span class="lineno"> 5753</span>    {3, 22},        <span class="comment">/* ! */</span> </div>
@@ -5939,9 +5916,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l05846" name="l05846"></a><span class="lineno"> 5846</span>    {11, 3476},         <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l05847" name="l05847"></a><span class="lineno"> 5847</span> </div>
 <div class="line"><a id="l05848" name="l05848"></a><span class="lineno"> 5848</span>};</div>
-</div>
 <div class="line"><a id="l05849" name="l05849"></a><span class="lineno"> 5849</span> </div>
-<div class="foldopen" id="foldopen05853" data-start="{" data-end="};">
 <div class="line"><a id="l05853" name="l05853"></a><span class="lineno"><a class="line" href="fonts_8c.html#a5428d9e6b29167e3045fc25f5a7ce0ed"> 5853</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#a5428d9e6b29167e3045fc25f5a7ce0ed">font30_data</a>[] = {</div>
 <div class="line"><a id="l05854" name="l05854"></a><span class="lineno"> 5854</span>    <span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l05855" name="l05855"></a><span class="lineno"> 5855</span>    0x00, <span class="comment">//   </span></div>
@@ -8983,9 +8958,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l08891" name="l08891"></a><span class="lineno"> 8891</span>    0x00, 0x00, <span class="comment">//               </span></div>
 <div class="line"><a id="l08892" name="l08892"></a><span class="lineno"> 8892</span>    0x00, 0x00, <span class="comment">//  </span></div>
 <div class="line"><a id="l08893" name="l08893"></a><span class="lineno"> 8893</span>};</div>
-</div>
 <div class="line"><a id="l08894" name="l08894"></a><span class="lineno"> 8894</span> </div>
-<div class="foldopen" id="foldopen08898" data-start="{" data-end="};">
 <div class="line"><a id="l08898" name="l08898"></a><span class="lineno"><a class="line" href="fonts_8c.html#ac2f5acf223c4613e821d802d7b384ae5"> 8898</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#ac2f5acf223c4613e821d802d7b384ae5">font30_info</a>[] = {</div>
 <div class="line"><a id="l08899" name="l08899"></a><span class="lineno"> 8899</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l08900" name="l08900"></a><span class="lineno"> 8900</span>    {3, 30},        <span class="comment">/* ! */</span> </div>
@@ -9084,9 +9057,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l08993" name="l08993"></a><span class="lineno"> 8993</span>    {14, 5310},         <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l08994" name="l08994"></a><span class="lineno"> 8994</span> </div>
 <div class="line"><a id="l08995" name="l08995"></a><span class="lineno"> 8995</span>};</div>
-</div>
 <div class="line"><a id="l08996" name="l08996"></a><span class="lineno"> 8996</span> </div>
-<div class="foldopen" id="foldopen09000" data-start="{" data-end="};">
 <div class="line"><a id="l09000" name="l09000"></a><span class="lineno"><a class="line" href="fonts_8c.html#a8bf7b146307f7a5b66c2751933df12ea"> 9000</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#a8bf7b146307f7a5b66c2751933df12ea">font59_data</a>[] = {</div>
 <div class="line"><a id="l09001" name="l09001"></a><span class="lineno"> 9001</span>    <span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l09002" name="l09002"></a><span class="lineno"> 9002</span>    0x00, <span class="comment">//   </span></div>
@@ -14883,9 +14854,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l14793" name="l14793"></a><span class="lineno">14793</span>    0x00, 0x00, 0x00, 0x00, <span class="comment">//                             </span></div>
 <div class="line"><a id="l14794" name="l14794"></a><span class="lineno">14794</span>    0x00, 0x00, 0x00, 0x00, <span class="comment">//                             </span></div>
 <div class="line"><a id="l14795" name="l14795"></a><span class="lineno">14795</span>};</div>
-</div>
 <div class="line"><a id="l14796" name="l14796"></a><span class="lineno">14796</span> </div>
-<div class="foldopen" id="foldopen14800" data-start="{" data-end="};">
 <div class="line"><a id="l14800" name="l14800"></a><span class="lineno"><a class="line" href="fonts_8c.html#a7bac766f19b15d0211446b1938f30135">14800</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#a7bac766f19b15d0211446b1938f30135">font59_info</a>[] = {</div>
 <div class="line"><a id="l14801" name="l14801"></a><span class="lineno">14801</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l14802" name="l14802"></a><span class="lineno">14802</span>    {7, 59},        <span class="comment">/* ! */</span> </div>
@@ -14984,9 +14953,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l14895" name="l14895"></a><span class="lineno">14895</span>    {28, 19116},        <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l14896" name="l14896"></a><span class="lineno">14896</span> </div>
 <div class="line"><a id="l14897" name="l14897"></a><span class="lineno">14897</span>};</div>
-</div>
 <div class="line"><a id="l14898" name="l14898"></a><span class="lineno">14898</span> </div>
-<div class="foldopen" id="foldopen14902" data-start="{" data-end="};">
 <div class="line"><a id="l14902" name="l14902"></a><span class="lineno"><a class="line" href="fonts_8c.html#a8274c6c132073fe22eaef23aff78966d">14902</a></span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="fonts_8c.html#a8274c6c132073fe22eaef23aff78966d">font89_data</a>[] = {</div>
 <div class="line"><a id="l14903" name="l14903"></a><span class="lineno">14903</span><span class="comment">/* @0 &#39; &#39; (2 pixels wide) */</span></div>
 <div class="line"><a id="l14904" name="l14904"></a><span class="lineno">14904</span>    0x00, <span class="comment">//   </span></div>
@@ -23633,9 +23600,7 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l23545" name="l23545"></a><span class="lineno">23545</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">//                                           </span></div>
 <div class="line"><a id="l23546" name="l23546"></a><span class="lineno">23546</span>    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, <span class="comment">//                                           </span></div>
 <div class="line"><a id="l23547" name="l23547"></a><span class="lineno">23547</span>};</div>
-</div>
 <div class="line"><a id="l23548" name="l23548"></a><span class="lineno">23548</span> </div>
-<div class="foldopen" id="foldopen23552" data-start="{" data-end="};">
 <div class="line"><a id="l23552" name="l23552"></a><span class="lineno"><a class="line" href="fonts_8c.html#a3af219834d6277059db946e39339018d">23552</a></span><a class="code hl_struct" href="structchar__info__t.html">char_info_t</a> <a class="code hl_variable" href="fonts_8c.html#a3af219834d6277059db946e39339018d">font89_info</a>[] = {</div>
 <div class="line"><a id="l23553" name="l23553"></a><span class="lineno">23553</span>    {2, 0},         <span class="comment">/*   */</span> </div>
 <div class="line"><a id="l23554" name="l23554"></a><span class="lineno">23554</span>    {10, 89},       <span class="comment">/* ! */</span> </div>
@@ -23734,91 +23699,78 @@ $(function(){initNavTree('fonts_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l23647" name="l23647"></a><span class="lineno">23647</span>    {42, 40317},        <span class="comment">/* ~ */</span> </div>
 <div class="line"><a id="l23648" name="l23648"></a><span class="lineno">23648</span> </div>
 <div class="line"><a id="l23649" name="l23649"></a><span class="lineno">23649</span>};</div>
-</div>
 <div class="line"><a id="l23650" name="l23650"></a><span class="lineno">23650</span> </div>
 <div class="line"><a id="l23651" name="l23651"></a><span class="lineno">23651</span><span class="comment">/*==================[external data definition]===============================*/</span></div>
 <div class="line"><a id="l23652" name="l23652"></a><span class="lineno">23652</span> </div>
-<div class="foldopen" id="foldopen23653" data-start="{" data-end="};">
 <div class="line"><a id="l23653" name="l23653"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#ga96c13a7633909daa23faf1b5b185552d">23653</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#ga96c13a7633909daa23faf1b5b185552d">font_11</a> = {</div>
 <div class="line"><a id="l23654" name="l23654"></a><span class="lineno">23654</span>    11,</div>
 <div class="line"><a id="l23655" name="l23655"></a><span class="lineno">23655</span>    <a class="code hl_variable" href="fonts_8c.html#a21357940ba204c1f36b52fd8d2ee9389">font11_info</a>,</div>
 <div class="line"><a id="l23656" name="l23656"></a><span class="lineno">23656</span>    <a class="code hl_variable" href="fonts_8c.html#ac94b8e79e9d2c1454d961efdd0694706">font11_data</a></div>
 <div class="line"><a id="l23657" name="l23657"></a><span class="lineno">23657</span>};</div>
-</div>
 <div class="line"><a id="l23658" name="l23658"></a><span class="lineno">23658</span> </div>
-<div class="foldopen" id="foldopen23659" data-start="{" data-end="};">
 <div class="line"><a id="l23659" name="l23659"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#ga3a43430cdda2e2e8253724fe1bd81d7d">23659</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#ga3a43430cdda2e2e8253724fe1bd81d7d">font_19</a> = {</div>
 <div class="line"><a id="l23660" name="l23660"></a><span class="lineno">23660</span>    19,</div>
 <div class="line"><a id="l23661" name="l23661"></a><span class="lineno">23661</span>    <a class="code hl_variable" href="fonts_8c.html#aee72bcfdf92cc2cce1312ec49e7cf4bd">font19_info</a>,</div>
 <div class="line"><a id="l23662" name="l23662"></a><span class="lineno">23662</span>    <a class="code hl_variable" href="fonts_8c.html#a399f84ca794080cae7f0a760bd524457">font19_data</a></div>
 <div class="line"><a id="l23663" name="l23663"></a><span class="lineno">23663</span>};</div>
-</div>
 <div class="line"><a id="l23664" name="l23664"></a><span class="lineno">23664</span> </div>
-<div class="foldopen" id="foldopen23665" data-start="{" data-end="};">
 <div class="line"><a id="l23665" name="l23665"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#gacb2bb6bded5ed7e20abd6cf504164b62">23665</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#gacb2bb6bded5ed7e20abd6cf504164b62">font_22</a> = {</div>
 <div class="line"><a id="l23666" name="l23666"></a><span class="lineno">23666</span>    22,</div>
 <div class="line"><a id="l23667" name="l23667"></a><span class="lineno">23667</span>    <a class="code hl_variable" href="fonts_8c.html#a5644aa6042a06df55331020e8ae505ee">font22_info</a>,</div>
 <div class="line"><a id="l23668" name="l23668"></a><span class="lineno">23668</span>    <a class="code hl_variable" href="fonts_8c.html#a21dcc03b78bc52d0a3aff354b0a8618f">font22_data</a></div>
 <div class="line"><a id="l23669" name="l23669"></a><span class="lineno">23669</span>};</div>
-</div>
 <div class="line"><a id="l23670" name="l23670"></a><span class="lineno">23670</span> </div>
-<div class="foldopen" id="foldopen23671" data-start="{" data-end="};">
 <div class="line"><a id="l23671" name="l23671"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#ga413a8dcdab8681bcdcc9e217392b2bd5">23671</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#ga413a8dcdab8681bcdcc9e217392b2bd5">font_30</a> = {</div>
 <div class="line"><a id="l23672" name="l23672"></a><span class="lineno">23672</span>    30,</div>
 <div class="line"><a id="l23673" name="l23673"></a><span class="lineno">23673</span>    <a class="code hl_variable" href="fonts_8c.html#ac2f5acf223c4613e821d802d7b384ae5">font30_info</a>,</div>
 <div class="line"><a id="l23674" name="l23674"></a><span class="lineno">23674</span>    <a class="code hl_variable" href="fonts_8c.html#a5428d9e6b29167e3045fc25f5a7ce0ed">font30_data</a></div>
 <div class="line"><a id="l23675" name="l23675"></a><span class="lineno">23675</span>};</div>
-</div>
 <div class="line"><a id="l23676" name="l23676"></a><span class="lineno">23676</span> </div>
-<div class="foldopen" id="foldopen23677" data-start="{" data-end="};">
 <div class="line"><a id="l23677" name="l23677"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#gac400c8a085a491b76fbf5df77c3e8a5b">23677</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#gac400c8a085a491b76fbf5df77c3e8a5b">font_59</a> = {</div>
 <div class="line"><a id="l23678" name="l23678"></a><span class="lineno">23678</span>    59,</div>
 <div class="line"><a id="l23679" name="l23679"></a><span class="lineno">23679</span>    <a class="code hl_variable" href="fonts_8c.html#a7bac766f19b15d0211446b1938f30135">font59_info</a>,</div>
 <div class="line"><a id="l23680" name="l23680"></a><span class="lineno">23680</span>    <a class="code hl_variable" href="fonts_8c.html#a8bf7b146307f7a5b66c2751933df12ea">font59_data</a></div>
 <div class="line"><a id="l23681" name="l23681"></a><span class="lineno">23681</span>};</div>
-</div>
 <div class="line"><a id="l23682" name="l23682"></a><span class="lineno">23682</span> </div>
-<div class="foldopen" id="foldopen23683" data-start="{" data-end="};">
 <div class="line"><a id="l23683" name="l23683"></a><span class="lineno"><a class="line" href="group___i_c_o_n_s.html#ga89bac9cd0521397acf6351b0f2ade820">23683</a></span><a class="code hl_struct" href="struct_font__t.html">Font_t</a> <a class="code hl_variable" href="group___i_c_o_n_s.html#ga89bac9cd0521397acf6351b0f2ade820">font_89</a> = {</div>
 <div class="line"><a id="l23684" name="l23684"></a><span class="lineno">23684</span>    89,</div>
 <div class="line"><a id="l23685" name="l23685"></a><span class="lineno">23685</span>    <a class="code hl_variable" href="fonts_8c.html#a3af219834d6277059db946e39339018d">font89_info</a>,</div>
 <div class="line"><a id="l23686" name="l23686"></a><span class="lineno">23686</span>    <a class="code hl_variable" href="fonts_8c.html#a8274c6c132073fe22eaef23aff78966d">font89_data</a></div>
 <div class="line"><a id="l23687" name="l23687"></a><span class="lineno">23687</span>};</div>
-</div>
 <div class="line"><a id="l23688" name="l23688"></a><span class="lineno">23688</span> </div>
 <div class="line"><a id="l23689" name="l23689"></a><span class="lineno">23689</span><span class="comment">/*==================[internal functions definition]==========================*/</span></div>
 <div class="line"><a id="l23690" name="l23690"></a><span class="lineno">23690</span> </div>
 <div class="line"><a id="l23691" name="l23691"></a><span class="lineno">23691</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
 <div class="line"><a id="l23692" name="l23692"></a><span class="lineno">23692</span> </div>
 <div class="line"><a id="l23693" name="l23693"></a><span class="lineno">23693</span><span class="comment">/*==================[end of file]============================================*/</span></div>
-<div class="ttc" id="afonts_8c_html_a21357940ba204c1f36b52fd8d2ee9389"><div class="ttname"><a href="fonts_8c.html#a21357940ba204c1f36b52fd8d2ee9389">font11_info</a></div><div class="ttdeci">char_info_t font11_info[]</div><div class="ttdoc">11 pixels height char info array.</div><div class="ttdef"><b>Definition</b> <a href="#l01264">fonts.c:1264</a></div></div>
-<div class="ttc" id="afonts_8c_html_a21dcc03b78bc52d0a3aff354b0a8618f"><div class="ttname"><a href="fonts_8c.html#a21dcc03b78bc52d0a3aff354b0a8618f">font22_data</a></div><div class="ttdeci">const uint8_t font22_data[]</div><div class="ttdoc">22 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l03466">fonts.c:3466</a></div></div>
-<div class="ttc" id="afonts_8c_html_a399f84ca794080cae7f0a760bd524457"><div class="ttname"><a href="fonts_8c.html#a399f84ca794080cae7f0a760bd524457">font19_data</a></div><div class="ttdeci">const uint8_t font19_data[]</div><div class="ttdoc">19 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l01365">fonts.c:1365</a></div></div>
-<div class="ttc" id="afonts_8c_html_a3af219834d6277059db946e39339018d"><div class="ttname"><a href="fonts_8c.html#a3af219834d6277059db946e39339018d">font89_info</a></div><div class="ttdeci">char_info_t font89_info[]</div><div class="ttdoc">89 pixels height char info array.</div><div class="ttdef"><b>Definition</b> <a href="#l23552">fonts.c:23552</a></div></div>
-<div class="ttc" id="afonts_8c_html_a5428d9e6b29167e3045fc25f5a7ce0ed"><div class="ttname"><a href="fonts_8c.html#a5428d9e6b29167e3045fc25f5a7ce0ed">font30_data</a></div><div class="ttdeci">const uint8_t font30_data[]</div><div class="ttdoc">30 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l05853">fonts.c:5853</a></div></div>
-<div class="ttc" id="afonts_8c_html_a5644aa6042a06df55331020e8ae505ee"><div class="ttname"><a href="fonts_8c.html#a5644aa6042a06df55331020e8ae505ee">font22_info</a></div><div class="ttdeci">char_info_t font22_info[]</div><div class="ttdoc">22 pixels height char info array.</div><div class="ttdef"><b>Definition</b> <a href="#l05751">fonts.c:5751</a></div></div>
-<div class="ttc" id="afonts_8c_html_a7bac766f19b15d0211446b1938f30135"><div class="ttname"><a href="fonts_8c.html#a7bac766f19b15d0211446b1938f30135">font59_info</a></div><div class="ttdeci">char_info_t font59_info[]</div><div class="ttdoc">59 pixels height char info array.</div><div class="ttdef"><b>Definition</b> <a href="#l14800">fonts.c:14800</a></div></div>
-<div class="ttc" id="afonts_8c_html_a8274c6c132073fe22eaef23aff78966d"><div class="ttname"><a href="fonts_8c.html#a8274c6c132073fe22eaef23aff78966d">font89_data</a></div><div class="ttdeci">const uint8_t font89_data[]</div><div class="ttdoc">89 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l14902">fonts.c:14902</a></div></div>
-<div class="ttc" id="afonts_8c_html_a8bf7b146307f7a5b66c2751933df12ea"><div class="ttname"><a href="fonts_8c.html#a8bf7b146307f7a5b66c2751933df12ea">font59_data</a></div><div class="ttdeci">const uint8_t font59_data[]</div><div class="ttdoc">59 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l09000">fonts.c:9000</a></div></div>
-<div class="ttc" id="afonts_8c_html_ac2f5acf223c4613e821d802d7b384ae5"><div class="ttname"><a href="fonts_8c.html#ac2f5acf223c4613e821d802d7b384ae5">font30_info</a></div><div class="ttdeci">char_info_t font30_info[]</div><div class="ttdoc">30 pixels height char info array.</div><div class="ttdef"><b>Definition</b> <a href="#l08898">fonts.c:8898</a></div></div>
-<div class="ttc" id="afonts_8c_html_ac94b8e79e9d2c1454d961efdd0694706"><div class="ttname"><a href="fonts_8c.html#ac94b8e79e9d2c1454d961efdd0694706">font11_data</a></div><div class="ttdeci">const uint8_t font11_data[]</div><div class="ttdoc">11 pixels height data array.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">fonts.c:24</a></div></div>
-<div class="ttc" id="afonts_8c_html_aee72bcfdf92cc2cce1312ec49e7cf4bd"><div class="ttname"><a href="fonts_8c.html#aee72bcfdf92cc2cce1312ec49e7cf4bd">font19_info</a></div><div class="ttdeci">char_info_t font19_info[]</div><div class="ttdoc">19 pixels height chat info array.</div><div class="ttdef"><b>Definition</b> <a href="#l03365">fonts.c:3365</a></div></div>
+<div class="ttc" id="afonts_8c_html_a21357940ba204c1f36b52fd8d2ee9389"><div class="ttname"><a href="fonts_8c.html#a21357940ba204c1f36b52fd8d2ee9389">font11_info</a></div><div class="ttdeci">char_info_t font11_info[]</div><div class="ttdoc">11 pixels height char info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l01264">fonts.c:1264</a></div></div>
+<div class="ttc" id="afonts_8c_html_a21dcc03b78bc52d0a3aff354b0a8618f"><div class="ttname"><a href="fonts_8c.html#a21dcc03b78bc52d0a3aff354b0a8618f">font22_data</a></div><div class="ttdeci">const uint8_t font22_data[]</div><div class="ttdoc">22 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l03466">fonts.c:3466</a></div></div>
+<div class="ttc" id="afonts_8c_html_a399f84ca794080cae7f0a760bd524457"><div class="ttname"><a href="fonts_8c.html#a399f84ca794080cae7f0a760bd524457">font19_data</a></div><div class="ttdeci">const uint8_t font19_data[]</div><div class="ttdoc">19 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l01365">fonts.c:1365</a></div></div>
+<div class="ttc" id="afonts_8c_html_a3af219834d6277059db946e39339018d"><div class="ttname"><a href="fonts_8c.html#a3af219834d6277059db946e39339018d">font89_info</a></div><div class="ttdeci">char_info_t font89_info[]</div><div class="ttdoc">89 pixels height char info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23552">fonts.c:23552</a></div></div>
+<div class="ttc" id="afonts_8c_html_a5428d9e6b29167e3045fc25f5a7ce0ed"><div class="ttname"><a href="fonts_8c.html#a5428d9e6b29167e3045fc25f5a7ce0ed">font30_data</a></div><div class="ttdeci">const uint8_t font30_data[]</div><div class="ttdoc">30 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l05853">fonts.c:5853</a></div></div>
+<div class="ttc" id="afonts_8c_html_a5644aa6042a06df55331020e8ae505ee"><div class="ttname"><a href="fonts_8c.html#a5644aa6042a06df55331020e8ae505ee">font22_info</a></div><div class="ttdeci">char_info_t font22_info[]</div><div class="ttdoc">22 pixels height char info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l05751">fonts.c:5751</a></div></div>
+<div class="ttc" id="afonts_8c_html_a7bac766f19b15d0211446b1938f30135"><div class="ttname"><a href="fonts_8c.html#a7bac766f19b15d0211446b1938f30135">font59_info</a></div><div class="ttdeci">char_info_t font59_info[]</div><div class="ttdoc">59 pixels height char info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l14800">fonts.c:14800</a></div></div>
+<div class="ttc" id="afonts_8c_html_a8274c6c132073fe22eaef23aff78966d"><div class="ttname"><a href="fonts_8c.html#a8274c6c132073fe22eaef23aff78966d">font89_data</a></div><div class="ttdeci">const uint8_t font89_data[]</div><div class="ttdoc">89 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l14902">fonts.c:14902</a></div></div>
+<div class="ttc" id="afonts_8c_html_a8bf7b146307f7a5b66c2751933df12ea"><div class="ttname"><a href="fonts_8c.html#a8bf7b146307f7a5b66c2751933df12ea">font59_data</a></div><div class="ttdeci">const uint8_t font59_data[]</div><div class="ttdoc">59 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l09000">fonts.c:9000</a></div></div>
+<div class="ttc" id="afonts_8c_html_ac2f5acf223c4613e821d802d7b384ae5"><div class="ttname"><a href="fonts_8c.html#ac2f5acf223c4613e821d802d7b384ae5">font30_info</a></div><div class="ttdeci">char_info_t font30_info[]</div><div class="ttdoc">30 pixels height char info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l08898">fonts.c:8898</a></div></div>
+<div class="ttc" id="afonts_8c_html_ac94b8e79e9d2c1454d961efdd0694706"><div class="ttname"><a href="fonts_8c.html#ac94b8e79e9d2c1454d961efdd0694706">font11_data</a></div><div class="ttdeci">const uint8_t font11_data[]</div><div class="ttdoc">11 pixels height data array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l00024">fonts.c:24</a></div></div>
+<div class="ttc" id="afonts_8c_html_aee72bcfdf92cc2cce1312ec49e7cf4bd"><div class="ttname"><a href="fonts_8c.html#aee72bcfdf92cc2cce1312ec49e7cf4bd">font19_info</a></div><div class="ttdeci">char_info_t font19_info[]</div><div class="ttdoc">19 pixels height chat info array.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l03365">fonts.c:3365</a></div></div>
 <div class="ttc" id="afonts_8h_html"><div class="ttname"><a href="fonts_8h.html">fonts.h</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_ga3a43430cdda2e2e8253724fe1bd81d7d"><div class="ttname"><a href="group___i_c_o_n_s.html#ga3a43430cdda2e2e8253724fe1bd81d7d">font_19</a></div><div class="ttdeci">Font_t font_19</div><div class="ttdoc">19 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23659">fonts.c:23659</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_ga413a8dcdab8681bcdcc9e217392b2bd5"><div class="ttname"><a href="group___i_c_o_n_s.html#ga413a8dcdab8681bcdcc9e217392b2bd5">font_30</a></div><div class="ttdeci">Font_t font_30</div><div class="ttdoc">22 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23671">fonts.c:23671</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_ga89bac9cd0521397acf6351b0f2ade820"><div class="ttname"><a href="group___i_c_o_n_s.html#ga89bac9cd0521397acf6351b0f2ade820">font_89</a></div><div class="ttdeci">Font_t font_89</div><div class="ttdoc">89 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23683">fonts.c:23683</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_ga96c13a7633909daa23faf1b5b185552d"><div class="ttname"><a href="group___i_c_o_n_s.html#ga96c13a7633909daa23faf1b5b185552d">font_11</a></div><div class="ttdeci">Font_t font_11</div><div class="ttdoc">11 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23653">fonts.c:23653</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_gac400c8a085a491b76fbf5df77c3e8a5b"><div class="ttname"><a href="group___i_c_o_n_s.html#gac400c8a085a491b76fbf5df77c3e8a5b">font_59</a></div><div class="ttdeci">Font_t font_59</div><div class="ttdoc">59 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23677">fonts.c:23677</a></div></div>
-<div class="ttc" id="agroup___i_c_o_n_s_html_gacb2bb6bded5ed7e20abd6cf504164b62"><div class="ttname"><a href="group___i_c_o_n_s.html#gacb2bb6bded5ed7e20abd6cf504164b62">font_22</a></div><div class="ttdeci">Font_t font_22</div><div class="ttdoc">22 pixels font height structure</div><div class="ttdef"><b>Definition</b> <a href="#l23665">fonts.c:23665</a></div></div>
-<div class="ttc" id="astruct_font__t_html"><div class="ttname"><a href="struct_font__t.html">Font_t</a></div><div class="ttdoc">Font structure.</div><div class="ttdef"><b>Definition</b> <a href="fonts_8h_source.html#l00043">fonts.h:43</a></div></div>
-<div class="ttc" id="astructchar__info__t_html"><div class="ttname"><a href="structchar__info__t.html">char_info_t</a></div><div class="ttdoc">Fonts for LCD display.</div><div class="ttdef"><b>Definition</b> <a href="fonts_8h_source.html#l00036">fonts.h:36</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_ga3a43430cdda2e2e8253724fe1bd81d7d"><div class="ttname"><a href="group___i_c_o_n_s.html#ga3a43430cdda2e2e8253724fe1bd81d7d">font_19</a></div><div class="ttdeci">Font_t font_19</div><div class="ttdoc">19 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23659">fonts.c:23659</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_ga413a8dcdab8681bcdcc9e217392b2bd5"><div class="ttname"><a href="group___i_c_o_n_s.html#ga413a8dcdab8681bcdcc9e217392b2bd5">font_30</a></div><div class="ttdeci">Font_t font_30</div><div class="ttdoc">22 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23671">fonts.c:23671</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_ga89bac9cd0521397acf6351b0f2ade820"><div class="ttname"><a href="group___i_c_o_n_s.html#ga89bac9cd0521397acf6351b0f2ade820">font_89</a></div><div class="ttdeci">Font_t font_89</div><div class="ttdoc">89 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23683">fonts.c:23683</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_ga96c13a7633909daa23faf1b5b185552d"><div class="ttname"><a href="group___i_c_o_n_s.html#ga96c13a7633909daa23faf1b5b185552d">font_11</a></div><div class="ttdeci">Font_t font_11</div><div class="ttdoc">11 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23653">fonts.c:23653</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_gac400c8a085a491b76fbf5df77c3e8a5b"><div class="ttname"><a href="group___i_c_o_n_s.html#gac400c8a085a491b76fbf5df77c3e8a5b">font_59</a></div><div class="ttdeci">Font_t font_59</div><div class="ttdoc">59 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23677">fonts.c:23677</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_gacb2bb6bded5ed7e20abd6cf504164b62"><div class="ttname"><a href="group___i_c_o_n_s.html#gacb2bb6bded5ed7e20abd6cf504164b62">font_22</a></div><div class="ttdeci">Font_t font_22</div><div class="ttdoc">22 pixels font height structure</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8c_source.html#l23665">fonts.c:23665</a></div></div>
+<div class="ttc" id="astruct_font__t_html"><div class="ttname"><a href="struct_font__t.html">Font_t</a></div><div class="ttdoc">Font structure.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8h_source.html#l00043">fonts.h:43</a></div></div>
+<div class="ttc" id="astructchar__info__t_html"><div class="ttname"><a href="structchar__info__t.html">char_info_t</a></div><div class="ttdoc">Fonts for LCD display.</div><div class="ttdef"><b>Definition:</b> <a href="fonts_8h_source.html#l00036">fonts.h:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="fonts_8c.html">fonts.c</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

@@ -6,5 +6,6 @@ var searchData=
   ['blank_5fporch_5fctrl_3',['BLANK_PORCH_CTRL',['../ili9341_8c.html#a3864c48a21a720ca2c2e3ea4cd904569',1,'ili9341.c']]],
   ['blue_5fmsk_4',['BLUE_MSK',['../neopixel__stripe_8c.html#ab821869451c5b9d4dcaec88d8cb00b41',1,'neopixel_stripe.c']]],
   ['blue_5foffset_5',['BLUE_OFFSET',['../neopixel__stripe_8c.html#a62e3dbb5365407c155ed8c6ec346e8e1',1,'neopixel_stripe.c']]],
-  ['bright_5foffset_6',['BRIGHT_OFFSET',['../neopixel__stripe_8c.html#a6c94edbcea161634d33b78aa6138f18a',1,'neopixel_stripe.c']]]
+  ['bright_5foffset_6',['BRIGHT_OFFSET',['../neopixel__stripe_8c.html#a6c94edbcea161634d33b78aa6138f18a',1,'neopixel_stripe.c']]],
+  ['buffer_5fsize_7',['BUFFER_SIZE',['../monitor__unidad__paciente_8c.html#a6b20d41d6252e9871430c242cb1a56e7',1,'monitor_unidad_paciente.c']]]
 ];

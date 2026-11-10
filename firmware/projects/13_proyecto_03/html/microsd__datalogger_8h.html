@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto 3: Referencia del Archivo D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/inc/microsd_datalogger.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto 3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema embebido de monitoreo y asistencia para una unidad de paciente</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('microsd__datalogger_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del Archivo microsd_datalogger.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Driver de la capa de dispositivos para el almacenamiento clínico no volátil en tarjeta MicroSD de 2GB (formato FAT16), mediante bus SPI y gestión de reloj en tiempo real (RTC).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;esp_http_server.h&quot;</code><br />
+</div>
+<p><a href="microsd__datalogger_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structregistro__clinico__sd__t.html">registro_clinico_sd_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura de un registro clínico e higrotérmico para almacenamiento en DATALOG.CSV.  <a href="structregistro__clinico__sd__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a88aa1286457fbad71bb14dcf115ae3e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a88aa1286457fbad71bb14dcf115ae3e1">MICROSD_DEFAULT_CS_GPIO</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393ad3c7eb7127bc6e6c1ecc8216c518c60b">GPIO_13</a></td></tr>
+<tr class="separator:a88aa1286457fbad71bb14dcf115ae3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162443ad513f8dacfe3c964e8ce1449e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a162443ad513f8dacfe3c964e8ce1449e">MICROSD_DEFAULT_SCK_GPIO</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a></td></tr>
+<tr class="separator:a162443ad513f8dacfe3c964e8ce1449e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c46793340c64fbeea11490fc7cfbe5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a38c46793340c64fbeea11490fc7cfbe5">MICROSD_DEFAULT_MOSI_GPIO</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a></td></tr>
+<tr class="separator:a38c46793340c64fbeea11490fc7cfbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76970ef61769f855017826579ec8f5a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a76970ef61769f855017826579ec8f5a0">MICROSD_DEFAULT_MISO_GPIO</a>&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></td></tr>
+<tr class="separator:a76970ef61769f855017826579ec8f5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4431237d03acd208165b11a108b1ca29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a4431237d03acd208165b11a108b1ca29">MICROSD_MOUNT_POINT</a>&#160;&#160;&#160;&quot;/sdcard&quot;</td></tr>
+<tr class="separator:a4431237d03acd208165b11a108b1ca29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ad5061a4b6c4d7e039fce0320935e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#ae9ad5061a4b6c4d7e039fce0320935e0">MICROSD_CSV_FILEPATH</a>&#160;&#160;&#160;&quot;/sdcard/DATALOG.CSV&quot;</td></tr>
+<tr class="separator:ae9ad5061a4b6c4d7e039fce0320935e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8868392d766fd4c9d3a7299ed15d7885"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a8868392d766fd4c9d3a7299ed15d7885">MICROSD_LOG_PERIOD_MS</a>&#160;&#160;&#160;10000</td></tr>
+<tr class="separator:a8868392d766fd4c9d3a7299ed15d7885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a39514f523a8e0bec88720e736f32934a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a39514f523a8e0bec88720e736f32934a">MicroSdInit</a> (void)</td></tr>
+<tr class="memdesc:a39514f523a8e0bec88720e736f32934a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desconecta el transceptor USB_D+ de GPIO_13, inicializa el bus SPI2 a 4 MHz y monta la partición FAT16 de la tarjeta MicroSD. Crea el encabezado CSV si el archivo no existe.  <a href="microsd__datalogger_8h.html#a39514f523a8e0bec88720e736f32934a">Más...</a><br /></td></tr>
+<tr class="separator:a39514f523a8e0bec88720e736f32934a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85288140d87dab1441bf5168c7f20239"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a85288140d87dab1441bf5168c7f20239">MicroSdEscribirRegistro</a> (const <a class="el" href="structregistro__clinico__sd__t.html">registro_clinico_sd_t</a> *reg)</td></tr>
+<tr class="memdesc:a85288140d87dab1441bf5168c7f20239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta un ciclo atómico de Apertura (Fase 1), Escritura CSV y Cierre con Flush FAT (Fase 2). Si la tarjeta no estaba montada, reintenta su montaje automáticamente sin bloquear el RTOS.  <a href="microsd__datalogger_8h.html#a85288140d87dab1441bf5168c7f20239">Más...</a><br /></td></tr>
+<tr class="separator:a85288140d87dab1441bf5168c7f20239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e558af5b2234c6e920f7146296c50e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a25e558af5b2234c6e920f7146296c50e">MicroSdEstadoMontada</a> (void)</td></tr>
+<tr class="memdesc:a25e558af5b2234c6e920f7146296c50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta si la tarjeta MicroSD se encuentra operativa y con el sistema FAT montado.  <a href="microsd__datalogger_8h.html#a25e558af5b2234c6e920f7146296c50e">Más...</a><br /></td></tr>
+<tr class="separator:a25e558af5b2234c6e920f7146296c50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214e068be544282bfd91b953a787e12e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a214e068be544282bfd91b953a787e12e">MicroSdObtenerTotalEscritos</a> (void)</td></tr>
+<tr class="memdesc:a214e068be544282bfd91b953a787e12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la cantidad de registros grabados exitosamente desde el encendido del sistema.  <a href="microsd__datalogger_8h.html#a214e068be544282bfd91b953a787e12e">Más...</a><br /></td></tr>
+<tr class="separator:a214e068be544282bfd91b953a787e12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad29abca0ce8909e237f186bf9714f41f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f">MicroSdSincronizarRelojEpoch</a> (int64_t epoch_sec)</td></tr>
+<tr class="memdesc:ad29abca0ce8909e237f186bf9714f41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajusta el reloj de tiempo real (RTC) interno del ESP32-C6 a partir de un timestamp Unix (segundos) recibido desde el navegador web (ajustado a huso horario local UTC-3).  <a href="microsd__datalogger_8h.html#ad29abca0ce8909e237f186bf9714f41f">Más...</a><br /></td></tr>
+<tr class="separator:ad29abca0ce8909e237f186bf9714f41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a14319ea4ef4f176c539018e765d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#aa2a14319ea4ef4f176c539018e765d70">MicroSdObtenerFechaHoraActual</a> (char *out_fecha, size_t len_f, char *out_hora, size_t len_h)</td></tr>
+<tr class="memdesc:aa2a14319ea4ef4f176c539018e765d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene las cadenas formateadas de fecha (<code>YYYY-MM-DD</code>) y hora (<code>HH:MM:SS</code>) actuales del RTC.  <a href="microsd__datalogger_8h.html#aa2a14319ea4ef4f176c539018e765d70">Más...</a><br /></td></tr>
+<tr class="separator:aa2a14319ea4ef4f176c539018e765d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581f739f95d26f7a2e9b9772592012a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5">MicroSdRelojSincronizado</a> (void)</td></tr>
+<tr class="memdesc:a581f739f95d26f7a2e9b9772592012a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si el reloj RTC ya fue sincronizado con la fecha/hora real desde la interfaz web.  <a href="microsd__datalogger_8h.html#a581f739f95d26f7a2e9b9772592012a5">Más...</a><br /></td></tr>
+<tr class="separator:a581f739f95d26f7a2e9b9772592012a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1612e345a1df5f26d7c15e52e865acdb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb">MicroSdLeerUltimosRegistrosJson</a> (char *json_buf, size_t max_len, uint16_t max_registros)</td></tr>
+<tr class="memdesc:a1612e345a1df5f26d7c15e52e865acdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la Fase 3 (Apertura y Lectura SPI con <code>CMD17</code>) posicionándose al final de <code>DATALOG.CSV</code> mediante <code>fseek()</code> para extraer los últimos <code>max_registros</code> en formato JSON.  <a href="microsd__datalogger_8h.html#a1612e345a1df5f26d7c15e52e865acdb">Más...</a><br /></td></tr>
+<tr class="separator:a1612e345a1df5f26d7c15e52e865acdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae292d38a7d1265b371e7ea902750b2f7"><td class="memItemLeft" align="right" valign="top">esp_err_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7">MicroSdEnviarCsvCompletoHttp</a> (httpd_req_t *req)</td></tr>
+<tr class="memdesc:ae292d38a7d1265b371e7ea902750b2f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee el archivo <code>DATALOG.CSV</code> en bloques por SPI y lo transmite por streaming HTTP para su descarga directa en la PC o teléfono.  <a href="microsd__datalogger_8h.html#ae292d38a7d1265b371e7ea902750b2f7">Más...</a><br /></td></tr>
+<tr class="separator:ae292d38a7d1265b371e7ea902750b2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Driver de la capa de dispositivos para el almacenamiento clínico no volátil en tarjeta MicroSD de 2GB (formato FAT16), mediante bus SPI y gestión de reloj en tiempo real (RTC). </p>
+<p >Administra la inicialización del bus SPI2 del ESP32-C6, el montaje del sistema de archivos FAT sobre una tarjeta MicroSD de 2 GB (FAT16) y el registro periódico protegido ante cortes de energía mediante ciclos atómicos de apertura, escritura formateada CSV y cierre con volcado inmediato (<code>flush</code>) a la tabla FAT. <br  />
+ Asimismo, provee lectura selectiva de los últimos registros para su graficación en el servidor web embebido y descarga íntegra del archivo <code>DATALOG.CSV</code>. <br  />
+ </p>
+<h1><a class="anchor" id="sd_hw_specs"></a>
+Especificaciones de Hardware, Formato FAT16 y Desacople de GPIO_13 (USB_D+)</h1>
+<ul>
+<li><b>Tarjeta y Sistema de Archivos:</b> Tarjeta MicroSD SDSC de 2 GB comerciales (1.85 GB útiles) formateada en <b>FAT16</b> (<code>FAT</code> predeterminado), óptima por su baja sobrecarga de tabla de asignación de clústeres.</li>
+<li><b>Etapa de Alimentación y Nivelación del Módulo Lector:</b> El módulo se alimenta con <b>+5V DC</b> en su pin <code>VCC</code> (desacoplado localmente con un capacitor electrolítico de <b>220 µF</b>), integrando en placa un regulador lineal <code>AMS1117-3.3</code> y un buffer adaptador <code>74LVC125A</code> que opera con niveles lógicos seguros de 3.3V compatibles con el ESP32-C6.</li>
+<li><b>Tratamiento de GPIO_13 (Línea USB_D+):</b> El pin <code>GPIO_13</code> corresponde por defecto a la línea diferencial <code>USB_D+</code> del periférico interno <code>USB_SERIAL_JTAG</code>. Dado que el sistema emplea exclusivamente el puente <code>USB-UART0</code> para alimentación y telemetría con Teleplot, en <code><a class="el" href="microsd__datalogger_8h.html#a39514f523a8e0bec88720e736f32934a" title="Desconecta el transceptor USB_D+ de GPIO_13, inicializa el bus SPI2 a 4 MHz y monta la partición FAT1...">MicroSdInit()</a></code> se invoca <code>gpio_config()</code> sobre <code>GPIO_13</code> como salida digital pura con pull-up activo, lo cual ejecuta internamente <code>usb_serial_jtag_ll_phy_enable(false)</code> y libera el pad físico para operar como línea <code>CS</code> (Chip Select) sin interferencias.</li>
+</ul>
+<h1><a class="anchor" id="sd_osc_study"></a>
+Estudio Experimental del Bus SPI con Osciloscopio (Escritura, Cierre y Lectura)</h1>
+<p >Para caracterizar el comportamiento temporal y eléctrico del bus SPI antes de su integración, se implementó un banco de pruebas configurando el <b>Canal 1 (amarillo)</b> del osciloscopio sobre la línea <b>CS (Chip Select)</b> con disparo (<em>Trigger</em>) por flanco descendente, y relevando de forma secuencial con el <b>Canal 2 (verde)</b> las líneas <b>SCK</b>, <b>MOSI</b> y <b>MISO</b>:</p>
+<ol type="1">
+<li><b>Fase 1 - Apertura y Escritura de Datos (<code>fopen</code> / <code>fprintf</code>):</b><ul>
+<li><b>CS:</b> Cae de 3.3V/5V a nivel BAJO (0V), habilitando la tarjeta esclava y disparando el osciloscopio.</li>
+<li><b>SCK:</b> Genera ráfagas de reloj de 4 MHz (SPI Modo 0, 0V en reposo) sincronizando la transferencia.</li>
+<li><b>MOSI:</b> Intensa actividad transmitiendo el comando de escritura de bloque (<code>CMD24</code>), dirección de sector y la cadena ASCII de caracteres CSV.</li>
+<li><b>MISO:</b> Permanece mayormente en nivel ALTO con breves respuestas de confirmación (<code>0x00</code>) e intervalos cortos de estado ocupado (<em>busy</em> en 0V). Duración medida de la ráfaga: <b>≈ 4.5 ms</b>.</li>
+</ul>
+</li>
+<li><b>Fase 2 - Cierre del Archivo y Volcado No Volátil (<code>fclose</code> / Flush a Tabla FAT):</b><ul>
+<li><b>CS:</b> Desciende nuevamente a 0V durante toda la transacción de cierre (<b>≈ 11 ms</b>).</li>
+<li><b>SCK y MOSI:</b> Emiten múltiples trenes de pulsos actualizando el sector de datos, las copias de la tabla de asignación FAT16 y la entrada de directorio con el nuevo tamaño del archivo.</li>
+<li><b>MISO:</b> La tarjeta MicroSD retiene la línea <code>MISO</code> en nivel BAJO (0V) mientras su controlador interno programa físicamente las celdas Flash NAND (<em>busy state</em>). Una vez que <code>MISO</code> retorna a nivel ALTO y <code>CS</code> sube a reposo, el dato queda protegido contra cualquier corte súbito de energía eléctrica.</li>
+</ul>
+</li>
+<li><b>Fase 3 - Apertura y Lectura de Verificación (<code>fopen</code> / <code>fread</code>):</b><ul>
+<li><b>CS:</b> Cae a 0V durante <b>≈ 2.5 ms</b>.</li>
+<li><b>SCK:</b> Provee el tren continuo de pulsos de reloj generados por el maestro.</li>
+<li><b>MOSI:</b> Presenta un único pulso inicial enviando el comando de lectura de bloque (<code>CMD17</code>) y luego permanece en ALTO continuo enviando bytes <em>dummy</em> (<code>0xFF</code>).</li>
+<li><b>MISO:</b> Presenta alta densidad de conmutación devolviendo hacia el microcontrolador los bytes ASCII almacenados en el archivo <code>DATALOG.CSV</code>.</li>
+</ul>
+</li>
+</ol>
+<h1><a class="anchor" id="sd_media"></a>
+Video Experimental y Capturas del Datalogger MicroSD</h1>
+<ul>
+<li><b><a href="https://youtu.be/hTUDn0Bl0bQ">Registro y visualizacion de datos, y sincronización fecha y hora</a></b> <br  />
+ El ESP32 obtiene una fecha y hora actual para vincular a los datos registrados cada diez segundos. Los datos pueden descargarse de la web y visualizarse en forma de gráfica/función en la misma web también. <br  />
+ <dl class="section see"><dt>Ver también</dt><dd><a href="../formateo_tarjeta_micro_sd_2GB.png">Capacidad y Formato FAT16 de la MicroSD de 2 GB</a> </dd>
+<dd>
+<a href="../pinout_lector_micro_sd.png">Pinout y Arquitectura del Módulo Lector MicroSD</a> </dd>
+<dd>
+<a href="../escritura_cierre_y_lectura_micro_sd_por_spi.png">Relevamiento en Osciloscopio de Escritura, Cierre y Lectura SPI</a> </dd>
+<dd>
+<a href="../DATALOG.csv">Archivo real generado por el ESP32, y descargado de la propia web - DATALOG.csv</a></dd></dl>
+</li>
+</ul>
+<h1><a class="anchor" id="hardConn"></a>
+Hardware Connection</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Pin Módulo MicroSD   </th><th class="markdownTableHeadLeft">Pin ESP32-C6   </th><th class="markdownTableHeadLeft">Conexión Hardware / Circuito Externo    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">CS (Chip Select)   </td><td class="markdownTableBodyLeft">GPIO_13   </td><td class="markdownTableBodyLeft">Directo a GPIO_13 (PHY USB_D+ deshabilitado por software)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">SCK (Serial Clock)   </td><td class="markdownTableBodyLeft">GPIO_20   </td><td class="markdownTableBodyLeft">Directo a GPIO_20 (Reloj SPI Maestro a 4 MHz)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">MOSI (Master Out)   </td><td class="markdownTableBodyLeft">GPIO_21   </td><td class="markdownTableBodyLeft">Directo a GPIO_21 (Datos Maestro -&gt; Tarjeta MicroSD)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">MISO / MOSO   </td><td class="markdownTableBodyLeft">GPIO_22   </td><td class="markdownTableBodyLeft">Directo a GPIO_22 (Datos Tarjeta MicroSD -&gt; Maestro 3.3V)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">VCC   </td><td class="markdownTableBodyLeft">5V   </td><td class="markdownTableBodyLeft">Alimentación +5V DC con capacitor electrolítico de 220 µF a GND    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">GND   </td><td class="markdownTableBodyLeft">GND   </td><td class="markdownTableBodyLeft">Masa común del sistema (0V)   </td></tr>
+</table>
+<h1><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Date   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">2026-10-31   </td><td class="markdownTableBodyLeft">Creación del driver de datalogging clínico CSV en MicroSD por SPI y reloj RTC   </td></tr>
+</table>
+<dl class="section version"><dt>Versión</dt><dd>1.0 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Guillermo Casco Miranda </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+</div><h2 class="groupheader">Documentación de los 'defines'</h2>
+<a id="ae9ad5061a4b6c4d7e039fce0320935e0" name="ae9ad5061a4b6c4d7e039fce0320935e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ad5061a4b6c4d7e039fce0320935e0">&#9670;&nbsp;</a></span>MICROSD_CSV_FILEPATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_CSV_FILEPATH&#160;&#160;&#160;&quot;/sdcard/DATALOG.CSV&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00100">100</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a88aa1286457fbad71bb14dcf115ae3e1" name="a88aa1286457fbad71bb14dcf115ae3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88aa1286457fbad71bb14dcf115ae3e1">&#9670;&nbsp;</a></span>MICROSD_DEFAULT_CS_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_DEFAULT_CS_GPIO&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393ad3c7eb7127bc6e6c1ecc8216c518c60b">GPIO_13</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Pin CS en GPIO_13 (desacoplado de USB_D+) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00094">94</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a76970ef61769f855017826579ec8f5a0" name="a76970ef61769f855017826579ec8f5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76970ef61769f855017826579ec8f5a0">&#9670;&nbsp;</a></span>MICROSD_DEFAULT_MISO_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_DEFAULT_MISO_GPIO&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393aca7c5f2acf755d61b35d05ea921c79eb">GPIO_22</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Pin MISO (MOSO) en GPIO_22 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00097">97</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a38c46793340c64fbeea11490fc7cfbe5" name="a38c46793340c64fbeea11490fc7cfbe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38c46793340c64fbeea11490fc7cfbe5">&#9670;&nbsp;</a></span>MICROSD_DEFAULT_MOSI_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_DEFAULT_MOSI_GPIO&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a32ff7e9a2f00d396ff2b2b62af571d7c">GPIO_21</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Pin MOSI en GPIO_21 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00096">96</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a162443ad513f8dacfe3c964e8ce1449e" name="a162443ad513f8dacfe3c964e8ce1449e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a162443ad513f8dacfe3c964e8ce1449e">&#9670;&nbsp;</a></span>MICROSD_DEFAULT_SCK_GPIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_DEFAULT_SCK_GPIO&#160;&#160;&#160;<a class="el" href="group___g_i_o_p.html#ggaf65604147d0244c9b13cfdc865ad5393a081be372da926e3ca6f612b267854e95">GPIO_20</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Pin SCK en GPIO_20 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00095">95</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a8868392d766fd4c9d3a7299ed15d7885" name="a8868392d766fd4c9d3a7299ed15d7885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8868392d766fd4c9d3a7299ed15d7885">&#9670;&nbsp;</a></span>MICROSD_LOG_PERIOD_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_LOG_PERIOD_MS&#160;&#160;&#160;10000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Período de grabación en tarjeta MicroSD: 10 segundos </p>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00101">101</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<a id="a4431237d03acd208165b11a108b1ca29" name="a4431237d03acd208165b11a108b1ca29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4431237d03acd208165b11a108b1ca29">&#9670;&nbsp;</a></span>MICROSD_MOUNT_POINT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MICROSD_MOUNT_POINT&#160;&#160;&#160;&quot;/sdcard&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8h_source.html#l00099">99</a> del archivo <a class="el" href="microsd__datalogger_8h_source.html">microsd_datalogger.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de las funciones</h2>
+<a id="ae292d38a7d1265b371e7ea902750b2f7" name="ae292d38a7d1265b371e7ea902750b2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae292d38a7d1265b371e7ea902750b2f7">&#9670;&nbsp;</a></span>MicroSdEnviarCsvCompletoHttp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_err_t MicroSdEnviarCsvCompletoHttp </td>
+          <td>(</td>
+          <td class="paramtype">httpd_req_t *&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee el archivo <code>DATALOG.CSV</code> en bloques por SPI y lo transmite por streaming HTTP para su descarga directa en la PC o teléfono. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>Puntero a la petición activa del servidor HTTP. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><code>ESP_OK</code> si la transferencia finalizó correctamente. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00343">343</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="a85288140d87dab1441bf5168c7f20239" name="a85288140d87dab1441bf5168c7f20239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85288140d87dab1441bf5168c7f20239">&#9670;&nbsp;</a></span>MicroSdEscribirRegistro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MicroSdEscribirRegistro </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structregistro__clinico__sd__t.html">registro_clinico_sd_t</a> *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta un ciclo atómico de Apertura (Fase 1), Escritura CSV y Cierre con Flush FAT (Fase 2). Si la tarjeta no estaba montada, reintenta su montaje automáticamente sin bloquear el RTOS. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>Puntero a la estructura con las variables fisiológicas y ambientales a registrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si el registro fue grabado y volcado físicamente a la MicroSD; false en caso de error. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00157">157</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="a25e558af5b2234c6e920f7146296c50e" name="a25e558af5b2234c6e920f7146296c50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e558af5b2234c6e920f7146296c50e">&#9670;&nbsp;</a></span>MicroSdEstadoMontada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MicroSdEstadoMontada </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consulta si la tarjeta MicroSD se encuentra operativa y con el sistema FAT montado. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si está lista; false si hubo error o fue extraída. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00215">215</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="a39514f523a8e0bec88720e736f32934a" name="a39514f523a8e0bec88720e736f32934a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39514f523a8e0bec88720e736f32934a">&#9670;&nbsp;</a></span>MicroSdInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MicroSdInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desconecta el transceptor USB_D+ de GPIO_13, inicializa el bus SPI2 a 4 MHz y monta la partición FAT16 de la tarjeta MicroSD. Crea el encabezado CSV si el archivo no existe. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si la tarjeta MicroSD fue montada exitosamente; false si no está insertada o falló. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00141">141</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="monitor__unidad__paciente_8c_source.html#l01244">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a1612e345a1df5f26d7c15e52e865acdb" name="a1612e345a1df5f26d7c15e52e865acdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1612e345a1df5f26d7c15e52e865acdb">&#9670;&nbsp;</a></span>MicroSdLeerUltimosRegistrosJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MicroSdLeerUltimosRegistrosJson </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>json_buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>max_registros</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la Fase 3 (Apertura y Lectura SPI con <code>CMD17</code>) posicionándose al final de <code>DATALOG.CSV</code> mediante <code>fseek()</code> para extraer los últimos <code>max_registros</code> en formato JSON. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">json_buf</td><td>Buffer donde se escribe el arreglo JSON de registros históricos. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_len</td><td>Capacidad máxima en bytes del buffer <code>json_buf</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_registros</td><td>Cantidad máxima de puntos finales a recuperar (ej. 40). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Cantidad de bytes escritos en <code>json_buf</code>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00254">254</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="aa2a14319ea4ef4f176c539018e765d70" name="aa2a14319ea4ef4f176c539018e765d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a14319ea4ef4f176c539018e765d70">&#9670;&nbsp;</a></span>MicroSdObtenerFechaHoraActual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MicroSdObtenerFechaHoraActual </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>out_fecha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len_f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>out_hora</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len_h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene las cadenas formateadas de fecha (<code>YYYY-MM-DD</code>) y hora (<code>HH:MM:SS</code>) actuales del RTC. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_fecha</td><td>Buffer de salida para la fecha (mínimo 11 bytes). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len_f</td><td>Tamaño del buffer de fecha. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_hora</td><td>Buffer de salida para la hora (mínimo 9 bytes). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len_h</td><td>Tamaño del buffer de hora. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00234">234</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="a214e068be544282bfd91b953a787e12e" name="a214e068be544282bfd91b953a787e12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214e068be544282bfd91b953a787e12e">&#9670;&nbsp;</a></span>MicroSdObtenerTotalEscritos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t MicroSdObtenerTotalEscritos </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la cantidad de registros grabados exitosamente desde el encendido del sistema. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de líneas CSV escritas en la sesión actual. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00219">219</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="a581f739f95d26f7a2e9b9772592012a5" name="a581f739f95d26f7a2e9b9772592012a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581f739f95d26f7a2e9b9772592012a5">&#9670;&nbsp;</a></span>MicroSdRelojSincronizado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MicroSdRelojSincronizado </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si el reloj RTC ya fue sincronizado con la fecha/hora real desde la interfaz web. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si tiene fecha actual válida; false si corre sobre la fecha base inicial. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00250">250</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+<a id="ad29abca0ce8909e237f186bf9714f41f" name="ad29abca0ce8909e237f186bf9714f41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad29abca0ce8909e237f186bf9714f41f">&#9670;&nbsp;</a></span>MicroSdSincronizarRelojEpoch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MicroSdSincronizarRelojEpoch </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>epoch_sec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajusta el reloj de tiempo real (RTC) interno del ESP32-C6 a partir de un timestamp Unix (segundos) recibido desde el navegador web (ajustado a huso horario local UTC-3). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">epoch_sec</td><td>Segundos transcurridos desde 1970-01-01 00:00:00 en hora local. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="microsd__datalogger_8c_source.html#l00223">223</a> del archivo <a class="el" href="microsd__datalogger_8c_source.html">microsd_datalogger.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a class="el" href="microsd__datalogger_8h.html">microsd_datalogger.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
+</html>

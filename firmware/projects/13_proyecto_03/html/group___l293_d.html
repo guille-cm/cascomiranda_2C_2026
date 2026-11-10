@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Proyecto 3: L293D</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('group___l293_d.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('group___l293_d.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('group___l293_d.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -117,27 +105,27 @@ $(function(){initNavTree('group___l293_d.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumeraciones</h2></td></tr>
-<tr class="memitem:ga88a4b61016074d859a35a819185870c5" id="r_ga88a4b61016074d859a35a819185870c5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a> { <a class="el" href="#gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0">MOTOR_1</a>
-, <a class="el" href="#gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0">MOTOR_2</a>
+<tr class="memitem:ga88a4b61016074d859a35a819185870c5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l293_d.html#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a> { <a class="el" href="group___l293_d.html#gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0">MOTOR_1</a>
+, <a class="el" href="group___l293_d.html#gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0">MOTOR_2</a>
  }</td></tr>
-<tr class="memdesc:ga88a4b61016074d859a35a819185870c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motors.  <a href="#ga88a4b61016074d859a35a819185870c5">Más...</a><br /></td></tr>
+<tr class="memdesc:ga88a4b61016074d859a35a819185870c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motors.  <a href="group___l293_d.html#ga88a4b61016074d859a35a819185870c5">Más...</a><br /></td></tr>
 <tr class="separator:ga88a4b61016074d859a35a819185870c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:gadd2a75e90415afd4e8667c8975232759" id="r_gadd2a75e90415afd4e8667c8975232759"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadd2a75e90415afd4e8667c8975232759">L293Init</a> (void)</td></tr>
-<tr class="memdesc:gadd2a75e90415afd4e8667c8975232759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes L293 driver.  <br /></td></tr>
+<tr class="memitem:gadd2a75e90415afd4e8667c8975232759"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l293_d.html#gadd2a75e90415afd4e8667c8975232759">L293Init</a> (void)</td></tr>
+<tr class="memdesc:gadd2a75e90415afd4e8667c8975232759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes L293 driver.  <a href="group___l293_d.html#gadd2a75e90415afd4e8667c8975232759">Más...</a><br /></td></tr>
 <tr class="separator:gadd2a75e90415afd4e8667c8975232759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e47e21a27ca3aba1909e2b4deeb726c" id="r_ga6e47e21a27ca3aba1909e2b4deeb726c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6e47e21a27ca3aba1909e2b4deeb726c">L293SetSpeed</a> (<a class="el" href="#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a> motor, int8_t speed)</td></tr>
-<tr class="memdesc:ga6e47e21a27ca3aba1909e2b4deeb726c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes L293 driver.  <br /></td></tr>
+<tr class="memitem:ga6e47e21a27ca3aba1909e2b4deeb726c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l293_d.html#ga6e47e21a27ca3aba1909e2b4deeb726c">L293SetSpeed</a> (<a class="el" href="group___l293_d.html#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a> motor, int8_t speed)</td></tr>
+<tr class="memdesc:ga6e47e21a27ca3aba1909e2b4deeb726c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes L293 driver.  <a href="group___l293_d.html#ga6e47e21a27ca3aba1909e2b4deeb726c">Más...</a><br /></td></tr>
 <tr class="separator:ga6e47e21a27ca3aba1909e2b4deeb726c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1608250d3f606f95a2fc076ee5e55f02" id="r_ga1608250d3f606f95a2fc076ee5e55f02"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1608250d3f606f95a2fc076ee5e55f02">L293DeInit</a> (void)</td></tr>
-<tr class="memdesc:ga1608250d3f606f95a2fc076ee5e55f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes L293 Driver.  <br /></td></tr>
+<tr class="memitem:ga1608250d3f606f95a2fc076ee5e55f02"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___l293_d.html#ga1608250d3f606f95a2fc076ee5e55f02">L293DeInit</a> (void)</td></tr>
+<tr class="memdesc:ga1608250d3f606f95a2fc076ee5e55f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">De-initializes L293 Driver.  <a href="group___l293_d.html#ga1608250d3f606f95a2fc076ee5e55f02">Más...</a><br /></td></tr>
 <tr class="separator:ga1608250d3f606f95a2fc076ee5e55f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<p>Quadruple half-H driver. </p>
-<p>This driver provide functions to configure and control a dual DC motor driver using the L293D.</p>
+<p >Quadruple half-H driver. </p>
+<p >This driver provide functions to configure and control a dual DC motor driver using the L293D.</p>
 <dl class="section author"><dt>Autor</dt><dd>Albano Peñalva</dd></dl>
 <dl class="section note"><dt>Nota</dt><dd>Hardware connections:</dd></dl>
 <table class="markdownTable">
@@ -168,24 +156,24 @@ Changelog</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">17/05/2024   </td><td class="markdownTableBodyLeft">Document creation   </td></tr>
 </table>
-<h2 class="groupheader">Documentación de enumeraciones</h2>
+<h2 class="groupheader">Documentación de las enumeraciones</h2>
 <a id="ga88a4b61016074d859a35a819185870c5" name="ga88a4b61016074d859a35a819185870c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga88a4b61016074d859a35a819185870c5">&#9670;&#160;</a></span>l293_motor_t</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88a4b61016074d859a35a819185870c5">&#9670;&nbsp;</a></span>l293_motor_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a></td>
+          <td class="memname">enum <a class="el" href="group___l293_d.html#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Motors. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0" name="gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0"></a>MOTOR_1&#160;</td><td class="fielddoc"><p>Motor 1 </p>
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0" name="gga88a4b61016074d859a35a819185870c5a3941188d2d90aed5042e2a4e12f5e1a0"></a>MOTOR_1&#160;</td><td class="fielddoc"><p >Motor 1 </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0" name="gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0"></a>MOTOR_2&#160;</td><td class="fielddoc"><p>Motor 2 </p>
+<tr><td class="fieldname"><a id="gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0" name="gga88a4b61016074d859a35a819185870c5a4c392a2fa3fb63f41fd473e50bf197b0"></a>MOTOR_2&#160;</td><td class="fielddoc"><p >Motor 2 </p>
 </td></tr>
 </table>
 
@@ -193,9 +181,9 @@ Changelog</h1>
 
 </div>
 </div>
-<h2 class="groupheader">Documentación de funciones</h2>
+<h2 class="groupheader">Documentación de las funciones</h2>
 <a id="ga1608250d3f606f95a2fc076ee5e55f02" name="ga1608250d3f606f95a2fc076ee5e55f02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1608250d3f606f95a2fc076ee5e55f02">&#9670;&#160;</a></span>L293DeInit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1608250d3f606f95a2fc076ee5e55f02">&#9670;&nbsp;</a></span>L293DeInit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +191,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t L293DeInit </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -230,7 +219,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="gadd2a75e90415afd4e8667c8975232759" name="gadd2a75e90415afd4e8667c8975232759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd2a75e90415afd4e8667c8975232759">&#9670;&#160;</a></span>L293Init()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd2a75e90415afd4e8667c8975232759">&#9670;&nbsp;</a></span>L293Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +227,8 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t L293Init </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,7 +255,7 @@ Changelog</h1>
 </div>
 </div>
 <a id="ga6e47e21a27ca3aba1909e2b4deeb726c" name="ga6e47e21a27ca3aba1909e2b4deeb726c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6e47e21a27ca3aba1909e2b4deeb726c">&#9670;&#160;</a></span>L293SetSpeed()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e47e21a27ca3aba1909e2b4deeb726c">&#9670;&nbsp;</a></span>L293SetSpeed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,12 +263,19 @@ Changelog</h1>
         <tr>
           <td class="memname">uint8_t L293SetSpeed </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a></td>          <td class="paramname"><span class="paramname"><em>motor</em></span>, </td>
+          <td class="paramtype"><a class="el" href="group___l293_d.html#ga88a4b61016074d859a35a819185870c5">l293_motor_t</a>&#160;</td>
+          <td class="paramname"><em>motor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int8_t</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -309,7 +306,7 @@ Changelog</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>

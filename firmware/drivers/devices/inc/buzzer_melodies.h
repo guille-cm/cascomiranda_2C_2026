@@ -47,6 +47,11 @@ const char *songSmurfs = "Smurfs:d=32,o=5,b=200:4c#6,16p,4f#6,p,16c#6,p,8d#6,p,8
 const char *songMahnaMahna = "MahnaMahna:d=16,o=6,b=125:c#,c.,b5,8a#.5,8f.,4g#,a#,g.,4d#,8p,c#,c.,b5,8a#.5,8f.,g#.,8a#.,4g,8p,c#,c.,b5,8a#.5,8f.,4g#,f,g.,8d#.,f,g.,8d#.,f,8g,8d#.,f,8g,d#,8c,a#5,8d#.,8d#.,4d#,8d#.";
 const char *songLeisureSuit = "LeisureSuit:d=16,o=6,b=56:f.5,f#.5,g.5,g#5,32a#5,f5,g#.5,a#.5,32f5,g#5,32a#5,g#5,8c#.,a#5,32c#,a5,a#.5,c#.,32a5,a#5,32c#,d#,8e,c#.,f.,f.,f.,f.,f,32e,d#,8d,a#.5,e,32f,e,32f,c#,d#.,c#";
 const char *songMissionImp = "MissionImp:d=16,o=6,b=95:32d,32d#,32d,32d#,32d,32d#,32d,32d#,32d,32d,32d#,32e,32f,32f#,32g,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,g,8p,g,8p,a#,p,c7,p,g,8p,g,8p,f,p,f#,p,a#,g,2d,32p,a#,g,2c#,32p,a#,g,2c,a#5,8c,2p,32p,a#5,g5,2f#,32p,a#5,g5,2f,32p,a#5,g5,2e,d#,8d";
+const char *songMarioHurryUp_version_guille_cm = "MarioHurry:d=16,o=5,b=200:e,8d6,p,d6,32p,d6,p,f,8d#6,p,d#6,32p,d#6,p,f#,8e6,p,e6,32p,e6,p,8f6,p,4f6,4p,e6,32p,e6,p,e6,p,c6,e6,p,8g6,8p,8g,8p,8c6,p,8g,p,8e,p,8a,b,p,a#,8a,p,8g,8e6,8g6,8a6,f6,g6,p,8e6,c6,d6,8b,p,8c6,p,8g,p,8e,p,8a,b,p,a#,8a,p,8g,8e6,8g6,8a6,f6,g6,p,8e6,c6,d6,8b,8p,p,g6,f#6,f6,8d#6,e6,p,g#,a,c6,p,a,c6,d6,p,g6,f#6,f6,8d#6,e6,p,c7,32p,c7,32p,8c7,8p,p,g6,f#6,f6,8d#6,e6,p,g#,a,c6,p,a,c6,d6,p,8d#6,p,8d6,p,8c6";
+const char *songDrama_version_guille_cm = "Drama:d=8,o=5,b=180:d6,g,g,d6,g,g,d6,g,d#6,g,d6,g,g,d6,g,g,d6,g,d#6,g,c#6,f#,f#,c#6,f#,f#,c#6,f#,d6,f#,c#6,f#,f#,c#6,f#,f#,c#6,f#,d6,f#";
+const char *songPacman_version_guille_cm = "Pacman:d=4,o=5,b=112:p,32b,32p,32b6,32p,32f#6,32p,32d#6,32p,32b6,32f#6,16p,16d#6,16p,32c6,32p,32c7,32p,32g6,32p,32e6,32p,32c7,32g6,16p,16e6,16p,32b,32p,32b6,32p,32f#6,32p,32d#6,32p,32b6,32f#6,16p,16d#6,16p,32d#6,32e6,32f6,32p,32f6,32f#6,32g6,32p,32g6,32g#6,32a6,32p,32b6.,p";
+const char *songFunky_Town_version_guille_cm = "Funky Town:d=8,o=4,b=125:c6,c6,a#5,c6,p,g5,p,g5,c6,f6,e6,c6,2p,c6,c6,a#5,c6,p,g5,p,g5,c6,f6,e6,c6";
+
 /*==================[external functions declaration]=========================*/
 
 /** @} doxygen end group definition */

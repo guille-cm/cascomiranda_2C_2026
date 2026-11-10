@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['i2c_0',['I2C',['../group___i2_c.html',1,'']]],
-  ['icons_1',['Icons',['../group___i_c_o_n_s.html',1,'']]],
-  ['ili9341_2',['ILI9341',['../group___i_l_i9341.html',1,'']]],
-  ['io_3',['Analog IO',['../group___analog___i_o.html',1,'']]],
-  ['itse0803_4',['LCD ITSE0803',['../group___l_c_d___i_t_s_e0803.html',1,'']]]
+  ['mi_5fdisplay_5f7s_0',['mi_display_7s',['../group___m_i___d_i_s_p_l_a_y__7_s.html',1,'']]],
+  ['mi_5fdisplay_5f7s_5fx2_1',['mi_display_7s_x2',['../group___m_i___d_i_s_p_l_a_y__7_s___x2.html',1,'']]],
+  ['mpu6050_2',['MPU6050',['../group___m_p_u6050.html',1,'']]]
 ];

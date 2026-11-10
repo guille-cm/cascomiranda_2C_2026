@@ -1,27 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Proyecto 3: Archivo de código fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/ws2812b.c</title>
-<link rel="icon" href="icon.ico" type="image/x-icon" />
+<title>Proyecto 3: Fichero Fuente D:/programable_en_d/cascomiranda_2C_2026/firmware/drivers/devices/src/ws2812b.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-  $(function() { init_search(); });
+  $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -40,8 +37,11 @@
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
-          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+          <img id="MSearchSelect" src="search/mag_sel.svg"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,15 +55,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generado por Doxygen 1.11.0 -->
+<!-- Generado por Doxygen 1.9.4 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -79,7 +74,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
+$(document).ready(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -92,16 +87,9 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Cargando...</div>
-<div class="SRStatus" id="Searching">Buscando...</div>
-<div class="SRStatus" id="NoMatches">Nada coincide</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -147,7 +135,6 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">/*==================[external data definition]===============================*/</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">/*==================[internal functions definition]==========================*/</span></div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="ws2812b_8c.html#a77b8715bc283e04108cbecdf72e24b7d">   50</a></span><span class="keywordtype">void</span> IRAM_ATTR <a class="code hl_function" href="ws2812b_8c.html#a77b8715bc283e04108cbecdf72e24b7d">ws2812bSendHigh</a>(<a class="code hl_typedef" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin){</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="group___g_i_o_p___f_a_s_t.html#ga49597fb98997e713d9a0f660192491da">GPIOFastWrite</a>(1);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//delay 0.8us</span></div>
@@ -286,9 +273,7 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    __asm__ __volatile__ (<span class="stringliteral">&quot;nop&quot;</span>);   <span class="comment">// 28</span></div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    __asm__ __volatile__ (<span class="stringliteral">&quot;nop&quot;</span>);   <span class="comment">// 29</span></div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
-</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="ws2812b_8c.html#a36657f62d50cb950ac553ad8afeefdc0">  189</a></span><span class="keywordtype">void</span> IRAM_ATTR <a class="code hl_function" href="ws2812b_8c.html#a36657f62d50cb950ac553ad8afeefdc0">ws2812bSendLow</a>(<a class="code hl_typedef" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin){</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_function" href="group___g_i_o_p___f_a_s_t.html#ga49597fb98997e713d9a0f660192491da">GPIOFastWrite</a>(1);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">//delay 0.4us</span></div>
@@ -428,24 +413,18 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    __asm__ __volatile__ (<span class="stringliteral">&quot;nop&quot;</span>);   <span class="comment">// 93</span></div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    __asm__ __volatile__ (<span class="stringliteral">&quot;nop&quot;</span>);   <span class="comment">// 94</span></div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
-</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="foldopen" id="foldopen00329" data-start="{" data-end="}">
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="ws2812b_8c.html#af8b5a67621f64a435602bdfeca85d8c3">  329</a></span>uint8_t <a class="code hl_function" href="ws2812b_8c.html#af8b5a67621f64a435602bdfeca85d8c3">ws2812bGammaCorrection</a>(uint8_t component){</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">return</span> gamma_table[component];</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
-</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="comment">/*==================[external functions definition]==========================*/</span></div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="foldopen" id="foldopen00335" data-start="{" data-end="}">
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="group___w_s2812_b.html#gab5724b524301eafce386e26782206b3c">  335</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_s2812_b.html#gab5724b524301eafce386e26782206b3c">ws2812bInit</a>(<a class="code hl_typedef" href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a> pin){</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <a class="code hl_variable" href="ws2812b_8c.html#a8bafab9eba59f18ef73103a6ec526585">pin_number</a> = pin;</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <a class="code hl_function" href="group___g_i_o_p___f_a_s_t.html#ga56ea073ca6d7ef523095bf1da50fb8c1">GPIOFastInit</a>(&amp;pin, 1);</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
-</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="foldopen" id="foldopen00340" data-start="{" data-end="}">
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="group___w_s2812_b.html#ga6efc852be97e10768f170756c0bde024">  340</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_s2812_b.html#ga6efc852be97e10768f170756c0bde024">ws2812bSend</a>(<a class="code hl_struct" href="structrgb__led.html">rgb_led_t</a> led_color){</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    uint8_t i;</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="comment">// Blue</span></div>
@@ -476,36 +455,33 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>}</div>
-</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
-<div class="foldopen" id="foldopen00371" data-start="{" data-end="}">
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="group___w_s2812_b.html#ga7f917e1d76a1edff14b8bac723a169d8">  371</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___w_s2812_b.html#ga7f917e1d76a1edff14b8bac723a169d8">ws2812bSendRet</a>(<span class="keywordtype">void</span>){</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <a class="code hl_function" href="group___g_i_o_p___f_a_s_t.html#ga49597fb98997e713d9a0f660192491da">GPIOFastWrite</a>(0);</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <a class="code hl_function" href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a>(<a class="code hl_define" href="ws2812b_8c.html#aa9331d068b87e6429728b37d83e3d798">RET_CMD</a>);</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>}</div>
-</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="comment">/*==================[end of file]============================================*/</span></div>
 <div class="ttc" id="adelay__mcu_8h_html"><div class="ttname"><a href="delay__mcu_8h.html">delay_mcu.h</a></div></div>
 <div class="ttc" id="agpio__fast__out__mcu_8h_html"><div class="ttname"><a href="gpio__fast__out__mcu_8h.html">gpio_fast_out_mcu.h</a></div></div>
 <div class="ttc" id="agpio__mcu_8h_html"><div class="ttname"><a href="gpio__mcu_8h.html">gpio_mcu.h</a></div></div>
-<div class="ttc" id="agroup___delay_html_ga92e1b2564bacd20071bcd06b697f52f8"><div class="ttname"><a href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a></div><div class="ttdeci">void DelayUs(uint16_t usec)</div><div class="ttdoc">Delay in microseconds.</div><div class="ttdef"><b>Definition</b> <a href="delay__mcu_8c_source.html#l00080">delay_mcu.c:80</a></div></div>
-<div class="ttc" id="agroup___g_i_o_p___f_a_s_t_html_ga49597fb98997e713d9a0f660192491da"><div class="ttname"><a href="group___g_i_o_p___f_a_s_t.html#ga49597fb98997e713d9a0f660192491da">GPIOFastWrite</a></div><div class="ttdeci">void GPIOFastWrite(uint16_t value)</div><div class="ttdef"><b>Definition</b> <a href="gpio__fast__out__mcu_8c_source.html#l00054">gpio_fast_out_mcu.c:54</a></div></div>
-<div class="ttc" id="agroup___g_i_o_p___f_a_s_t_html_ga56ea073ca6d7ef523095bf1da50fb8c1"><div class="ttname"><a href="group___g_i_o_p___f_a_s_t.html#ga56ea073ca6d7ef523095bf1da50fb8c1">GPIOFastInit</a></div><div class="ttdeci">void GPIOFastInit(gpio_t *pin_list, uint8_t pin_qty)</div><div class="ttdoc">GPIO driver to use gpio ouputs with faster functions than gpio_mcu.</div><div class="ttdef"><b>Definition</b> <a href="gpio__fast__out__mcu_8c_source.html#l00034">gpio_fast_out_mcu.c:34</a></div></div>
+<div class="ttc" id="agroup___delay_html_ga92e1b2564bacd20071bcd06b697f52f8"><div class="ttname"><a href="group___delay.html#ga92e1b2564bacd20071bcd06b697f52f8">DelayUs</a></div><div class="ttdeci">void DelayUs(uint16_t usec)</div><div class="ttdoc">Delay in microseconds.</div><div class="ttdef"><b>Definition:</b> <a href="delay__mcu_8c_source.html#l00080">delay_mcu.c:80</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p___f_a_s_t_html_ga49597fb98997e713d9a0f660192491da"><div class="ttname"><a href="group___g_i_o_p___f_a_s_t.html#ga49597fb98997e713d9a0f660192491da">GPIOFastWrite</a></div><div class="ttdeci">void GPIOFastWrite(uint16_t value)</div><div class="ttdef"><b>Definition:</b> <a href="gpio__fast__out__mcu_8c_source.html#l00054">gpio_fast_out_mcu.c:54</a></div></div>
+<div class="ttc" id="agroup___g_i_o_p___f_a_s_t_html_ga56ea073ca6d7ef523095bf1da50fb8c1"><div class="ttname"><a href="group___g_i_o_p___f_a_s_t.html#ga56ea073ca6d7ef523095bf1da50fb8c1">GPIOFastInit</a></div><div class="ttdeci">void GPIOFastInit(gpio_t *pin_list, uint8_t pin_qty)</div><div class="ttdoc">GPIO driver to use gpio ouputs with faster functions than gpio_mcu.</div><div class="ttdef"><b>Definition:</b> <a href="gpio__fast__out__mcu_8c_source.html#l00034">gpio_fast_out_mcu.c:34</a></div></div>
 <div class="ttc" id="agroup___g_i_o_p_html_gac6f7bd4f7ee306a4519f04641cbf2d67"><div class="ttname"><a href="group___g_i_o_p.html#gac6f7bd4f7ee306a4519f04641cbf2d67">gpio_t</a></div><div class="ttdeci">enum gpio_list gpio_t</div><div class="ttdoc">ESP32-C6 available GPIOs (not all of them are available in ESP-EDU)</div></div>
-<div class="ttc" id="agroup___w_s2812_b_html_ga6efc852be97e10768f170756c0bde024"><div class="ttname"><a href="group___w_s2812_b.html#ga6efc852be97e10768f170756c0bde024">ws2812bSend</a></div><div class="ttdeci">void ws2812bSend(rgb_led_t led_color)</div><div class="ttdoc">Send color information to NeoPixel.</div><div class="ttdef"><b>Definition</b> <a href="#l00340">ws2812b.c:340</a></div></div>
-<div class="ttc" id="agroup___w_s2812_b_html_ga7f917e1d76a1edff14b8bac723a169d8"><div class="ttname"><a href="group___w_s2812_b.html#ga7f917e1d76a1edff14b8bac723a169d8">ws2812bSendRet</a></div><div class="ttdeci">void ws2812bSendRet(void)</div><div class="ttdoc">Send a ret command to NeoPixel.</div><div class="ttdef"><b>Definition</b> <a href="#l00371">ws2812b.c:371</a></div></div>
-<div class="ttc" id="agroup___w_s2812_b_html_gab5724b524301eafce386e26782206b3c"><div class="ttname"><a href="group___w_s2812_b.html#gab5724b524301eafce386e26782206b3c">ws2812bInit</a></div><div class="ttdeci">void ws2812bInit(gpio_t pin)</div><div class="ttdoc">NeoPixel initialization.</div><div class="ttdef"><b>Definition</b> <a href="#l00335">ws2812b.c:335</a></div></div>
-<div class="ttc" id="astructrgb__led_html"><div class="ttname"><a href="structrgb__led.html">rgb_led</a></div><div class="ttdoc">Driver for handling WS2812B RGB leds.</div><div class="ttdef"><b>Definition</b> <a href="ws2812b_8h_source.html#l00037">ws2812b.h:37</a></div></div>
-<div class="ttc" id="astructrgb__led_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structrgb__led.html#a287b397e90d7b995c81ff54e741f96b2">rgb_led::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdef"><b>Definition</b> <a href="ws2812b_8h_source.html#l00040">ws2812b.h:40</a></div></div>
-<div class="ttc" id="astructrgb__led_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structrgb__led.html#a90d21fa503b626c00cdc8d94863d5877">rgb_led::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdef"><b>Definition</b> <a href="ws2812b_8h_source.html#l00038">ws2812b.h:38</a></div></div>
-<div class="ttc" id="astructrgb__led_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structrgb__led.html#ad47d918910aaa51c73160ac85999d09c">rgb_led::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdef"><b>Definition</b> <a href="ws2812b_8h_source.html#l00039">ws2812b.h:39</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_a36657f62d50cb950ac553ad8afeefdc0"><div class="ttname"><a href="ws2812b_8c.html#a36657f62d50cb950ac553ad8afeefdc0">ws2812bSendLow</a></div><div class="ttdeci">void IRAM_ATTR ws2812bSendLow(gpio_t pin)</div><div class="ttdef"><b>Definition</b> <a href="#l00189">ws2812b.c:189</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_a4ad58adf84157aebea2a98cc9402212a"><div class="ttname"><a href="ws2812b_8c.html#a4ad58adf84157aebea2a98cc9402212a">BIT_7</a></div><div class="ttdeci">#define BIT_7</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ws2812b.c:22</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_a77b8715bc283e04108cbecdf72e24b7d"><div class="ttname"><a href="ws2812b_8c.html#a77b8715bc283e04108cbecdf72e24b7d">ws2812bSendHigh</a></div><div class="ttdeci">void IRAM_ATTR ws2812bSendHigh(gpio_t pin)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">ws2812b.c:50</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_a8bafab9eba59f18ef73103a6ec526585"><div class="ttname"><a href="ws2812b_8c.html#a8bafab9eba59f18ef73103a6ec526585">pin_number</a></div><div class="ttdeci">gpio_t pin_number</div><div class="ttdef"><b>Definition</b> <a href="#l00024">ws2812b.c:24</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_aa9331d068b87e6429728b37d83e3d798"><div class="ttname"><a href="ws2812b_8c.html#aa9331d068b87e6429728b37d83e3d798">RET_CMD</a></div><div class="ttdeci">#define RET_CMD</div><div class="ttdef"><b>Definition</b> <a href="#l00020">ws2812b.c:20</a></div></div>
-<div class="ttc" id="aws2812b_8c_html_af8b5a67621f64a435602bdfeca85d8c3"><div class="ttname"><a href="ws2812b_8c.html#af8b5a67621f64a435602bdfeca85d8c3">ws2812bGammaCorrection</a></div><div class="ttdeci">uint8_t ws2812bGammaCorrection(uint8_t component)</div><div class="ttdef"><b>Definition</b> <a href="#l00329">ws2812b.c:329</a></div></div>
+<div class="ttc" id="agroup___w_s2812_b_html_ga6efc852be97e10768f170756c0bde024"><div class="ttname"><a href="group___w_s2812_b.html#ga6efc852be97e10768f170756c0bde024">ws2812bSend</a></div><div class="ttdeci">void ws2812bSend(rgb_led_t led_color)</div><div class="ttdoc">Send color information to NeoPixel.</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00340">ws2812b.c:340</a></div></div>
+<div class="ttc" id="agroup___w_s2812_b_html_ga7f917e1d76a1edff14b8bac723a169d8"><div class="ttname"><a href="group___w_s2812_b.html#ga7f917e1d76a1edff14b8bac723a169d8">ws2812bSendRet</a></div><div class="ttdeci">void ws2812bSendRet(void)</div><div class="ttdoc">Send a ret command to NeoPixel.</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00371">ws2812b.c:371</a></div></div>
+<div class="ttc" id="agroup___w_s2812_b_html_gab5724b524301eafce386e26782206b3c"><div class="ttname"><a href="group___w_s2812_b.html#gab5724b524301eafce386e26782206b3c">ws2812bInit</a></div><div class="ttdeci">void ws2812bInit(gpio_t pin)</div><div class="ttdoc">NeoPixel initialization.</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00335">ws2812b.c:335</a></div></div>
+<div class="ttc" id="astructrgb__led_html"><div class="ttname"><a href="structrgb__led.html">rgb_led</a></div><div class="ttdoc">Driver for handling WS2812B RGB leds.</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8h_source.html#l00037">ws2812b.h:37</a></div></div>
+<div class="ttc" id="astructrgb__led_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structrgb__led.html#a287b397e90d7b995c81ff54e741f96b2">rgb_led::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8h_source.html#l00040">ws2812b.h:40</a></div></div>
+<div class="ttc" id="astructrgb__led_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structrgb__led.html#a90d21fa503b626c00cdc8d94863d5877">rgb_led::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8h_source.html#l00038">ws2812b.h:38</a></div></div>
+<div class="ttc" id="astructrgb__led_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structrgb__led.html#ad47d918910aaa51c73160ac85999d09c">rgb_led::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8h_source.html#l00039">ws2812b.h:39</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_a36657f62d50cb950ac553ad8afeefdc0"><div class="ttname"><a href="ws2812b_8c.html#a36657f62d50cb950ac553ad8afeefdc0">ws2812bSendLow</a></div><div class="ttdeci">void IRAM_ATTR ws2812bSendLow(gpio_t pin)</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00189">ws2812b.c:189</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_a4ad58adf84157aebea2a98cc9402212a"><div class="ttname"><a href="ws2812b_8c.html#a4ad58adf84157aebea2a98cc9402212a">BIT_7</a></div><div class="ttdeci">#define BIT_7</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00022">ws2812b.c:22</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_a77b8715bc283e04108cbecdf72e24b7d"><div class="ttname"><a href="ws2812b_8c.html#a77b8715bc283e04108cbecdf72e24b7d">ws2812bSendHigh</a></div><div class="ttdeci">void IRAM_ATTR ws2812bSendHigh(gpio_t pin)</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00050">ws2812b.c:50</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_a8bafab9eba59f18ef73103a6ec526585"><div class="ttname"><a href="ws2812b_8c.html#a8bafab9eba59f18ef73103a6ec526585">pin_number</a></div><div class="ttdeci">gpio_t pin_number</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00024">ws2812b.c:24</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_aa9331d068b87e6429728b37d83e3d798"><div class="ttname"><a href="ws2812b_8c.html#aa9331d068b87e6429728b37d83e3d798">RET_CMD</a></div><div class="ttdeci">#define RET_CMD</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00020">ws2812b.c:20</a></div></div>
+<div class="ttc" id="aws2812b_8c_html_af8b5a67621f64a435602bdfeca85d8c3"><div class="ttname"><a href="ws2812b_8c.html#af8b5a67621f64a435602bdfeca85d8c3">ws2812bGammaCorrection</a></div><div class="ttdeci">uint8_t ws2812bGammaCorrection(uint8_t component)</div><div class="ttdef"><b>Definition:</b> <a href="ws2812b_8c_source.html#l00329">ws2812b.c:329</a></div></div>
 <div class="ttc" id="aws2812b_8h_html"><div class="ttname"><a href="ws2812b_8h.html">ws2812b.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -513,7 +489,7 @@ $(function(){initNavTree('ws2812b_8c_source.html',''); initResizable(true); });
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a class="el" href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a class="el" href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a class="el" href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a class="el" href="ws2812b_8c.html">ws2812b.c</a></li>
-    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
   </ul>
 </div>
 </body>
